@@ -11,7 +11,7 @@ button, button:hover {background-color: #da8f4d;
    button:active {margin-top: 2px;
     border: 3px solid #682424;}
 
-
+ul {list-style: none;}
 
 .App {
   text-align: center;
@@ -24,8 +24,17 @@ display: inline;}
 .fishImage {border: 1px solid #d1cca6;
 }
 
-.fishImage img {            max-width: 98px;
+.fishInfoDisplayed {line-height: 0px;
+opacity: 0%;}
+
+.fishInfoDisplayed2 {line-height: normal;
+  opacity: 100%;}
+
+.fishPicture {            max-width: 98px;
 max-height: 98px;}
+
+.fishPicture2 {      filter: contrast(0%) brightness(105%)  grayscale(100%);}
+  
 
 .Header {box-shadow: 0px 2px 3px #d8cfa1;}
 
@@ -35,8 +44,8 @@ margin-top: 100px;}
 
 .Northern {  position: absolute;
   left: 670px;
-top: 90px;}
+top: 140px;}
 
 .Southern {  position: absolute;
-right: 690px;
-top: 90px;}
+right: 680px;
+top: 140px;}

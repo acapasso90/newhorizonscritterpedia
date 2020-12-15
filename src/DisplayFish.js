@@ -4,7 +4,6 @@ import FishInfoShown from "./FishInfoShown.js";
 
 export default function DisplayFish(){
     const [fishInfo, setfishInfo] = useState({ready:false});
-    const [ready, setReady] = useState("");
     const [hemisphere, setHemisphere] = useState("Northern");
     const [loaded, setLoaded] = useState(false);
 function showFish(response){
@@ -21,14 +20,15 @@ function setSouthernHemisphere(){ setHemisphere("Southern")}
 
 if (loaded){return(
     <div className="getFishInfo">
+        <div className="CurrentHemisphere"><h2>Current Hemisphere: {hemisphere} </h2></div>
         <div className="buttons">
             <button  onClick={setNorthernHemisphere} className="Northern">Northern</button>
             <button onClick={setSouthernHemisphere} className="Southern">Southern</button>
         </div>
         <div className="horizontalRow">
             <div className="column">
-        <FishInfoShown data={fishInfo[0]} location={hemisphere}/>
-        <FishInfoShown data={fishInfo[1]} location={hemisphere} />
+        <FishInfoShown data={fishInfo[0]} location={hemisphere}/> 
+        <FishInfoShown data={fishInfo[1]} location={hemisphere} /> 
         <FishInfoShown data={fishInfo[2]} location={hemisphere} />
         <FishInfoShown data={fishInfo[3]} location={hemisphere}/>
         <FishInfoShown data={fishInfo[4]} location={hemisphere}/>

@@ -7,8 +7,10 @@ export default function FishInfoShown(props){
     const northernArray = "month-array-northern";
     const southernArray = "month-array-southern";
     const timeArray = "time-array";
-    let worldLocation = props.location;
+        let worldLocation = props.location;
     let availability = null; 
+    let monthAvailable = null;
+    let timeAvailable = null; 
     if (worldLocation === "Northern"){availability = props.data.availability[northernArray];}
     else {availability = props.data.availability[southernArray];}
     let findLocation = props.data.location;
@@ -17,17 +19,33 @@ export default function FishInfoShown(props){
         let priceNormal = props.data.price;
        let  priceCJ = props.data.[cj];
       let  catchphrase = props.data[phrase];
-        let time = props.data.availability[timeArray];
         let allDay = props.data.availability.isAllDay;
+        if (allDay === true){timeAvailable = true;}
         let allYear = props.data.availability.isAllYear;    
+        if (allYear === true){monthAvailable = true;}
+        let time = props.data.availability[timeArray];
     let currentTime = new Date();
     let month = currentTime.getMonth();
     let hours = currentTime.getHours();
-return(
-    <div className="FishInfo">
-        <div className="fishImage"> 
-        <img src={image} alt="fish icon" />
-    </div>
-    </div>
-)
+    if (time.includes(hours)){timeAvailable = true;}
+    if (availability.includes(month)){monthAvailable = true;}
+ 
+function DisplayFishInfo(){return(   <div className="fishInfoDisplayed">
+<ul>
+    <li>Name: {fishName}</li>
+    <li>Location: {findLocation}</li>
+    <li>Price: {priceNormal}</li>
+    <li>CJ Price: {priceCJ}</li>
+    <li>"{catchphrase}"</li>
+</ul>
+
+</div>);    
 }
+    return(
+        <div className="FishInfo">
+            <div className="fishImage" onClick={DisplayFishInfo}> 
+            <img src={image} alt="fish icon" className="fishPicture" />
+        </div>
+        </div>
+    )
+    }
