@@ -20,7 +20,7 @@ export default function FishInfoShown(props){
     
 return(
     <div className="FishInfo">
-        <div className="songImage"> 
+        <div className="fishImage"> 
         <img src={image} alt="fish icon" />
     </div>
     </div>
