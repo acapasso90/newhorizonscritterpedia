@@ -35,6 +35,7 @@ function DisplayFishInfo(){return(   <div className="fishInfoDisplayed">
 <ul>
     <li>Name: {fishName}</li>
     <li>Location: {findLocation}</li>
+    <li>Hours: {time} </li>
     <li>Price: {priceNormal}</li>
     <li>CJ Price: {priceCJ}</li>
     <li>"{catchphrase}"</li>

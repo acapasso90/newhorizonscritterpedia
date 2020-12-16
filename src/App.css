@@ -44,6 +44,8 @@ max-height: 98px;}
 flex-direction: row;
 margin-top: 100px;}
 
+.left {float: left;}
+
 .Northern {  position: absolute;
   left: 670px;
 top: 140px;}
