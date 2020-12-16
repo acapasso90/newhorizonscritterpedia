@@ -17,7 +17,7 @@ export default function FishInfoShown(props){
     let fishName = props.data.name[english];
        let image = props.data.icon_uri;
         let priceNormal = props.data.price;
-       let  priceCJ = props.data.[cj];
+       let  priceCJ = props.data[cj];
       let  catchphrase = props.data[phrase];
         let allDay = props.data.availability.isAllDay;
         if (allDay === true){timeAvailable = true;}
@@ -28,7 +28,8 @@ export default function FishInfoShown(props){
     let month = currentTime.getMonth();
     let hours = currentTime.getHours();
     if (time.includes(hours)){timeAvailable = true;}
-    if (availability.includes(month)){monthAvailable = true;}
+    if (availability.includes(month)){monthAvailable = true;} 
+
  
 function DisplayFishInfo(){return(   <div className="fishInfoDisplayed">
 <ul>
@@ -41,7 +42,9 @@ function DisplayFishInfo(){return(   <div className="fishInfoDisplayed">
 
 </div>);    
 }
-    return(
+
+if (monthAvailable === true && timeAvailable === true)
+{return(
         <div className="FishInfo">
             <div className="fishImage" onClick={DisplayFishInfo}> 
             <img src={image} alt="fish icon" className="fishPicture" />
@@ -49,3 +52,10 @@ function DisplayFishInfo(){return(   <div className="fishInfoDisplayed">
         </div>
     )
     }
+    else {return(
+        <div className="FishInfo">
+            <div className="fishImage" onClick={DisplayFishInfo}> 
+            <img src={image} alt="fish icon" className="fishPicture2" />
+        </div>
+        </div>
+    )}}
