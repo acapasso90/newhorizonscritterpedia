@@ -24,11 +24,9 @@ display: inline;}
 .fishImage {border: 1px solid #d1cca6;
 }
 
-.fishInfoDisplayed {line-height: 0px;
-opacity: 0%;}
+.fishInfoDisplayed {position: absolute;
+margin-left: 100px;}
 
-.fishInfoDisplayed2 {line-height: normal;
-  opacity: 100%;}
 
 .fishPicture {            max-width: 98px;
 max-height: 98px;}
