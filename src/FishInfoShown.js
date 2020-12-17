@@ -42,7 +42,7 @@ export default function FishInfoShown(props){
     if (availability.includes(month)){monthAvailable = true;} 
 
 function DisplayFishInfo(){
-SetStyle(infoShownStyle)
+SetStyle(infoShownStyle);
 ;}   
 
 

@@ -25,6 +25,7 @@ if (loaded){return(
             <button  onClick={setNorthernHemisphere} className="Northern">Northern</button>
             <button onClick={setSouthernHemisphere} className="Southern">Southern</button>
         </div>
+        <div className="currentlyAvailable"><h2>Fish currently available:</h2></div>
         <div className="horizontalRow">
             <div className="column">
         <FishInfoShown data={fishInfo[0]} location={hemisphere}/> 
