@@ -13,10 +13,11 @@ export default function FishInfoShown(props){
         backgroundColor: "#F5EBC1",
         zIndex: 2,
         width: "413px",
-        height: "150px",
+        height: "160px",
         textTransform: "capitalize",
         border: "3px",
-        borderColor: "#3f1200",
+        borderColor: "#7a3737",
+        paddingRight: "50px",
         borderStyle: "solid",
   position: "absolute",
  marginLeft: "100px",      };
@@ -32,19 +33,19 @@ export default function FishInfoShown(props){
         backgroundColor: "#F5EBC1",
         zIndex: 2,
         width: "413px",
-        height: "150px",
+        height: "160px",
         textTransform: "capitalize",
         border: "3px",
-        borderColor: "#3f1200",
+        borderColor: "#7a3737",
         borderStyle: "solid",
   position: "absolute",
+  paddingRight: "50px",
  marginLeft: "-420px",      
       };
       const [style, SetStyle] = useState(infoHiddenStyle)
       const [id, SetId] = useState("inactive")
         let worldLocation = props.location;
         let fishnumber = props.data.id;
-        console.log(fishnumber);
     let availability = null; 
     let monthAvailable = null;
     let timeAvailable = null; 

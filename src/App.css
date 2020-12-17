@@ -22,35 +22,126 @@ ul {list-style: none;}
 display: inline;}
 
 .currentlyAvailable {position: relative;
-top: 80px;}
+top: 65px;}
+
 .fishImage {border: 1px solid #d1cca6;
 }
 
 
 
-.fishPicture {            max-width: 98px;
+.fishPicture {            max-width: 96px;
 max-height: 98px;}
 
 .fishPicture2 {      filter: contrast(0%) brightness(105%)  grayscale(80%);
-  max-width: 98px;
+  max-width: 96px;
   max-height: 98px;}
   
-
 .Header {box-shadow: 0px 2px 3px #d8cfa1;}
 
 .horizontalRow {display: flex;
 flex-direction: row;
-margin-top: 100px;}
+position: relative; 
+top: 80px;
+margin-left: 8px;}
+
 
 .left {float: left;}
 
+
+.mobile .column {margin-bottom: 0px;
+max-height: 310px;}
+.mobile .CurrentHemisphere {white-space: nowrap;
+  font-size: 14px;
+position: relative;
+bottom: 10px;}
+
+  .mobile .currentlyAvailable {position: relative;
+  top: 45px;}
+
+  .mobile .Header {font-size: 13px;
+  white-space: nowrap;
+max-height: 50px;
+min-width: 400px;
+position: relative;
+right: 20px;
+bottom: 5px;}
+
+  .mobile .horizontalRow {display: flex;
+    flex-wrap: wrap;
+    margin-top: 85px;
+    max-width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+  top: -20px;
+    } 
+
+    .mobile .fishInfoHidden {font-size: 12px;
+    min-height: 200px;
+  max-width: 150px;
+position: relative;
+left: 5px;}
+
+    .mobile .fishPicture {            max-width: 55px;
+      max-height: 82px;}
+      
+     .mobile .fishPicture2 {      filter: contrast(0%) brightness(105%)  grayscale(80%);
+      max-width: 55px;
+      max-height: 82px;}
+  
+.mobile .Northern {position: absolute;
+  left: 50px;
+top: 91px;
+}
+
+.mobile .Southern {position: absolute;
+  left: 201px;
+top: 91px;
+}
 .Northern {  position: absolute;
   left: 670px;
-top: 140px;}
+top: 125px;}
+
 
 .Southern {  position: absolute;
 right: 680px;
-top: 140px;}
+top: 125px;}
 
-.inactive {width: 0px;
+.tablet .Header {position: relative;
+  bottom: 10px;}
+
+  .tablet .CurrentHemisphere {white-space: nowrap;
+    font-size: 14px;
+  position: relative;
+  bottom: 10px;}
+
+  .tablet .currentlyAvailable {position: relative;
+    top: 50px;}
+
+    .tablet .fishPicture {            max-width: 55px;
+      max-height: 82px;}
+      
+     .tablet .fishPicture2 {      filter: contrast(0%) brightness(105%)  grayscale(80%);
+      max-width: 55px;
+      max-height: 82px;}
+
+      .tablet .horizontalRow {margin-left: 5px;
+        position: relative;
+        bottom: 35px;
+        } 
+
+    .tablet .Northern {position: absolute;
+    left: 370px;
+  top: 110px;
+  }
+  
+  .tablet .Southern {position: absolute;
+    left: 540px;
+  top: 110px;
+  }
+
+#inactive {width: 0px;
 height: 0px;}
+
+#active {animation: 5s disappear;}
+
