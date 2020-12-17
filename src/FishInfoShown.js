@@ -12,12 +12,21 @@ export default function FishInfoShown(props){
         opacity: "100%",
         backgroundColor: "#F5EBC1",
         zIndex: 2,
+        width: "413px",
+        height: "150px",
+        textTransform: "capitalize",
+  position: "absolute",
+  marginLeft: "100px",
+
       };
       const infoHiddenStyle = {
         lineHeight: "0px",
+        width: "0px",
+        height: "0px",
         opacity: "0%"
       };
       const [style, SetStyle] = useState(infoHiddenStyle)
+      const [id, SetId] = useState("inactive")
         let worldLocation = props.location;
     let availability = null; 
     let monthAvailable = null;
@@ -41,10 +50,13 @@ export default function FishInfoShown(props){
     if (time.includes(hours)){timeAvailable = true;}
     if (availability.includes(month)){monthAvailable = true;} 
 
-function DisplayFishInfo(){
-SetStyle(infoShownStyle);
-;}   
-
+    function DisplayFishInfo(){
+        let active = document.getElementById("active");
+        if(active){SetStyle(infoHiddenStyle);
+            SetId("inactive");}
+    else {SetStyle(infoShownStyle);
+        SetId("active");}
+    ;}   
 
 if (monthAvailable === true && timeAvailable === true)
 {return(
@@ -52,7 +64,7 @@ if (monthAvailable === true && timeAvailable === true)
             <div className="fishImage" onClick={DisplayFishInfo}> 
             <img src={image} alt="fish icon" className="fishPicture" />
             <div className="left">
-            <div className="fishInfoDisplayed" style={style}>
+            <div className="fishInfoHidden" style={style} id={id} >
 <ul>
     <li>Name: {fishName}</li>
     <li>Location: {findLocation}</li>
@@ -70,9 +82,9 @@ if (monthAvailable === true && timeAvailable === true)
     else {return(
         <div className="FishInfo" >
             <div className="fishImage" onClick={DisplayFishInfo}> 
-            <img src={image} alt="fish icon" className="fishPicture2" />
+            <img src={image} alt="fish icon" className="fishPicture2" onClick={DisplayFishInfo} />
             <div className="left">
-            <div className="fishInfoDisplayed" style={style}>
+            <div className="fishInfoHidden" style={style} id={id} >
 <ul>
     <li>Name: {fishName}</li>
     <li>Location: {findLocation}</li>

@@ -25,8 +25,6 @@ top: 80px;}
 .fishImage {border: 1px solid #d1cca6;
 }
 
-.fishInfoDisplayed {position: absolute;
-margin-left: 100px;}
 
 
 .fishPicture {            max-width: 98px;
@@ -52,3 +50,6 @@ top: 140px;}
 .Southern {  position: absolute;
 right: 680px;
 top: 140px;}
+
+.inactive {width: 0px;
+height: 0px;}
