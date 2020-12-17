@@ -84,8 +84,8 @@ if (loaded){return(
         <FishInfoShown data={fishInfo[39]} location={hemisphere}/>
             </div>
             <div className="column">
-        <FishInfoShown data={fishInfo[40]} location={hemisphere}/>
-        <FishInfoShown data={fishInfo[41]} location={hemisphere}/>
+        <FishInfoShown data={fishInfo[40]} location={hemisphere} />
+        <FishInfoShown data={fishInfo[41]} location={hemisphere} />
         <FishInfoShown data={fishInfo[42]} location={hemisphere}/>
         <FishInfoShown data={fishInfo[43]} location={hemisphere}/>
         <FishInfoShown data={fishInfo[44]} location={hemisphere}/>
@@ -133,11 +133,11 @@ if (loaded){return(
         <FishInfoShown data={fishInfo[74]} location={hemisphere}/>
             </div>
             <div className="column">
-        <FishInfoShown data={fishInfo[75]} location={hemisphere}/>
-        <FishInfoShown data={fishInfo[76]} location={hemisphere}/>
+        <FishInfoShown data={fishInfo[75]} location={hemisphere} />
+        <FishInfoShown data={fishInfo[76]} location={hemisphere}  />
         <FishInfoShown data={fishInfo[77]} location={hemisphere}/>
-        <FishInfoShown data={fishInfo[78]} location={hemisphere}/>
-        <FishInfoShown data={fishInfo[79]} location={hemisphere}/>
+        <FishInfoShown data={fishInfo[78]} location={hemisphere} />
+        <FishInfoShown data={fishInfo[79]} location={hemisphere}  />
             </div>
         </div>
      </div>

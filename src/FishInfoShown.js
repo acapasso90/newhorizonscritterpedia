@@ -5,7 +5,7 @@ export default function FishInfoShown(props){
     const cj = "price-cj";
     const phrase = "catch-phrase";
     const northernArray = "month-array-northern";
-    const southernArray = "month-array-southern";
+    const southernArray = "month-array-southern"; 
     const timeArray = "time-array";
     const infoShownStyle = {
         lineHeight: "normal",
@@ -15,19 +15,36 @@ export default function FishInfoShown(props){
         width: "413px",
         height: "150px",
         textTransform: "capitalize",
+        border: "3px",
+        borderColor: "#3f1200",
+        borderStyle: "solid",
   position: "absolute",
-  marginLeft: "100px",
-
-      };
+ marginLeft: "100px",      };
       const infoHiddenStyle = {
         lineHeight: "0px",
         width: "0px",
         height: "0px",
         opacity: "0%"
       };
+      const infoShownStyleRight = {
+        lineHeight: "normal",
+        opacity: "100%",
+        backgroundColor: "#F5EBC1",
+        zIndex: 2,
+        width: "413px",
+        height: "150px",
+        textTransform: "capitalize",
+        border: "3px",
+        borderColor: "#3f1200",
+        borderStyle: "solid",
+  position: "absolute",
+ marginLeft: "-420px",      
+      };
       const [style, SetStyle] = useState(infoHiddenStyle)
       const [id, SetId] = useState("inactive")
         let worldLocation = props.location;
+        let fishnumber = props.data.id;
+        console.log(fishnumber);
     let availability = null; 
     let monthAvailable = null;
     let timeAvailable = null; 
@@ -54,6 +71,8 @@ export default function FishInfoShown(props){
         let active = document.getElementById("active");
         if(active){SetStyle(infoHiddenStyle);
             SetId("inactive");}
+            else if (fishnumber >= 40) {SetStyle(infoShownStyleRight);
+                SetId("active");}
     else {SetStyle(infoShownStyle);
         SetId("active");}
     ;}   
