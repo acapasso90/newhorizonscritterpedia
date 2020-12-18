@@ -44,6 +44,9 @@ position: relative;
 top: 80px;
 margin-left: 8px;}
 
+.iconLinks {position: relative;
+bottom: 80px;
+left: 5px;}
 
 .left {float: left;}
 
@@ -76,7 +79,7 @@ bottom: 5px;}
   top: -20px;
     } 
 
-    .mobile .fishInfoHidden {font-size: 12px;
+    .mobile .active {font-size: 12px;
     min-height: 200px;
   max-width: 150px;
 position: relative;

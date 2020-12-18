@@ -42,8 +42,8 @@ export default function FishInfoShown(props){
   paddingRight: "50px",
  marginLeft: "-420px",      
       };
-      const [style, SetStyle] = useState(infoHiddenStyle)
-      const [id, SetId] = useState("inactive")
+      const [style, SetStyle] = useState(infoHiddenStyle);
+      const [id, SetId] = useState("inactive");
         let worldLocation = props.location;
         let fishnumber = props.data.id;
     let availability = null; 
@@ -69,13 +69,15 @@ export default function FishInfoShown(props){
     if (availability.includes(month)){monthAvailable = true;} 
 
     function DisplayFishInfo(){
-        let active = document.getElementById("active");
+        let active = document.getElementById('active');
         if(active){SetStyle(infoHiddenStyle);
             SetId("inactive");}
             else if (fishnumber >= 40) {SetStyle(infoShownStyleRight);
-                SetId("active");}
+                SetId("active");
+}
     else {SetStyle(infoShownStyle);
-        SetId("active");}
+        SetId("active");
+}
     ;}   
 
 if (monthAvailable === true && timeAvailable === true)
