@@ -61,13 +61,16 @@ bottom: 10px;}
   .mobile .currentlyAvailable {position: relative;
   top: 45px;}
 
-  .mobile .Header {font-size: 13px;
+  .mobile .Header {font-size: 10px;
   white-space: nowrap;
 max-height: 50px;
 min-width: 400px;
 position: relative;
-right: 20px;
+left: 5px;
 bottom: 5px;}
+
+.mobile .headerText {position: relative;
+left: 40px;}
 
   .mobile .horizontalRow {display: flex;
     flex-wrap: wrap;
@@ -78,6 +81,13 @@ bottom: 5px;}
     position: relative;
   top: -20px;
     } 
+
+.mobile .iconLinks {position: relative;
+  bottom: 47px;
+  left: -5px;}
+
+  .mobile .iconLinks img {max-width: 40px;
+  max-height: 40px;}
 
     .mobile .active {font-size: 12px;
     min-height: 200px;

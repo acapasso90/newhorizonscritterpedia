@@ -6,7 +6,8 @@ import octopus from "./octopus.png";
 export default function Header(){
     return(
         <div className="Header">
-            <h1>New Horizon's Fish App</h1>
+            <div className="headerText">
+            <h1>New Horizon's Fish App</h1></div>
             <div className="left">
                 <div className="iconLinks">
             <img src={butterfly} alt="bugs" />
