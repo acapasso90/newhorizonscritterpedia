@@ -22,7 +22,11 @@ ul {list-style: none;}
 display: inline;}
 
 .currentlyAvailable {position: relative;
-top: 65px;}
+top: 65px;
+right: 80px;}
+
+.CurrentHemisphere {position: relative;
+  right: 80px;}
 
 .fishImage {border: 1px solid #d1cca6;
 }

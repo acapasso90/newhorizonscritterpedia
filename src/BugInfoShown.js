@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 
-export default function FishInfoShown(props){
+export default function BugInfoShown(props){
     const english = "name-USen";
     const cj = "price-cj";
     const phrase = "catch-phrase";
@@ -47,7 +47,7 @@ export default function FishInfoShown(props){
       const [style, SetStyle] = useState(infoHiddenStyle);
       const [id, SetId] = useState("inactive");
         let worldLocation = props.location;
-        let fishnumber = props.data.id;
+        let bugnumber = props.data.id;
     let availability = null; 
     let monthAvailable = null;
     let timeAvailable = null; 
@@ -57,7 +57,7 @@ export default function FishInfoShown(props){
     else {availability = props.data.availability[southernArray];
         displayAvailabilty = props.data.availability[southernMonths];}
     let findLocation = props.data.availability.location;
-    let fishName = props.data.name[english];
+    let bugName = props.data.name[english];
        let image = props.data.icon_uri;
         let priceNormal = props.data.price;
        let  priceCJ = props.data[cj];
@@ -73,11 +73,11 @@ export default function FishInfoShown(props){
     if (time.includes(hours)){timeAvailable = true;}
     if (availability.includes(month)){monthAvailable = true;} 
 
-    function DisplayFishInfo(){
+    function DisplayBugInfo(){
         let active = document.getElementById('active');
         if(active){SetStyle(infoHiddenStyle);
             SetId("inactive");}
-            else if (fishnumber >= 40) {SetStyle(infoShownStyleRight);
+            else if (bugnumber >= 40) {SetStyle(infoShownStyleRight);
                 SetId("active");
 }
     else {SetStyle(infoShownStyle);
@@ -87,13 +87,13 @@ export default function FishInfoShown(props){
 
 if (monthAvailable === true && timeAvailable === true)
 {return(
-        <div className="FishInfo">
-            <div className="fishImage" onClick={DisplayFishInfo}> 
-            <img src={image} alt="fish icon" className="fishPicture" />
+        <div className="BugInfo">
+            <div className="bugImage" onClick={DisplayBugInfo}> 
+            <img src={image} alt="bug icon" className="fishPicture" />
             <div className="left">
-            <div className="fishInfoHidden" style={style} id={id} >
+            <div className="bugInfoHidden" style={style} id={id} >
 <ul>
-    <li>Name: {fishName}</li>
+    <li>Name: {bugName}</li>
     <li>Location: {findLocation}</li>
     <li>Months Available: {displayAvailabilty} </li>
     <li>Price: {priceNormal} bells</li>
@@ -108,13 +108,13 @@ if (monthAvailable === true && timeAvailable === true)
     )
     }
     else {return(
-        <div className="FishInfo" >
-            <div className="fishImage" onClick={DisplayFishInfo}> 
-            <img src={image} alt="fish icon" className="fishPicture2" onClick={DisplayFishInfo} />
+        <div className="BugInfo" >
+            <div className="bugImage" onClick={DisplayBugInfo}> 
+            <img src={image} alt="bug icon" className="fishPicture2" onClick={DisplayBugInfo} />
             <div className="left">
-            <div className="fishInfoHidden" style={style} id={id} >
+            <div className="bugInfoHidden" style={style} id={id} >
 <ul>
-    <li>Name: {fishName}</li>
+    <li>Name: {bugName}</li>
     <li>Location: {findLocation}</li>
     <li>Months Available: {displayAvailabilty} </li>
     <li>Price: {priceNormal} bells</li>
