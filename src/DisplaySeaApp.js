@@ -1,25 +1,25 @@
 import './App.css';
-import BugApp from "./BugApp.js";
+import DeepSeaApp from "./DeepSeaApp.js";
 import MediaQuery from 'react-responsive'
 
 
-export default function DisplayBugApp() {
+export default function DisplaySeaApp() {
   return (
     <div className="App">
       <header className="header">
         <div className="mobile">
       <MediaQuery maxDeviceWidth={410}>
-        <BugApp />
+        <DeepSeaApp />
         </MediaQuery>
         </div>
         <div className="tablet">
       <MediaQuery minDeviceWidth={411} maxDeviceWidth={1025}>
-        <BugApp />
+        <DeepSeaApp />
         </MediaQuery>
         </div>
         <div className="pc">
       <MediaQuery minDeviceWidth={1026}>
-        <BugApp />
+        <DeepSeaApp />
         </MediaQuery>
         </div>
       </header>

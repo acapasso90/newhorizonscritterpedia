@@ -1,8 +1,7 @@
 import React, {useState} from "react";
 
-export default function BugInfoShown(props){
+export default function SeaCrittersInfoShown(props){
     const english = "name-USen";
-    const flick = "price-flick";
     const phrase = "catch-phrase";
     const northernArray = "month-array-northern";
     const southernArray = "month-array-southern"; 
@@ -15,7 +14,7 @@ export default function BugInfoShown(props){
         backgroundColor: "#F5EBC1",
         zIndex: 2,
         width: "413px",
-        height: "160px",
+        height: "180px",
         textTransform: "capitalize",
         border: "3px",
         borderColor: "#7a3737",
@@ -24,30 +23,31 @@ export default function BugInfoShown(props){
   position: "absolute",
  marginLeft: "100px",      };
       const infoHiddenStyle = {
-        lineHeight: "0px",
+        lineHeight: "0",
+        opacity: "0%",
         width: "0px",
         height: "0px",
-        opacity: "0%"
+        position: "absolute",
       };
       const infoShownStyleRight = {
         lineHeight: "normal",
         opacity: "100%",
         backgroundColor: "#F5EBC1",
         zIndex: 2,
-        width: "413px",
-        height: "160px",
+        minWidth: "413px",
+        height: "180px",
         textTransform: "capitalize",
         border: "3px",
         borderColor: "#7a3737",
         borderStyle: "solid",
   position: "absolute",
-  paddingRight: "50px",
- marginLeft: "-420px",      
+  left: "182px",
+  paddingRight: "50px"
       };
       const [style, SetStyle] = useState(infoHiddenStyle);
       const [id, SetId] = useState("inactive");
         let worldLocation = props.location;
-        let bugnumber = props.data.id;
+        let SeaCrittersnumber = props.data.id;
     let availability = null; 
     let monthAvailable = null;
     let timeAvailable = null; 
@@ -57,10 +57,11 @@ export default function BugInfoShown(props){
     else {availability = props.data.availability[southernArray];
         displayAvailabilty = props.data.availability[southernMonths];}
     let findLocation = props.data.availability.location;
-    let bugName = props.data.name[english];
+    let SeaCrittersName = props.data.name[english];
        let image = props.data.icon_uri;
         let priceNormal = props.data.price;
-       let  priceflick = props.data[flick];
+       let  speed = props.data.speed;
+       let shadow = props.data.shadow;
       let  catchphrase = props.data[phrase];
         let allDay = props.data.availability.isAllDay;
         if (allDay === true){timeAvailable = true;}
@@ -73,11 +74,11 @@ export default function BugInfoShown(props){
     if (time.includes(hours)){timeAvailable = true;}
     if (availability.includes(month)){monthAvailable = true;} 
 
-    function DisplayBugInfo(){
+    function DisplaySeaCrittersInfo(){
         let active = document.getElementById('active');
         if(active){SetStyle(infoHiddenStyle);
             SetId("inactive");}
-            else if (bugnumber >= 40) {SetStyle(infoShownStyleRight);
+            else if (SeaCrittersnumber >= 20) {SetStyle(infoShownStyleRight);
                 SetId("active");
 }
     else {SetStyle(infoShownStyle);
@@ -87,17 +88,18 @@ export default function BugInfoShown(props){
 
 if (monthAvailable === true && timeAvailable === true)
 {return(
-        <div className="BugInfo">
-            <div className="bugImage" onClick={DisplayBugInfo}> 
-            <img src={image} alt="bug icon" className="fishPicture" />
+        <div className="SeaCrittersInfo">
+            <div className="SeaCrittersImage" onClick={DisplaySeaCrittersInfo}> 
+            <img src={image} alt="SeaCritters icon" className="fishPicture" />
             <div className="left">
-            <div className="bugInfoHidden" style={style} id={id} >
+            <div className="SeaCrittersInfoHidden" style={style} id={id} >
 <ul>
-    <li>Name: {bugName}</li>
+    <li>Name: {SeaCrittersName}</li>
     <li>Location: {findLocation}</li>
     <li>Months Available: {displayAvailabilty} </li>
     <li>Price: {priceNormal} bells</li>
-    <li>Flick Price: {priceflick} bells</li>
+    <li>Speed: {speed} </li>
+    <li>Shadow: {shadow} </li>
     <li>"{catchphrase}"</li>
 </ul>
 
@@ -108,17 +110,18 @@ if (monthAvailable === true && timeAvailable === true)
     )
     }
     else {return(
-        <div className="BugInfo" >
-            <div className="bugImage" onClick={DisplayBugInfo}> 
-            <img src={image} alt="bug icon" className="fishPicture2" onClick={DisplayBugInfo} />
+        <div className="SeaCrittersInfo" >
+            <div className="SeaCrittersImage" onClick={DisplaySeaCrittersInfo}> 
+            <img src={image} alt="SeaCritters icon" className="fishPicture2" onClick={DisplaySeaCrittersInfo} />
             <div className="left">
-            <div className="bugInfoHidden" style={style} id={id} >
+            <div className="SeaCrittersInfoHidden" style={style} id={id} >
 <ul>
-    <li>Name: {bugName}</li>
+    <li>Name: {SeaCrittersName}</li>
     <li>Location: {findLocation}</li>
     <li>Months Available: {displayAvailabilty} </li>
     <li>Price: {priceNormal} bells</li>
-    <li>Flick Price: {priceflick} bells</li>
+    <li>Speed: {speed} </li>
+    <li>Shadow: {shadow} </li>
     <li>"{catchphrase}"</li>
 </ul>
 

@@ -28,7 +28,7 @@ right: 80px;}
 .CurrentHemisphere {position: relative;
   right: 80px;}
 
-.fishImage {border: 1px solid #d1cca6;
+.fishImage, .bugImage, .SeaCrittersImage {border: 1px solid #d1cca6;
 }
 
 
@@ -39,14 +39,25 @@ max-height: 98px;}
 .fishPicture2 {      filter: contrast(0%) brightness(105%)  grayscale(80%);
   max-width: 96px;
   max-height: 98px;}
-  
-.Header {box-shadow: 0px 2px 3px #d8cfa1;}
 
-.horizontalRow {display: flex;
-flex-direction: row;
-position: relative; 
-top: 80px;
-margin-left: 8px;}
+  .getFishInfo .horizontalRow {display: flex;
+    flex-direction: row;
+    position: relative; 
+    top: 80px;
+    left: 7px;}
+
+    .getBugInfo .horizontalRow {display: flex;
+      flex-direction: row;
+      position: relative; 
+      top: 80px;
+      left: 7px;}
+  
+
+.Header {box-shadow: 0px 2px 3px #d8cfa1;
+}
+
+.headerText {text-align: right;}
+
 
 .iconLinks {position: relative;
 bottom: 80px;
@@ -119,6 +130,14 @@ top: 91px;
   left: 670px;
 top: 125px;}
 
+.getSeaCrittersInfo .horizontalRow {width: 800px;
+margin-left: auto;
+margin-right: auto;
+display: flex;
+    flex-direction: row;
+    position: relative; 
+    top: 80px;
+}
 
 .Southern {  position: absolute;
 right: 680px;
@@ -160,5 +179,4 @@ top: 125px;}
 #inactive {width: 0px;
 height: 0px;}
 
-#active {animation: 5s disappear;}
 
