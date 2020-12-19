@@ -7,6 +7,7 @@ button, button:hover {background-color: #da8f4d;
   color: #440f0f;
   padding: 15px 25px;
   border-radius: 4px;
+  position: absolute;
    }
   
    button:active {margin-top: 2px;
@@ -40,6 +41,9 @@ max-height: 98px;}
   max-width: 96px;
   max-height: 98px;}
 
+.footer {font-size: 18px;
+text-align: center;
+margin-top: 100px;}
   .getFishInfo .horizontalRow {display: flex;
     flex-direction: row;
     position: relative; 

@@ -34,13 +34,13 @@ export default function SeaCrittersInfoShown(props){
         opacity: "100%",
         backgroundColor: "#F5EBC1",
         zIndex: 2,
-        minWidth: "413px",
+        width: "413px",
         height: "180px",
         textTransform: "capitalize",
         border: "3px",
         borderColor: "#7a3737",
         borderStyle: "solid",
-  position: "absolute",
+        position: "absolute",
   left: "182px",
   paddingRight: "50px"
       };

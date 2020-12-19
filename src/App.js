@@ -1,6 +1,6 @@
 import React from "react";
 import './App.css';
-import { BrowserRouter as Router, Route, Link, Switch} from "react-router-dom";
+import { BrowserRouter as Router, Route, NavLink, Switch} from "react-router-dom";
 import fish from "./fish.png";
 import DisplaySeaApp from "./DisplaySeaApp.js";
 import DisplayFishApp from "./DisplayFishApp.js";
@@ -20,9 +20,9 @@ return (
             <div className="left">
                 <div className="iconLinks">
                 <nav>
-                <Link to="/bugs" style={{ textDecoration: 'none' }}> <img src={butterfly} alt="bug" /></Link>
-        <Link to="/" style={{ textDecoration: 'none' }}> <img src={fish} alt="fish" /></Link>
-        <Link to="/deepsea" style={{ textDecoration: 'none' }}><img src={octopus} alt="deep-sea" /> </Link>
+                <NavLink to="/bugs" style={{ textDecoration: 'none' }} > <img src={butterfly} alt="bug" /></NavLink>
+        <NavLink to="/"  style={{ textDecoration: 'none' }} > <img src={fish} alt="fish" /></NavLink>
+        <NavLink to="/deepsea" style={{ textDecoration: 'none' }} ><img src={octopus} alt="deep-sea" /> </NavLink>
        </nav>
             </div>
             </div>
@@ -34,6 +34,9 @@ return (
     <Route render={() => <h1>404: page not found</h1>} />
     </Switch>
          </main>
+         <div className="footer">
+      <footer><a href="https://github.com/acapasso90/newhorizonscritterpedia" target="_blank"  rel="noreferrer">Open-sourced</a> app built by <a href="https://www.amandacapasso.com" target="_blank"  rel="noreferrer">Amanda Capasso</a></footer>
+      </div>
     </Router>
   );
 }
