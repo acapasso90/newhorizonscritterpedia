@@ -19,15 +19,48 @@ ul {list-style: none;}
   text-align: center;
 }
 
+.backdrop1{background-color: #ffff;
+  height: 80px;
+  width: 80px;
+  position: relative;
+  bottom: 5px;
+border-radius: 50%;}
+
+.backdrop2{background-color: #ffff;
+  height: 80px;
+  width: 80px;
+border-radius: 50%;
+position: relative;
+bottom: 5px;
+right: 30px;}
+
+.backdrop3 {background-color: #ffff;
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  position: relative;
+  bottom: 5px;
+  right: 60px;}
+
+  .butterfly {position: relative;
+  bottom: 75px;
+left: 15px;}
+.fishpic {position: relative;
+  bottom: 75px;
+  left: 8px;}
+
+  .octopus {position: relative;
+    bottom: 75px;
+  left: 5px;}
 .buttons {white-space: nowrap;
 display: inline;}
 
 .currentlyAvailable {position: relative;
 top: 65px;
-right: 80px;}
+right: 110px;}
 
 .CurrentHemisphere {position: relative;
-  right: 80px;}
+  right: 110px;}
 
 .fishImage, .bugImage, .SeaCrittersImage {border: 1px solid #d1cca6;
 }
@@ -48,13 +81,13 @@ margin-top: 100px;}
     flex-direction: row;
     position: relative; 
     top: 80px;
-    left: 7px;}
+    right: 232px;}
 
     .getBugInfo .horizontalRow {display: flex;
       flex-direction: row;
       position: relative; 
       top: 80px;
-      left: 7px;}
+      right: 232px;}
   
 
 .Header {box-shadow: 0px 2px 3px #d8cfa1;
@@ -134,7 +167,7 @@ top: 91px;
   left: 670px;
 top: 125px;}
 
-.getSeaCrittersInfo .horizontalRow {width: 800px;
+.getSeaCrittersInfo .horizontalRow {width: 1040px;
 margin-left: auto;
 margin-right: auto;
 display: flex;
@@ -180,6 +213,8 @@ top: 125px;}
   top: 110px;
   }
 
+.row {display: flex;
+flex-direction: row;}
 #inactive {width: 0px;
 height: 0px;}
 

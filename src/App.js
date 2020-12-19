@@ -19,10 +19,15 @@ return (
             <h1>New Horizon's Critterpedia</h1></div>
             <div className="left">
                 <div className="iconLinks">
+                  <div className="row">
+                  <div className="backdrop1"></div>
+                  <div className="backdrop2"></div>
+                  <div className="backdrop3"></div>
+                  </div>
                 <nav>
-                <NavLink to="/bugs" style={{ textDecoration: 'none' }} > <img src={butterfly} alt="bug" /></NavLink>
-        <NavLink to="/"  style={{ textDecoration: 'none' }} > <img src={fish} alt="fish" /></NavLink>
-        <NavLink to="/deepsea" style={{ textDecoration: 'none' }} ><img src={octopus} alt="deep-sea" /> </NavLink>
+                <NavLink to="/bugs" style={{ textDecoration: 'none' }} > <img src={butterfly} alt="bug" className="butterfly"/></NavLink>
+        <NavLink to="/"  style={{ textDecoration: 'none' }} > <img src={fish} alt="fish" className="fishpic"/></NavLink>
+        <NavLink to="/deepsea" style={{ textDecoration: 'none' }} ><img src={octopus} alt="deep-sea" className="octopus"/> </NavLink>
        </nav>
             </div>
             </div>
