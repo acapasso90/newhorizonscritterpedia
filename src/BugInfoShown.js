@@ -31,25 +31,9 @@ export default function BugInfoShown(props){
         height: "0px",
         opacity: "0%"
       };
-      const infoShownStyleRight = {
-        lineHeight: "normal",
-        opacity: "100%",
-        backgroundColor: "#F5EBC1",
-        zIndex: 2,
-        width: "413px",
-        height: "180px",
-        textTransform: "capitalize",
-        border: "3px",
-        borderColor: "#7a3737",
-        borderStyle: "solid",
-  position: "absolute",
-  paddingRight: "50px",
- marginLeft: "-420px",      
-      };
       const [style, SetStyle] = useState(infoHiddenStyle);
       const [id, SetId] = useState("inactive");
         let worldLocation = props.location;
-        let bugnumber = props.data.id;
     let availability = null; 
     let monthAvailable = null;
     let timeAvailable = null; 
@@ -84,9 +68,6 @@ export default function BugInfoShown(props){
         let active = document.getElementById('active');
         if(active){SetStyle(infoHiddenStyle);
             SetId("inactive");}
-            else if (bugnumber >= 40) {SetStyle(infoShownStyleRight);
-                SetId("active");
-}
     else {SetStyle(infoShownStyle);
         SetId("active");
 }
@@ -97,7 +78,6 @@ if (monthAvailable === true && timeAvailable === true)
         <div className="BugInfo">
             <div className="bugImage" onClick={DisplayBugInfo}> 
             <img src={image} alt="bug icon" className="fishPicture" />
-            <div className="left">
             <div className="bugInfoHidden" style={style} id={id} >
 <ul>
 <li> <img src={realisticImage} alt="bug realistic" className="fishRealistic" /></li>
@@ -114,14 +94,13 @@ if (monthAvailable === true && timeAvailable === true)
 </div>
             </div>
         </div>
-        </div>
+
     )
     }
     else {return(
         <div className="BugInfo" >
             <div className="bugImage" onClick={DisplayBugInfo}> 
             <img src={image} alt="bug icon" className="fishPicture2" onClick={DisplayBugInfo} />
-            <div className="left">
             <div className="bugInfoHidden" style={style} id={id} >
 <ul>
 <li> <img src={realisticImage} alt="bug realistic" className="fishRealistic" /></li>
@@ -137,6 +116,5 @@ if (monthAvailable === true && timeAvailable === true)
 
 </div>
             </div>
-        </div>
         </div>
     )}}

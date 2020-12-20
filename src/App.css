@@ -100,7 +100,6 @@ margin-top: 100px;}
 bottom: 80px;
 left: 5px;}
 
-.left {float: left;}
 
 
 .mobile .column {margin-bottom: 0px;
@@ -219,3 +218,7 @@ flex-direction: row;}
 height: 0px;}
 
 
+.pc .SeaCrittersInfoHidden {top: -260px;
+  right: -152px;
+min-width: 1528px;
+min-height: 600px;}

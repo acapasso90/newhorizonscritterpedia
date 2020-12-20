@@ -31,25 +31,9 @@ export default function FishInfoShown(props){
         height: "0px",
         opacity: "0%"
       };
-      const infoShownStyleRight = {
-        lineHeight: "normal",
-        opacity: "100%",
-        backgroundColor: "#F5EBC1",
-        zIndex: 2,
-        width: "413px",
-        minHeight: "240px",
-        textTransform: "capitalize",
-        border: "3px",
-        borderColor: "#7a3737",
-        borderStyle: "solid",
-  position: "absolute",
-  paddingRight: "50px",
- marginLeft: "-420px",      
-      };
       const [style, SetStyle] = useState(infoHiddenStyle);
       const [id, SetId] = useState("inactive");
         let worldLocation = props.location;
-        let fishnumber = props.data.id;
     let availability = null; 
     let monthAvailable = null;
     let timeAvailable = null; 
@@ -85,9 +69,6 @@ export default function FishInfoShown(props){
         let active = document.getElementById('active');
         if(active){SetStyle(infoHiddenStyle);
             SetId("inactive");}
-            else if (fishnumber >= 40) {SetStyle(infoShownStyleRight);
-                SetId("active");
-}
     else {SetStyle(infoShownStyle);
         SetId("active");
 }
@@ -98,7 +79,6 @@ if (monthAvailable === true && timeAvailable === true)
         <div className="FishInfo">
             <div className="fishImage" onClick={DisplayFishInfo}> 
             <img src={image} alt="fish icon" className="fishPicture" />
-            <div className="left">
             <div className="fishInfoHidden" style={style} id={id} >
 <ul>
 <li> <img src={realisticImage} alt="fish realistic" className="fishRealistic" /></li>
@@ -113,7 +93,6 @@ if (monthAvailable === true && timeAvailable === true)
 </ul>
 
 </div>
-            </div>
         </div>
         </div>
     )
@@ -122,7 +101,6 @@ if (monthAvailable === true && timeAvailable === true)
      <div className="FishInfo" >
             <div className="fishImage" onClick={DisplayFishInfo}> 
             <img src={image} alt="fish" className="fishPicture2" onClick={DisplayFishInfo} />
-            <div className="left">
             <div className="fishInfoHidden" style={style} id={id} >
 <ul>
 <li> <img src={realisticImage} alt="fish realistic" className="fishRealistic" /></li>
@@ -138,6 +116,5 @@ if (monthAvailable === true && timeAvailable === true)
 
 </div>
             </div>
-        </div>
         </div>
     )}}

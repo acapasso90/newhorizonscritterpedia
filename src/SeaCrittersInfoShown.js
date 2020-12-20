@@ -22,8 +22,7 @@ export default function SeaCrittersInfoShown(props){
         borderColor: "#7a3737",
         paddingRight: "50px",
         borderStyle: "solid",
-  position: "absolute",
- marginLeft: "100px",      };
+  position: "absolute",  };
       const infoHiddenStyle = {
         lineHeight: "0",
         opacity: "0%",
@@ -31,25 +30,9 @@ export default function SeaCrittersInfoShown(props){
         height: "0px",
         position: "absolute",
       };
-      const infoShownStyleRight = {
-        lineHeight: "normal",
-        opacity: "100%",
-        backgroundColor: "#F5EBC1",
-        zIndex: 2,
-        width: "413px",
-        minHeight: "280px",
-        textTransform: "capitalize",
-        border: "3px",
-        borderColor: "#7a3737",
-        borderStyle: "solid",
-        position: "absolute",
-  left: "182px",
-  paddingRight: "50px"
-      };
       const [style, SetStyle] = useState(infoHiddenStyle);
       const [id, SetId] = useState("inactive");
         let worldLocation = props.location;
-        let SeaCrittersnumber = props.data.id;
     let availability = null; 
     let monthAvailable = null;
     let timeAvailable = null; 
@@ -84,9 +67,6 @@ export default function SeaCrittersInfoShown(props){
         let active = document.getElementById('active');
         if(active){SetStyle(infoHiddenStyle);
             SetId("inactive");}
-            else if (SeaCrittersnumber >= 20) {SetStyle(infoShownStyleRight);
-                SetId("active");
-}
     else {SetStyle(infoShownStyle);
         SetId("active");
 }
@@ -97,7 +77,6 @@ if (monthAvailable === true && timeAvailable === true)
         <div className="SeaCrittersInfo">
             <div className="SeaCrittersImage" onClick={DisplaySeaCrittersInfo}> 
             <img src={image} alt="SeaCritters icon" className="fishPicture" />
-            <div className="left">
             <div className="SeaCrittersInfoHidden" style={style} id={id} >
 <ul>
 <li> <img src={realisticImage} alt="sea realistic" className="fishRealistic" /></li>
@@ -111,7 +90,6 @@ if (monthAvailable === true && timeAvailable === true)
     <li><img src={Blathers} alt="Blathers" ></img>"{blathers}"</li>
 </ul>
 
-</div>
             </div>
         </div>
         </div>
@@ -121,7 +99,6 @@ if (monthAvailable === true && timeAvailable === true)
         <div className="SeaCrittersInfo" >
             <div className="SeaCrittersImage" onClick={DisplaySeaCrittersInfo}> 
             <img src={image} alt="SeaCritters icon" className="fishPicture2" onClick={DisplaySeaCrittersInfo} />
-            <div className="left">
             <div className="SeaCrittersInfoHidden" style={style} id={id} >
 <ul>
 <li> <img src={realisticImage} alt="sea realistic" className="fishRealistic" /></li>
@@ -136,7 +113,6 @@ if (monthAvailable === true && timeAvailable === true)
 </ul>
 
 </div>
-            </div>
         </div>
         </div>
     )}}
