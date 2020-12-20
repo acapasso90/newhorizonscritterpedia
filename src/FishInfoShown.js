@@ -101,7 +101,7 @@ if (monthAvailable === true && timeAvailable === true)
             <div className="left">
             <div className="fishInfoHidden" style={style} id={id} >
 <ul>
-<li> <img src={realisticImage} alt="fish image" className="fishRealistic" /></li>
+<li> <img src={realisticImage} alt="fish realistic" className="fishRealistic" /></li>
         <li>Name: {fishName}</li>
     <li>Location: {findLocation}</li>
     <li> Time Available: {timeDisplayed} </li>
@@ -121,11 +121,11 @@ if (monthAvailable === true && timeAvailable === true)
     else {return(
      <div className="FishInfo" >
             <div className="fishImage" onClick={DisplayFishInfo}> 
-            <img src={image} alt="fish icon" className="fishPicture2" onClick={DisplayFishInfo} />
+            <img src={image} alt="fish" className="fishPicture2" onClick={DisplayFishInfo} />
             <div className="left">
             <div className="fishInfoHidden" style={style} id={id} >
 <ul>
-<li> <img src={realisticImage} alt="fish image" className="fishRealistic" /></li>
+<li> <img src={realisticImage} alt="fish realistic" className="fishRealistic" /></li>
     <li>Name: {fishName}</li>
     <li>Location: {findLocation}</li>
     <li> Time Available: {timeDisplayed} </li>
