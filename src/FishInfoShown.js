@@ -1,9 +1,11 @@
 import React, {useState} from "react";
+import Blathers from "./Blathers.png";
 
 export default function FishInfoShown(props){
     const english = "name-USen";
     const cj = "price-cj";
     const phrase = "catch-phrase";
+    const blathersPhrase = "museum-phrase";
     const northernArray = "month-array-northern";
     const southernArray = "month-array-southern"; 
     const northernMonths = "month-northern";
@@ -15,7 +17,7 @@ export default function FishInfoShown(props){
         backgroundColor: "#F5EBC1",
         zIndex: 2,
         width: "413px",
-        height: "180px",
+        minHeight: "240px",
         textTransform: "capitalize",
         border: "3px",
         borderColor: "#7a3737",
@@ -35,7 +37,7 @@ export default function FishInfoShown(props){
         backgroundColor: "#F5EBC1",
         zIndex: 2,
         width: "413px",
-        height: "180px",
+        minHeight: "240px",
         textTransform: "capitalize",
         border: "3px",
         borderColor: "#7a3737",
@@ -51,6 +53,10 @@ export default function FishInfoShown(props){
     let availability = null; 
     let monthAvailable = null;
     let timeAvailable = null; 
+    let timeDisplayed = props.data.availability.time;
+    if (timeDisplayed.length < 1){timeDisplayed = "All Day";}
+    let rarity = props.data.availability.rarity;
+    console.log(timeDisplayed);
     let displayAvailabilty = null;
     if (worldLocation === "Northern"){availability = props.data.availability[northernArray];
     displayAvailabilty = props.data.availability[northernMonths]}
@@ -59,9 +65,11 @@ export default function FishInfoShown(props){
     let findLocation = props.data.availability.location;
     let fishName = props.data.name[english];
        let image = props.data.icon_uri;
+       let realisticImage = props.data.image_uri;
         let priceNormal = props.data.price;
        let  priceCJ = props.data[cj];
       let  catchphrase = props.data[phrase];
+      let blathers = props.data[blathersPhrase];
         let allDay = props.data.availability.isAllDay;
         if (allDay === true){timeAvailable = true;}
         let allYear = props.data.availability.isAllYear;    
@@ -93,12 +101,15 @@ if (monthAvailable === true && timeAvailable === true)
             <div className="left">
             <div className="fishInfoHidden" style={style} id={id} >
 <ul>
-    <li>Name: {fishName}</li>
+<li> <img src={realisticImage} alt="fish image" className="fishRealistic" /></li>
+        <li>Name: {fishName}</li>
     <li>Location: {findLocation}</li>
-    <li>Months Available: {displayAvailabilty} </li>
+    <li> Time Available: {timeDisplayed} </li>
+    <li> Rarity: {rarity}</li>
     <li>Price: {priceNormal} bells</li>
     <li>CJ Price: {priceCJ} bells</li>
     <li>"{catchphrase}"</li>
+    <li><img src={Blathers} alt="Blathers" ></img>"{blathers}"</li>
 </ul>
 
 </div>
@@ -108,18 +119,21 @@ if (monthAvailable === true && timeAvailable === true)
     )
     }
     else {return(
-        <div className="FishInfo" >
+     <div className="FishInfo" >
             <div className="fishImage" onClick={DisplayFishInfo}> 
             <img src={image} alt="fish icon" className="fishPicture2" onClick={DisplayFishInfo} />
             <div className="left">
             <div className="fishInfoHidden" style={style} id={id} >
 <ul>
+<li> <img src={realisticImage} alt="fish image" className="fishRealistic" /></li>
     <li>Name: {fishName}</li>
     <li>Location: {findLocation}</li>
-    <li>Months Available: {displayAvailabilty} </li>
+    <li> Time Available: {timeDisplayed} </li>
+    <li> Rarity: {rarity}</li>
     <li>Price: {priceNormal} bells</li>
     <li>CJ Price: {priceCJ} bells</li>
     <li>"{catchphrase}"</li>
+    <li><img src={Blathers} alt="Blathers" ></img>"{blathers}"</li>
 </ul>
 
 </div>
