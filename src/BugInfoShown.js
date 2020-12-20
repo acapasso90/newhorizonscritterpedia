@@ -8,24 +8,24 @@ export default function BugInfoShown(props){
     const blathersPhrase = "museum-phrase";
     const northernArray = "month-array-northern";
     const southernArray = "month-array-southern"; 
-    const northernMonths = "month-northern";
-    const southernMonths = "month-southern";
+   // const northernMonths = "month-northern";
+  //  const southernMonths = "month-southern";
     const timeArray = "time-array";
     const infoShownStyle = {
         lineHeight: "normal",
         opacity: "100%",
         backgroundColor: "#F5EBC1",
         zIndex: 2,
-        width: "413px",
-        height: "180px",
         textTransform: "capitalize",
         border: "3px",
         borderColor: "#7a3737",
         paddingRight: "50px",
         borderStyle: "solid",
-  position: "absolute",
- marginLeft: "100px",      };
+  position: "absolute", 
+top: "-260px", 
+right: "-233px"};
       const infoHiddenStyle = {
+        position: "absolute",
         lineHeight: "0px",
         width: "0px",
         height: "0px",
@@ -39,11 +39,11 @@ export default function BugInfoShown(props){
     let timeAvailable = null; 
     let timeDisplayed = props.data.availability.time;
     if (timeDisplayed.length < 1){timeDisplayed = "All Day";}
-    let displayAvailabilty = null;
-    if (worldLocation === "Northern"){availability = props.data.availability[northernArray];
-    displayAvailabilty = props.data.availability[northernMonths]}
-    else {availability = props.data.availability[southernArray];
-        displayAvailabilty = props.data.availability[southernMonths];}
+   // let displayAvailabilty = null;
+    if (worldLocation === "Northern"){availability = props.data.availability[northernArray];}
+  //  displayAvailabilty = props.data.availability[northernMonths]}
+    else {availability = props.data.availability[southernArray];}
+       // displayAvailabilty = props.data.availability[southernMonths];}
     let findLocation = props.data.availability.location;
     let rarity = props.data.availability.rarity;
     let bugName = props.data.name[english];
@@ -70,8 +70,7 @@ export default function BugInfoShown(props){
             SetId("inactive");}
     else {SetStyle(infoShownStyle);
         SetId("active");
-}
-    ;}   
+}}   
 
 if (monthAvailable === true && timeAvailable === true)
 {return(
@@ -87,8 +86,8 @@ if (monthAvailable === true && timeAvailable === true)
     <li> Rarity: {rarity}</li>
     <li>Price: {priceNormal} bells</li>
     <li>Flick Price: {priceflick} bells</li>
-    <li>"{catchphrase}"</li>
-    <li><img src={Blathers} alt="Blathers" ></img>"{blathers}"</li>
+    <li>&quot;{catchphrase}&quot;</li>
+    <li><img src={Blathers} alt="Blathers" ></img>&quot;{blathers}&quot;</li>
 </ul>
 
 </div>
@@ -110,8 +109,8 @@ if (monthAvailable === true && timeAvailable === true)
     <li> Rarity: {rarity}</li>
     <li>Price: {priceNormal} bells</li>
     <li>Flick Price: {priceflick} bells</li>
-    <li>"{catchphrase}"</li>
-    <li><img src={Blathers} alt="Blathers" ></img>"{blathers}"</li>
+    <li>&quot;{catchphrase}&quot;</li>
+    <li><img src={Blathers} alt="Blathers" ></img>&quot;{blathers}&quot;</li>
 </ul>
 
 </div>

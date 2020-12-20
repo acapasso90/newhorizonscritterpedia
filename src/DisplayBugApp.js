@@ -1,6 +1,8 @@
 import './App.css';
 import BugApp from "./BugApp.js";
 import MediaQuery from 'react-responsive'
+import React from 'react';
+
 
 
 export default function DisplayBugApp() {

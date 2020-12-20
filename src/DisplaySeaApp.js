@@ -1,6 +1,8 @@
 import './App.css';
 import DeepSeaApp from "./DeepSeaApp.js";
 import MediaQuery from 'react-responsive'
+import React from 'react';
+
 
 
 export default function DisplaySeaApp() {

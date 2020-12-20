@@ -16,7 +16,7 @@ return (
      <main>
           <div className="Header">
             <div className="headerText">
-            <h1>New Horizon's Critterpedia</h1></div>
+            <h1>New Horizon&apos;s Critterpedia</h1></div>
             <div className="left">
                 <div className="iconLinks">
                   <div className="row">

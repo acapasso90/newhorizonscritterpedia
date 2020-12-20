@@ -7,22 +7,22 @@ export default function SeaCrittersInfoShown(props){
     const blathersPhrase = "museum-phrase";
     const northernArray = "month-array-northern";
     const southernArray = "month-array-southern"; 
-    const northernMonths = "month-northern";
-    const southernMonths = "month-southern";
+    //const northernMonths = "month-northern";
+   // const southernMonths = "month-southern";
     const timeArray = "time-array";
     const infoShownStyle = {
         lineHeight: "normal",
         opacity: "100%",
         backgroundColor: "#F5EBC1",
         zIndex: 2,
-        width: "413px",
-        minHeight: "280px",
         textTransform: "capitalize",
         border: "3px",
         borderColor: "#7a3737",
         paddingRight: "50px",
         borderStyle: "solid",
-  position: "absolute",  };
+  position: "absolute", 
+top: "-260px", 
+right: "-152px"};
       const infoHiddenStyle = {
         lineHeight: "0",
         opacity: "0%",
@@ -38,11 +38,11 @@ export default function SeaCrittersInfoShown(props){
     let timeAvailable = null; 
     let timeDisplayed = props.data.availability.time;
     if (timeDisplayed.length < 1){timeDisplayed = "All Day";}
-    let displayAvailabilty = null;
+  //  let displayAvailabilty = null;
     if (worldLocation === "Northern"){availability = props.data.availability[northernArray];
-    displayAvailabilty = props.data.availability[northernMonths]}
-    else {availability = props.data.availability[southernArray];
-        displayAvailabilty = props.data.availability[southernMonths];}
+  //  displayAvailabilty = props.data.availability[northernMonths]}
+    }else {availability = props.data.availability[southernArray];}
+  //     displayAvailabilty = props.data.availability[southernMonths];}
     let findLocation = props.data.availability.location;
     let SeaCrittersName = props.data.name[english];
        let image = props.data.icon_uri;
@@ -69,8 +69,7 @@ export default function SeaCrittersInfoShown(props){
             SetId("inactive");}
     else {SetStyle(infoShownStyle);
         SetId("active");
-}
-    ;}   
+}}   
 
 if (monthAvailable === true && timeAvailable === true)
 {return(
@@ -86,8 +85,8 @@ if (monthAvailable === true && timeAvailable === true)
     <li>Price: {priceNormal} bells</li>
     <li>Speed: {speed} </li>
     <li>Shadow: {shadow} </li>
-    <li>"{catchphrase}"</li>
-    <li><img src={Blathers} alt="Blathers" ></img>"{blathers}"</li>
+    <li>&quot;{catchphrase}&quot;</li>
+    <li><img src={Blathers} alt="Blathers" ></img>&quot;{blathers}&quot;</li>
 </ul>
 
             </div>
@@ -108,8 +107,8 @@ if (monthAvailable === true && timeAvailable === true)
     <li>Price: {priceNormal} bells</li>
     <li>Speed: {speed} </li>
     <li>Shadow: {shadow} </li>
-    <li>"{catchphrase}"</li>
-    <li><img src={Blathers} alt="Blathers" ></img>"{blathers}"</li>
+    <li>&quot;{catchphrase}&quot;</li>
+    <li><img src={Blathers} alt="Blathers" ></img>&quot;{blathers}&quot;</li>
 </ul>
 
 </div>

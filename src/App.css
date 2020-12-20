@@ -101,6 +101,7 @@ bottom: 80px;
 left: 5px;}
 
 
+.left {float: left;}
 
 .mobile .column {margin-bottom: 0px;
 max-height: 310px;}
@@ -217,8 +218,5 @@ flex-direction: row;}
 #inactive {width: 0px;
 height: 0px;}
 
-
-.pc .SeaCrittersInfoHidden {top: -260px;
-  right: -152px;
-min-width: 1528px;
-min-height: 600px;}
+.pc .SeaCrittersInfoHidden, .pc .fishInfoHidden, .pc .bugInfoHidden {  min-width: 1528px;
+  min-Height: 600px;}
