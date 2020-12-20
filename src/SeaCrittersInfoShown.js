@@ -10,26 +10,30 @@ export default function SeaCrittersInfoShown(props){
     //const northernMonths = "month-northern";
    // const southernMonths = "month-southern";
     const timeArray = "time-array";
+    const blathersStyle = {maxWidth: "340px",
+    marginTop: "120px",}
     const infoShownStyle = {
-        lineHeight: "normal",
-        opacity: "100%",
-        backgroundColor: "#F5EBC1",
-        zIndex: 2,
-        textTransform: "capitalize",
-        border: "3px",
-        borderColor: "#7a3737",
-        paddingRight: "50px",
-        borderStyle: "solid",
-  position: "absolute", 
-top: "-260px", 
-right: "-152px"};
-      const infoHiddenStyle = {
-        lineHeight: "0",
-        opacity: "0%",
-        width: "0px",
-        height: "0px",
-        position: "absolute",
-      };
+      lineHeight: "normal",
+      opacity: "100%",
+      backgroundColor: "#F5EBC1",
+      zIndex: 2,
+      width: "413px",
+      height: "160px",
+      textTransform: "capitalize",
+      border: "3px",
+      borderColor: "#7a3737",
+      paddingRight: "50px",
+      borderStyle: "solid",
+      position: "absolute",
+      marginLeft: "100px"
+    };
+    const infoHiddenStyle = {
+      lineHeight: "0px",
+      width: "0px",
+      height: "0px",
+      opacity: "0%",
+      position: "absolute",
+    };
       const [style, SetStyle] = useState(infoHiddenStyle);
       const [id, SetId] = useState("inactive");
         let worldLocation = props.location;
@@ -43,7 +47,6 @@ right: "-152px"};
   //  displayAvailabilty = props.data.availability[northernMonths]}
     }else {availability = props.data.availability[southernArray];}
   //     displayAvailabilty = props.data.availability[southernMonths];}
-    let findLocation = props.data.availability.location;
     let SeaCrittersName = props.data.name[english];
        let image = props.data.icon_uri;
        let realisticImage = props.data.image_uri;
@@ -71,47 +74,58 @@ right: "-152px"};
         SetId("active");
 }}   
 
-if (monthAvailable === true && timeAvailable === true)
-{return(
-        <div className="SeaCrittersInfo">
-            <div className="SeaCrittersImage" onClick={DisplaySeaCrittersInfo}> 
-            <img src={image} alt="SeaCritters icon" className="fishPicture" />
-            <div className="SeaCrittersInfoHidden" style={style} id={id} >
-<ul>
-<li> <img src={realisticImage} alt="sea realistic" className="fishRealistic" /></li>
-    <li>Name: {SeaCrittersName}</li>
-    <li>Location: {findLocation}</li>
+if (monthAvailable === true && timeAvailable === true) {
+  return (
+    <div className="SeaCrittersInfo">
+      <div className="SeaCrittersImage" onClick={DisplaySeaCrittersInfo}>
+        <img src={image} alt="SeaCritters icon" className="fishPicture" />
+        <div className="left">
+          <div className="SeaCrittersInfoHidden" style={style} id={id}>
+            <ul>
+            <li> <img src={realisticImage} alt="sea realistic" className="fishRealistic" /></li>
+    <li>{SeaCrittersName}</li>
     <li> Time Available: {timeDisplayed} </li>
     <li>Price: {priceNormal} bells</li>
     <li>Speed: {speed} </li>
     <li>Shadow: {shadow} </li>
     <li>&quot;{catchphrase}&quot;</li>
-    <li><img src={Blathers} alt="Blathers" ></img>&quot;{blathers}&quot;</li>
-</ul>
-
-            </div>
-        </div>
-        </div>
-    )
-    }
-    else {return(
-        <div className="SeaCrittersInfo" >
-            <div className="SeaCrittersImage" onClick={DisplaySeaCrittersInfo}> 
-            <img src={image} alt="SeaCritters icon" className="fishPicture2" onClick={DisplaySeaCrittersInfo} />
-            <div className="SeaCrittersInfoHidden" style={style} id={id} >
-<ul>
-<li> <img src={realisticImage} alt="sea realistic" className="fishRealistic" /></li>
-    <li>Name: {SeaCrittersName}</li>
-    <li>Location: {findLocation}</li>
-    <li> Time Available: {timeDisplayed} </li>
-    <li>Price: {priceNormal} bells</li>
-    <li>Speed: {speed} </li>
-    <li>Shadow: {shadow} </li>
-    <li>&quot;{catchphrase}&quot;</li>
-    <li><img src={Blathers} alt="Blathers" ></img>&quot;{blathers}&quot;</li>
-</ul>
-
+    <li> 
+                <img src={Blathers} alt="Blathers" className="Blathers" style={blathersStyle} /><div className="blathersInfo" >&quot;{blathers}&quot;</div>
+                </li>
+            </ul>
+          </div>
 </div>
-        </div>
-        </div>
-    )}}
+</div>
+      </div>
+  );
+} else {
+  return (
+    <div className="SeaCrittersInfo">
+      <div className="SeaCrittersImage" onClick={DisplaySeaCrittersInfo}>
+        <img
+          src={image}
+          alt="SeaCritters icon"
+          className="fishPicture2"
+          onClick={DisplaySeaCrittersInfo}
+        />
+        <div className="left">
+        <div className="SeaCrittersInfoHidden" style={style} id={id}>
+            <ul>
+            <li> <img src={realisticImage} alt="sea realistic" className="fishRealistic" /></li>
+    <li>{SeaCrittersName}</li>
+    <li> Time Available: {timeDisplayed} </li>
+    <li>Price: {priceNormal} bells</li>
+    <li>Speed: {speed} </li>
+    <li>Shadow: {shadow} </li>
+    <li>&quot;{catchphrase}&quot;</li>
+    <li> 
+                <img src={Blathers} alt="Blathers" className="Blathers" style={blathersStyle} /><div className="blathersInfo" >&quot;{blathers}&quot;</div>
+                </li>
+            </ul>
+          </div>
+</div>
+</div>
+      </div>
+  );
+}
+}

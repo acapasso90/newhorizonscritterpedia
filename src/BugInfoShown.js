@@ -11,26 +11,30 @@ export default function BugInfoShown(props){
    // const northernMonths = "month-northern";
   //  const southernMonths = "month-southern";
     const timeArray = "time-array";
+    const blathersStyle = {maxWidth: "340px",
+    marginTop: "120px",}
     const infoShownStyle = {
-        lineHeight: "normal",
-        opacity: "100%",
-        backgroundColor: "#F5EBC1",
-        zIndex: 2,
-        textTransform: "capitalize",
-        border: "3px",
-        borderColor: "#7a3737",
-        paddingRight: "50px",
-        borderStyle: "solid",
-  position: "absolute", 
-top: "-260px", 
-right: "-233px"};
-      const infoHiddenStyle = {
-        position: "absolute",
-        lineHeight: "0px",
-        width: "0px",
-        height: "0px",
-        opacity: "0%"
-      };
+      lineHeight: "normal",
+      opacity: "100%",
+      backgroundColor: "#F5EBC1",
+      zIndex: 2,
+      width: "413px",
+      height: "160px",
+      textTransform: "capitalize",
+      border: "3px",
+      borderColor: "#7a3737",
+      paddingRight: "50px",
+      borderStyle: "solid",
+      position: "absolute",
+      marginLeft: "100px"
+    };
+    const infoHiddenStyle = {
+      lineHeight: "0px",
+      width: "0px",
+      height: "0px",
+      opacity: "0%",
+      position: "absolute",
+    };
       const [style, SetStyle] = useState(infoHiddenStyle);
       const [id, SetId] = useState("inactive");
         let worldLocation = props.location;
@@ -77,22 +81,25 @@ if (monthAvailable === true && timeAvailable === true)
         <div className="BugInfo">
             <div className="bugImage" onClick={DisplayBugInfo}> 
             <img src={image} alt="bug icon" className="fishPicture" />
+            <div className="left">
             <div className="bugInfoHidden" style={style} id={id} >
 <ul>
 <li> <img src={realisticImage} alt="bug realistic" className="fishRealistic" /></li>
-    <li>Name: {bugName}</li>
+        <li> {bugName}</li>
     <li>Location: {findLocation}</li>
     <li> Time Available: {timeDisplayed} </li>
     <li> Rarity: {rarity}</li>
     <li>Price: {priceNormal} bells</li>
     <li>Flick Price: {priceflick} bells</li>
     <li>&quot;{catchphrase}&quot;</li>
-    <li><img src={Blathers} alt="Blathers" ></img>&quot;{blathers}&quot;</li>
+    <li> 
+                <img src={Blathers} alt="Blathers" className="Blathers" style={blathersStyle} /><div className="blathersInfo" >&quot;{blathers}&quot;</div>
+                </li>
 </ul>
-
 </div>
-            </div>
-        </div>
+</div>
+</div>
+</div>
 
     )
     }
@@ -100,20 +107,23 @@ if (monthAvailable === true && timeAvailable === true)
         <div className="BugInfo" >
             <div className="bugImage" onClick={DisplayBugInfo}> 
             <img src={image} alt="bug icon" className="fishPicture2" onClick={DisplayBugInfo} />
+            <div className="left">
             <div className="bugInfoHidden" style={style} id={id} >
 <ul>
 <li> <img src={realisticImage} alt="bug realistic" className="fishRealistic" /></li>
-    <li>Name: {bugName}</li>
+        <li> {bugName}</li>
     <li>Location: {findLocation}</li>
     <li> Time Available: {timeDisplayed} </li>
     <li> Rarity: {rarity}</li>
     <li>Price: {priceNormal} bells</li>
     <li>Flick Price: {priceflick} bells</li>
     <li>&quot;{catchphrase}&quot;</li>
-    <li><img src={Blathers} alt="Blathers" ></img>&quot;{blathers}&quot;</li>
+    <li> 
+                <img src={Blathers} alt="Blathers" className="Blathers" style={blathersStyle} /><div className="blathersInfo" >&quot;{blathers}&quot;</div>
+                </li>
 </ul>
-
 </div>
-            </div>
-        </div>
+</div>
+</div>
+</div>
     )}}
