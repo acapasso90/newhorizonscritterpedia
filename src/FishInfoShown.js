@@ -16,15 +16,14 @@ export default function FishInfoShown(props) {
     opacity: "100%",
     backgroundColor: "#F5EBC1",
     zIndex: 2,
-    width: "413px",
-    height: "160px",
     textTransform: "capitalize",
-    border: "3px",
+    border: "4px",
     borderColor: "#7a3737",
     paddingRight: "50px",
     borderStyle: "solid",
     position: "absolute",
-    marginLeft: "100px"
+    top: "-255px",
+    left: "-6px",
   };
   const infoHiddenStyle = {
     lineHeight: "0px",
@@ -85,6 +84,7 @@ export default function FishInfoShown(props) {
     }
   }
 
+
   if (monthAvailable === true && timeAvailable === true) {
     return (
       <div className="FishInfo">
@@ -92,19 +92,24 @@ export default function FishInfoShown(props) {
           <img src={image} alt="fish icon" className="fishPicture" />
           <div className="left">
             <div className="fishInfoHidden" style={style} id={id}>
+              <div className="row">
+                <div className="column">
               <ul>
               <li> <img src={realisticImage} alt="fish realistic" className="fishRealistic" /></li>
-                <li>{fishName}</li>
+              <li><div className="polaroid"></div></li>
+              <li className="fishName">{fishName}</li>
                 <li>Location: {findLocation}</li>
                 <li> Time Available: {timeDisplayed} </li>
     <li> Rarity: {rarity}</li>
                 <li>Price: {priceNormal} bells</li>
                 <li>CJ Price: {priceCJ} bells</li>
                 <li>&quot;{catchphrase}&quot;</li>
-                <li> 
-                <img src={Blathers} alt="Blathers" className="Blathers" style={blathersStyle} /><div className="blathersInfo" >&quot;{blathers}&quot;</div>
-                </li>
               </ul>
+              </div>
+              <div className="column">
+              <img src={Blathers} alt="Blathers" className="Blathers" style={blathersStyle} /><div className="blathersInfo" >&quot;{blathers}&quot;</div>
+              </div>
+              </div>
             </div>
 </div>
 </div>
@@ -124,7 +129,8 @@ export default function FishInfoShown(props) {
           <div className="fishInfoHidden" style={style} id={id}>
               <ul>
               <li> <img src={realisticImage} alt="fish realistic" className="fishRealistic" /></li>
-                <li>{fishName}</li>
+              <li><div className="polaroid"></div></li>
+                <li className="fishName">{fishName}</li>
                 <li>Location: {findLocation}</li>
                 <li> Time Available: {timeDisplayed} </li>
     <li> Rarity: {rarity}</li>

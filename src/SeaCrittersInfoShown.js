@@ -17,15 +17,14 @@ export default function SeaCrittersInfoShown(props){
       opacity: "100%",
       backgroundColor: "#F5EBC1",
       zIndex: 2,
-      width: "413px",
-      height: "160px",
       textTransform: "capitalize",
-      border: "3px",
+      border: "4px",
       borderColor: "#7a3737",
       paddingRight: "50px",
       borderStyle: "solid",
       position: "absolute",
-      marginLeft: "100px"
+      top: "-255px",
+      left: "-388px",
     };
     const infoHiddenStyle = {
       lineHeight: "0px",
@@ -81,22 +80,27 @@ if (monthAvailable === true && timeAvailable === true) {
         <img src={image} alt="SeaCritters icon" className="fishPicture" />
         <div className="left">
           <div className="SeaCrittersInfoHidden" style={style} id={id}>
+          <div className="row">
+                <div className="column">
             <ul>
             <li> <img src={realisticImage} alt="sea realistic" className="fishRealistic" /></li>
-    <li>{SeaCrittersName}</li>
+            <li><div className="polaroid"></div></li>
+    <li className="seaName">{SeaCrittersName}</li>
     <li> Time Available: {timeDisplayed} </li>
     <li>Price: {priceNormal} bells</li>
     <li>Speed: {speed} </li>
     <li>Shadow: {shadow} </li>
     <li>&quot;{catchphrase}&quot;</li>
-    <li> 
-                <img src={Blathers} alt="Blathers" className="Blathers" style={blathersStyle} /><div className="blathersInfo" >&quot;{blathers}&quot;</div>
-                </li>
-            </ul>
-          </div>
+   </ul>
+   </div>
+   <div className="column">
+              <img src={Blathers} alt="Blathers" className="Blathers" style={blathersStyle} /><div className="blathersInfo" >&quot;{blathers}&quot;</div>
+              </div>
+              </div>
+            </div>
 </div>
 </div>
-      </div>
+        </div>
   );
 } else {
   return (
@@ -110,22 +114,27 @@ if (monthAvailable === true && timeAvailable === true) {
         />
         <div className="left">
         <div className="SeaCrittersInfoHidden" style={style} id={id}>
+          <div className="row">
+                <div className="column">
             <ul>
             <li> <img src={realisticImage} alt="sea realistic" className="fishRealistic" /></li>
-    <li>{SeaCrittersName}</li>
+            <li><div className="polaroid"></div></li>
+    <li className="seaName">{SeaCrittersName}</li>
     <li> Time Available: {timeDisplayed} </li>
     <li>Price: {priceNormal} bells</li>
     <li>Speed: {speed} </li>
     <li>Shadow: {shadow} </li>
     <li>&quot;{catchphrase}&quot;</li>
-    <li> 
-                <img src={Blathers} alt="Blathers" className="Blathers" style={blathersStyle} /><div className="blathersInfo" >&quot;{blathers}&quot;</div>
-                </li>
-            </ul>
-          </div>
+   </ul>
+   </div>
+   <div className="column">
+              <img src={Blathers} alt="Blathers" className="Blathers" style={blathersStyle} /><div className="blathersInfo" >&quot;{blathers}&quot;</div>
+              </div>
+              </div>
+            </div>
 </div>
 </div>
-      </div>
+        </div>
   );
 }
 }

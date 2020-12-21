@@ -13,7 +13,8 @@ body {background-color: #F5EBC1;
      button:active {margin-top: 2px;
       border: 3px solid #682424;}
   
-  ul {list-style: none;}
+  ul {list-style: none;
+  width: 400px;}
   
   .App {
     text-align: center;
@@ -66,6 +67,14 @@ body {background-color: #F5EBC1;
   .fishImage, .bugImage, .SeaCrittersImage {border: 1px solid #d1cca6;
   }
   
+
+  .fishName, .bugName, .seaName {font-size: 30px;
+  position: relative;
+bottom: 70px;}
+
+.bugName {font-size: 21px;
+  position: relative;
+bottom: 110px;}
   
   
   .fishPicture {            max-width: 96px;
@@ -169,6 +178,22 @@ body {background-color: #F5EBC1;
     left: 670px;
   top: 125px;}
   
+  .polaroid {background-color: #ffffff;
+  max-width: 320px;
+min-height: 95px;}
+
+.polaroidBug {background-color: #ffffff;
+  max-width: 320px;
+min-height: 135px;}
+
+.pc .polaroid {position: relative;
+bottom: 5px;
+left: 40px;}
+
+.pc .polaroidBug {position: relative;
+  bottom: 15px;
+  left: 40px;}
+
   .getSeaCrittersInfo .horizontalRow {width: 1040px;
   margin-left: auto;
   margin-right: auto;
@@ -220,13 +245,13 @@ body {background-color: #F5EBC1;
   #inactive {width: 0px;
   height: 0px;}
   
-  .pc .SeaCrittersInfoHidden, .pc .fishInfoHidden, .pc .bugInfoHidden {  min-width: 1528px;
-    min-Height: 500px;}
+  .pc .SeaCrittersInfoHidden, .pc .fishInfoHidden, .pc .bugInfoHidden {  min-width: 1520px;
+    min-Height: 750px;}
 
   .fishRealistic {max-height: 300px;
   max-width: 300px;
 background-color: #f8f2dc;
-border: 5px solid #7a3737;}
+border: 10px solid #ffffff;}
 
 .pc .Blathers {max-width: 400px;
 position: absolute;
@@ -239,6 +264,7 @@ top: 130px;}
   border-radius: 5%;}
   
   .pc .blathersInfo {position: absolute;
-    right: 80px;
-    bottom: 350px;
+    right: 60px;
+    bottom: 420px;
+    max-width: 450px;
   }
