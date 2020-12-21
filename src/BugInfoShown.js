@@ -79,7 +79,7 @@ if (monthAvailable === true && timeAvailable === true)
 {return(
         <div className="BugInfo">
             <div className="bugImage" onClick={DisplayBugInfo}> 
-            <img src={image} alt="bug icon" className="fishPicture" />
+            <img src={image} alt="bug icon" className="fishPicture" />        </div>
             <div className="left">
             <div className="bugInfoHidden" style={style} id={id} >
             <div className="row">
@@ -100,11 +100,10 @@ if (monthAvailable === true && timeAvailable === true)
               <img src={Blathers} alt="Blathers" className="Blathers" style={blathersStyle} />
               <div className="quoteTriangle"></div>
               <div className="blathersInfo" >&quot;{blathers}&quot;</div>
-              <div className="exitButton"><button>Go Back</button></div>
+              <div className="exitButton"><button onClick={DisplayBugInfo}>Go Back</button></div>
               </div>
               </div>
             </div>
-</div>
 </div>
         </div>
     )
@@ -112,7 +111,7 @@ if (monthAvailable === true && timeAvailable === true)
     else {return(
         <div className="BugInfo" >
             <div className="bugImage" onClick={DisplayBugInfo}> 
-            <img src={image} alt="bug icon" className="fishPicture2" onClick={DisplayBugInfo} />
+            <img src={image} alt="bug icon" className="fishPicture2"  />        </div>
             <div className="left">
             <div className="bugInfoHidden" style={style} id={id} >
             <div className="row">
@@ -133,11 +132,10 @@ if (monthAvailable === true && timeAvailable === true)
               <img src={Blathers} alt="Blathers" className="Blathers" style={blathersStyle} />
               <div className="quoteTriangle"></div>
               <div className="blathersInfo" >&quot;{blathers}&quot;</div>
-              <div className="exitButton"><button>Go Back</button></div>
+              <div className="exitButton"><button onClick={DisplayBugInfo}>Go Back</button></div>
               </div>
               </div>
             </div>
 </div>
 </div>
-        </div>
     )}}

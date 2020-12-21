@@ -72,7 +72,7 @@ body {background-color: #F5EBC1;
   }
   
 
-  .fishName, .bugName, .seaName {font-size: 30px;
+  .fishName, .bugName, .seaName {font-size: 28px;
   position: relative;
 bottom: 70px;}
 
@@ -86,7 +86,7 @@ color: #007910}
 .seaName {color: #180052;
   font-size: 28px;}
 
-  .fishInfoHidden {z-index: -1;}
+  .fishInfoHidden, .bugInfoHidden, .SeaCrittersInfoHidden {z-index: -1;}
   
   
   .fishPicture {            max-width: 96px;
@@ -302,7 +302,7 @@ top: 250px;}
   top: 354px;}
 
 
-  .pc .fishInfoHidden .exitButton {position: absolute;
+  .pc .fishInfoHidden .exitButton, .pc .bugInfoHidden .exitButton, .pc .SeaCrittersInfoHidden .exitButton{position: absolute;
   right: 140px;
 bottom: 80px;
 }

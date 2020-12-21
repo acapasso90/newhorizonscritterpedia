@@ -77,7 +77,7 @@ if (monthAvailable === true && timeAvailable === true) {
   return (
     <div className="SeaCrittersInfo">
       <div className="SeaCrittersImage" onClick={DisplaySeaCrittersInfo}>
-        <img src={image} alt="SeaCritters icon" className="fishPicture" />
+        <img src={image} alt="SeaCritters icon" className="fishPicture" /> </div>
         <div className="left">
           <div className="SeaCrittersInfoHidden" style={style} id={id}>
           <div className="row">
@@ -97,13 +97,12 @@ if (monthAvailable === true && timeAvailable === true) {
               <img src={Blathers} alt="Blathers" className="Blathers" style={blathersStyle} />
               <div className="quoteTriangle"></div>
               <div className="blathersInfo" >&quot;{blathers}&quot;</div>
-              <div className="exitButton"><button>Go Back</button></div>
+              <div className="exitButton"><button  onClick={DisplaySeaCrittersInfo}>Go Back</button></div>
               </div>
               </div>
             </div>
 </div>
 </div>
-        </div>
   );
 } else {
   return (
@@ -113,8 +112,7 @@ if (monthAvailable === true && timeAvailable === true) {
           src={image}
           alt="SeaCritters icon"
           className="fishPicture2"
-          onClick={DisplaySeaCrittersInfo}
-        />
+        /></div>
         <div className="left">
         <div className="SeaCrittersInfoHidden" style={style} id={id}>
           <div className="row">
@@ -134,13 +132,12 @@ if (monthAvailable === true && timeAvailable === true) {
               <img src={Blathers} alt="Blathers" className="Blathers" style={blathersStyle} />
               <div className="quoteTriangle"></div>
               <div className="blathersInfo" >&quot;{blathers}&quot;</div>
-              <div className="exitButton"><button>Go Back</button></div>
+              <div className="exitButton"><button  onClick={DisplaySeaCrittersInfo}>Go Back</button></div>
               </div>
               </div>
             </div>
 </div>
 </div>
-        </div>
   );
 }
 }
