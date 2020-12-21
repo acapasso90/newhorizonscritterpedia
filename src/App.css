@@ -50,6 +50,13 @@ body {background-color: #F5EBC1;
     .butterfly {position: relative;
     bottom: 75px;
   left: 15px;}
+
+  .quote {margin-top: 20px;
+  margin-bottom: 20px;
+font-size: 25px;
+color: #ad5400;
+}
+
   .fishpic {position: relative;
     bottom: 75px;
     left: 8px;}

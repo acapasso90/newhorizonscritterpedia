@@ -8,6 +8,8 @@ export default function FishInfoShown(props) {
   const blathersPhrase = "museum-phrase";
   const northernArray = "month-array-northern";
   const southernArray = "month-array-southern";
+  const northernMonths = "month-northern";
+  const southernMonths = "month-southern";
   const timeArray = "time-array";
   const blathersStyle = {maxWidth: "340px",
   marginTop: "120px",}
@@ -37,13 +39,15 @@ export default function FishInfoShown(props) {
   let worldLocation = props.location;
   let availability = null;
   let monthAvailable = null;
+  let displayAvailabilty = null;
   let timeAvailable = null;
   let timeDisplayed = props.data.availability.time;
   if (timeDisplayed.length < 1){timeDisplayed = "All Day";}
   if (worldLocation === "Northern") {
     availability = props.data.availability[northernArray];
-  } else {
+    displayAvailabilty = props.data.availability[northernMonths]} else {
     availability = props.data.availability[southernArray];
+    displayAvailabilty = props.data.availability[southernMonths];
   }
   let findLocation = props.data.availability.location;
   let rarity = props.data.availability.rarity;
@@ -63,6 +67,15 @@ export default function FishInfoShown(props) {
     monthAvailable = true;
   }
   let time = props.data.availability[timeArray];
+  let displayMonths = null;
+  const months= ["January","February","March","April","May","June","July",
+  "August","September","October","November","December"];
+if (allYear === false && displayAvailabilty.length <= 2){   var array = displayAvailabilty.split('-');
+var a = parseInt(array[0]);
+let formattedA = months[a];
+displayMonths = `${formattedA}`;}
+else if  (allYear === true ){     displayMonths = `All Year`;}
+else if (allYear === false && displayAvailabilty.length > 2){displayMonths = displayAvailabilty}
   let currentTime = new Date();
   let month = currentTime.getMonth();
   let hours = currentTime.getHours();
@@ -92,12 +105,13 @@ else {SetStyle(infoShownStyle);
               <div className="row">
                 <div className="column">
               <ul>
-              <li>&quot;{catchphrase}&quot;</li>
+              <li className="quote">&quot;{catchphrase}&quot;</li>
               <li> <img src={realisticImage} alt="fish realistic" className="fishRealistic" /></li>
               <li><div className="polaroid"></div></li>
               <li className="fishName">{fishName}</li>
                 <li>Location: {findLocation}</li>
                 <li> Time Available: {timeDisplayed} </li>
+                <li> Months Available: {displayMonths} </li>
     <li> Rarity: {rarity}</li>
                 <li>Price: {priceNormal} bells</li>     
                 <li>CJ Price: {priceCJ} bells</li>
@@ -128,12 +142,13 @@ else {SetStyle(infoShownStyle);
           <div className="left">
           <div className="fishInfoHidden" style={style} id={id}>
               <ul>
-              <li>&quot;{catchphrase}&quot;</li>
+              <li className="quote">&quot;{catchphrase}&quot;</li>
               <li> <img src={realisticImage} alt="fish realistic" className="fishRealistic" /></li>
               <li><div className="polaroid"></div></li>
                 <li className="fishName">{fishName}</li>
                 <li>Location: {findLocation}</li>
                 <li> Time Available: {timeDisplayed} </li>
+                <li> Months Available: {displayMonths} </li>
     <li> Rarity: {rarity}</li>
                 <li>Price: {priceNormal} bells</li>
                 <li>CJ Price: {priceCJ} bells</li>

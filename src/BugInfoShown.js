@@ -8,8 +8,8 @@ export default function BugInfoShown(props){
     const blathersPhrase = "museum-phrase";
     const northernArray = "month-array-northern";
     const southernArray = "month-array-southern"; 
-   // const northernMonths = "month-northern";
-  //  const southernMonths = "month-southern";
+    const northernMonths = "month-northern";
+    const southernMonths = "month-southern";
     const timeArray = "time-array";
     const blathersStyle = {maxWidth: "340px",
     marginTop: "120px",}
@@ -42,11 +42,11 @@ export default function BugInfoShown(props){
     let timeAvailable = null; 
     let timeDisplayed = props.data.availability.time;
     if (timeDisplayed.length < 1){timeDisplayed = "All Day";}
-   // let displayAvailabilty = null;
-    if (worldLocation === "Northern"){availability = props.data.availability[northernArray];}
-  //  displayAvailabilty = props.data.availability[northernMonths]}
-    else {availability = props.data.availability[southernArray];}
-       // displayAvailabilty = props.data.availability[southernMonths];}
+   let displayAvailabilty = null;
+    if (worldLocation === "Northern"){availability = props.data.availability[northernArray];
+    displayAvailabilty = props.data.availability[northernMonths]}
+    else {availability = props.data.availability[southernArray];
+       displayAvailabilty = props.data.availability[southernMonths];}
     let findLocation = props.data.availability.location;
     let rarity = props.data.availability.rarity;
     let bugName = props.data.name[english];
@@ -61,6 +61,15 @@ export default function BugInfoShown(props){
         let allYear = props.data.availability.isAllYear;    
         if (allYear === true){monthAvailable = true;}
         let time = props.data.availability[timeArray];
+        let displayMonths = null;
+        const months= ["January","February","March","April","May","June","July",
+        "August","September","October","November","December"];
+if (allYear === false && displayAvailabilty.length <= 2){   var array = displayAvailabilty.split('-');
+  var a = parseInt(array[0]);
+  let formattedA = months[a];
+  displayMonths = `${formattedA}`;}
+  else if  (allYear === true ){     displayMonths = `All Year`;}
+  else if (allYear === false && displayAvailabilty.length > 2){displayMonths = displayAvailabilty}
     let currentTime = new Date();
     let month = currentTime.getMonth();
     let hours = currentTime.getHours();
@@ -85,12 +94,13 @@ if (monthAvailable === true && timeAvailable === true)
             <div className="row">
                 <div className="column">
 <ul>
-<li>&quot;{catchphrase}&quot;</li>
+<li className="quote">&quot;{catchphrase}&quot;</li>
 <li> <img src={realisticImage} alt="bug realistic" className="fishRealistic" /></li>
 <li><div className="polaroidBug"></div></li>
 <li className="bugName">{bugName}</li>
     <li>Location: {findLocation}</li>
     <li> Time Available: {timeDisplayed} </li>
+    <li> Months Available: {displayMonths} </li>
     <li> Rarity: {rarity}</li>
     <li>Price: {priceNormal} bells</li>
     <li>Flick Price: {priceflick} bells</li>
@@ -117,12 +127,13 @@ if (monthAvailable === true && timeAvailable === true)
             <div className="row">
                 <div className="column">
 <ul>
-<li>&quot;{catchphrase}&quot;</li>
+<li className="quote">&quot;{catchphrase}&quot;</li>
 <li> <img src={realisticImage} alt="bug realistic" className="fishRealistic" /></li>
 <li><div className="polaroidBug"></div></li>
 <li className="bugName">{bugName}</li>
     <li>Location: {findLocation}</li>
     <li> Time Available: {timeDisplayed} </li>
+    <li> Months Available: {displayMonths} </li>
     <li> Rarity: {rarity}</li>
     <li>Price: {priceNormal} bells</li>
     <li>Flick Price: {priceflick} bells</li>
