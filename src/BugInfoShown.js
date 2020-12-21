@@ -97,7 +97,9 @@ if (monthAvailable === true && timeAvailable === true)
 </ul>
 </div>
               <div className="column">
-              <img src={Blathers} alt="Blathers" className="Blathers" style={blathersStyle} /><div className="blathersInfo" >&quot;{blathers}&quot;</div>
+              <img src={Blathers} alt="Blathers" className="Blathers" style={blathersStyle} />
+              <div className="quoteTriangle"></div>
+              <div className="blathersInfo" >&quot;{blathers}&quot;</div>
               </div>
               </div>
             </div>
@@ -127,7 +129,9 @@ if (monthAvailable === true && timeAvailable === true)
 </ul>
 </div>
               <div className="column">
-              <img src={Blathers} alt="Blathers" className="Blathers" style={blathersStyle} /><div className="blathersInfo" >&quot;{blathers}&quot;</div>
+              <img src={Blathers} alt="Blathers" className="Blathers" style={blathersStyle} />
+              <div className="quoteTriangle"></div>
+              <div className="blathersInfo" >&quot;{blathers}&quot;</div>
               </div>
               </div>
             </div>

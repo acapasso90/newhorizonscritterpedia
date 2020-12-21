@@ -94,7 +94,9 @@ if (monthAvailable === true && timeAvailable === true) {
    </ul>
    </div>
    <div className="column">
-              <img src={Blathers} alt="Blathers" className="Blathers" style={blathersStyle} /><div className="blathersInfo" >&quot;{blathers}&quot;</div>
+              <img src={Blathers} alt="Blathers" className="Blathers" style={blathersStyle} />
+              <div className="quoteTriangle"></div>
+              <div className="blathersInfo" >&quot;{blathers}&quot;</div>
               </div>
               </div>
             </div>
@@ -115,7 +117,7 @@ if (monthAvailable === true && timeAvailable === true) {
         <div className="left">
         <div className="SeaCrittersInfoHidden" style={style} id={id}>
           <div className="row">
-                <div className="column">
+              <div className="column">
             <ul>
             <li> <img src={realisticImage} alt="sea realistic" className="fishRealistic" /></li>
             <li><div className="polaroid"></div></li>
@@ -128,7 +130,9 @@ if (monthAvailable === true && timeAvailable === true) {
    </ul>
    </div>
    <div className="column">
-              <img src={Blathers} alt="Blathers" className="Blathers" style={blathersStyle} /><div className="blathersInfo" >&quot;{blathers}&quot;</div>
+              <img src={Blathers} alt="Blathers" className="Blathers" style={blathersStyle} />
+              <div className="quoteTriangle"></div>
+              <div className="blathersInfo" >&quot;{blathers}&quot;</div>
               </div>
               </div>
             </div>

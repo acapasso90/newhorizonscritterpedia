@@ -107,8 +107,9 @@ export default function FishInfoShown(props) {
               </ul>
               </div>
               <div className="column">
-              <img src={Blathers} alt="Blathers" className="Blathers" style={blathersStyle} /><div className="blathersInfo" >&quot;{blathers}&quot;</div>
-              </div>
+              <img src={Blathers} alt="Blathers" className="Blathers" style={blathersStyle} />
+              <div className="quoteTriangle"></div>
+              <div className="blathersInfo" >&quot;{blathers}&quot;</div>              </div>
               </div>
             </div>
 </div>
@@ -138,8 +139,9 @@ export default function FishInfoShown(props) {
                 <li>CJ Price: {priceCJ} bells</li>
                 <li>&quot;{catchphrase}&quot;</li>
                 <li> 
-                <img src={Blathers} alt="Blathers" className="Blathers" style={blathersStyle} /><div className="blathersInfo" >&quot;{blathers}&quot;</div>
-                </li>
+                <img src={Blathers} alt="Blathers" className="Blathers" style={blathersStyle} />
+              <div className="quoteTriangle"></div>
+              <div className="blathersInfo" >&quot;{blathers}&quot;</div>                </li>
               </ul>
             </div>
 </div>

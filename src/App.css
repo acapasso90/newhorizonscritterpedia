@@ -256,15 +256,35 @@ border: 10px solid #ffffff;}
 .pc .Blathers {max-width: 400px;
 position: absolute;
 right: 500px;
-top: 130px;}
+top: 250px;}
 
 
 .blathersInfo {text-align: left;
   background-color: #ffff;
-  border-radius: 5%;}
-  
+  border-radius: 10%;}
+
   .pc .blathersInfo {position: absolute;
-    right: 60px;
-    bottom: 420px;
+    right: 59px;
+    bottom: 351px;
     max-width: 450px;
+    padding: 10px 20px;
   }
+
+
+
+  .quoteTriangle {width: 0px;
+    height: 0px;
+    border-top: 30px solid transparent;
+    border-bottom: 30px solid rgb(255, 255, 255);;
+    border-left: 30px solid transparent;
+  transform: rotate(80deg);
+  z-index: -1;
+}
+
+.pc .fishInfoHidden .quoteTriangle, .pc .bugInfoHidden .quoteTriangle {position: absolute;
+  left: 1038px;
+  top: 354px;}
+
+  .pc .SeaCrittersInfoHidden .quoteTriangle {position: absolute;
+    left: 1038px;
+    top: 354px;}
