@@ -73,37 +73,34 @@ export default function FishInfoShown(props) {
     monthAvailable = true;
   }
 
-  function DisplayFishInfo() {
-    let active = document.getElementById("active");
-    if (active) {
-      SetStyle(infoHiddenStyle);
-      SetId("inactive");
-    }  else {
-      SetStyle(infoShownStyle);
-      SetId("active");
-    }
-  }
+  function DisplayFishInfo(){
+    let active = document.getElementById('active');
+    if(active){SetStyle(infoHiddenStyle);
+        SetId("inactive");}
+else {SetStyle(infoShownStyle);
+    SetId("active");
+}}   
 
 
   if (monthAvailable === true && timeAvailable === true) {
     return (
       <div className="FishInfo">
         <div className="fishImage" onClick={DisplayFishInfo}>
-          <img src={image} alt="fish icon" className="fishPicture" />
+          <img src={image} alt="fish icon" className="fishPicture" onClick={DisplayFishInfo} />      </div>
           <div className="left">
             <div className="fishInfoHidden" style={style} id={id}>
               <div className="row">
                 <div className="column">
               <ul>
+              <li>&quot;{catchphrase}&quot;</li>
               <li> <img src={realisticImage} alt="fish realistic" className="fishRealistic" /></li>
               <li><div className="polaroid"></div></li>
               <li className="fishName">{fishName}</li>
                 <li>Location: {findLocation}</li>
                 <li> Time Available: {timeDisplayed} </li>
     <li> Rarity: {rarity}</li>
-                <li>Price: {priceNormal} bells</li>
+                <li>Price: {priceNormal} bells</li>     
                 <li>CJ Price: {priceCJ} bells</li>
-                <li>&quot;{catchphrase}&quot;</li>
               </ul>
               </div>
               <div className="column">
@@ -111,8 +108,10 @@ export default function FishInfoShown(props) {
               <div className="quoteTriangle"></div>
               <div className="blathersInfo" >&quot;{blathers}&quot;</div>              </div>
               </div>
+              <div className="column">
+              <div className="exitButton"><button onClick={DisplayFishInfo}>Go Back</button></div>
+              </div>
             </div>
-</div>
 </div>
         </div>
     );
@@ -125,10 +124,11 @@ export default function FishInfoShown(props) {
             alt="fish icon"
             className="fishPicture2"
             onClick={DisplayFishInfo}
-          />
+          />         </div>
           <div className="left">
           <div className="fishInfoHidden" style={style} id={id}>
               <ul>
+              <li>&quot;{catchphrase}&quot;</li>
               <li> <img src={realisticImage} alt="fish realistic" className="fishRealistic" /></li>
               <li><div className="polaroid"></div></li>
                 <li className="fishName">{fishName}</li>
@@ -137,16 +137,17 @@ export default function FishInfoShown(props) {
     <li> Rarity: {rarity}</li>
                 <li>Price: {priceNormal} bells</li>
                 <li>CJ Price: {priceCJ} bells</li>
-                <li>&quot;{catchphrase}&quot;</li>
                 <li> 
                 <img src={Blathers} alt="Blathers" className="Blathers" style={blathersStyle} />
               <div className="quoteTriangle"></div>
               <div className="blathersInfo" >&quot;{blathers}&quot;</div>                </li>
               </ul>
+              <div className="column">
+              <div className="exitButton"><button onClick={DisplayFishInfo}>Go Back</button></div>
+              </div>
             </div>
 </div>
 </div>
-        </div>
     );
   }
 }

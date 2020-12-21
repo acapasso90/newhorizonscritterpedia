@@ -85,6 +85,7 @@ if (monthAvailable === true && timeAvailable === true)
             <div className="row">
                 <div className="column">
 <ul>
+<li>&quot;{catchphrase}&quot;</li>
 <li> <img src={realisticImage} alt="bug realistic" className="fishRealistic" /></li>
 <li><div className="polaroidBug"></div></li>
 <li className="bugName">{bugName}</li>
@@ -93,13 +94,13 @@ if (monthAvailable === true && timeAvailable === true)
     <li> Rarity: {rarity}</li>
     <li>Price: {priceNormal} bells</li>
     <li>Flick Price: {priceflick} bells</li>
-    <li>&quot;{catchphrase}&quot;</li>
 </ul>
 </div>
               <div className="column">
               <img src={Blathers} alt="Blathers" className="Blathers" style={blathersStyle} />
               <div className="quoteTriangle"></div>
               <div className="blathersInfo" >&quot;{blathers}&quot;</div>
+              <div className="exitButton"><button>Go Back</button></div>
               </div>
               </div>
             </div>
@@ -117,6 +118,7 @@ if (monthAvailable === true && timeAvailable === true)
             <div className="row">
                 <div className="column">
 <ul>
+<li>&quot;{catchphrase}&quot;</li>
 <li> <img src={realisticImage} alt="bug realistic" className="fishRealistic" /></li>
 <li><div className="polaroidBug"></div></li>
 <li className="bugName">{bugName}</li>
@@ -125,13 +127,13 @@ if (monthAvailable === true && timeAvailable === true)
     <li> Rarity: {rarity}</li>
     <li>Price: {priceNormal} bells</li>
     <li>Flick Price: {priceflick} bells</li>
-    <li>&quot;{catchphrase}&quot;</li>
 </ul>
 </div>
               <div className="column">
               <img src={Blathers} alt="Blathers" className="Blathers" style={blathersStyle} />
               <div className="quoteTriangle"></div>
               <div className="blathersInfo" >&quot;{blathers}&quot;</div>
+              <div className="exitButton"><button>Go Back</button></div>
               </div>
               </div>
             </div>

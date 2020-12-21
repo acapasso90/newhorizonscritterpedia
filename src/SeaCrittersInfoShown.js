@@ -83,6 +83,7 @@ if (monthAvailable === true && timeAvailable === true) {
           <div className="row">
                 <div className="column">
             <ul>
+            <li>&quot;{catchphrase}&quot;</li>
             <li> <img src={realisticImage} alt="sea realistic" className="fishRealistic" /></li>
             <li><div className="polaroid"></div></li>
     <li className="seaName">{SeaCrittersName}</li>
@@ -90,13 +91,13 @@ if (monthAvailable === true && timeAvailable === true) {
     <li>Price: {priceNormal} bells</li>
     <li>Speed: {speed} </li>
     <li>Shadow: {shadow} </li>
-    <li>&quot;{catchphrase}&quot;</li>
    </ul>
    </div>
    <div className="column">
               <img src={Blathers} alt="Blathers" className="Blathers" style={blathersStyle} />
               <div className="quoteTriangle"></div>
               <div className="blathersInfo" >&quot;{blathers}&quot;</div>
+              <div className="exitButton"><button>Go Back</button></div>
               </div>
               </div>
             </div>
@@ -119,6 +120,7 @@ if (monthAvailable === true && timeAvailable === true) {
           <div className="row">
               <div className="column">
             <ul>
+            <li>&quot;{catchphrase}&quot;</li>
             <li> <img src={realisticImage} alt="sea realistic" className="fishRealistic" /></li>
             <li><div className="polaroid"></div></li>
     <li className="seaName">{SeaCrittersName}</li>
@@ -126,13 +128,13 @@ if (monthAvailable === true && timeAvailable === true) {
     <li>Price: {priceNormal} bells</li>
     <li>Speed: {speed} </li>
     <li>Shadow: {shadow} </li>
-    <li>&quot;{catchphrase}&quot;</li>
    </ul>
    </div>
    <div className="column">
               <img src={Blathers} alt="Blathers" className="Blathers" style={blathersStyle} />
               <div className="quoteTriangle"></div>
               <div className="blathersInfo" >&quot;{blathers}&quot;</div>
+              <div className="exitButton"><button>Go Back</button></div>
               </div>
               </div>
             </div>
