@@ -23,9 +23,12 @@ const Active = {
   textAlign: "center",
   backgroundColor: "#f7cc64",
   borderRadius: "30px",
-  color: "#b6b295",
-  minHeight: "40px",
-  minWidth: "127.5px",
+  color: "#847f6c",
+  fontWeight: "bold",
+  paddingTop: "10px",
+  minHeight: "30px",
+  minWidth: "90.5px",
+  whiteSpace: "nowrap",
 }
 const InActive = {opacity: "0%",
 position: "absolute",}

@@ -111,7 +111,13 @@ white-space: nowrap;}
 
   .fishInfoHidden, .bugInfoHidden, .SeaCrittersInfoHidden {z-index: -1;}
   
+  .fishLabel, .bugLabel, .seaLabel {top: -30px;
+  right: 20px;}
   
+  .fishLabel {right: 105px;}
+
+  .bugLabel {right: 155px;}
+  .seaLabel {  width: 147.5px;}
   .fishPicture {            max-width: 96px;
   max-height: 98px;}
   
@@ -138,14 +144,21 @@ white-space: nowrap;}
     
   
   .Header {box-shadow: 0px 2px 3px #d8cfa1;
+    margin-top: -20px;
+    min-height: 80px;
+    background-image: url(./marbledbackground.jpg);
+    background-repeat: repeat;
+    background-position-y: -100px;
   }
   
-  .headerText {text-align: right;}
+  .headerText {text-align: right;
+  position: relative;
+top: 35px;}
   
   
   .iconLinks {position: relative;
-  bottom: 80px;
-  left: 5px;}
+  bottom: 30px;
+  left: 35px;}
 
   .active:hover {cursor: default;}
   .link:hover {cursor: default;}
@@ -216,7 +229,7 @@ white-space: nowrap;}
   }
   .Northern { 
     left: 635px;
-  top: 125px;}
+  top: 145px;}
   
   .polaroid {background-color: #ffffff;
   max-width: 330px;
@@ -248,7 +261,7 @@ left: 35px;}
   
   .Southern { 
   left: 820px;
-  top: 125px;}
+  top: 145px;}
   
   .tablet .Header {position: relative;
     bottom: 10px;}
