@@ -113,6 +113,7 @@ white-space: nowrap;}
   text-align: center;
   margin-top: 100px;}
 
+
     .getFishInfo .horizontalRow {display: flex;
       flex-direction: row;
       position: relative; 
@@ -199,8 +200,8 @@ white-space: nowrap;}
     left: 201px;
   top: 91px;
   }
-  .Northern {  position: absolute;
-    left: 650px;
+  .Northern { 
+    left: 635px;
   top: 125px;}
   
   .polaroid {background-color: #ffffff;
@@ -231,8 +232,8 @@ left: 35px;}
       top: 80px;
   }
   
-  .Southern {  position: absolute;
-  right: 640px;
+  .Southern { 
+  left: 820px;
   top: 125px;}
   
   .tablet .Header {position: relative;
