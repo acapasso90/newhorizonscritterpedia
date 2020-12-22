@@ -102,32 +102,41 @@ else {SetStyle(infoShownStyle);
           <img src={image} alt="fish icon" className="fishPicture" onClick={DisplayFishInfo} />      </div>
           <div className="left">
             <div className="fishInfoHidden" style={style} id={id}>
-              <div className="row">
-                <div className="column">
+            <div className="row">
+    <div className="column">
+      <div className="row">
+      <div className="column">
               <ul>
-              <li className="quote">&quot;{catchphrase}&quot;</li>
               <li> <img src={realisticImage} alt="fish realistic" className="fishRealistic" /></li>
               <li><div className="polaroid"></div></li>
               <li className="fishName">{fishName}</li>
+              <li className="quote">&quot;{catchphrase}&quot;</li>
+               </ul>
+               </div>
+               <div className="right">
+<div className="columnRight">
+               <ul>
                 <li>Location: {findLocation}</li>
                 <li> Time Available: {timeDisplayed} </li>
                 <li> Months Available: {displayMonths} </li>
     <li> Rarity: {rarity}</li>
                 <li>Price: {priceNormal} bells</li>     
                 <li>CJ Price: {priceCJ} bells</li>
-              </ul>
-              </div>
-              <div className="column">
+                </ul>
+                </div>
+   </div>
+   </div>
+   </div>
+   </div>
+   <div className="column">
               <img src={Blathers} alt="Blathers" className="Blathers" style={blathersStyle} />
               <div className="quoteTriangle"></div>
-              <div className="blathersInfo" >&quot;{blathers}&quot;</div>              </div>
+              <div className="blathersInfo" >&quot;{blathers}&quot;</div>
+              <div className="exitButton"><button  onClick={DisplayFishInfo}>Go Back</button></div>
               </div>
-              <div className="column">
-              <div className="exitButton"><button onClick={DisplayFishInfo}>Go Back</button></div>
               </div>
             </div>
 </div>
-        </div>
     );
   } else {
     return (
@@ -141,27 +150,40 @@ else {SetStyle(infoShownStyle);
           />         </div>
           <div className="left">
           <div className="fishInfoHidden" style={style} id={id}>
+            <div className="row">
+    <div className="column">
+      <div className="row">
+      <div className="column">
               <ul>
-              <li className="quote">&quot;{catchphrase}&quot;</li>
               <li> <img src={realisticImage} alt="fish realistic" className="fishRealistic" /></li>
               <li><div className="polaroid"></div></li>
-                <li className="fishName">{fishName}</li>
+              <li className="fishName">{fishName}</li>
+              <li className="quote">&quot;{catchphrase}&quot;</li>
+               </ul>
+               </div>
+               <div className="right">
+<div className="columnRight">
+               <ul>
                 <li>Location: {findLocation}</li>
                 <li> Time Available: {timeDisplayed} </li>
                 <li> Months Available: {displayMonths} </li>
     <li> Rarity: {rarity}</li>
-                <li>Price: {priceNormal} bells</li>
+                <li>Price: {priceNormal} bells</li>     
                 <li>CJ Price: {priceCJ} bells</li>
-                <li> 
-                <img src={Blathers} alt="Blathers" className="Blathers" style={blathersStyle} />
+                </ul>
+   </div>
+   </div>
+   </div>
+   </div>
+   </div>
+   <div className="column">
+              <img src={Blathers} alt="Blathers" className="Blathers" style={blathersStyle} />
               <div className="quoteTriangle"></div>
-              <div className="blathersInfo" >&quot;{blathers}&quot;</div>                </li>
-              </ul>
-              <div className="column">
-              <div className="exitButton"><button onClick={DisplayFishInfo}>Go Back</button></div>
+              <div className="blathersInfo" >&quot;{blathers}&quot;</div>
+              <div className="exitButton"><button  onClick={DisplayFishInfo}>Go Back</button></div>
+              </div>
               </div>
             </div>
-</div>
 </div>
     );
   }

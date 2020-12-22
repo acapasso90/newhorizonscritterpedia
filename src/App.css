@@ -59,6 +59,8 @@ body {background-color: #F5EBC1;
   .quote {margin-top: 20px;
   margin-bottom: 20px;
 font-size: 25px;
+position: relative;
+left: 80px;
 }
 
 .SeaCrittersInfoHidden .quote {color: #180052;}
@@ -91,11 +93,12 @@ font-size: 25px;
 
   .fishName, .bugName, .seaName {font-size: 28px;
   position: relative;
-bottom: 70px;}
+bottom: 60px;
+left: 80px;}
 
 .bugName {font-size: 21px;
   position: relative;
-bottom: 110px;
+bottom: 60px;
 color: #007910}
 
 .fishName {color: #004d80;}
@@ -146,7 +149,7 @@ white-space: nowrap;}
   .Header {box-shadow: 0px 2px 3px #d8cfa1;
     margin-top: -20px;
     min-height: 80px;
-    background-image: url(./marbledbackground.jpg);
+    background-image: url(./bigmarble.jpg);
     background-repeat: repeat;
     background-position-y: -100px;
   }
@@ -242,13 +245,13 @@ min-height: 95px;}
 min-height: 135px;}
 
 .pc .polaroid {position: relative;
-bottom: 5px;
-left: 35px;}
+top: 5px;
+left: 115px;}
 
 .pc .polaroidBug {position: relative;
-  bottom: 25px;
+  top: 10px;
   z-index: -1;
-  left: 35px;}
+  left: 115px;}
 
   .getSeaCrittersInfo .horizontalRow {width: 1040px;
   margin-left: auto;
@@ -259,6 +262,13 @@ left: 35px;}
       top: 80px;
   }
   
+  .right {float: right;}
+
+  .SeaCrittersInfoHidden .columnRight, .fishInfoHidden .columnRight, .bugInfoHidden .columnRight {position: relative;
+    left: 400px;
+    top: 60px;
+
+  }
   .Southern { 
   left: 820px;
   top: 145px;}
@@ -308,12 +318,15 @@ opacity: 0%;}
   .fishRealistic {max-height: 300px;
   max-width: 300px;
 background-color: #f8f2dc;
-border: 15px solid #ffffff;}
+border: 15px solid #ffffff;
+position: relative;
+left: 80px;
+top: 55px;}
 
-.pc .Blathers {max-width: 400px;
+.pc .Blathers {max-width: 300px!important;
   position: absolute;
-  right: 500px;
-  top: 250px;}
+  right: 480px;
+  top: 290px;}
   
   
   .blathersInfo {text-align: left;
@@ -344,6 +357,6 @@ border: 15px solid #ffffff;}
 
 
   .pc .fishInfoHidden .exitButton, .pc .bugInfoHidden .exitButton, .pc .SeaCrittersInfoHidden .exitButton{position: absolute;
-  right: 140px;
-bottom: 80px;
+  left: 10px;
+top: 10px;
 }

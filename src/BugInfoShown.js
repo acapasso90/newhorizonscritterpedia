@@ -86,18 +86,66 @@ if (allYear === false && displayAvailabilty.length <= 2){   var array = displayA
 
 if (monthAvailable === true && timeAvailable === true)
 {return(
-        <div className="BugInfo">
-            <div className="bugImage" onClick={DisplayBugInfo}> 
-            <img src={image} alt="bug icon" className="fishPicture" />        </div>
-            <div className="left">
-            <div className="bugInfoHidden" style={style} id={id} >
-            <div className="row">
-                <div className="column">
+  <div className="BugInfo" >
+  <div className="bugImage" onClick={DisplayBugInfo}> 
+  <img src={image} alt="bug icon" className="fishPicture2"  />        </div>
+  <div className="left">
+  <div className="bugInfoHidden" style={style} id={id} >
+  <div className="row">
+    <div className="column">
+      <div className="row">
+      <div className="column">
 <ul>
-<li className="quote">&quot;{catchphrase}&quot;</li>
 <li> <img src={realisticImage} alt="bug realistic" className="fishRealistic" /></li>
 <li><div className="polaroidBug"></div></li>
 <li className="bugName">{bugName}</li>
+<li className="quote">&quot;{catchphrase}&quot;</li>
+</ul>   </div>
+<div className="right">
+<div className="columnRight">
+<ul>
+<li>Location: {findLocation}</li>
+<li> Time Available: {timeDisplayed} </li>
+<li> Months Available: {displayMonths} </li>
+<li> Rarity: {rarity}</li>
+<li>Price: {priceNormal} bells</li>
+<li>Flick Price: {priceflick} bells</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+    <div className="column">
+    <img src={Blathers} alt="Blathers" className="Blathers" style={blathersStyle} />
+    <div className="quoteTriangle"></div>
+    <div className="blathersInfo" >&quot;{blathers}&quot;</div>
+    <div className="exitButton"><button onClick={DisplayBugInfo}>Go Back</button></div>
+    </div>
+    </div>
+  </div>
+</div>
+</div>
+)
+}
+    else {return(
+        <div className="BugInfo" >
+            <div className="bugImage" onClick={DisplayBugInfo}> 
+            <img src={image} alt="bug icon" className="fishPicture2"  />        </div>
+            <div className="left">
+            <div className="bugInfoHidden" style={style} id={id} >
+            <div className="row">
+              <div className="column">
+                <div className="row">
+                <div className="column">
+<ul>
+<li> <img src={realisticImage} alt="bug realistic" className="fishRealistic" /></li>
+<li><div className="polaroidBug"></div></li>
+<li className="bugName">{bugName}</li>
+<li className="quote">&quot;{catchphrase}&quot;</li>
+</ul>   </div>
+ <div className="right">
+    <div className="columnRight">
+      <ul>
     <li>Location: {findLocation}</li>
     <li> Time Available: {timeDisplayed} </li>
     <li> Months Available: {displayMonths} </li>
@@ -106,6 +154,9 @@ if (monthAvailable === true && timeAvailable === true)
     <li>Flick Price: {priceflick} bells</li>
 </ul>
 </div>
+   </div>
+   </div>
+   </div>
               <div className="column">
               <img src={Blathers} alt="Blathers" className="Blathers" style={blathersStyle} />
               <div className="quoteTriangle"></div>
@@ -117,36 +168,4 @@ if (monthAvailable === true && timeAvailable === true)
 </div>
         </div>
     )
-    }
-    else {return(
-        <div className="BugInfo" >
-            <div className="bugImage" onClick={DisplayBugInfo}> 
-            <img src={image} alt="bug icon" className="fishPicture2"  />        </div>
-            <div className="left">
-            <div className="bugInfoHidden" style={style} id={id} >
-            <div className="row">
-                <div className="column">
-<ul>
-<li className="quote">&quot;{catchphrase}&quot;</li>
-<li> <img src={realisticImage} alt="bug realistic" className="fishRealistic" /></li>
-<li><div className="polaroidBug"></div></li>
-<li className="bugName">{bugName}</li>
-    <li>Location: {findLocation}</li>
-    <li> Time Available: {timeDisplayed} </li>
-    <li> Months Available: {displayMonths} </li>
-    <li> Rarity: {rarity}</li>
-    <li>Price: {priceNormal} bells</li>
-    <li>Flick Price: {priceflick} bells</li>
-</ul>
-</div>
-              <div className="column">
-              <img src={Blathers} alt="Blathers" className="Blathers" style={blathersStyle} />
-              <div className="quoteTriangle"></div>
-              <div className="blathersInfo" >&quot;{blathers}&quot;</div>
-              <div className="exitButton"><button onClick={DisplayBugInfo}>Go Back</button></div>
-              </div>
-              </div>
-            </div>
-</div>
-</div>
-    )}}
+    }}

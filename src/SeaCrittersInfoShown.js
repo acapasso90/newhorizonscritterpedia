@@ -89,20 +89,30 @@ if (monthAvailable === true && timeAvailable === true) {
       <div className="SeaCrittersImage" onClick={DisplaySeaCrittersInfo}>
         <img src={image} alt="SeaCritters icon" className="fishPicture" /> </div>
         <div className="left">
-          <div className="SeaCrittersInfoHidden" style={style} id={id}>
+        <div className="SeaCrittersInfoHidden" style={style} id={id}>
           <div className="row">
+              <div className="column">
+                <div className="row">
                 <div className="column">
             <ul>
-            <li className="quote">&quot;{catchphrase}&quot;</li>
             <li> <img src={realisticImage} alt="sea realistic" className="fishRealistic" /></li>
             <li><div className="polaroid"></div></li>
     <li className="seaName">{SeaCrittersName}</li>
+    <li className="quote">&quot;{catchphrase}&quot;</li>
+    </ul> 
+    </div>
+    <div className="right">
+    <div className="columnRight">
+      <ul>
     <li> Time Available: {timeDisplayed} </li>
     <li> Months Available: {displayMonths} </li>
     <li>Price: {priceNormal} bells</li>
     <li>Speed: {speed} </li>
     <li>Shadow: {shadow} </li>
    </ul>
+   </div>
+   </div>
+   </div>
    </div>
    <div className="column">
               <img src={Blathers} alt="Blathers" className="Blathers" style={blathersStyle} />
@@ -128,17 +138,27 @@ if (monthAvailable === true && timeAvailable === true) {
         <div className="SeaCrittersInfoHidden" style={style} id={id}>
           <div className="row">
               <div className="column">
+                <div className="row">
+                <div className="column">
             <ul>
-            <li className="quote">&quot;{catchphrase}&quot;</li>
             <li> <img src={realisticImage} alt="sea realistic" className="fishRealistic" /></li>
             <li><div className="polaroid"></div></li>
     <li className="seaName">{SeaCrittersName}</li>
+    <li className="quote">&quot;{catchphrase}&quot;</li>
+    </ul> 
+    </div>
+    <div className="right">
+    <div className="columnRight">
+      <ul>
     <li> Time Available: {timeDisplayed} </li>
     <li> Months Available: {displayMonths} </li>
     <li>Price: {priceNormal} bells</li>
     <li>Speed: {speed} </li>
     <li>Shadow: {shadow} </li>
    </ul>
+   </div>
+   </div>
+   </div>
    </div>
    <div className="column">
               <img src={Blathers} alt="Blathers" className="Blathers" style={blathersStyle} />
