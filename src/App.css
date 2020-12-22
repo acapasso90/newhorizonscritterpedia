@@ -90,6 +90,12 @@ color: #007910}
 
 .fishName {color: #004d80;}
 
+.loadingFish {margin-top: 100px;
+width: 550px;
+margin-left: auto;
+margin-right: auto;
+white-space: nowrap;}
+
 .seaName {color: #180052;
   font-size: 28px;}
 

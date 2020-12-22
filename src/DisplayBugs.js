@@ -1,6 +1,8 @@
 import React, {useState} from "react";
 import axios from "axios";
 import BugInfoShown from "./BugInfoShown.js";
+import Loader from 'react-loader-spinner'
+
 
 export default function DisplayBugs(){
     const [bugInfo, setbugInfo] = useState({ready:false});
@@ -145,4 +147,15 @@ if (loaded){return(
     )
 }
 else{getBugs()
-return null;}}
+    return (  
+        <div className="loadingFish">
+        <h1>Loading Current Bugs</h1>
+        <Loader
+            type="Puff"
+            color="#4f963f"
+            height={250}
+            width={250}
+        
+         />
+         </div>
+        );}}

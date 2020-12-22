@@ -1,6 +1,8 @@
 import React, {useState} from "react";
 import axios from "axios";
 import SeaCrittersInfoShown from "./SeaCrittersInfoShown.js";
+import Loader from 'react-loader-spinner'
+
 
 export default function DisplaySeaCritters(){
     const [SeaCrittersInfo, setSeaCrittersInfo] = useState({ready:false});
@@ -89,4 +91,14 @@ if (loaded){return(
     )
 }
 else{getSeaCritters()
-return null;}}
+    return (  
+        <div className="loadingFish">
+        <h1>Loading Current Sea Creatures</h1>
+        <Loader
+            type="Puff"
+            color="#08203a"
+            height={250}
+            width={250}
+        
+         />
+         </div>)}}

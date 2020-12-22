@@ -1,10 +1,12 @@
 import React, {useState} from "react";
 import axios from "axios";
 import FishInfoShown from "./FishInfoShown.js";
+import Loader from 'react-loader-spinner'
+
 
 export default function DisplayFish(){
-    const [fishInfo, setfishInfo] = useState({ready:false});
-    const [hemisphere, setHemisphere] = useState("Northern");
+   const [fishInfo, setfishInfo] = useState({ready:false});
+   const [hemisphere, setHemisphere] = useState("Northern");
     const [loaded, setLoaded] = useState(false);
 function showFish(response){
 setfishInfo(response.data)
@@ -12,7 +14,7 @@ setLoaded(true);
 }
 function getFish(){
     let apiURL = "https://acnhapi.com/v1a/fish/";
-    axios.get(apiURL).then(showFish);
+   axios.get(apiURL).then(showFish);
 }
 
 function setNorthernHemisphere(){ setHemisphere("Northern")}
@@ -143,5 +145,16 @@ if (loaded){return(
      </div>
     )
 }
-else{getFish()
-return null;}}
+else{getFish();
+return (  
+<div className="loadingFish">
+<h1>Loading Current Fish</h1>
+<Loader
+    type="Puff"
+    color="#5B799B"
+    height={250}
+    width={250}
+
+ />
+ </div>
+);}}
