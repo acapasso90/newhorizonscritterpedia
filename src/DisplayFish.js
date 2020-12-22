@@ -24,12 +24,8 @@ if (loaded){return(
     <div className="getFishInfo">
         <div className="CurrentHemisphere"><h2>Current Hemisphere: {hemisphere} </h2></div>
         <div className="buttons">
-            <div className="row">
-                <div className="column">
-            <button  onClick={setNorthernHemisphere} className="Northern">Northern</button></div>
-            <div className="column">
-  <button onClick={setSouthernHemisphere} className="Southern">Southern</button></div>
-            </div>
+            <button  onClick={setNorthernHemisphere} className="Northern">Northern</button>
+            <button onClick={setSouthernHemisphere} className="Southern">Southern</button>
         </div>
         <div className="currentlyAvailable"><h2>Fish currently available:</h2></div>
         <div className="horizontalRow">

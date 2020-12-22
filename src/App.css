@@ -54,8 +54,13 @@ body {background-color: #F5EBC1;
   .quote {margin-top: 20px;
   margin-bottom: 20px;
 font-size: 25px;
-color: #ad5400;
 }
+
+.SeaCrittersInfoHidden .quote {color: #180052;}
+
+.fishInfoHidden .quote {color:  #004d80;}
+
+.bugInfoHidden .quote {color: #007910; }
 
   .fishpic {position: relative;
     bottom: 75px;
