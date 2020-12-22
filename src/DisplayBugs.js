@@ -155,7 +155,7 @@ else{getBugs()
             color="#4f963f"
             height={250}
             width={250}
-        
+            timeout={6000}
          />
          </div>
         );}}

@@ -1,6 +1,8 @@
+
 body {background-color: #F5EBC1;
   color: #8B7A65;
-  font-family: 'Short Stack', cursive;}
+  font-family: 'Short Stack', cursive;
+  }
   
   button, button:hover {background-color: #da8f4d;
     border: 4px solid #702b2b;
@@ -49,7 +51,10 @@ body {background-color: #F5EBC1;
   
     .butterfly {position: relative;
     bottom: 75px;
-  left: 15px;}
+  left: 15px;
+}
+
+.butterfly:hover, .octopus:hover, .fishpic:hover {cursor: pointer;}
 
   .quote {margin-top: 20px;
   margin-bottom: 20px;
@@ -141,6 +146,10 @@ white-space: nowrap;}
   .iconLinks {position: relative;
   bottom: 80px;
   left: 5px;}
+
+  .active:hover {cursor: default;}
+  .link:hover {cursor: default;}
+
   
   
   .left {float: left;}
@@ -289,22 +298,22 @@ background-color: #f8f2dc;
 border: 15px solid #ffffff;}
 
 .pc .Blathers {max-width: 400px;
-position: absolute;
-right: 500px;
-top: 250px;}
-
-
-.blathersInfo {text-align: left;
-  background-color: #ffff;
-  border-radius: 10%;}
-
-  .pc .blathersInfo {position: absolute;
-    right: 59px;
-    bottom: 351px;
-    max-width: 450px;
-    padding: 10px 20px;
-  }
-
+  position: absolute;
+  right: 500px;
+  top: 250px;}
+  
+  
+  .blathersInfo {text-align: left;
+    background-color: #ffff;
+    border-radius: 10%;}
+  
+    .pc .blathersInfo {position: absolute;
+      right: 59px;
+      bottom: 351px;
+      max-width: 450px;
+      padding: 10px 20px;
+    }
+  
 
 
   .quoteTriangle {width: 0px;

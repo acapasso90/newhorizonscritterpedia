@@ -99,6 +99,6 @@ else{getSeaCritters()
             color="#08203a"
             height={250}
             width={250}
-        
+            timeout={6000}
          />
          </div>)}}

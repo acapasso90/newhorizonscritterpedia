@@ -23,7 +23,7 @@ export default function BugInfoShown(props){
       borderColor: "#7a3737",
       paddingRight: "50px",
       borderStyle: "solid",
-      position: "absolute",
+      position: "absolute",      
       top: "-255px",
       left: "-6px",
     };

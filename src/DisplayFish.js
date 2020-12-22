@@ -154,6 +154,7 @@ return (
     color="#5B799B"
     height={250}
     width={250}
+    timeout={6000}
 
  />
  </div>
