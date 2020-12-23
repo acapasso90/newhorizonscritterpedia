@@ -1,8 +1,17 @@
 import React, { useState } from "react";
 import Blathers from "./Blathers.png";
-import Months from "./Months.js"
 
 export default function FishInfoShown(props) {
+
+  const unavailable = {
+    opacity: "50%",
+    textDecoration: "line-through",
+  };
+const available = {opacity: "100%",
+textDecoration: "none",}
+const [janStyle, setJanStyle] = useState(unavailable);
+const [febStyle, setFebStyle] = useState(unavailable);
+
   const english = "name-USen";
   const cj = "price-cj";
   const phrase = "catch-phrase";
@@ -68,12 +77,17 @@ let hours = currentTime.getHours();
 if (time.includes(hours)){timeAvailable = true;}
 if (availability.includes(month)){monthAvailable = true;} 
 
+
+function ShowMonths(){ if(availability.includes(1)){setJanStyle(available);}
+else if (availability.includes(2)){setFebStyle(available);}}
+
   function DisplayFishInfo(){
     let active = document.getElementById('active');
     if(active){SetStyle(infoHiddenStyle);
         SetId("inactive");}
 else {SetStyle(infoShownStyle);
     SetId("active");
+    ShowMonths()
 }}   
 
 
@@ -85,7 +99,25 @@ else {SetStyle(infoShownStyle);
         <div className="fishInfoHidden" style={style} id={id}>
         <div className="row">
 <div className="column">
-<Months key={availability} />
+<div className="Months">
+    <div className="months">
+    <h4 className="monthsHeader"> Months Available</h4>
+   <p className="Jan"  style={janStyle}>January</p>
+      <p className="Feb" style={febStyle} >February</p>
+      <p className="Mar"  style={janStyle}>March</p>
+      <p className="Apr"  style={janStyle}>April</p>
+      <p className="May"  style={janStyle} >May</p>
+      <p className="Jun"  style={janStyle}>June</p>
+      </div> 
+      <div className="months2">
+      <p className="Jul" style={janStyle}>July</p>
+      <p className="Aug" style={janStyle} >August</p>
+      <p className="Sep" style={janStyle}>September</p>
+      <p className="Oct" style={janStyle}>October</p>
+      <p className="Nov" style={janStyle}>November</p>
+      <p className="Dec"style={janStyle} >December</p>
+  </div>
+  </div>
     </div>
 <div className="row">
   <div className="column">
@@ -131,7 +163,25 @@ else {SetStyle(infoShownStyle);
           <div className="fishInfoHidden" style={style} id={id}>
     <div className="row">
 <div className="column">
-   <Months key={availability} />
+<div className="Months">
+    <div className="months">
+    <h4 className="monthsHeader"> Months Available</h4>
+   <p className="Jan"  style={janStyle}>January</p>
+      <p className="Feb" style={janStyle} >February</p>
+      <p className="Mar"  style={janStyle}>March</p>
+      <p className="Apr"  style={janStyle}>April</p>
+      <p className="May"  style={janStyle} >May</p>
+      <p className="Jun"  style={janStyle}>June</p>
+      </div> 
+      <div className="months2">
+      <p className="Jul" style={janStyle}>July</p>
+      <p className="Aug" style={janStyle} >August</p>
+      <p className="Sep" style={janStyle}>September</p>
+      <p className="Oct" style={janStyle}>October</p>
+      <p className="Nov" style={janStyle}>November</p>
+      <p className="Dec"style={janStyle} >December</p>
+  </div>
+  </div>
 </div>
       <div className="row">
       <div className="column">

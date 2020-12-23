@@ -236,15 +236,18 @@ top: 35px;}
   flex-direction: row;
 position: relative;
 top: 70px;
-right: 5px;}
+left: 255px;
+font-size: 18px;}
 
 .months2 {display: flex;
   flex-direction: row;
   position: relative;
-  top: 100px;
-right: 450px;}
+  top: 40px;
+left: 380px;
+font-size: 18px;}
 
 .months p, .months2 p {margin-left: 50px;}
+
   .Northern { 
     left: 635px;
   top: 145px;}
@@ -253,7 +256,7 @@ right: 450px;}
     font-size: 20px;
     position: relative;
 bottom: 60px;
-left: 400px;
+left: 440px;
   }
   .polaroid {background-color: #ffffff;
   max-width: 330px;

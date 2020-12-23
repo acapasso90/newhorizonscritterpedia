@@ -1,14 +1,21 @@
 import React, {useState} from "react";
 import Blathers from "./Blathers.png";
-import Months from "./Months.js"
 
 export default function BugInfoShown(props){
-    const english = "name-USen";
-    const flick = "price-flick";
-    const phrase = "catch-phrase";
-    const blathersPhrase = "museum-phrase";
+  const unavailable = {
+    opacity: "50%",
+    textDecoration: "line-through",
+  };
+const available = {opacity: "100%",
+textDecoration: "none",}
+const [janStyle, setJanStyle] = useState(unavailable);
+const [febStyle, setFebStyle] = useState(null);
+const english = "name-USen";
+ const flick = "price-flick";
+  const phrase = "catch-phrase";
+ const blathersPhrase = "museum-phrase";
     const northernArray = "month-array-northern";
-    const southernArray = "month-array-southern"; 
+  const southernArray = "month-array-southern"; 
     const timeArray = "time-array";
     const blathersStyle = {maxWidth: "340px",
     marginTop: "120px",}
@@ -58,25 +65,26 @@ export default function BugInfoShown(props){
           timeAvailable = true;
         }
         let allYear = props.data.availability.isAllYear;
-        if (allYear === true) {
-          monthAvailable = true;
-        }
-        let time = props.data.availability[timeArray];
-        let currentTime = new Date();
-        let month = currentTime.getMonth();
-        let hours = currentTime.getHours();
-        if (time.includes(hours)) {
-          timeAvailable = true;
-        }
-        if (availability.includes(month)) {
-          monthAvailable = true;
-        }
-    function DisplayBugInfo(){
-        let active = document.getElementById('active');
-        if(active){SetStyle(infoHiddenStyle);
-            SetId("inactive");}
-    else {SetStyle(infoShownStyle);
-        SetId("active");
+        if (allYear === true) {monthAvailable = true;    }
+   let time = props.data.availability[timeArray];
+   let currentTime = new Date();
+   let month = currentTime.getMonth();
+ let hours = currentTime.getHours();
+if (time.includes(hours)) { timeAvailable = true;}
+ if (availability.includes(month)) {monthAvailable = true;}
+ 
+ function ShowMonths(){ if(availability.includes(1)){setJanStyle(available);}
+  else if(availability.includes(2)){setFebStyle(available);}
+  else if (!availability.includes(2)){setFebStyle(unavailable);}
+ }
+
+function DisplayBugInfo(){
+let active = document.getElementById('active');
+if(active){SetStyle(infoHiddenStyle);
+  SetId("inactive");}
+else {SetStyle(infoShownStyle);
+    SetId("active");
+    ShowMonths()
 }}   
 
 if (monthAvailable === true && timeAvailable === true)
@@ -88,7 +96,26 @@ if (monthAvailable === true && timeAvailable === true)
   <div className="bugInfoHidden" style={style} id={id} >
   <div className="row">
     <div className="column">
-    <Months key={availability} />
+ 
+<div className="Months">
+    <div className="months">
+    <h4 className="monthsHeader"> Months Available</h4>
+   <p className="Jan"  style={janStyle}>January</p>
+      <p className="Feb" style={febStyle} >February</p>
+      <p className="Mar"  style={febStyle}>March</p>
+      <p className="Apr"  style={febStyle}>April</p>
+      <p className="May"  style={febStyle} >May</p>
+      <p className="Jun"  style={febStyle}>June</p>
+      </div> 
+      <div className="months2">
+      <p className="Jul" style={febStyle}>July</p>
+      <p className="Aug" style={febStyle} >August</p>
+      <p className="Sep" style={febStyle}>September</p>
+      <p className="Oct" style={febStyle}>October</p>
+      <p className="Nov" style={febStyle}>November</p>
+      <p className="Dec"style={febStyle} >December</p>
+  </div>
+  </div>
 </div>
 <div className="row">
       <div className="column">
@@ -130,7 +157,26 @@ if (monthAvailable === true && timeAvailable === true)
       <div className="bugInfoHidden" style={style} id={id} >
       <div className="row">
         <div className="column">
-        <Months key={availability} />
+
+        <div className="Months">
+    <div className="months">
+    <h4 className="monthsHeader"> Months Available</h4>
+   <p className="Jan"  style={janStyle}>January</p>
+      <p className="Feb" style={febStyle} >February</p>
+      <p className="Mar"  style={febStyle}>March</p>
+      <p className="Apr"  style={febStyle}>April</p>
+      <p className="May"  style={febStyle} >May</p>
+      <p className="Jun"  style={febStyle}>June</p>
+      </div> 
+      <div className="months2">
+      <p className="Jul" style={febStyle}>July</p>
+      <p className="Aug" style={febStyle} >August</p>
+      <p className="Sep" style={febStyle}>September</p>
+      <p className="Oct" style={febStyle}>October</p>
+      <p className="Nov" style={febStyle}>November</p>
+      <p className="Dec"style={febStyle} >December</p>
+  </div>
+  </div>
     </div>
     <div className="row">
           <div className="column">
