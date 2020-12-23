@@ -246,7 +246,9 @@ font-size: 18px;}
 left: 380px;
 font-size: 18px;}
 
-.months p, .months2 p {margin-left: 50px;}
+.months p, .months2 p {margin-left: 50px;
+max-height: 20px;
+padding: 7px 15px;}
 
   .Northern { 
     left: 635px;

@@ -3,11 +3,18 @@ import Blathers from "./Blathers.png";
 
 export default function BugInfoShown(props){
   const unavailable = {
-    opacity: "50%",
+    opacity: "40%",
     textDecoration: "line-through",
   };
 const available = {opacity: "100%",
-textDecoration: "none",}
+textDecoration: "none",
+fontWeight: "bold",
+borderWidth: "2px",
+borderStyle: "solid",
+borderColor: "#702B2B",
+backgroundColor: "#fcf8e8",
+color: "#702B2B",
+}
 const [janStyle, setJanStyle] = useState(unavailable);
 const [febStyle, setFebStyle] = useState(unavailable);
 const [marStyle, setMarStyle] = useState(unavailable);

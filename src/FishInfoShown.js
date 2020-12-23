@@ -7,8 +7,15 @@ export default function FishInfoShown(props) {
     opacity: "50%",
     textDecoration: "line-through",
   };
-const available = {opacity: "100%",
-textDecoration: "none",}
+  const available = {opacity: "100%",
+  textDecoration: "none",
+  fontWeight: "bold",
+  borderWidth: "2px",
+  borderStyle: "solid",
+  borderColor: "#702B2B",
+  backgroundColor: "#fcf8e8",
+  color: "#702B2B",
+  }
 const [janStyle, setJanStyle] = useState(unavailable);
 const [febStyle, setFebStyle] = useState(unavailable);
 const [marStyle, setMarStyle] = useState(unavailable);
