@@ -11,6 +11,16 @@ const available = {opacity: "100%",
 textDecoration: "none",}
 const [janStyle, setJanStyle] = useState(unavailable);
 const [febStyle, setFebStyle] = useState(unavailable);
+const [marStyle, setMarStyle] = useState(unavailable);
+const [aprStyle, setAprStyle] = useState(unavailable);
+const [mayStyle, setMayStyle] = useState(unavailable);
+const [junStyle, setJunStyle] = useState(unavailable);
+const [julStyle, setJulStyle] = useState(unavailable);
+const [augStyle, setAugStyle] = useState(unavailable);
+const [sepStyle, setSepStyle] = useState(unavailable);
+const [octStyle, setOctStyle] = useState(unavailable);
+const [novStyle, setNovStyle] = useState(unavailable);
+const [decStyle, setDecStyle] = useState(unavailable);
 
   const english = "name-USen";
   const cj = "price-cj";
@@ -79,7 +89,19 @@ if (availability.includes(month)){monthAvailable = true;}
 
 
 function ShowMonths(){ if(availability.includes(1)){setJanStyle(available);}
-else if (availability.includes(2)){setFebStyle(available);}}
+if(availability.includes(2)){setFebStyle(available);}
+ if(availability.includes(3)){setMarStyle(available);}
+ if(availability.includes(4)){setAprStyle(available);}
+ if(availability.includes(5)){setMayStyle(available);}
+if(availability.includes(6)){setJunStyle(available);}
+ if(availability.includes(7)){setJulStyle(available);}
+ if(availability.includes(8)){setAugStyle(available);}
+ if(availability.includes(9)){setSepStyle(available);}
+ if(availability.includes(10)){setOctStyle(available);}
+  if(availability.includes(11)){setNovStyle(available);}
+  if(availability.includes(12)){setDecStyle(available);}
+   }  
+
 
   function DisplayFishInfo(){
     let active = document.getElementById('active');
@@ -102,20 +124,21 @@ else {SetStyle(infoShownStyle);
 <div className="Months">
     <div className="months">
     <h4 className="monthsHeader"> Months Available</h4>
+   
    <p className="Jan"  style={janStyle}>January</p>
       <p className="Feb" style={febStyle} >February</p>
-      <p className="Mar"  style={janStyle}>March</p>
-      <p className="Apr"  style={janStyle}>April</p>
-      <p className="May"  style={janStyle} >May</p>
-      <p className="Jun"  style={janStyle}>June</p>
+      <p className="Mar"  style={marStyle}>March</p>
+      <p className="Apr"  style={aprStyle}>April</p>
+      <p className="May"  style={mayStyle} >May</p>
+      <p className="Jun"  style={junStyle}>June</p>
       </div> 
       <div className="months2">
-      <p className="Jul" style={janStyle}>July</p>
-      <p className="Aug" style={janStyle} >August</p>
-      <p className="Sep" style={janStyle}>September</p>
-      <p className="Oct" style={janStyle}>October</p>
-      <p className="Nov" style={janStyle}>November</p>
-      <p className="Dec"style={janStyle} >December</p>
+      <p className="Jul" style={julStyle}>July</p>
+      <p className="Aug" style={augStyle} >August</p>
+      <p className="Sep" style={sepStyle}>September</p>
+      <p className="Oct" style={octStyle}>October</p>
+      <p className="Nov" style={novStyle}>November</p>
+      <p className="Dec"style={decStyle} >December</p>
   </div>
   </div>
     </div>
@@ -163,23 +186,24 @@ else {SetStyle(infoShownStyle);
           <div className="fishInfoHidden" style={style} id={id}>
     <div className="row">
 <div className="column">
+
 <div className="Months">
     <div className="months">
     <h4 className="monthsHeader"> Months Available</h4>
    <p className="Jan"  style={janStyle}>January</p>
-      <p className="Feb" style={janStyle} >February</p>
-      <p className="Mar"  style={janStyle}>March</p>
-      <p className="Apr"  style={janStyle}>April</p>
-      <p className="May"  style={janStyle} >May</p>
-      <p className="Jun"  style={janStyle}>June</p>
+      <p className="Feb" style={febStyle} >February</p>
+      <p className="Mar"  style={marStyle}>March</p>
+      <p className="Apr"  style={aprStyle}>April</p>
+      <p className="May"  style={mayStyle} >May</p>
+      <p className="Jun"  style={junStyle}>June</p>
       </div> 
       <div className="months2">
-      <p className="Jul" style={janStyle}>July</p>
-      <p className="Aug" style={janStyle} >August</p>
-      <p className="Sep" style={janStyle}>September</p>
-      <p className="Oct" style={janStyle}>October</p>
-      <p className="Nov" style={janStyle}>November</p>
-      <p className="Dec"style={janStyle} >December</p>
+      <p className="Jul" style={julStyle}>July</p>
+      <p className="Aug" style={augStyle} >August</p>
+      <p className="Sep" style={sepStyle}>September</p>
+      <p className="Oct" style={octStyle}>October</p>
+      <p className="Nov" style={novStyle}>November</p>
+      <p className="Dec"style={decStyle} >December</p>
   </div>
   </div>
 </div>
