@@ -10,6 +10,9 @@ import fishActive from "./fishActive.png";
 import DisplaySeaApp from "./DisplaySeaApp.js";
 import DisplayFishApp from "./DisplayFishApp.js";
 import DisplayBugApp from "./DisplayBugApp.js";
+import axios from "axios";
+
+let signal = axios.CancelToken.source();
 
 
 
@@ -40,36 +43,46 @@ const [styleOctopus, setStyleOctopus] = useState(InActive);
       if (bugsrc === butterflyActive) {setBugsrc(butterfly);
         setStylebug(InActive);
         setSeasrc(octopusActive);
-      setStyleOctopus(Active);}
+      setStyleOctopus(Active);
+      signal.cancel()}
    else if (fishsrc === fishActive){setFishsrc(fish);
     setStyleFish(InActive);
     setSeasrc(octopusActive);
-    setStyleOctopus(Active);}
+    setStyleOctopus(Active);
+    signal.cancel()}
     else{
     setSeasrc(octopusActive);
-    setStyleOctopus(Active);}}
+    setStyleOctopus(Active);}
+    signal.cancel()}
   
   function fishLinkActive(){ if (bugsrc === butterflyActive) {setBugsrc(butterfly);
     setStylebug(InActive);
     setFishsrc(fishActive);
-    setStyleFish(Active);}
+    setStyleFish(Active);
+    signal.cancel();}
     else if (seasrc === octopusActive){setSeasrc(octopus);
       setStyleOctopus(InActive);
       setFishsrc(fishActive);
-      setStyleFish(Active);}
+      setStyleFish(Active);
+      signal.cancel();}
     else{setFishsrc(fishActive);
-      setStyleFish(Active);}}
+      setStyleFish(Active);
+      signal.cancel();}}
   
     function bugLinkActive(){ if (fishsrc === fishActive) {setBugsrc(butterflyActive);
       setStylebug(Active);
       setFishsrc(fish);
-      setStyleFish(InActive);}
+      setStyleFish(InActive);
+      signal.cancel();}
       else if (seasrc === octopusActive){setSeasrc(octopus);
         setStyleOctopus(InActive);
         setBugsrc(butterflyActive);
-        setStylebug(Active);}
+        setStylebug(Active);
+        signal.cancel();}
       else{setBugsrc(butterflyActive);
-        setStylebug(Active);}}
+        setStylebug(Active);
+        signal.cancel();}}
+
 
 
 return (

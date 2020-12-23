@@ -9,11 +9,11 @@ export default function DisplaySeaCritters(){
     const [hemisphere, setHemisphere] = useState("Northern");
     const [loaded, setLoaded] = useState(false);
 
-
 function showSeaCritters(response){
     setSeaCrittersInfo(response.data)
 setLoaded(true);
 }
+
 
 
 function getSeaCritters(){
