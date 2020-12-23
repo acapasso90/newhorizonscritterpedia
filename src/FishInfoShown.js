@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Blathers from "./Blathers.png";
+import Months from "./Months.js"
 
 export default function FishInfoShown(props) {
   const english = "name-USen";
@@ -8,8 +9,6 @@ export default function FishInfoShown(props) {
   const blathersPhrase = "museum-phrase";
   const northernArray = "month-array-northern";
   const southernArray = "month-array-southern";
-  const northernMonths = "month-northern";
-  const southernMonths = "month-southern";
   const timeArray = "time-array";
   const blathersStyle = {maxWidth: "340px",
   marginTop: "120px",}
@@ -39,16 +38,12 @@ export default function FishInfoShown(props) {
   let worldLocation = props.location;
   let availability = null;
   let monthAvailable = null;
-  let displayAvailabilty = null;
   let timeAvailable = null;
   let timeDisplayed = props.data.availability.time;
   if (timeDisplayed.length < 1){timeDisplayed = "All Day";}
   if (worldLocation === "Northern") {
-    availability = props.data.availability[northernArray];
-    displayAvailabilty = props.data.availability[northernMonths]} else {
-    availability = props.data.availability[southernArray];
-    displayAvailabilty = props.data.availability[southernMonths];
-  }
+    availability = props.data.availability[northernArray];} else {
+    availability = props.data.availability[southernArray];}
   let findLocation = props.data.availability.location;
   let rarity = props.data.availability.rarity;
   let realisticImage = props.data.image_uri;
@@ -67,24 +62,11 @@ export default function FishInfoShown(props) {
     monthAvailable = true;
   }
   let time = props.data.availability[timeArray];
-  let displayMonths = null;
-  const months= ["January","February","March","April","May","June","July",
-  "August","September","October","November","December"];
-if (allYear === false && displayAvailabilty.length <= 2){   var array = displayAvailabilty.split('-');
-var a = parseInt(array[0]);
-let formattedA = months[a];
-displayMonths = `${formattedA}`;}
-else if  (allYear === true ){     displayMonths = `All Year`;}
-else if (allYear === false && displayAvailabilty.length > 2){displayMonths = displayAvailabilty}
-  let currentTime = new Date();
-  let month = currentTime.getMonth();
-  let hours = currentTime.getHours();
-  if (time.includes(hours)) {
-    timeAvailable = true;
-  }
-  if (availability.includes(month)) {
-    monthAvailable = true;
-  }
+let currentTime = new Date();
+let month = currentTime.getMonth();
+let hours = currentTime.getHours();
+if (time.includes(hours)){timeAvailable = true;}
+if (availability.includes(month)){monthAvailable = true;} 
 
   function DisplayFishInfo(){
     let active = document.getElementById('active');
@@ -95,49 +77,46 @@ else {SetStyle(infoShownStyle);
 }}   
 
 
-  if (monthAvailable === true && timeAvailable === true) {
-    return (
-      <div className="FishInfo">
-        <div className="fishImage" onClick={DisplayFishInfo}>
-          <img src={image} alt="fish icon" className="fishPicture" onClick={DisplayFishInfo} />      </div>
-          <div className="left">
-            <div className="fishInfoHidden" style={style} id={id}>
-            <div className="row">
-    <div className="column">
-      <div className="row">
-      <div className="column">
-              <ul>
-              <li> <img src={realisticImage} alt="fish realistic" className="fishRealistic" /></li>
-              <li><div className="polaroid"></div></li>
-              <li className="fishName">{fishName}</li>
-              <li className="quote">&quot;{catchphrase}&quot;</li>
-               </ul>
-               </div>
-               <div className="right">
+  if (monthAvailable === true && timeAvailable === true) {return(
+    <div className="FishInfo">
+    <div className="fishImage" onClick={DisplayFishInfo}>
+      <img src={image} alt="fish icon" className="fishPicture" onClick={DisplayFishInfo} />      </div>
+      <div className="left">
+        <div className="fishInfoHidden" style={style} id={id}>
+        <div className="row">
+<div className="column">
+<Months key={availability} />
+    </div>
+<div className="row">
+  <div className="column">
+  <ul>
+<li> <img src={realisticImage} alt="bug realistic" className="fishRealistic" /></li>
+<li><div className="polaroid"></div></li>
+<li className="bugName">{fishName}</li>
+<li className="quote">&quot;{catchphrase}&quot;</li>
+</ul>   </div>
+<div className="right">
 <div className="columnRight">
-               <ul>
-                <li>Location: {findLocation}</li>
-                <li> Time Available: {timeDisplayed} </li>
-                <li> Months Available: {displayMonths} </li>
-    <li> Rarity: {rarity}</li>
-                <li>Price: {priceNormal} bells</li>     
+<ul>
+<li>Location: {findLocation}</li>
+<li> Time Available: {timeDisplayed} </li>
+<li> Rarity: {rarity}</li>
+<li>Price: {priceNormal} bells</li>
                 <li>CJ Price: {priceCJ} bells</li>
                 </ul>
-                </div>
-   </div>
-   </div>
-   </div>
-   </div>
+</div>
+</div>
+</div>
    <div className="column">
               <img src={Blathers} alt="Blathers" className="Blathers" style={blathersStyle} />
               <div className="quoteTriangle"></div>
               <div className="blathersInfo" >&quot;{blathers}&quot;</div>
               <div className="exitButton"><button  onClick={DisplayFishInfo}>Go Back</button></div>
               </div>
-              </div>
-            </div>
+    </div>
+  </div>
 </div>
-    );
+</div>);
   } else {
     return (
       <div className="FishInfo">
@@ -150,8 +129,10 @@ else {SetStyle(infoShownStyle);
           />         </div>
           <div className="left">
           <div className="fishInfoHidden" style={style} id={id}>
-            <div className="row">
-    <div className="column">
+    <div className="row">
+<div className="column">
+   <Months key={availability} />
+</div>
       <div className="row">
       <div className="column">
               <ul>
@@ -166,24 +147,22 @@ else {SetStyle(infoShownStyle);
                <ul>
                 <li>Location: {findLocation}</li>
                 <li> Time Available: {timeDisplayed} </li>
-                <li> Months Available: {displayMonths} </li>
     <li> Rarity: {rarity}</li>
                 <li>Price: {priceNormal} bells</li>     
                 <li>CJ Price: {priceCJ} bells</li>
                 </ul>
-   </div>
-   </div>
-   </div>
-   </div>
-   </div>
+                </div>
+</div>
+</div>
    <div className="column">
               <img src={Blathers} alt="Blathers" className="Blathers" style={blathersStyle} />
               <div className="quoteTriangle"></div>
               <div className="blathersInfo" >&quot;{blathers}&quot;</div>
               <div className="exitButton"><button  onClick={DisplayFishInfo}>Go Back</button></div>
               </div>
-              </div>
-            </div>
+    </div>
+  </div>
+</div>
 </div>
     );
   }

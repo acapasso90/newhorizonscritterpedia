@@ -8,14 +8,16 @@ export default function DisplayFish(){
    const [fishInfo, setfishInfo] = useState({ready:false});
    const [hemisphere, setHemisphere] = useState("Northern");
     const [loaded, setLoaded] = useState(false);
+
 function showFish(response){
 setfishInfo(response.data)
 setLoaded(true);
 }
+
 function getFish(){
     let apiURL = "https://acnhapi.com/v1a/fish/";
-   axios.get(apiURL).then(showFish);
-}
+            axios.get(apiURL).then(showFish);
+        }
 
 function setNorthernHemisphere(){ setHemisphere("Northern")}
 function setSouthernHemisphere(){ setHemisphere("Southern")}

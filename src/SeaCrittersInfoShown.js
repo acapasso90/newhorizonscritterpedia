@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import Blathers from "./Blathers.png";
+import Months from "./Months.js"
 
 export default function SeaCrittersInfoShown(props){
     const english = "name-USen";
@@ -7,8 +8,6 @@ export default function SeaCrittersInfoShown(props){
     const blathersPhrase = "museum-phrase";
     const northernArray = "month-array-northern";
     const southernArray = "month-array-southern"; 
-    const northernMonths = "month-northern";
-    const southernMonths = "month-southern";
     const timeArray = "time-array";
     const blathersStyle = {maxWidth: "340px",
     marginTop: "120px",}
@@ -41,11 +40,8 @@ export default function SeaCrittersInfoShown(props){
     let timeAvailable = null; 
     let timeDisplayed = props.data.availability.time;
     if (timeDisplayed.length < 1){timeDisplayed = "All Day";}
-  let displayAvailabilty = null;
-    if (worldLocation === "Northern"){availability = props.data.availability[northernArray];
-   displayAvailabilty = props.data.availability[northernMonths]}
-    else {availability = props.data.availability[southernArray];
-     displayAvailabilty = props.data.availability[southernMonths];}
+    if (worldLocation === "Northern"){availability = props.data.availability[northernArray];}
+    else {availability = props.data.availability[southernArray];}
     let SeaCrittersName = props.data.name[english];
        let image = props.data.icon_uri;
        let realisticImage = props.data.image_uri;
@@ -57,17 +53,8 @@ export default function SeaCrittersInfoShown(props){
         let allDay = props.data.availability.isAllDay;
         if (allDay === true){timeAvailable = true;}
         let allYear = props.data.availability.isAllYear;    
-        let displayMonths = null;
         if (allYear === true){monthAvailable = true;}
         let time = props.data.availability[timeArray];
-        const months= ["January","February","March","April","May","June","July",
-        "August","September","October","November","December"];
-if (allYear === false && displayAvailabilty.length <= 2){   var array = displayAvailabilty.split('-');
-  var a = parseInt(array[0]);
-  let formattedA = months[a];
-  displayMonths = `${formattedA}`;}
-  else if  (allYear === true ){     displayMonths = `All Year`;}
-  else if (allYear === false && displayAvailabilty.length > 2){displayMonths = displayAvailabilty}
    
     let currentTime = new Date();
     let month = currentTime.getMonth();
@@ -92,6 +79,8 @@ if (monthAvailable === true && timeAvailable === true) {
         <div className="SeaCrittersInfoHidden" style={style} id={id}>
           <div className="row">
               <div className="column">
+              <Months key={availability} />
+    </div>
                 <div className="row">
                 <div className="column">
             <ul>
@@ -105,15 +94,13 @@ if (monthAvailable === true && timeAvailable === true) {
     <div className="columnRight">
       <ul>
     <li> Time Available: {timeDisplayed} </li>
-    <li> Months Available: {displayMonths} </li>
     <li>Price: {priceNormal} bells</li>
     <li>Speed: {speed} </li>
     <li>Shadow: {shadow} </li>
-   </ul>
-   </div>
-   </div>
-   </div>
-   </div>
+    </ul>
+</div>
+</div>
+</div>
    <div className="column">
               <img src={Blathers} alt="Blathers" className="Blathers" style={blathersStyle} />
               <div className="quoteTriangle"></div>
@@ -138,6 +125,7 @@ if (monthAvailable === true && timeAvailable === true) {
         <div className="SeaCrittersInfoHidden" style={style} id={id}>
           <div className="row">
               <div className="column">
+              <Months key={availability} /> </div>
                 <div className="row">
                 <div className="column">
             <ul>
@@ -151,15 +139,13 @@ if (monthAvailable === true && timeAvailable === true) {
     <div className="columnRight">
       <ul>
     <li> Time Available: {timeDisplayed} </li>
-    <li> Months Available: {displayMonths} </li>
     <li>Price: {priceNormal} bells</li>
     <li>Speed: {speed} </li>
     <li>Shadow: {shadow} </li>
-   </ul>
-   </div>
-   </div>
-   </div>
-   </div>
+    </ul>
+</div>
+</div>
+</div>
    <div className="column">
               <img src={Blathers} alt="Blathers" className="Blathers" style={blathersStyle} />
               <div className="quoteTriangle"></div>

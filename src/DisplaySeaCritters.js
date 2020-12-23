@@ -9,14 +9,18 @@ export default function DisplaySeaCritters(){
     const [hemisphere, setHemisphere] = useState("Northern");
     const [loaded, setLoaded] = useState(false);
 
+
 function showSeaCritters(response){
     setSeaCrittersInfo(response.data)
 setLoaded(true);
 }
+
+
 function getSeaCritters(){
     let apiURL = "https://acnhapi.com/v1a/sea/";
     axios.get(apiURL).then(showSeaCritters);
 }
+
 
 function setNorthernHemisphere(){ setHemisphere("Northern")}
 function setSouthernHemisphere(){ setHemisphere("Southern")}

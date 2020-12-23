@@ -11,15 +11,16 @@ export default function DisplayBugs(){
 
 function showBugs(response){
 setbugInfo(response.data)
-setLoaded(true);
-}
+setLoaded(true);}
+
 function getBugs(){
-    let apiURL = "https://acnhapi.com/v1a/bugs/";
-    axios.get(apiURL).then(showBugs);
+        let apiURL = "https://acnhapi.com/v1a/bugs/";
+                axios.get(apiURL).then(showBugs); 
 }
 
 function setNorthernHemisphere(){ setHemisphere("Northern")}
 function setSouthernHemisphere(){ setHemisphere("Southern")}
+
 
 if (loaded){return(
     <div className="getBugInfo">

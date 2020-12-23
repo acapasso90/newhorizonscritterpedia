@@ -60,7 +60,8 @@ body {background-color: #F5EBC1;
   margin-bottom: 20px;
 font-size: 25px;
 position: relative;
-left: 80px;
+top: 60px;
+right: 120px;
 }
 
 .SeaCrittersInfoHidden .quote {color: #180052;}
@@ -93,12 +94,12 @@ left: 80px;
 
   .fishName, .bugName, .seaName {font-size: 28px;
   position: relative;
-bottom: 60px;
-left: 80px;}
+bottom: 10px;
+right: 120px;}
 
 .bugName {font-size: 21px;
   position: relative;
-bottom: 60px;
+bottom: 20px;
 color: #007910}
 
 .fishName {color: #004d80;}
@@ -230,10 +231,30 @@ top: 35px;}
     left: 201px;
   top: 91px;
   }
+
+  .months {display: flex;
+  flex-direction: row;
+position: relative;
+top: 70px;
+right: 5px;}
+
+.months2 {display: flex;
+  flex-direction: row;
+  position: relative;
+  top: 100px;
+right: 450px;}
+
+.months p, .months2 p {margin-left: 50px;}
   .Northern { 
     left: 635px;
   top: 145px;}
   
+ .pc .monthsHeader {white-space: nowrap;
+    font-size: 20px;
+    position: relative;
+bottom: 60px;
+left: 400px;
+  }
   .polaroid {background-color: #ffffff;
   max-width: 330px;
 min-height: 95px;}
@@ -245,13 +266,13 @@ min-height: 95px;}
 min-height: 135px;}
 
 .pc .polaroid {position: relative;
-top: 5px;
-left: 115px;}
+top: 65px;
+right: 85px;}
 
 .pc .polaroidBug {position: relative;
-  top: 10px;
+  top: 50px;
   z-index: -1;
-  left: 115px;}
+  right: 85px;}
 
   .getSeaCrittersInfo .horizontalRow {width: 1040px;
   margin-left: auto;
@@ -266,7 +287,7 @@ left: 115px;}
 
   .SeaCrittersInfoHidden .columnRight, .fishInfoHidden .columnRight, .bugInfoHidden .columnRight {position: relative;
     left: 400px;
-    top: 60px;
+    top: 180px;
 
   }
   .Southern { 
@@ -320,13 +341,13 @@ opacity: 0%;}
 background-color: #f8f2dc;
 border: 15px solid #ffffff;
 position: relative;
-left: 80px;
-top: 55px;}
+top: 75px;
+right: 120px;}
 
 .pc .Blathers {max-width: 300px!important;
   position: absolute;
   right: 480px;
-  top: 290px;}
+  top: 280px;}
   
   
   .blathersInfo {text-align: left;
@@ -334,8 +355,8 @@ top: 55px;}
     border-radius: 10%;}
   
     .pc .blathersInfo {position: absolute;
-      right: 59px;
-      bottom: 351px;
+      right: 49px;
+      bottom: 311px;
       max-width: 450px;
       padding: 10px 20px;
     }
@@ -352,11 +373,11 @@ top: 55px;}
 }
 
 .pc .fishInfoHidden .quoteTriangle, .pc .bugInfoHidden .quoteTriangle, .pc .SeaCrittersInfoHidden .quoteTriangle {position: absolute;
-  left: 1037px;
-  top: 354px;}
+  left: 1047px;
+  top: 394px;}
 
 
   .pc .fishInfoHidden .exitButton, .pc .bugInfoHidden .exitButton, .pc .SeaCrittersInfoHidden .exitButton{position: absolute;
-  left: 10px;
+  right: 140px;
 top: 10px;
 }
