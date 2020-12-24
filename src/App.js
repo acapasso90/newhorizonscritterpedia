@@ -11,9 +11,8 @@ import DisplaySeaApp from "./DisplaySeaApp.js";
 import DisplayFishApp from "./DisplayFishApp.js";
 import DisplayBugApp from "./DisplayBugApp.js";
 import axios from "axios";
-
-let signal = axios.CancelToken.source();
-
+const url = window.location.pathname;
+const signal = axios.CancelToken.source();
 
 
 function App() {
@@ -39,51 +38,47 @@ const [styleFish, setStyleFish] = useState(Active);
 const [styleBug, setStylebug] = useState(InActive);
 const [styleOctopus, setStyleOctopus] = useState(InActive);
 
-    function seaLinkActive(){
+  
+
+    function seaLinkActive(){ 
       if (bugsrc === butterflyActive) {setBugsrc(butterfly);
         setStylebug(InActive);
         setSeasrc(octopusActive);
       setStyleOctopus(Active);
-      signal.cancel()}
+      signal.cancel();}
    else if (fishsrc === fishActive){setFishsrc(fish);
     setStyleFish(InActive);
     setSeasrc(octopusActive);
     setStyleOctopus(Active);
-    signal.cancel()}
-    else{
-    setSeasrc(octopusActive);
-    setStyleOctopus(Active);}
-    signal.cancel()}
+    signal.cancel()}}
   
   function fishLinkActive(){ if (bugsrc === butterflyActive) {setBugsrc(butterfly);
     setStylebug(InActive);
     setFishsrc(fishActive);
     setStyleFish(Active);
-    signal.cancel();}
+    signal.cancel()}
     else if (seasrc === octopusActive){setSeasrc(octopus);
       setStyleOctopus(InActive);
       setFishsrc(fishActive);
       setStyleFish(Active);
-      signal.cancel();}
-    else{setFishsrc(fishActive);
-      setStyleFish(Active);
-      signal.cancel();}}
+      signal.cancel()}}
   
     function bugLinkActive(){ if (fishsrc === fishActive) {setBugsrc(butterflyActive);
       setStylebug(Active);
       setFishsrc(fish);
       setStyleFish(InActive);
-      signal.cancel();}
+      signal.cancel()}
       else if (seasrc === octopusActive){setSeasrc(octopus);
         setStyleOctopus(InActive);
         setBugsrc(butterflyActive);
         setStylebug(Active);
-        signal.cancel();}
-      else{setBugsrc(butterflyActive);
-        setStylebug(Active);
-        signal.cancel();}}
+        signal.cancel()}}
 
-
+        window.addEventListener('load', function () {
+          if ( url === '/bugs')
+          {bugLinkActive()}
+  else if  (url === '/deepsea'){seaLinkActive()}
+      });
 
 return (
   <Router>
@@ -103,7 +98,7 @@ return (
   <label style={styleBug} className="bugLabel" >Insects</label>
 <NavLink to="/"  style={{ textDecoration: 'none' }} className="link"> <img src={fishsrc} alt="fish" className="fishpic" onClick={fishLinkActive} /></NavLink>
 <label style={styleFish} className="fishLabel">Fish</label>
-<NavLink to="/deepsea" style={{ textDecoration: 'none' }} className="link"><img src={seasrc} alt="deep-sea" className="octopus" onClick={seaLinkActive}/> </NavLink>
+<NavLink to="/deepsea" style={{ textDecoration: 'none' }} className="link"><img src={seasrc} alt="deep-sea" className="octopus" onClick={seaLinkActive} /> </NavLink>
 <label style={styleOctopus} className="seaLabel">Sea Creatures</label>
 
 </nav>
