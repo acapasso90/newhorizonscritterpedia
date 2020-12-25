@@ -1,30 +1,37 @@
 import React, {useState} from "react";
-import axios from "axios";
 import FishInfoShown from "./FishInfoShown.js";
 import Loader from 'react-loader-spinner'
+import axios from "axios";
+
+
 
 
 export default function DisplayFish(){
    const [fishInfo, setfishInfo] = useState({ready:false});
    const [hemisphere, setHemisphere] = useState("Northern");
     const [loaded, setLoaded] = useState(false);
-    const signal = axios.CancelToken.source();
-    window.addEventListener('locationchange', function(){
-        signal.cancel();
-     })
+    const [mounted, setMounted] = useState(true);
+    const controller = new AbortController();
 
-function showFish(response){
-setfishInfo(response.data);
-setLoaded(true);
-}
+    window.addEventListener('locationchange', function(){setMounted(false);
+        controller.abort();
+     })          
 
-function getFish(){
-    let apiURL = "https://acnhapi.com/v1a/fish/";
-            axios.get(apiURL).then(showFish);
-        }
+            function showFish(response){
+                setfishInfo(response.data)
+                setLoaded(true);}
+
+                function getFish(){if(mounted){
+                    let apiURL = "https://acnhapi.com/v1a/fish/";
+                            axios.get(apiURL).then(showFish);  }
+                            else{controller.abort;}            
+            }
+                         
+
 
 function setNorthernHemisphere(){ setHemisphere("Northern")}
 function setSouthernHemisphere(){ setHemisphere("Southern")}
+
 
 if (loaded){return(
     <div className="getFishInfo">
