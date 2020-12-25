@@ -129,8 +129,6 @@ if (monthAvailable === true && timeAvailable === true) {
       <p className="Apr"  style={aprStyle}>April</p>
       <p className="May"  style={mayStyle} >May</p>
       <p className="Jun"  style={junStyle}>June</p>
-      </div> 
-      <div className="months2">
       <p className="Jul" style={julStyle}>July</p>
       <p className="Aug" style={augStyle} >August</p>
       <p className="Sep" style={sepStyle}>September</p>
@@ -194,8 +192,6 @@ if (monthAvailable === true && timeAvailable === true) {
       <p className="Apr"  style={aprStyle}>April</p>
       <p className="May"  style={mayStyle} >May</p>
       <p className="Jun"  style={junStyle}>June</p>
-      </div> 
-      <div className="months2">
       <p className="Jul" style={julStyle}>July</p>
       <p className="Aug" style={augStyle} >August</p>
       <p className="Sep" style={sepStyle}>September</p>

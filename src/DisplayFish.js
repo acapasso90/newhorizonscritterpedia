@@ -8,9 +8,13 @@ export default function DisplayFish(){
    const [fishInfo, setfishInfo] = useState({ready:false});
    const [hemisphere, setHemisphere] = useState("Northern");
     const [loaded, setLoaded] = useState(false);
+    const signal = axios.CancelToken.source();
+    window.addEventListener('locationchange', function(){
+        signal.cancel();
+     })
 
 function showFish(response){
-setfishInfo(response.data)
+setfishInfo(response.data);
 setLoaded(true);
 }
 

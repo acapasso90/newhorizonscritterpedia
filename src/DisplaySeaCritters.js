@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState}  from "react";
 import axios from "axios";
 import SeaCrittersInfoShown from "./SeaCrittersInfoShown.js";
 import Loader from 'react-loader-spinner'
@@ -8,19 +8,23 @@ export default function DisplaySeaCritters(){
     const [SeaCrittersInfo, setSeaCrittersInfo] = useState({ready:false});
     const [hemisphere, setHemisphere] = useState("Northern");
     const [loaded, setLoaded] = useState(false);
+    const signal = axios.CancelToken.source();
 
 function showSeaCritters(response){
     setSeaCrittersInfo(response.data)
 setLoaded(true);
 }
 
+window.addEventListener('locationchange', function(){
+   signal.cancel();
+})
 
 
 function getSeaCritters(){
     let apiURL = "https://acnhapi.com/v1a/sea/";
     axios.get(apiURL).then(showSeaCritters);
-}
 
+}
 
 function setNorthernHemisphere(){ setHemisphere("Northern")}
 function setSouthernHemisphere(){ setHemisphere("Southern")}
@@ -106,3 +110,4 @@ else{getSeaCritters()
             timeout={6000}
          />
          </div>)}}
+

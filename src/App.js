@@ -10,9 +10,8 @@ import fishActive from "./fishActive.png";
 import DisplaySeaApp from "./DisplaySeaApp.js";
 import DisplayFishApp from "./DisplayFishApp.js";
 import DisplayBugApp from "./DisplayBugApp.js";
-import axios from "axios";
+
 const url = window.location.pathname;
-const signal = axios.CancelToken.source();
 
 
 function App() {
@@ -37,42 +36,46 @@ position: "absolute",}
 const [styleFish, setStyleFish] = useState(Active);
 const [styleBug, setStylebug] = useState(InActive);
 const [styleOctopus, setStyleOctopus] = useState(InActive);
+var controller = new AbortController();
+function cancelAxios(){ controller.abort()}
 
-  
-
-    function seaLinkActive(){ 
+    function seaLinkActive(){ cancelAxios();
       if (bugsrc === butterflyActive) {setBugsrc(butterfly);
         setStylebug(InActive);
         setSeasrc(octopusActive);
       setStyleOctopus(Active);
-      signal.cancel();}
+      }
    else if (fishsrc === fishActive){setFishsrc(fish);
     setStyleFish(InActive);
     setSeasrc(octopusActive);
     setStyleOctopus(Active);
-    signal.cancel()}}
+   }}
   
-  function fishLinkActive(){ if (bugsrc === butterflyActive) {setBugsrc(butterfly);
+  function fishLinkActive(){ 
+    cancelAxios();
+    if (bugsrc === butterflyActive) {setBugsrc(butterfly);
     setStylebug(InActive);
     setFishsrc(fishActive);
     setStyleFish(Active);
-    signal.cancel()}
+    }
     else if (seasrc === octopusActive){setSeasrc(octopus);
       setStyleOctopus(InActive);
       setFishsrc(fishActive);
       setStyleFish(Active);
-      signal.cancel()}}
+     }}
   
-    function bugLinkActive(){ if (fishsrc === fishActive) {setBugsrc(butterflyActive);
+    function bugLinkActive(){
+      cancelAxios();
+      if (fishsrc === fishActive) {setBugsrc(butterflyActive);
       setStylebug(Active);
       setFishsrc(fish);
       setStyleFish(InActive);
-      signal.cancel()}
+     }
       else if (seasrc === octopusActive){setSeasrc(octopus);
         setStyleOctopus(InActive);
         setBugsrc(butterflyActive);
         setStylebug(Active);
-        signal.cancel()}}
+       }}
 
         window.addEventListener('load', function () {
           if ( url === '/bugs')
@@ -94,11 +97,11 @@ return (
     <div className="backdrop3"></div>
     </div>
   <nav>
-  <NavLink to="/bugs" style={{ textDecoration: 'none' }} className="link" > <img src={bugsrc} alt="bug" className="butterfly" onClick={bugLinkActive}/></NavLink>
+  <NavLink to="/bugs" style={{ textDecoration: 'none' }} className="link" > <img src={bugsrc} alt="bug" className="butterfly" onClick={bugLinkActive}  /></NavLink>
   <label style={styleBug} className="bugLabel" >Insects</label>
-<NavLink to="/"  style={{ textDecoration: 'none' }} className="link"> <img src={fishsrc} alt="fish" className="fishpic" onClick={fishLinkActive} /></NavLink>
+<NavLink to="/"  style={{ textDecoration: 'none' }} className="link"> <img src={fishsrc} alt="fish" className="fishpic" onClick={fishLinkActive}  /></NavLink>
 <label style={styleFish} className="fishLabel">Fish</label>
-<NavLink to="/deepsea" style={{ textDecoration: 'none' }} className="link"><img src={seasrc} alt="deep-sea" className="octopus" onClick={seaLinkActive} /> </NavLink>
+<NavLink to="/deepsea" style={{ textDecoration: 'none' }} className="link"><img src={seasrc} alt="deep-sea" className="octopus" onClick={seaLinkActive}  /> </NavLink>
 <label style={styleOctopus} className="seaLabel">Sea Creatures</label>
 
 </nav>
@@ -117,7 +120,9 @@ return (
     </Switch>
          </main>
          <div className="footer">
-      <footer><a href="https://github.com/acapasso90/newhorizonscritterpedia" target="_blank"  rel="noreferrer">Open-sourced</a> app built by <a href="https://www.amandacapasso.com" target="_blank"  rel="noreferrer">Amanda Capasso</a></footer>
+      <footer><p>All images, songs, and characters found on the app are the sole property of Nintendo and Animal Crossing
+and are only used for non-commercial and educational purpose.</p>
+        <a href="https://github.com/acapasso90/newhorizonscritterpedia" target="_blank"  rel="noreferrer">Open-sourced</a> app built by <a href="https://www.amandacapasso.com" target="_blank"  rel="noreferrer">Amanda Capasso</a></footer>
       </div>
     </Router>
   );
