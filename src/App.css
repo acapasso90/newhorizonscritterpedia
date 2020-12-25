@@ -235,14 +235,20 @@ top: 35px;}
   .months {display: flex;
   flex-direction: row;
 position: relative;
-top: 670px;
-right: 257px;
+top: 645px;
+text-align: center;
+right: 50px;
 font-size: 18px;}
 
+.months2 {display: flex;
+  flex-direction: row;
+position: relative;
+top: 45px;
+right: 1095px;}
 
-.months p {margin-left: 28px;
+.months p {margin-left: 80px;
 max-height: 20px;
-padding: 7px 11px;}
+padding: 8px 15px;}
 
   .Northern { 
     left: 635px;
@@ -251,8 +257,8 @@ padding: 7px 11px;}
  .pc .monthsHeader {white-space: nowrap;
     font-size: 24px;
     position: relative;
-bottom: 70px;
-left: 855px;
+bottom: 55px;
+left: 655px;
   }
   .polaroid {background-color: #ffffff;
   max-width: 330px;
@@ -265,11 +271,9 @@ min-height: 95px;}
 min-height: 135px;}
 
 .pc .polaroid {position: relative;
-top: 30px;
 right: 75px;}
 
 .pc .polaroidBug {position: relative;
-  top: 30px;
   z-index: -1;
   right: 75px;}
 
@@ -333,7 +337,7 @@ right: 75px;}
 opacity: 0%;}
   
   .pc .SeaCrittersInfoHidden, .pc .fishInfoHidden, .pc .bugInfoHidden { width: 90%; 
-    min-width: 1420px;
+    min-width: 1450px;
     height: 100%;
     min-Height: 750px;}
 
@@ -344,10 +348,10 @@ opacity: 0%;}
 background-color: #f8f2dc;
 border: 15px solid #ffffff;
 position: relative;
-top: 35px;
+top: 5px;
 right: 110px;}
 
-.pc .Blathers {max-width: 250px!important;
+.pc .Blathers {max-width: 230px!important;
   position: absolute;
   right: 445px;
   top: 247px;}
@@ -368,16 +372,16 @@ right: 110px;}
 
   .quoteTriangle {width: 0px;
     height: 0px;
-    border-top: 30px solid transparent;
-    border-bottom: 30px solid rgb(255, 255, 255);;
-    border-left: 30px solid transparent;
-  transform: rotate(80deg);
+    border-top: 31px solid transparent;
+    border-bottom: 31px solid rgb(255, 255, 255);;
+    border-left: 31px solid transparent;
+  transform: rotate(85deg);
   z-index: -1;
 }
 
 .pc .fishInfoHidden .quoteTriangle, .pc .bugInfoHidden .quoteTriangle, .pc .SeaCrittersInfoHidden .quoteTriangle {position: absolute;
-  left: 988px;
-  top: 384px;}
+  left: 1017px;
+  top: 383px;}
 
   .exitButton button {padding: 10px 15px;}
 

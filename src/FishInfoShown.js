@@ -49,8 +49,8 @@ const [decStyle, setDecStyle] = useState(unavailable);
     paddingRight: "50px",
     borderStyle: "solid",
     position: "absolute",
-    top: "-255px",
-    left: "-6px",
+    top: "-275px",
+    left: "-4px",
   };
   const infoHiddenStyle = {
     lineHeight: "0px",
@@ -138,12 +138,14 @@ else {SetStyle(infoShownStyle);
       <p className="Apr"  style={aprStyle}>April</p>
       <p className="May"  style={mayStyle} >May</p>
       <p className="Jun"  style={junStyle}>June</p>
+      <div className="months2">
       <p className="Jul" style={julStyle}>July</p>
       <p className="Aug" style={augStyle} >August</p>
       <p className="Sep" style={sepStyle}>September</p>
       <p className="Oct" style={octStyle}>October</p>
       <p className="Nov" style={novStyle}>November</p>
       <p className="Dec"style={decStyle} >December</p>
+      </div>
   </div>
   </div>
     </div>
@@ -201,12 +203,14 @@ else {SetStyle(infoShownStyle);
       <p className="Apr"  style={aprStyle}>April</p>
       <p className="May"  style={mayStyle} >May</p>
       <p className="Jun"  style={junStyle}>June</p>
+      <div className="months2">
       <p className="Jul" style={julStyle}>July</p>
       <p className="Aug" style={augStyle} >August</p>
       <p className="Sep" style={sepStyle}>September</p>
       <p className="Oct" style={octStyle}>October</p>
       <p className="Nov" style={novStyle}>November</p>
       <p className="Dec"style={decStyle} >December</p>
+      </div>
   </div>
   </div>
 </div>
