@@ -6,15 +6,19 @@ export default function BugInfoShown(props){
     opacity: "40%",
     textDecoration: "line-through",
   };
-const available = {opacity: "100%",
-textDecoration: "none",
-fontWeight: "bold",
-borderWidth: "2px",
-borderStyle: "solid",
-borderColor: "#702B2B",
-backgroundColor: "#fcf8e8",
-color: "#702B2B",
-}
+  const available = {opacity: "100%",
+  textDecoration: "none",
+  fontWeight: "bold",
+  borderWidth: "3px",
+  borderStyle: "solid",
+  borderColor: "#702B2B",
+  backgroundColor: "#da8f4d",
+  borderRadius: "2px",
+  color: "#440f0f",
+  }
+const bold = {fontSize: "24px",
+fontWeight: "bold"}
+
 const [janStyle, setJanStyle] = useState(unavailable);
 const [febStyle, setFebStyle] = useState(unavailable);
 const [marStyle, setMarStyle] = useState(unavailable);
@@ -155,11 +159,11 @@ if (monthAvailable === true && timeAvailable === true)
 <div className="right">
 <div className="columnRight">
 <ul>
-<li>Location: {findLocation}</li>
-<li> Time Available: {timeDisplayed} </li>
-<li> Rarity: {rarity}</li>
-<li>Price: {priceNormal} bells</li>
-<li>Flick Price: {priceflick} bells</li>
+<li className="location"><span style={bold}>Location</span> <br />{findLocation}</li>
+    <li className="rarity"> <span style={bold}>Rarity </span> <br /> {rarity}</li>
+    <li className="price"><span style={bold}>Price</span> <br /> {priceNormal} bells</li>
+    <li className="flickPrice"><span style={bold}>Flick Price:</span> <br /> {priceflick} bells</li>
+    <li className="timeFound"><span style={bold}>Time Found </span><br /> {timeDisplayed} </li>
 </ul>
 </div>
 </div>
@@ -217,11 +221,11 @@ if (monthAvailable === true && timeAvailable === true)
     <div className="right">
     <div className="columnRight">
     <ul>
-    <li>Location: {findLocation}</li>
-    <li> Time Available: {timeDisplayed} </li>
-    <li> Rarity: {rarity}</li>
-    <li>Price: {priceNormal} bells</li>
-    <li>Flick Price: {priceflick} bells</li>
+    <li className="location"><span style={bold}>Location</span> <br />{findLocation}</li>
+    <li className="rarity"> <span style={bold}>Rarity </span> <br /> {rarity}</li>
+    <li className="price"><span style={bold}>Price</span> <br /> {priceNormal} bells</li>
+    <li className="flickPrice"><span style={bold}>Flick Price:</span> <br /> {priceflick} bells</li>
+    <li className="timeFound"><span style={bold}>Time Found </span><br /> {timeDisplayed} </li>
     </ul>
     </div>
     </div>

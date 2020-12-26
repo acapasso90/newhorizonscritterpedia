@@ -9,12 +9,15 @@ export default function SeaCrittersInfoShown(props){
   const available = {opacity: "100%",
   textDecoration: "none",
   fontWeight: "bold",
-  borderWidth: "2px",
+  borderWidth: "3px",
   borderStyle: "solid",
   borderColor: "#702B2B",
-  backgroundColor: "#fcf8e8",
-  color: "#702B2B",
+  backgroundColor: "#da8f4d",
+  borderRadius: "2px",
+  color: "#440f0f",
   }
+  const bold = {fontSize: "24px",
+fontWeight: "bold"}
 const [janStyle, setJanStyle] = useState(unavailable);
 const [febStyle, setFebStyle] = useState(unavailable);
 const [marStyle, setMarStyle] = useState(unavailable);
@@ -152,10 +155,10 @@ if (monthAvailable === true && timeAvailable === true) {
     <div className="right">
     <div className="columnRight">
       <ul>
-    <li> Time Available: {timeDisplayed} </li>
-    <li>Price: {priceNormal} bells</li>
-    <li>Speed: {speed} </li>
-    <li>Shadow: {shadow} </li>
+      <li className="speed"><span style={bold}>Speed</span> <br /> {speed} </li>
+      <li className="price"><span style={bold}>Price</span> <br /> {priceNormal} bells</li>
+    <li className="shadow"><span style={bold}>Shadow</span> <br /> {shadow} </li>
+    <li className="timeFound"><span style={bold}>Time Found </span><br /> {timeDisplayed} </li>
     </ul>
 </div>
 </div>
@@ -217,10 +220,10 @@ if (monthAvailable === true && timeAvailable === true) {
     <div className="right">
     <div className="columnRight">
       <ul>
-    <li> Time Available: {timeDisplayed} </li>
-    <li>Price: {priceNormal} bells</li>
-    <li>Speed: {speed} </li>
-    <li>Shadow: {shadow} </li>
+      <li className="speed"><span style={bold}>Speed</span> <br /> {speed} </li>
+      <li className="price"><span style={bold}>Price</span> <br /> {priceNormal} bells</li>
+    <li className="shadow"><span style={bold}>Shadow</span> <br /> {shadow} </li>
+    <li className="timeFound"><span style={bold}>Time Found </span><br /> {timeDisplayed} </li>
     </ul>
 </div>
 </div>

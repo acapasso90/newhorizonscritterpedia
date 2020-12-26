@@ -8,7 +8,7 @@ body {background-color: #F5EBC1;
     border: 4px solid #702b2b;
     color: #440f0f;
     padding: 15px 25px;
-    border-radius: 5px;
+    border-radius: 3px;
     font-weight: bold;
     position: absolute;
     white-space: nowrap;
@@ -60,7 +60,7 @@ body {background-color: #F5EBC1;
   margin-bottom: 20px;
 font-size: 25px;
 position: relative;
-top: 30px;
+bottom: 10px;
 right: 115px;
 }
 
@@ -82,11 +82,11 @@ right: 115px;
   
   .column {max-width: 100px;}
   .currentlyAvailable {position: relative;
-  top: 65px;
-  right: 110px;}
+  top: 70px;
+  right: 120px;}
   
   .CurrentHemisphere {position: relative;
-    right: 110px;}
+right: 115px;}
   
   .fishImage, .bugImage, .SeaCrittersImage {border: 1px solid #d1cca6;
   }
@@ -113,7 +113,8 @@ white-space: nowrap;}
 .seaName {color: #180052;
   font-size: 28px;}
 
-  .fishInfoHidden, .bugInfoHidden, .SeaCrittersInfoHidden {z-index: -1;}
+  .fishInfoHidden, .bugInfoHidden, .SeaCrittersInfoHidden {z-index: -1;
+  background-Image: url(./bigmarble.jpg)}
   
   .fishLabel, .bugLabel, .seaLabel {top: -30px;
   right: 20px;}
@@ -172,10 +173,11 @@ top: 35px;}
   .left {float: left;}
 
     .location {position: relative;
-      bottom: 30px;
+      bottom: 50px;
     }
 
- .price, .CJprice, .timeFound {margin-top: 30px;
+    
+ .price, .CJprice, .timeFound, .flickPrice, .shadow {margin-top: 60px;
     }
   
   .mobile .column {margin-bottom: 0px;
@@ -242,7 +244,7 @@ top: 35px;}
   .months {display: flex;
   flex-direction: row;
 position: relative;
-top: 630px;
+top: 620px;
 text-align: center;
 right: 50px;
 font-size: 18px;}
@@ -250,7 +252,7 @@ font-size: 18px;}
 .months2 {display: flex;
   flex-direction: row;
 position: relative;
-top: 48px;
+top: 55px;
 right: 1125px;}
 
 .months p {margin-left: 80px;
@@ -258,13 +260,13 @@ max-height: 20px;
 padding: 8px 15px;}
 
   .Northern { 
-    left: 635px;
+    left: 625px;
   top: 145px;}
   
  .pc .monthsHeader {white-space: nowrap;
     font-size: 24px;
     position: relative;
-bottom: 65px;
+bottom: 60px;
 left: 655px;
   }
   .polaroid {background-color: #ffffff;
@@ -330,7 +332,7 @@ right: 75px;}
           } 
   
       .tablet .Northern {position: absolute;
-      left: 370px;
+      left: 365px;
     top: 110px;
     }
     

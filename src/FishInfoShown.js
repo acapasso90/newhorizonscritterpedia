@@ -9,12 +9,14 @@ export default function FishInfoShown(props) {
   const available = {opacity: "100%",
   textDecoration: "none",
   fontWeight: "bold",
-  borderWidth: "2px",
+  borderWidth: "3px",
   borderStyle: "solid",
   borderColor: "#702B2B",
-  backgroundColor: "#fcf8e8",
-  color: "#702B2B",
+  backgroundColor: "#da8f4d",
+  borderRadius: "2px",
+  color: "#440f0f",
   }
+
   const bold = {fontSize: "24px",
 fontWeight: "bold"}
 const [janStyle, setJanStyle] = useState(unavailable);
