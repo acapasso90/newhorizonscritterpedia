@@ -94,12 +94,12 @@ right: 115px;
 
   .fishName, .bugName, .seaName {font-size: 28px;
   position: relative;
-  bottom: 40px;
+  bottom: 80px;
 right: 110px;}
 
 .bugName {font-size: 21px;
   position: relative;
-bottom: 20px;
+bottom: 90px;
 color: #007910}
 
 .fishName {color: #004d80;}
@@ -170,6 +170,13 @@ top: 35px;}
   
   
   .left {float: left;}
+
+    .location {position: relative;
+      bottom: 30px;
+    }
+
+ .price, .CJprice, .timeFound {margin-top: 30px;
+    }
   
   .mobile .column {margin-bottom: 0px;
   max-height: 310px;}
@@ -235,7 +242,7 @@ top: 35px;}
   .months {display: flex;
   flex-direction: row;
 position: relative;
-top: 645px;
+top: 630px;
 text-align: center;
 right: 50px;
 font-size: 18px;}
@@ -243,8 +250,8 @@ font-size: 18px;}
 .months2 {display: flex;
   flex-direction: row;
 position: relative;
-top: 45px;
-right: 1095px;}
+top: 48px;
+right: 1125px;}
 
 .months p {margin-left: 80px;
 max-height: 20px;
@@ -257,7 +264,7 @@ padding: 8px 15px;}
  .pc .monthsHeader {white-space: nowrap;
     font-size: 24px;
     position: relative;
-bottom: 55px;
+bottom: 65px;
 left: 655px;
   }
   .polaroid {background-color: #ffffff;
@@ -289,8 +296,10 @@ right: 75px;}
   .right {float: right;}
 
   .SeaCrittersInfoHidden .columnRight, .fishInfoHidden .columnRight, .bugInfoHidden .columnRight {position: relative;
-    left: 400px;
-    top: 180px;
+    left: 280px;
+    top: 50px;
+    font-size: 24px;
+    letter-spacing: 2px;
 
   }
   .Southern { 
@@ -343,7 +352,7 @@ opacity: 0%;}
 
   .fishRealistic {max-height: 300px;
   max-width: 300px;
-  min-height: 300px;
+  min-height: 100px;
   min-width: 300px;
 background-color: #f8f2dc;
 border: 15px solid #ffffff;

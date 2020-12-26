@@ -10,21 +10,24 @@ export default function DisplayFish(){
    const [fishInfo, setfishInfo] = useState({ready:false});
    const [hemisphere, setHemisphere] = useState("Northern");
     const [loaded, setLoaded] = useState(false);
-    const [mounted, setMounted] = useState(true);
-    const controller = new AbortController();
-
-    window.addEventListener('locationchange', function(){setMounted(false);
-        controller.abort();
+    const cancelTokenSource = axios.CancelToken.source();
+    const url = window.location.pathname;
+    window.addEventListener('locationchange', function(){
+        cancelTokenSource.cancel();
      })          
 
             function showFish(response){
                 setfishInfo(response.data)
-                setLoaded(true);}
+                setLoaded(true);
+                cancelTokenSource.cancel();
+           }
 
-                function getFish(){if(mounted){
+                function getFish(){if( url === '/'){
                     let apiURL = "https://acnhapi.com/v1a/fish/";
-                            axios.get(apiURL).then(showFish);  }
-                            else{controller.abort;}            
+                            axios.get(apiURL, {
+                                cancelToken: cancelTokenSource.token
+                              }).then(showFish)}
+                            else{cancelTokenSource.cancel();}            
             }
                          
 

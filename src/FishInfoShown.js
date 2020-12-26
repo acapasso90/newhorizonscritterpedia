@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import Blathers from "./Blathers.png";
 
 export default function FishInfoShown(props) {
-
   const unavailable = {
     opacity: "50%",
     textDecoration: "line-through",
@@ -16,6 +15,8 @@ export default function FishInfoShown(props) {
   backgroundColor: "#fcf8e8",
   color: "#702B2B",
   }
+  const bold = {fontSize: "24px",
+fontWeight: "bold"}
 const [janStyle, setJanStyle] = useState(unavailable);
 const [febStyle, setFebStyle] = useState(unavailable);
 const [marStyle, setMarStyle] = useState(unavailable);
@@ -66,7 +67,7 @@ const [decStyle, setDecStyle] = useState(unavailable);
   let monthAvailable = null;
   let timeAvailable = null;
   let timeDisplayed = props.data.availability.time;
-  if (timeDisplayed.length < 1){timeDisplayed = "All Day";}
+  if (timeDisplayed.length < 1){timeDisplayed = `All Day`;}
   if (worldLocation === "Northern") {
     availability = props.data.availability[northernArray];} else {
     availability = props.data.availability[southernArray];}
@@ -152,20 +153,20 @@ else {SetStyle(infoShownStyle);
 <div className="row">
   <div className="column">
   <ul>
-<li> <img src={realisticImage} alt="bug realistic" className="fishRealistic" /></li>
+<li> <img src={realisticImage} alt="fish realistic" className="fishRealistic" /></li>
 <li><div className="polaroid"></div></li>
-<li className="bugName">{fishName}</li>
+<li className="fishName">{fishName}</li>
 <li className="quote">&quot;{catchphrase}&quot;</li>
 </ul>   </div>
 <div className="right">
 <div className="columnRight">
-<ul>
-<li>Location: {findLocation}</li>
-<li> Time Available: {timeDisplayed} </li>
-<li> Rarity: {rarity}</li>
-<li>Price: {priceNormal} bells</li>
-                <li>CJ Price: {priceCJ} bells</li>
-                </ul>
+    <ul>
+    <li className="location"><span style={bold}>Location</span> <br />{findLocation}</li>
+<li className="rarity"> <span style={bold}>Rarity </span> <br /> {rarity}</li>
+<li className="price"><span style={bold}>Price</span> <br /> {priceNormal} bells</li>
+<li className="CJprice"><span style={bold}>CJ Price </span><br /> {priceCJ} bells</li>
+<li className="timeFound"><span style={bold}>Time Found </span><br /> {timeDisplayed} </li>
+    </ul>
 </div>
 </div>
 </div>
@@ -226,11 +227,11 @@ else {SetStyle(infoShownStyle);
                <div className="right">
 <div className="columnRight">
                <ul>
-                <li>Location: {findLocation}</li>
-                <li> Time Available: {timeDisplayed} </li>
-    <li> Rarity: {rarity}</li>
-                <li>Price: {priceNormal} bells</li>     
-                <li>CJ Price: {priceCJ} bells</li>
+               <li className="location"><span style={bold}>Location</span> <br />{findLocation}</li>
+<li className="rarity"> <span style={bold}>Rarity </span> <br /> {rarity}</li>
+<li className="price"><span style={bold}>Price</span> <br /> {priceNormal} bells</li>
+<li className="CJprice"><span style={bold}>CJ Price </span><br /> {priceCJ} bells</li>
+<li className="timeFound"><span style={bold}>Time Found </span><br /> {timeDisplayed} </li>
                 </ul>
                 </div>
 </div>
