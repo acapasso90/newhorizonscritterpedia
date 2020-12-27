@@ -90,9 +90,14 @@ const english = "name-USen";
    let time = props.data.availability[timeArray];
    let currentTime = new Date();
    let month = currentTime.getMonth();
+   let inputMonth = props.month;
+let inputHour = props.hour;
+if (inputMonth != null){month = inputMonth}
  let hours = currentTime.getHours();
+ if (inputHour != null){hours = inputHour}
 if (time.includes(hours)) { timeAvailable = true;}
  if (availability.includes(month)) {monthAvailable = true;}
+ 
  
  function ShowMonths(){ if(availability.includes(1)){setJanStyle(available);}
    if(availability.includes(2)){setFebStyle(available);}
@@ -125,7 +130,7 @@ if (monthAvailable === true && timeAvailable === true)
   <img src={image} alt="bug icon" className="fishPicture"  />        </div>
   <div className="left">
   <div className="bugInfoHidden" style={style} id={id} >
-  <div className="row">
+  <div className="hrow">
     <div className="column">
  
 <div className="Months">
@@ -148,7 +153,7 @@ if (monthAvailable === true && timeAvailable === true)
   </div>
   </div>
 </div>
-<div className="row">
+<div className="hrow">
       <div className="column">
 <ul>
 <li> <img src={realisticImage} alt="bug realistic" className="fishRealistic" /></li>
@@ -186,7 +191,7 @@ if (monthAvailable === true && timeAvailable === true)
       <img src={image} alt="bug icon" className="fishPicture2"  />        </div>
       <div className="left">
       <div className="bugInfoHidden" style={style} id={id} >
-      <div className="row">
+      <div className="hrow">
         <div className="column">
 
     
@@ -210,7 +215,7 @@ if (monthAvailable === true && timeAvailable === true)
   </div>
   </div>
     </div>
-    <div className="row">
+    <div className="hrow">
           <div className="column">
     <ul>
     <li> <img src={realisticImage} alt="bug realistic" className="fishRealistic" /></li>

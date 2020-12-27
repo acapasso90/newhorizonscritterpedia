@@ -1,4 +1,6 @@
 import React, {useState} from "react";
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/js/dist/dropdown';
 import './App.css';
 import { BrowserRouter as Router, Route, NavLink, Switch} from "react-router-dom";
 import fish from "./fish.png";
@@ -11,6 +13,7 @@ import fishActive from "./fishActive.png";
 import DisplaySeaApp from "./DisplaySeaApp.js";
 import DisplayFishApp from "./DisplayFishApp.js";
 import DisplayBugApp from "./DisplayBugApp.js";
+
 
 const url = window.location.pathname;
 
@@ -86,12 +89,13 @@ const cancelTokenSource = axios.CancelToken.source();
 return (
   <Router>
      <main>
+       <div className="container">
           <div className="Header">
             <div className="headerText">
             <h1>New Horizon&apos;s Critterpedia</h1></div>
             <div className="left">
    <div className="iconLinks">
-    <div className="row">
+    <div className="hrow">
     <div className="backdrop1"></div>
     <div className="backdrop2"></div>
     <div className="backdrop3"></div>
@@ -111,6 +115,7 @@ return (
 
 
 
+
          </div>
          <Switch>
          <Route path="/" exact component={DisplayFishApp} />
@@ -118,12 +123,14 @@ return (
     <Route path="/deepsea"  component={DisplaySeaApp} />
     <Route render={() => <h1>404: page not found</h1>} />
     </Switch>
-         </main>
+    
          <div className="footer">
       <footer><p>All images, songs, and characters found on the app are the sole property of Nintendo and Animal Crossing
 and are only used for non-commercial and educational purpose.</p>
         <a href="https://github.com/acapasso90/newhorizonscritterpedia" target="_blank"  rel="noreferrer">Open-sourced</a> app built by <a href="https://www.amandacapasso.com" target="_blank"  rel="noreferrer">Amanda Capasso</a> using the <a href="http://acnhapi.com/" target="blank" rel="noreferrer">ACNH API</a> </footer>
       </div>
+      </div>
+      </main>
     </Router>
   );
 }

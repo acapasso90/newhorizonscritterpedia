@@ -93,11 +93,15 @@ const [decStyle, setDecStyle] = useState(unavailable);
     monthAvailable = true;
   }
   let time = props.data.availability[timeArray];
-let currentTime = new Date();
-let month = currentTime.getMonth();
-let hours = currentTime.getHours();
-if (time.includes(hours)){timeAvailable = true;}
-if (availability.includes(month)){monthAvailable = true;} 
+  let currentTime = new Date();
+   let month = currentTime.getMonth();
+   let inputMonth = props.month;
+let inputHour = props.hour;
+if (inputMonth != null){month = inputMonth}
+ let hours = currentTime.getHours();
+ if (inputHour != null){hours = inputHour}
+if (time.includes(hours)) { timeAvailable = true;}
+ if (availability.includes(month)) {monthAvailable = true;}
 
 
 function ShowMonths(){ if(availability.includes(1)){setJanStyle(available);}
@@ -130,7 +134,7 @@ else {SetStyle(infoShownStyle);
       <img src={image} alt="fish icon" className="fishPicture" onClick={DisplayFishInfo} />      </div>
       <div className="left">
         <div className="fishInfoHidden" style={style} id={id}>
-        <div className="row">
+        <div className="hrow">
 <div className="column">
 <div className="Months">
     <div className="months">
@@ -153,7 +157,7 @@ else {SetStyle(infoShownStyle);
   </div>
   </div>
     </div>
-<div className="row">
+<div className="hrow">
   <div className="column">
   <ul>
 <li> <img src={realisticImage} alt="fish realistic" className="fishRealistic" /></li>
@@ -195,7 +199,7 @@ else {SetStyle(infoShownStyle);
           />         </div>
           <div className="left">
           <div className="fishInfoHidden" style={style} id={id}>
-    <div className="row">
+    <div className="hrow">
 <div className="column">
 
 <div className="Months">
@@ -218,7 +222,7 @@ else {SetStyle(infoShownStyle);
   </div>
   </div>
 </div>
-      <div className="row">
+      <div className="hrow">
       <div className="column">
               <ul>
               <li> <img src={realisticImage} alt="fish realistic" className="fishRealistic" /></li>

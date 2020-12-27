@@ -59,6 +59,17 @@ body {background-color: #F5EBC1;
 .butterfly:hover, .octopus:hover, .fishpic:hover {cursor: pointer;
 }
 
+.container {margin-left: 0px;
+
+}
+
+.currentMonth {position: absolute; 
+right: 200px;}
+.currentTime {position: absolute;
+left: 100px;}
+.dropdown {position: absolute;
+right: 200px;}
+
   .quote {margin-top: 20px;
   margin-bottom: 20px;
 font-size: 25px;
@@ -352,7 +363,7 @@ right: 75px;}
     top: 110px;
     }
   
-  .row {display: flex;
+  .hrow {display: flex;
   flex-direction: row;}
   #inactive {width: 0px;
   height: 0px;

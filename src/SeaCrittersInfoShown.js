@@ -86,9 +86,15 @@ const [decStyle, setDecStyle] = useState(unavailable);
    
     let currentTime = new Date();
     let month = currentTime.getMonth();
-    let hours = currentTime.getHours();
+    let hours = currentTime.getHours(); 
+    let inputMonth = props.month;
+    let inputHour = props.hour;
+    if (inputMonth != null){month = inputMonth}
+     if (inputHour != null){hours = inputHour}
     if (time.includes(hours)){timeAvailable = true;}
     if (availability.includes(month)){monthAvailable = true;} 
+   
+
 
     function ShowMonths(){ if(availability.includes(1)){setJanStyle(available);}
     if(availability.includes(2)){setFebStyle(available);}
@@ -120,7 +126,7 @@ if (monthAvailable === true && timeAvailable === true) {
         <img src={image} alt="SeaCritters icon" className="fishPicture" /> </div>
         <div className="left">
         <div className="SeaCrittersInfoHidden" style={style} id={id}>
-          <div className="row">
+          <div className="hrow">
               <div className="column">
       
 <div className="Months">
@@ -143,7 +149,7 @@ if (monthAvailable === true && timeAvailable === true) {
   </div>
   </div>
     </div>
-                <div className="row">
+                <div className="hrow">
                 <div className="column">
             <ul>
             <li> <img src={realisticImage} alt="sea realistic" className="fishRealistic" /></li>
@@ -185,7 +191,7 @@ if (monthAvailable === true && timeAvailable === true) {
         /></div>
         <div className="left">
         <div className="SeaCrittersInfoHidden" style={style} id={id}>
-          <div className="row">
+          <div className="hrow">
               <div className="column">
 
               <div className="Months">
@@ -208,7 +214,7 @@ if (monthAvailable === true && timeAvailable === true) {
   </div>
   </div>
   </div>
-                <div className="row">
+                <div className="hrow">
                 <div className="column">
             <ul>
             <li> <img src={realisticImage} alt="sea realistic" className="fishRealistic" /></li>
