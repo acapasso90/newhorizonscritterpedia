@@ -19,6 +19,8 @@ export default function FishInfoShown(props) {
 
   const bold = {fontSize: "24px",
 fontWeight: "bold"}
+
+
 const [janStyle, setJanStyle] = useState(unavailable);
 const [febStyle, setFebStyle] = useState(unavailable);
 const [marStyle, setMarStyle] = useState(unavailable);
@@ -121,7 +123,6 @@ else {SetStyle(infoShownStyle);
     SetId("active");
     ShowMonths()
 }}   
-
 
   if (monthAvailable === true && timeAvailable === true) {return(
     <div className="FishInfo">

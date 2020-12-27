@@ -1,4 +1,6 @@
-
+a {color: #702b2b;
+font-weight: bold;
+text-decoration: none; }
 body {background-color: #F5EBC1;
   color: #8B7A65;
   font-family: 'Short Stack', cursive;
@@ -54,7 +56,8 @@ body {background-color: #F5EBC1;
   left: 15px;
 }
 
-.butterfly:hover, .octopus:hover, .fishpic:hover {cursor: pointer;}
+.butterfly:hover, .octopus:hover, .fishpic:hover {cursor: pointer;
+}
 
   .quote {margin-top: 20px;
   margin-bottom: 20px;
@@ -86,7 +89,7 @@ right: 115px;
   right: 120px;}
   
   .CurrentHemisphere {position: relative;
-right: 115px;}
+right: 120px;}
   
   .fishImage, .bugImage, .SeaCrittersImage {border: 1px solid #d1cca6;
   }
@@ -132,7 +135,7 @@ white-space: nowrap;}
   
   .footer {font-size: 18px;
   text-align: center;
-  margin-top: 100px;}
+  margin-top: 130px;}
 
 
     .getFishInfo .horizontalRow {display: flex;
@@ -167,7 +170,15 @@ top: 35px;}
 
   .active:hover {cursor: default;}
   .link:hover {cursor: default;}
-
+  
+  .kk {position: relative;
+  bottom: 115px;
+left: 200px;
+text-decoration: none;
+color: #8B7A65;
+font-weight: bold;
+font-size: 18px;
+}
   
   
   .left {float: left;}

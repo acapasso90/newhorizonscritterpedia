@@ -103,8 +103,8 @@ return (
 <label style={styleFish} className="fishLabel">Fish</label>
 <NavLink to="/deepsea" style={{ textDecoration: 'none' }} className="link"><img src={seasrc} alt="deep-sea" className="octopus" onClick={seaLinkActive}  /> </NavLink>
 <label style={styleOctopus} className="seaLabel">Sea Creatures</label>
-
 </nav>
+<a href="https://determined-lamarr-edc795.netlify.app/" className="kk" target="_blank"  rel="noreferrer">K.K. Slider Jukebox</a>
 </div>
 </div>
 
@@ -122,7 +122,7 @@ return (
          <div className="footer">
       <footer><p>All images, songs, and characters found on the app are the sole property of Nintendo and Animal Crossing
 and are only used for non-commercial and educational purpose.</p>
-        <a href="https://github.com/acapasso90/newhorizonscritterpedia" target="_blank"  rel="noreferrer">Open-sourced</a> app built by <a href="https://www.amandacapasso.com" target="_blank"  rel="noreferrer">Amanda Capasso</a></footer>
+        <a href="https://github.com/acapasso90/newhorizonscritterpedia" target="_blank"  rel="noreferrer">Open-sourced</a> app built by <a href="https://www.amandacapasso.com" target="_blank"  rel="noreferrer">Amanda Capasso</a> using the <a href="http://acnhapi.com/" target="blank" rel="noreferrer">ACNH API</a> </footer>
       </div>
     </Router>
   );
