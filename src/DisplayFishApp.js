@@ -1,5 +1,5 @@
 import React from "react";
-import FishApp from "./FishApp.js";
+import DisplayFish from "./DisplayFish.js";
 import MediaQuery from 'react-responsive'
 
 export default function DisplayFishApp(){return(
@@ -7,17 +7,17 @@ export default function DisplayFishApp(){return(
 <header className="header">
   <div className="mobile">
 <MediaQuery maxDeviceWidth={410}>
-  <FishApp />
+  <DisplayFish />
   </MediaQuery>
   </div>
   <div className="tablet">
 <MediaQuery minDeviceWidth={411} maxDeviceWidth={1025}>
-<FishApp />
+<DisplayFish />
   </MediaQuery>
   </div>
   <div className="pc">
 <MediaQuery minDeviceWidth={1026}>
-  <FishApp />
+  <DisplayFish />
   </MediaQuery>
   </div>
 </header>

@@ -1,5 +1,5 @@
 import './App.css';
-import BugApp from "./BugApp.js";
+import DisplayBugs from "./DisplayBugs.js";
 import MediaQuery from 'react-responsive'
 import React from 'react';
 
@@ -10,17 +10,17 @@ export default function DisplayBugApp() {
       <header className="header">
         <div className="mobile">
       <MediaQuery maxDeviceWidth={410}>
-        <BugApp />
+        <DisplayBugs />
         </MediaQuery>
         </div>
         <div className="tablet">
       <MediaQuery minDeviceWidth={411} maxDeviceWidth={1025}>
-        <BugApp />
+        <DisplayBugs />
         </MediaQuery>
         </div>
         <div className="pc">
       <MediaQuery minDeviceWidth={1026}>
-        <BugApp />
+        <DisplayBugs />
         </MediaQuery>
         </div>
       </header>
