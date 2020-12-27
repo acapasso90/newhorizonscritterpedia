@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import axios from "axios";
 import BugInfoShown from "./BugInfoShown.js";
 import Loader from 'react-loader-spinner'
@@ -8,15 +8,24 @@ export default function DisplayBugs(){
     const [bugInfo, setbugInfo] = useState({ready:false});
     const [hemisphere, setHemisphere] = useState("Northern");
     const [loaded, setLoaded] = useState(false);
+    const cancelTokenSource = axios.CancelToken.source();
+
 
 function showBugs(response){
 setbugInfo(response.data)
 setLoaded(true);}
 
-function getBugs(){
-        let apiURL = "https://acnhapi.com/v1a/bugs/";
-                axios.get(apiURL).then(showBugs); 
-}
+
+useEffect(() => {
+    let mounted = true;
+    if (mounted) {axios.get("https://acnhapi.com/v1a/bugs/", {
+        cancelToken: cancelTokenSource.token
+      }).then(showBugs);}
+    return function cleanup() {
+      mounted = false
+      cancelTokenSource.cancel();
+  }}, []);
+
 
 function setNorthernHemisphere(){ setHemisphere("Northern")}
 function setSouthernHemisphere(){ setHemisphere("Southern")}
@@ -147,7 +156,7 @@ if (loaded){return(
      </div>
     )
 }
-else{getBugs()
+else{
     return (  
         <div className="loadingFish">
         <h1>Loading Current Bugs</h1>

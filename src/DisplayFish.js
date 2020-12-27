@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import FishInfoShown from "./FishInfoShown.js";
 import Loader from 'react-loader-spinner'
 import axios from "axios";
@@ -11,24 +11,27 @@ export default function DisplayFish(){
    const [hemisphere, setHemisphere] = useState("Northern");
     const [loaded, setLoaded] = useState(false);
     const cancelTokenSource = axios.CancelToken.source();
-    const url = window.location.pathname;
-    window.addEventListener('locationchange', function(){
-        cancelTokenSource.cancel();
-     })          
 
-            function showFish(response){
-                setfishInfo(response.data)
-                setLoaded(true);
-                cancelTokenSource.cancel();
-           }
 
-                function getFish(){if( url === '/'){
-                    let apiURL = "https://acnhapi.com/v1a/fish/";
-                            axios.get(apiURL, {
-                                cancelToken: cancelTokenSource.token
-                              }).then(showFish)}
-                            else{cancelTokenSource.cancel();}            
-            }
+
+    function showFish(response){
+        setfishInfo(response.data)
+        setLoaded(true);
+       
+   }
+
+    useEffect(() => {
+        let mounted = true;
+        if (mounted) {axios.get("https://acnhapi.com/v1a/fish/", {
+            cancelToken: cancelTokenSource.token
+          }).then(showFish);}
+        return function cleanup() {
+          mounted = false
+          cancelTokenSource.cancel();
+      }}, []);
+    
+
+
                          
 
 
@@ -161,7 +164,7 @@ if (loaded){return(
      </div>
     )
 }
-else{getFish();
+else{
 return (  
 <div className="loadingFish">
 <h1>Loading Current Fish</h1>

@@ -1,4 +1,4 @@
-import React, {useState}  from "react";
+import React, {useState, useEffect}  from "react";
 import axios from "axios";
 import SeaCrittersInfoShown from "./SeaCrittersInfoShown.js";
 import Loader from 'react-loader-spinner'
@@ -8,23 +8,24 @@ export default function DisplaySeaCritters(){
     const [SeaCrittersInfo, setSeaCrittersInfo] = useState({ready:false});
     const [hemisphere, setHemisphere] = useState("Northern");
     const [loaded, setLoaded] = useState(false);
-    const signal = axios.CancelToken.source();
+    const cancelTokenSource = axios.CancelToken.source();
 
 function showSeaCritters(response){
     setSeaCrittersInfo(response.data)
 setLoaded(true);
 }
 
-window.addEventListener('locationchange', function(){
-   signal.cancel();
-})
+useEffect(() => {
+    let mounted = true;
+    if (mounted) {axios.get("https://acnhapi.com/v1a/sea/", {
+        cancelToken: cancelTokenSource.token
+      }).then(showSeaCritters);}
+    return function cleanup() {
+      mounted = false
+      cancelTokenSource.cancel();
+  }}, []);
 
 
-function getSeaCritters(){
-    let apiURL = "https://acnhapi.com/v1a/sea/";
-    axios.get(apiURL).then(showSeaCritters);
-
-}
 
 function setNorthernHemisphere(){ setHemisphere("Northern")}
 function setSouthernHemisphere(){ setHemisphere("Southern")}
@@ -98,7 +99,7 @@ if (loaded){return(
      </div>
     )
 }
-else{getSeaCritters()
+else{
     return (  
         <div className="loadingFish">
         <h1>Loading Current Sea Creatures</h1>

@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import './App.css';
 import { BrowserRouter as Router, Route, NavLink, Switch} from "react-router-dom";
 import fish from "./fish.png";
+import axios from "axios";
 import butterfly from "./butterfly.png";
 import octopus from "./octopus.png";
 import octopusActive from "./octopusActive.png";
@@ -36,10 +37,9 @@ position: "absolute",}
 const [styleFish, setStyleFish] = useState(Active);
 const [styleBug, setStylebug] = useState(InActive);
 const [styleOctopus, setStyleOctopus] = useState(InActive);
-var controller = new AbortController();
-function cancelAxios(){ controller.abort()}
+const cancelTokenSource = axios.CancelToken.source();
 
-    function seaLinkActive(){ cancelAxios();
+    function seaLinkActive(){  cancelTokenSource.cancel();
       if (bugsrc === butterflyActive) {setBugsrc(butterfly);
         setStylebug(InActive);
         setSeasrc(octopusActive);
@@ -52,7 +52,7 @@ function cancelAxios(){ controller.abort()}
    }}
   
   function fishLinkActive(){ 
-    cancelAxios();
+    cancelTokenSource.cancel();
     if (bugsrc === butterflyActive) {setBugsrc(butterfly);
     setStylebug(InActive);
     setFishsrc(fishActive);
@@ -65,7 +65,7 @@ function cancelAxios(){ controller.abort()}
      }}
   
     function bugLinkActive(){
-      cancelAxios();
+      cancelTokenSource.cancel();
       if (fishsrc === fishActive) {setBugsrc(butterflyActive);
       setStylebug(Active);
       setFishsrc(fish);
@@ -97,7 +97,7 @@ return (
     <div className="backdrop3"></div>
     </div>
   <nav>
-  <NavLink to="/bugs" style={{ textDecoration: 'none' }} className="link" > <img src={bugsrc} alt="bug" className="butterfly" onClick={bugLinkActive}  /></NavLink>
+  <NavLink to="/bugs" style={{ textDecoration: 'none' }} className="link" > <img src={bugsrc} alt="bug" className="butterfly"  onClick={bugLinkActive}  /></NavLink>
   <label style={styleBug} className="bugLabel" >Insects</label>
 <NavLink to="/"  style={{ textDecoration: 'none' }} className="link"> <img src={fishsrc} alt="fish" className="fishpic" onClick={fishLinkActive}  /></NavLink>
 <label style={styleFish} className="fishLabel">Fish</label>
