@@ -55,7 +55,7 @@ const [decStyle, setDecStyle] = useState(unavailable);
     paddingRight: "50px",
     borderStyle: "solid",
     position: "absolute",
-    top: "-275px",
+    top: "-255px",
     left: "-4px",
   };
   const infoHiddenStyle = {

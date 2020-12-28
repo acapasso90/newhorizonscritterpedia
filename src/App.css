@@ -1,8 +1,13 @@
 a {color: #702b2b;
 font-weight: bold;
 text-decoration: none; }
+
+a:hover {color: #31020f;
+text-decoration: none;}
+
 body {background-color: #F5EBC1;
   color: #8B7A65;
+  font-weight: bold;
   font-family: 'Short Stack', cursive;
   }
   
@@ -16,6 +21,7 @@ body {background-color: #F5EBC1;
     white-space: nowrap;
     font-family: 'Short Stack', cursive;
     font-size: 16px;
+    user-select: none;
      }
     
      button:active {margin-top: 2px;
@@ -28,6 +34,9 @@ body {background-color: #F5EBC1;
     text-align: center;
     min-width: 100%;
   }
+
+  ::selection{background-color:#74573c;
+  color: #ffff;}
   
   .backdrop1{background-color: #ffff;
     height: 80px;
@@ -67,10 +76,14 @@ body {background-color: #F5EBC1;
 }
 
 .dropdown {position: absolute;
-right: 200px;}
+right: 260px;}
+
+.dropdown2{ position: absolute;
+left: 75px;}
 
 .dropdown-menu {background-image: url(./dropdownmarble.jpg)}
 
+.dropdown-item:active {background-color: #74573c;}
   .quote {margin-top: 20px;
   margin-bottom: 20px;
 font-size: 25px;
@@ -117,8 +130,10 @@ right: 115px;
   right: 120px;}
   
   .CurrentHemisphere {position: relative;
-right: 120px;}
+    right: 120px;}
   
+  .CurrentHemisphere h2 {font-size: 28px;
+  }
   .fishImage, .bugImage, .SeaCrittersImage {border: 1px solid #d1cca6;
   }
   
@@ -155,9 +170,11 @@ white-space: nowrap;}
   .bugLabel {right: 155px;}
   .seaLabel {  width: 147.5px;}
   .fishPicture {            max-width: 96px;
+    user-select: none;
   max-height: 98px;}
   
   .fishPicture2 {      filter: contrast(0%) brightness(140%)  grayscale(80%);
+    user-select: none;
     max-width: 96px;
     max-height: 98px;}
   
@@ -170,7 +187,7 @@ white-space: nowrap;}
       flex-direction: row;
       position: relative; 
       top: 80px;
-      right: 232px;}
+      right: 245px;}
   
       .getBugInfo .horizontalRow {display: flex;
         flex-direction: row;
@@ -180,6 +197,7 @@ white-space: nowrap;}
     
   
   .Header {box-shadow: 0px 2px 3px #d8cfa1;
+    user-select: none;
 position: relative;
 bottom: 20px;
 right: 15px;
@@ -198,6 +216,7 @@ top: 35px;}
   
   
   .iconLinks {position: relative;
+    user-select: none;
   bottom: 30px;
   left: 35px;}
 
@@ -217,11 +236,11 @@ font-size: 18px;
   .left {float: left;}
 
     .location {position: relative;
-      bottom: 50px;
+      bottom: 40px;
     }
 
     
- .price, .CJprice, .timeFound, .flickPrice, .shadowSea {margin-top: 60px;
+ .price, .CJprice, .timeFound, .flickPrice, .shadowSea {margin-top: 50px;
     }
   
   .mobile .column {margin-bottom: 0px;
@@ -235,6 +254,7 @@ font-size: 18px;
     top: 45px;}
   
     .mobile .Header {font-size: 10px;
+      user-select: none;
     white-space: nowrap;
   max-height: 50px;
   min-width: 400px;
@@ -288,7 +308,7 @@ font-size: 18px;
   .months {display: flex;
   flex-direction: row;
 position: relative;
-top: 620px;
+top: 610px;
 text-align: center;
 right: 50px;
 font-size: 18px;}
@@ -296,7 +316,7 @@ font-size: 18px;}
 .months2 {display: flex;
   flex-direction: row;
 position: relative;
-top: 55px;
+top: 65px;
 right: 1135px;}
 
 .months p {margin-left: 80px;
@@ -304,8 +324,8 @@ max-height: 20px;
 padding: 8px 15px;}
 
   .Northern { 
-    left: 625px;
-  top: 145px;}
+    left: 600px;
+  }
   
  .pc .monthsHeader {white-space: nowrap;
   font-size: 24px;
@@ -352,8 +372,7 @@ top: 20px;}
 
   }
   .Southern { 
-  left: 820px;
-  top: 145px;}
+  left: 862px;}
   
   .tablet .Header {position: relative;
     bottom: 10px;}
@@ -408,6 +427,9 @@ border: 20px solid #ffffff;
 position: relative;
 top: 25px;
 right: 110px;}
+
+
+.fishPicture:hover {cursor: pointer;}
 
 .pc .Blathers {max-width: 210px!important;
   position: absolute;
