@@ -12,10 +12,11 @@ export default function DisplayFish(){
     const [loaded, setLoaded] = useState(false);
     const cancelTokenSource = axios.CancelToken.source();
     let currentTime = new Date();
-   let monthNow = currentTime.getMonth();
-    let hoursNow = currentTime.getHours();
-    const [hour, setHour] = useState(hoursNow);
-    const [month, setMonth] = useState("");
+    let monthNow = currentTime.getMonth();
+    let currentMonth = ++(monthNow);
+ let currentHour = currentTime.getHours();
+    const [hour, setHour] = useState(currentHour);
+const [month, setMonth] = useState(currentMonth);
     let monthNowNames = [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December",
 ];
     let monthNames =  ["null", "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December",
@@ -42,52 +43,7 @@ export default function DisplayFish(){
           mounted = false
           cancelTokenSource.cancel();
       }}, []);
-    
-
-
-      function setJanuary(){setMonth(1);}
-      function setFebruary(){setMonth(2);}
-      function setMarch(){setMonth(3);}
-      function setApril(){setMonth(4);}
-      function setMay(){setMonth(5);}
-      function setJune(){setMonth(6);}
-      function setJuly(){setMonth(7);}
-      function setAugust(){setMonth(8);}
-      function setSeptember(){setMonth(9);}
-      function setOctober(){setMonth(10);}
-      function setNovember(){setMonth(11);}
-      function setDecember(){setMonth(12);}
-    
-      function set0(){setHour(0);}
-      function set1(){setHour(1);}
-      function set2(){setHour(2);}
-      function set3(){setHour(3);}
-      function set4(){setHour(4);}
-      function set5(){setHour(5);}
-      function set6(){setHour(6);}
-      function set7(){setHour(7);}
-      function set8(){setHour(8);}
-      function set9(){setHour(9);}
-      function set10(){setHour(10);}
-      function set11(){setHour(11);}
-      function set12(){setHour(12);}
-      function set13(){setHour(13);}
-      function set14(){setHour(14);}
-      function set15(){setHour(15);}
-      function set16(){setHour(16);}
-      function set17(){setHour(17);}
-      function set18(){setHour(18);}
-      function set19(){setHour(19);}
-      function set20(){setHour(20);}
-      function set21(){setHour(21);}
-      function set22(){setHour(22);}
-      function set23(){setHour(23);}         
-
-
-function setNorthernHemisphere(){ setHemisphere("Northern")}
-function setSouthernHemisphere(){ setHemisphere("Southern")}
-
-
+         
 if (loaded){return(
     <div className="getFishInfo">
              <div className="CurrentHemisphere"><h2>Current Hemisphere: {hemisphere} </h2></div>
@@ -99,18 +55,18 @@ if (loaded){return(
    Select a Month
   </button>
   <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    <a className="dropdown-item" href="#" onClick={setJanuary} >January</a>
-    <a className="dropdown-item" href="#" onClick={setFebruary}>February</a>
-    <a className="dropdown-item" href="#" onClick={setMarch}>March</a>
-    <a className="dropdown-item" href="#" onClick={setApril}>April</a>
-    <a className="dropdown-item" href="#" onClick={setMay}>May</a>
-    <a className="dropdown-item" href="#" onClick={setJune}>June</a>
-    <a className="dropdown-item" href="#" onClick={setJuly}>July</a>
-    <a className="dropdown-item" href="#" onClick={setAugust}>August</a>
-    <a className="dropdown-item" href="#" onClick={setSeptember}>September</a>
-    <a className="dropdown-item" href="#" onClick={setOctober}>October</a>
-    <a className="dropdown-item" href="#" onClick={setNovember}>November</a>
-    <a className="dropdown-item" href="#" onClick={setDecember}>December</a>
+  <a className="dropdown-item" href="#" onClick={() => setMonth(1)} >January</a>
+    <a className="dropdown-item" href="#" onClick={() => setMonth(2)}>February</a>
+    <a className="dropdown-item" href="#" onClick={() => setMonth(3)}>March</a>
+    <a className="dropdown-item" href="#" onClick={() => setMonth(4)}>April</a>
+    <a className="dropdown-item" href="#" onClick={() => setMonth(5)}>May</a>
+    <a className="dropdown-item" href="#" onClick={() => setMonth(6)}>June</a>
+    <a className="dropdown-item" href="#" onClick={() => setMonth(7)}>July</a>
+    <a className="dropdown-item" href="#" onClick={() => setMonth(8)}>August</a>
+    <a className="dropdown-item" href="#" onClick={() => setMonth(9)}>September</a>
+    <a className="dropdown-item" href="#" onClick={() => setMonth(10)}>October</a>
+    <a className="dropdown-item" href="#" onClick={() => setMonth(11)}>November</a>
+    <a className="dropdown-item" href="#" onClick={() => setMonth(12)}>December</a>
   </div>
 </div>
 <div className="currentTime">Selected Time: {formattedHours} </div>
@@ -119,34 +75,34 @@ if (loaded){return(
    Select an hour
   </button>
   <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    <a className="dropdown-item" href="#" onClick={set0} >MIDNIGHT to 1AM</a>
-    <a className="dropdown-item" href="#" onClick={set1}>1AM to 2AM</a>
-    <a className="dropdown-item" href="#" onClick={set2}>2AM to 3AM</a>
-    <a className="dropdown-item" href="#" onClick={set3}>3AM to 4AM</a>
-    <a className="dropdown-item" href="#" onClick={set4}>4AM to 5AM</a>
-    <a className="dropdown-item" href="#" onClick={set5}>5AM to 6AM</a>
-    <a className="dropdown-item" href="#" onClick={set6}>6AM to 7AM</a>
-    <a className="dropdown-item" href="#" onClick={set7}>7AM to 8AM</a>
-    <a className="dropdown-item" href="#" onClick={set8}>8AM to 9AM</a>
-    <a className="dropdown-item" href="#" onClick={set9}>9AM to 10AM</a>
-    <a className="dropdown-item" href="#" onClick={set10}>10AM to 11AM</a>
-    <a className="dropdown-item" href="#" onClick={set11}>11AM to NOON</a>
-    <a className="dropdown-item" href="#" onClick={set12} >NOON to 1PM</a>
-    <a className="dropdown-item" href="#" onClick={set13}>1PM to 2PM</a>
-    <a className="dropdown-item" href="#" onClick={set14}>2PM to 3PM</a>
-    <a className="dropdown-item" href="#" onClick={set15}>3PM to 4PM</a>
-    <a className="dropdown-item" href="#" onClick={set16}>4PM to 5PM</a>
-    <a className="dropdown-item" href="#" onClick={set17}>5PM to 6PM</a>
-    <a className="dropdown-item" href="#" onClick={set18}>6PM to 7PM</a>
-    <a className="dropdown-item" href="#" onClick={set19}>7PM to 8PM</a>
-    <a className="dropdown-item" href="#" onClick={set20}>8PM to 9PM</a>
-    <a className="dropdown-item" href="#" onClick={set21}>9PM to 10PM</a>
-    <a className="dropdown-item" href="#" onClick={set22}>10PM to 11PM</a>
-    <a className="dropdown-item" href="#" onClick={set23}>11PM to MIDNIGHT</a>
+  <a className="dropdown-item" href="#" onClick={() => setHour(0)} >MIDNIGHT to 1AM</a>
+    <a className="dropdown-item" href="#" onClick={() => setHour(1)}>1AM to 2AM</a>
+    <a className="dropdown-item" href="#" onClick={() => setHour(2)}>2AM to 3AM</a>
+    <a className="dropdown-item" href="#" onClick={() => setHour(3)}>3AM to 4AM</a>
+    <a className="dropdown-item" href="#" onClick={() => setHour(4)}>4AM to 5AM</a>
+    <a className="dropdown-item" href="#" onClick={() => setHour(5)}>5AM to 6AM</a>
+    <a className="dropdown-item" href="#"onClick={() => setHour(6)}>6AM to 7AM</a>
+    <a className="dropdown-item" href="#" onClick={() => setHour(7)}>7AM to 8AM</a>
+    <a className="dropdown-item" href="#" onClick={() => setHour(8)}>8AM to 9AM</a>
+    <a className="dropdown-item" href="#" onClick={() => setHour(9)}>9AM to 10AM</a>
+    <a className="dropdown-item" href="#" onClick={() => setHour(10)}>10AM to 11AM</a>
+    <a className="dropdown-item" href="#" onClick={() => setHour(11)}>11AM to NOON</a>
+    <a className="dropdown-item" href="#" onClick={() => setHour(12)} >NOON to 1PM</a>
+    <a className="dropdown-item" href="#" onClick={() => setHour(13)}>1PM to 2PM</a>
+    <a className="dropdown-item" href="#" onClick={() => setHour(14)}>2PM to 3PM</a>
+    <a className="dropdown-item" href="#" onClick={() => setHour(15)}>3PM to 4PM</a>
+    <a className="dropdown-item" href="#" onClick={() => setHour(16)}>4PM to 5PM</a>
+    <a className="dropdown-item" href="#" onClick={() => setHour(17)}>5PM to 6PM</a>
+    <a className="dropdown-item" href="#" onClick={() => setHour(18)}>6PM to 7PM</a>
+    <a className="dropdown-item" href="#" onClick={() => setHour(19)}>7PM to 8PM</a>
+    <a className="dropdown-item" href="#" onClick={() => setHour(20)}>8PM to 9PM</a>
+    <a className="dropdown-item" href="#" onClick={() => setHour(21)}>9PM to 10PM</a>
+    <a className="dropdown-item" href="#" onClick={() => setHour(22)}>10PM to 11PM</a>
+    <a className="dropdown-item" href="#" onClick={() => setHour(23)}>11PM to MIDNIGHT</a>
   </div>
 </div>
-            <button  onClick={setNorthernHemisphere} className="Northern">Northern</button>
-            <button onClick={setSouthernHemisphere} className="Southern">Southern</button>
+<button   className="Northern" onClick={() => setHemisphere("Northern")}>Northern</button>
+            <button className="Southern" onClick={() => setHemisphere("Southern")}>Southern</button>
             </div>
         </div>
         <div className="currentlyAvailable"><h2>Fish currently available:</h2></div>
