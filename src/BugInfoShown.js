@@ -9,6 +9,7 @@ export default function BugInfoShown(props){
   const available = {opacity: "100%",
   textDecoration: "none",
   fontWeight: "bold",
+  minHeight: "40px",
   borderWidth: "3px",
   borderStyle: "solid",
   borderColor: "#702B2B",
@@ -18,7 +19,6 @@ export default function BugInfoShown(props){
   }
 const bold = {fontSize: "24px",
 fontWeight: "bold"}
-
 const [janStyle, setJanStyle] = useState(unavailable);
 const [febStyle, setFebStyle] = useState(unavailable);
 const [marStyle, setMarStyle] = useState(unavailable);
@@ -100,18 +100,20 @@ if (time.includes(hours)) { timeAvailable = true;}
  if (availability.includes(month)) {monthAvailable = true;}
  
  
- function ShowMonths(){ if(availability.includes(1)){setJanStyle(available);}
-   if(availability.includes(2)){setFebStyle(available);}
+ function ShowMonths(){if (allYear === true) {setJanStyle(available), setFebStyle(available), setMarStyle(available), setJunStyle(available), setJulStyle(available)
+  setAugStyle(available); setSepStyle(available), setOctStyle(available), setNovStyle(available), setDecStyle(available);} 
+  else { if(availability.includes(1)){setJanStyle(available);}
+    if(availability.includes(2)){setFebStyle(available);}
     if(availability.includes(3)){setMarStyle(available);}
-    if(availability.includes(4)){setAprStyle(available);}
-    if(availability.includes(5)){setMayStyle(available);}
+   if(availability.includes(4)){setAprStyle(available);}
+   if(availability.includes(5)){setMayStyle(available);}
    if(availability.includes(6)){setJunStyle(available);}
-    if(availability.includes(7)){setJulStyle(available);}
-    if(availability.includes(8)){setAugStyle(available);}
-    if(availability.includes(9)){setSepStyle(available);}
-    if(availability.includes(10)){setOctStyle(available);}
-     if(availability.includes(11)){setNovStyle(available);}
-     if(availability.includes(12)){setDecStyle(available);}
+   if(availability.includes(7)){setJulStyle(available);}
+   if(availability.includes(8)){setAugStyle(available);}
+   if(availability.includes(9)){setSepStyle(available);}
+   if(availability.includes(10)){setOctStyle(available);}
+   if(availability.includes(11)){setNovStyle(available);}
+   if(availability.includes(12)){setDecStyle(available);}}
       }  
 
 
@@ -126,7 +128,7 @@ else {SetStyle(infoShownStyle);
 
 if (monthAvailable === true && timeAvailable === true)
 {return(
-  <div className="BugInfo" >
+  <div className="BugInfo">
   <div className="bugImage" onClick={DisplayBugInfo}> 
   <img src={image} alt="bug icon" className="fishPicture"  />        </div>
   <div className="left">
@@ -187,7 +189,7 @@ if (monthAvailable === true && timeAvailable === true)
 )
 }
     else {return(
-      <div className="BugInfo" >
+      <div className="BugInfo">
       <div className="bugImage" onClick={DisplayBugInfo}> 
       <img src={image} alt="bug icon" className="fishPicture2"  />        </div>
       <div className="left">

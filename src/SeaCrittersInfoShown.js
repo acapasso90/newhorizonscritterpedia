@@ -9,6 +9,7 @@ export default function SeaCrittersInfoShown(props){
   const available = {opacity: "100%",
   textDecoration: "none",
   fontWeight: "bold",
+  minHeight: "40px",
   borderWidth: "3px",
   borderStyle: "solid",
   borderColor: "#702B2B",
@@ -97,19 +98,24 @@ const [decStyle, setDecStyle] = useState(unavailable);
    
 
 
-    function ShowMonths(){ if(availability.includes(1)){setJanStyle(available);}
+  
+function ShowMonths(){ if (allYear === true) {setJanStyle(available), setFebStyle(available), setMarStyle(available), setJunStyle(available), setJulStyle(available)
+  setAugStyle(available); setSepStyle(available), setOctStyle(available), setNovStyle(available), setDecStyle(available);} 
+  else { if(availability.includes(1)){setJanStyle(available);}
     if(availability.includes(2)){setFebStyle(available);}
-     if(availability.includes(3)){setMarStyle(available);}
-     if(availability.includes(4)){setAprStyle(available);}
-     if(availability.includes(5)){setMayStyle(available);}
-    if(availability.includes(6)){setJunStyle(available);}
-     if(availability.includes(7)){setJulStyle(available);}
-     if(availability.includes(8)){setAugStyle(available);}
-     if(availability.includes(9)){setSepStyle(available);}
-     if(availability.includes(10)){setOctStyle(available);}
-      if(availability.includes(11)){setNovStyle(available);}
-      if(availability.includes(12)){setDecStyle(available);}
-       }  
+    if(availability.includes(3)){setMarStyle(available);}
+   if(availability.includes(4)){setAprStyle(available);}
+   if(availability.includes(5)){setMayStyle(available);}
+   if(availability.includes(6)){setJunStyle(available);}
+   if(availability.includes(7)){setJulStyle(available);}
+   if(availability.includes(8)){setAugStyle(available);}
+   if(availability.includes(9)){setSepStyle(available);}
+   if(availability.includes(10)){setOctStyle(available);}
+   if(availability.includes(11)){setNovStyle(available);}
+   if(availability.includes(12)){setDecStyle(available);}}
+
+   }  
+
 
     function DisplaySeaCrittersInfo(){
         let active = document.getElementById('active');
@@ -164,7 +170,7 @@ if (monthAvailable === true && timeAvailable === true) {
       <ul>
       <li className="speed"><span style={bold}>Speed</span> <br /> {speed} </li>
       <li className="price"><span style={bold}>Price</span> <br /> {priceNormal} bells</li>
-    <li className="shadow"><span style={bold}>Shadow</span> <br /> {shadow} </li>
+    <li className="shadowSea"><span style={bold}>Shadow</span> <br /> {shadow} </li>
     <li className="timeFound"><span style={bold}>Time Found </span><br /> {timeDisplayed} </li>
     </ul>
 </div>
@@ -229,7 +235,7 @@ if (monthAvailable === true && timeAvailable === true) {
       <ul>
       <li className="speed"><span style={bold}>Speed</span> <br /> {speed} </li>
       <li className="price"><span style={bold}>Price</span> <br /> {priceNormal} bells</li>
-    <li className="shadow"><span style={bold}>Shadow</span> <br /> {shadow} </li>
+    <li className="shadowSea"><span style={bold}>Shadow</span> <br /> {shadow} </li>
     <li className="timeFound"><span style={bold}>Time Found </span><br /> {timeDisplayed} </li>
     </ul>
 </div>

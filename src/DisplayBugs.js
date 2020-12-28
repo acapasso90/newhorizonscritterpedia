@@ -42,7 +42,6 @@ if (loaded){return(
         <div className="CurrentHemisphere"><h2>Current Hemisphere: {hemisphere} </h2></div>
         <div className="buttons">
             <div className="hrow">
-                <div className="currentMonth">Selected Month: {formattedMonths} </div>
             <div className="dropdown">
   <button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
    Select a Month
@@ -62,7 +61,7 @@ if (loaded){return(
     <a className="dropdown-item" href="#" onClick={() => setMonth(12)}>December</a>
   </div>
 </div>
-<div className="currentTime">Selected Time: {formattedHours} </div>
+
             <div className="dropdown2">
   <button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
    Select an hour
@@ -98,7 +97,7 @@ if (loaded){return(
             <button className="Southern" onClick={() => setHemisphere("Southern")}>Southern</button>
             </div>
         </div>
-        <div className="currentlyAvailable"><h2>Bugs currently available:</h2></div>
+        <div className="currentlyAvailable"><h2>Bugs available between {formattedHours} in {formattedMonths}:</h2></div>
         <div className="horizontalRow">
             <div className="column">
         <BugInfoShown data={bugInfo[0]} month={month} hour={hour} location={hemisphere}/> 
