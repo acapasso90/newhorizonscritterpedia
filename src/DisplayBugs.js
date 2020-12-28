@@ -9,8 +9,14 @@ export default function DisplayBugs(){
     const [hemisphere, setHemisphere] = useState("Northern");
     const [loaded, setLoaded] = useState(false);
     const cancelTokenSource = axios.CancelToken.source();
-const [hour, setHour] = useState("");
-const [month, setMonth] = useState("");
+    let currentTime = new Date();
+    let monthNow = currentTime.getMonth();
+    let currentMonth = ++(monthNow);
+ let currentHour = currentTime.getHours();
+    const [hour, setHour] = useState(currentHour);
+const [month, setMonth] = useState(currentMonth);
+console.log(currentMonth)
+
 let monthNames =  ["null", "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December",
 ];
 let hourNames =  ["Midnight-1AM", "1AM-2AM", "2AM-3AM", "3AM-4AM", "4AM-5AM", "5AM-6AM", "6AM-7AM", "7AM-8AM", "8AM-9AM", "9AM-10AM", "10AM-11AM", "11AM-Noon", "Noon-1PM",
@@ -70,10 +76,6 @@ useEffect(() => {
   function set23(){setHour(23);}
 
 
-function setNorthernHemisphere(){ setHemisphere("Northern")}
-function setSouthernHemisphere(){ setHemisphere("Southern")}
-
-
 if (loaded){return(
     <div className="getBugInfo">
         <div className="CurrentHemisphere"><h2>Current Hemisphere: {hemisphere} </h2></div>
@@ -131,8 +133,8 @@ if (loaded){return(
     <a className="dropdown-item" href="#" onClick={set23}>11PM to MIDNIGHT</a>
   </div>
 </div>
-            <button  onClick={setNorthernHemisphere} className="Northern">Northern</button>
-            <button onClick={setSouthernHemisphere} className="Southern">Southern</button>
+            <button   className="Northern" onClick={() => setHemisphere("Northern")}>Northern</button>
+            <button className="Southern" onClick={() => setHemisphere("Southern")}>Southern</button>
             </div>
         </div>
         <div className="currentlyAvailable"><h2>Bugs currently available:</h2></div>

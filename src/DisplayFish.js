@@ -11,15 +11,21 @@ export default function DisplayFish(){
    const [hemisphere, setHemisphere] = useState("Northern");
     const [loaded, setLoaded] = useState(false);
     const cancelTokenSource = axios.CancelToken.source();
-    const [hour, setHour] = useState("");
+    let currentTime = new Date();
+   let monthNow = currentTime.getMonth();
+    let hoursNow = currentTime.getHours();
+    const [hour, setHour] = useState(hoursNow);
     const [month, setMonth] = useState("");
+    let monthNowNames = [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December",
+];
     let monthNames =  ["null", "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December",
     ];
     let hourNames =  ["Midnight-1AM", "1AM-2AM", "2AM-3AM", "3AM-4AM", "4AM-5AM", "5AM-6AM", "6AM-7AM", "7AM-8AM", "8AM-9AM", "9AM-10AM", "10AM-11AM", "11AM-Noon", "Noon-1PM",
     "1PM-2PM", "2PM-3PM", "3PM-4PM", "4PM-5PM", "5PM-6PM", "6PM-7PM", "7PM-8PM", "8PM-9PM", "9PM-10PM", "10PM-11PM", "11PM-Midnight"];
     let formattedHours = hourNames[hour];
     let formattedMonths = monthNames[month];
-
+    let formattedMonthsNow = monthNowNames[monthNow];
+    console.log(formattedMonthsNow)
 
     function showFish(response){
         setfishInfo(response.data)
@@ -146,11 +152,11 @@ if (loaded){return(
         <div className="currentlyAvailable"><h2>Fish currently available:</h2></div>
         <div className="horizontalRow">
             <div className="column">
-        <FishInfoShown data={fishInfo[0]} month={month} hour={hour} location={hemisphere}/> 
-        <FishInfoShown data={fishInfo[1]} month={month} hour={hour} location={hemisphere} /> 
-        <FishInfoShown data={fishInfo[2]} month={month} hour={hour} location={hemisphere} />
-        <FishInfoShown data={fishInfo[3]} month={month} hour={hour} location={hemisphere}/>
-        <FishInfoShown data={fishInfo[4]} month={month} hour={hour} location={hemisphere}/>
+        <FishInfoShown data={fishInfo[0]} location={hemisphere} month={month} hour={hour} /> 
+        <FishInfoShown data={fishInfo[1]} location={hemisphere} month={month} hour={hour} /> 
+        <FishInfoShown data={fishInfo[2]} location={hemisphere} month={month} hour={hour} />
+        <FishInfoShown data={fishInfo[3]} location={hemisphere} month={month} hour={hour} />
+        <FishInfoShown data={fishInfo[4]} location={hemisphere} month={month} hour={hour} />
             </div>
             <div className="column">
         <FishInfoShown data={fishInfo[5]} month={month} hour={hour} location={hemisphere}/>

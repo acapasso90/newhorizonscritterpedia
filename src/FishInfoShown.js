@@ -94,7 +94,8 @@ const [decStyle, setDecStyle] = useState(unavailable);
   }
   let time = props.data.availability[timeArray];
   let currentTime = new Date();
-   let month = currentTime.getMonth();
+  let javamonth = currentTime.getMonth();
+  let month = ++(javamonth);
    let inputMonth = props.month;
 let inputHour = props.hour;
 if (inputMonth != null){month = inputMonth}

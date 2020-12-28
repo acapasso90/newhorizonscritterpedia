@@ -85,7 +85,8 @@ const [decStyle, setDecStyle] = useState(unavailable);
         let time = props.data.availability[timeArray];
    
     let currentTime = new Date();
-    let month = currentTime.getMonth();
+    let javamonth = currentTime.getMonth();
+    let month = ++(javamonth);
     let hours = currentTime.getHours(); 
     let inputMonth = props.month;
     let inputHour = props.hour;
