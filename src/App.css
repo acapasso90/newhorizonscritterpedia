@@ -559,7 +559,8 @@ bottom: 10px;}
     margin: 15px 0px 0px 5px;}
 
      .fishRealistic {
-      background-color: #f1d8b1;
+      background: radial-gradient(circle, rgb(231, 235, 248) 0%, rgb(248, 218, 247) 100%);
+
       border: 20px solid #ffffff;
      }
       
