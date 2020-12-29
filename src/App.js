@@ -125,7 +125,7 @@ return (
     </Switch>
     
          <div className="footer">
-      <footer><p>All images, songs, and characters found on the app are the sole property of Nintendo and Animal Crossing
+      <footer><p>All images, information, quotes, and characters found on the app are the sole property of Nintendo and Animal Crossing
 and are only used for non-commercial and educational purpose.</p>
         <a href="https://github.com/acapasso90/newhorizonscritterpedia" target="_blank"  rel="noreferrer">Open-sourced</a> app built by <a href="https://www.amandacapasso.com" target="_blank"  rel="noreferrer">Amanda Capasso</a> using the <a href="http://acnhapi.com/" target="blank" rel="noreferrer">ACNH API</a> </footer>
       </div>

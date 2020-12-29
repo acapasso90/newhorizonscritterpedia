@@ -38,7 +38,7 @@ const [decStyle, setDecStyle] = useState(unavailable);
     const northernArray = "month-array-northern";
     const southernArray = "month-array-southern"; 
     const timeArray = "time-array";
-    const blathersStyle = {maxWidth: "340px",
+    const blathersStyle = {maxWidth: "200px",
     marginTop: "120px",}
     const infoShownStyle = {
       lineHeight: "normal",

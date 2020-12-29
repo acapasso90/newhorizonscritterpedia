@@ -17,16 +17,12 @@ export default function DisplayFish(){
  let currentHour = currentTime.getHours();
     const [hour, setHour] = useState(currentHour);
 const [month, setMonth] = useState(currentMonth);
-    let monthNowNames = [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December",
-];
     let monthNames =  ["null", "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December",
     ];
     let hourNames =  ["Midnight-1AM", "1AM-2AM", "2AM-3AM", "3AM-4AM", "4AM-5AM", "5AM-6AM", "6AM-7AM", "7AM-8AM", "8AM-9AM", "9AM-10AM", "10AM-11AM", "11AM-Noon", "Noon-1PM",
     "1PM-2PM", "2PM-3PM", "3PM-4PM", "4PM-5PM", "5PM-6PM", "6PM-7PM", "7PM-8PM", "8PM-9PM", "9PM-10PM", "10PM-11PM", "11PM-Midnight"];
     let formattedHours = hourNames[hour];
     let formattedMonths = monthNames[month];
-    let formattedMonthsNow = monthNowNames[monthNow];
-    console.log(formattedMonthsNow)
 
     function showFish(response){
         setfishInfo(response.data)

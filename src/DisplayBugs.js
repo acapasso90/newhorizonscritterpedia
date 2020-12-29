@@ -15,7 +15,7 @@ export default function DisplayBugs(){
  let currentHour = currentTime.getHours();
     const [hour, setHour] = useState(currentHour);
 const [month, setMonth] = useState(currentMonth);
-console.log(currentMonth)
+
 
 let monthNames =  ["null", "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December",
 ];
@@ -23,6 +23,7 @@ let hourNames =  ["Midnight-1AM", "1AM-2AM", "2AM-3AM", "3AM-4AM", "4AM-5AM", "5
 "1PM-2PM", "2PM-3PM", "3PM-4PM", "4PM-5PM", "5PM-6PM", "6PM-7PM", "7PM-8PM", "8PM-9PM", "9PM-10PM", "10PM-11PM", "11PM-Midnight"];
 let formattedHours = hourNames[hour];
 let formattedMonths = monthNames[month];
+
 function showBugs(response){
 setbugInfo(response.data)
 setLoaded(true);}
