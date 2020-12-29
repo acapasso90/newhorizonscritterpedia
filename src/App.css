@@ -1,110 +1,103 @@
 a {color: #702b2b;
-font-weight: bold;
-text-decoration: none; }
-
-a:hover {color: #31020f;
-text-decoration: none;}
-
-body {background-color: #F5EBC1;
-  color: #8B7A65;
   font-weight: bold;
-  font-family: 'Short Stack', cursive;
-  }
+  text-decoration: none; }
   
-  button, button:hover {background-color: #da8f4d;
-    border: 4px solid #702b2b;
-    color: #440f0f;
-    padding: 8px 18px;
-    border-radius: 3px;
+  a:hover {color: #31020f;
+  text-decoration: none;}
+  
+  body {background-color: #F5EBC1;
+    color: #8B7A65;
     font-weight: bold;
-    position: absolute;
-    white-space: nowrap;
     font-family: 'Short Stack', cursive;
-    font-size: 16px;
-    user-select: none;
-     }
+    }
     
-     button:active {margin-top: 2px;
-      border: 4px solid #682424;}
+    button, button:hover {background-color: #da8f4d;
+      border: 4px solid #702b2b;
+      color: #440f0f;
+      padding: 8px 18px;
+      border-radius: 3px;
+      font-weight: bold;
+      position: absolute;
+      white-space: nowrap;
+      font-family: 'Short Stack', cursive;
+      font-size: 16px;
+      user-select: none;
+       }
+      
+       button:active {margin-top: 2px;
+        border: 4px solid #682424;}
+    
+    ul {list-style: none;
+    width: 400px;}
+    
+    .App {
+      text-align: center;
+      min-width: 100%;
+    }
   
-  ul {list-style: none;
-  width: 400px;}
-  
-  .App {
-    text-align: center;
-    min-width: 100%;
-  }
-
-  ::selection{background-color:#74573c;
-  color: #ffff;}
-  
-  .backdrop1{background-color: #ffff;
-    height: 80px;
-    width: 80px;
-    position: relative;
-    bottom: 5px;
-  border-radius: 50%;}
-  
-  .backdrop2{background-color: #ffff;
-    height: 80px;
-    width: 80px;
-  border-radius: 50%;
-  position: relative;
-  bottom: 5px;
-  right: 30px;}
-  
-  .backdrop3 {background-color: #ffff;
-    height: 80px;
-    width: 80px;
+    ::selection{background-color:#74573c;
+    color: #ffff;}
+    
+    .backdrop1{background-color: #ffff;
+      height: 80px;
+      width: 80px;
+      position: relative;
+      top: 5px;
+    border-radius: 50%;}
+    
+    .backdrop2{background-color: #ffff;
+      height: 80px;
+      width: 80px;
     border-radius: 50%;
     position: relative;
-    bottom: 5px;
-    right: 60px;}
- 
-    .bugNameHide {position: absolute;
-   margin-top: 50px;}
-    .butterfly {position: relative;
-    bottom: 75px;
-  left: 15px;
-}
+    top: 5px;
+    right: 30px;}
+    
+    .backdrop3 {background-color: #ffff;
+      height: 80px;
+      width: 80px;
+      border-radius: 50%;
+      position: relative;
+      top: 5px;
+      right: 60px;}
+   
 
-.butterfly:hover, .octopus:hover, .fishpic:hover {cursor: pointer;
-}
-
-.container {margin: 18px 0px 0px 0px;
-  min-width: 100%;
-}
-
-.dropdown {position: absolute;
-right: 260px;}
-
-.dropdown2{ position: absolute;
-left: 75px;}
-
-.dropdown-menu {background-image: url(./dropdownmarble.jpg)}
-
-.dropdown-item:active {background-color: #74573c;}
-  .quote {margin-top: 20px;
-  margin-bottom: 20px;
-font-size: 25px;
-position: relative;
-top: 15px;
-right: 115px;
-}
-
-.SeaCrittersInfoHidden .quote {color: #180052;}
-
-.fishInfoHidden .quote {color:  #004d80;}
-
-.bugInfoHidden .quote {color: #007910; }
-
-  .fishpic {position: relative;
-    bottom: 75px;
+  
+  .butterfly:hover, .octopus:hover, .fishpic:hover {cursor: pointer;
+  }
+  
+  .container {    overflow: hidden;
+    min-width: 1580px;
+  }
+  
+  .dropdown {position: absolute;
+  right: 260px;}
+  
+  .dropdown2{ position: absolute;
+  left: 75px;}
+  
+  .dropdown-menu {background-image: url(./dropdownmarble.jpg)}
+  
+  .dropdown-item:active {background-color: #74573c;}
+    .quote {margin-top: 20px;
+    margin-bottom: 20px;
+  font-size: 25px;
+  position: relative;
+  top: 15px;
+  right: 115px;
+  }
+  
+  .SeaCrittersInfoHidden .quote {color: #180052;}
+  
+  .fishInfoHidden .quote {color:  #004d80;}
+  
+  .bugInfoHidden .quote {color: #007910; }
+  
+  .fishpic, .octopus, .butterfly {position: relative;
+    bottom: 65px;
     left: 8px;}
   
-    .octopus {position: relative;
-      bottom: 75px;
-    left: 5px;}
+    .butterfly {left: 12px;}
 
     .btn, .btn:hover, .btn-secondary:not(:disabled):not(.disabled) {background-color: #da8f4d;
       border: 4px solid #702b2b;
@@ -116,132 +109,133 @@ right: 115px;
       white-space: nowrap;
       font-family: 'Short Stack', cursive;
       font-size: 16px;}
+
   .buttons {white-space: nowrap;
   display: inline;}
-
 
   .btn-secondary:not(:disabled):not(.disabled):active {background-color: #ac672b;
     border: 4px solid #702b2b;
     }
   
-  .column {max-width: 100px;}
+  .column {max-width: 100px;
+  min-width: 98px;}
+
   .currentlyAvailable {position: relative;
   top: 70px;
   right: 120px;}
-  
+    
   .CurrentHemisphere {position: relative;
     right: 120px;}
   
   .CurrentHemisphere h2 {font-size: 28px;
   }
+
   .fishImage, .bugImage, .SeaCrittersImage {border: 1px solid #d1cca6;
+    min-width: 98px;
+    min-height: 98px;
   }
   
-
   .fishName, .bugName, .seaName {font-size: 28px;
-  position: relative;
+    position: relative;
+    bottom: 60px;
+  right: 110px;}
+
+  .bugName {font-size: 21px;
+    position: relative;
   bottom: 60px;
-right: 110px;}
-
-.bugName {font-size: 21px;
-  position: relative;
-bottom: 60px;
-color: #007910}
-
+  color: #007910}
+  
 .fishName {color: #004d80;}
-
+  
 .loadingFish {margin-top: 100px;
-width: 550px;
-margin-left: auto;
-margin-right: auto;
-white-space: nowrap;}
-
+    width: 550px;
+    margin-left: auto;
+    margin-right: auto;
+    white-space: nowrap;}
+  
 .seaName {color: #180052;
-  font-size: 28px;}
-
-  .fishInfoHidden, .bugInfoHidden, .SeaCrittersInfoHidden {z-index: -1;
-  background-Image: url(./bigmarble.jpg)}
+    font-size: 28px;}
   
-  .fishLabel, .bugLabel, .seaLabel {top: -30px;
-  right: 20px;}
+.fishInfoHidden, .bugInfoHidden, .SeaCrittersInfoHidden {z-index: -1;
+    background-Image: url(./bigmarble.jpg)}
+    
+.fishLabel, .bugLabel, .seaLabel {top: -12px;
+      right: 20px;}
+    
+.fishLabel {right: 105px;}
   
-  .fishLabel {right: 105px;}
-
-  .bugLabel {right: 155px;}
-  .seaLabel {  width: 147.5px;}
-  .fishPicture {            max-width: 96px;
-    user-select: none;
-  max-height: 98px;}
+.bugLabel {right: 155px;}
+.seaLabel {  width: 147.5px;}
+.fishPicture {            max-width: 96px;
+        user-select: none;
+      max-height: 98px;}
+    
+      .fishPicture2 {      filter: contrast(0%) brightness(140%)  grayscale(80%);
+        user-select: none;
+        max-width: 96px;
+        max-height: 98px;}
+      
+      .footer {font-size: 18px;
+      text-align: center;
+      margin-top: 130px;}
   
-  .fishPicture2 {      filter: contrast(0%) brightness(140%)  grayscale(80%);
-    user-select: none;
-    max-width: 96px;
-    max-height: 98px;}
   
-  .footer {font-size: 18px;
-  text-align: center;
-  margin-top: 130px;}
-
-
-    .getFishInfo .horizontalRow {display: flex;
-      flex-direction: row;
-      position: relative; 
-      top: 80px;
-      right: 245px;}
-  
-      .getBugInfo .horizontalRow {display: flex;
+      .getFishInfo .horizontalRow {display: flex;
         flex-direction: row;
         position: relative; 
         top: 80px;
-        right: 232px;}
+        right: 245px;}
     
-  
-  .Header {box-shadow: 0px 2px 3px #d8cfa1;
-    user-select: none;
-position: relative;
-bottom: 20px;
-right: 15px;
-    min-height: 80px;
-   width: 100%;
-   min-width: 1580px;
-   max-width: 1585px;
-    background-image: url(./bigmarble.jpg);
-    background-repeat: repeat;
-    background-position-y: -100px;
-  }
-  
-  .headerText {text-align: right;
-  position: relative;
-top: 35px;}
-  
-  
-  .iconLinks {position: relative;
-    user-select: none;
-  bottom: 30px;
-  left: 35px;}
+        .getBugInfo .horizontalRow {display: flex;
+          flex-direction: row;
+          position: relative; 
+          top: 80px;
+          right: 248px;}
+      
+          .Header {box-shadow: 0px 2px 3px #d8cfa1;
+            user-select: none;
+        position: relative;
+        bottom: 20px;
+        right: 15px;
+            min-height: 80px;
+            width: 100%;
+            min-width: 1580px;
+            max-width: 1585px;
+            background-image: url(./bigmarble.jpg);
+            background-repeat: repeat;
+            background-position-y: -100px;
+          }
+    
+          .headerText {text-align: right;
+            position: relative;
+          top: 35px;}
+            
+            
+          .iconLinks {position: relative;
+            user-select: none;
+          bottom: 30px;
+          left: 35px;}
 
   .active:hover {cursor: default;}
   .link:hover {cursor: default;}
   
   .kk {position: relative;
-  bottom: 115px;
-left: 200px;
-text-decoration: none;
-color: #8B7A65;
-font-weight: bold;
-font-size: 18px;
-}
-  
+    bottom: 115px;
+  left: 200px;
+  text-decoration: none;
+  color: #8B7A65;
+  font-weight: bold;
+  font-size: 18px;
+  }
   
   .left {float: left;}
 
-    .location {position: relative;
-      bottom: 40px;
-    }
-
+  .location {position: relative;
+    bottom: 40px;
+  }
     
- .price, .CJprice, .timeFound, .flickPrice, .shadowSea {margin-top: 50px;
-    }
+  .price, .CJprice, .timeFound, .flickPrice, .shadowSea {margin-top: 50px;
+  }
   
   .mobile .column {margin-bottom: 0px;
   max-height: 310px;}
@@ -306,61 +300,62 @@ font-size: 18px;
   }
 
   .months {display: flex;
-  flex-direction: row;
-position: relative;
-top: 610px;
-text-align: center;
-right: 50px;
-font-size: 18px;}
-
-.months2 {display: flex;
-  flex-direction: row;
-position: relative;
-top: 65px;
-right: 1135px;}
-
-.months p {margin-left: 80px;
-max-height: 20px;
-padding: 8px 15px;}
-
-  .Northern { 
-    left: 600px;
-  }
+    flex-direction: row;
+  position: relative;
+  top: 610px;
+  text-align: center;
+  right: 50px;
+  font-size: 18px;}
   
- .pc .monthsHeader {white-space: nowrap;
-  font-size: 24px;
-  font-weight: bold;
-    position: relative;
-bottom: 60px;
-left: 630px;
-  }
-  .polaroid {background-color: #ffffff;
-  max-width: 300px;
-min-height: 95px;}
+  .months2 {display: flex;
+    flex-direction: row;
+  position: relative;
+  top: 65px;
+  right: 1135px;}
 
-.fishInfoHidden .polaroid {min-height: 110px;}
+  .months p {margin-left: 80px;
+    max-height: 20px;
+    padding: 6px 15px 9px 15px;}
+    
+    .Northern { 
+      left: 600px;
+    }
+    
+    .pc .monthsHeader {white-space: nowrap;
+      font-size: 24px;
+      font-weight: bold;
+        position: relative;
+    bottom: 60px;
+    left: 630px;
+      }
+      
+      .polaroid {background-color: #ffffff;
+        max-width: 300px;
+      min-height: 95px;}
 
-.polaroidBug {background-color: #ffffff;
-  max-width: 300px;
-min-height: 105px;}
+      .fishInfoHidden .polaroid {min-height: 110px;}
 
-.pc .polaroid {position: relative;
-right: 80px;
-top: 20px;}
+      .polaroidBug {background-color: #ffffff;
+        max-width: 300px;
+      min-height: 105px;}
+      
+      .pc .polaroid {position: relative;
+      right: 80px;
+      top: 20px;}
+      
+      .pc .polaroidBug {position: relative;
+        z-index: -1;
+        right: 80px;
+      top: 20px;}
 
-.pc .polaroidBug {position: relative;
-  z-index: -1;
-  right: 80px;
-top: 20px;}
-
-  .getSeaCrittersInfo .horizontalRow {width: 1040px;
-  margin-left: auto;
-  margin-right: auto;
-  display: flex;
-      flex-direction: row;
-      position: relative; 
-      top: 80px;
-  }
+      .getSeaCrittersInfo .horizontalRow {width: 1040px;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+            flex-direction: row;
+            position: relative; 
+            top: 80px;
+        }
   
   .right {float: right;}
 
@@ -369,10 +364,10 @@ top: 20px;}
     top: 50px;
     font-size: 24px;
     letter-spacing: 2px;
-
   }
+
   .Southern { 
-  left: 862px;}
+    left: 862px;}
   
   .tablet .Header {position: relative;
     bottom: 10px;}
@@ -407,27 +402,29 @@ top: 20px;}
     top: 110px;
     }
   
-  .hrow {display: flex;
-  flex-direction: row;}
-  #inactive {width: 0px;
-  height: 0px;
-opacity: 0%;}
+    .hrow {display: flex;
+      flex-direction: row;}
+
+      #inactive {width: 0px;
+      height: 0px;
+    opacity: 0%;}
   
-  .pc .SeaCrittersInfoHidden, .pc .fishInfoHidden, .pc .bugInfoHidden { width: 90%; 
-    min-width: 1450px;
-    height: 100%;
-    min-Height: 750px;}
+    .pc .SeaCrittersInfoHidden, .pc .fishInfoHidden, .pc .bugInfoHidden { width: 90%; 
+      min-width: 1450px;
+      height: 100%;
+      min-Height: 750px;
+    margin: 15px 0px 0px 5px;}
 
-  .fishRealistic {max-height: 300px;
-  max-width: 300px;
-  min-height: 100px;
-  min-width: 300px;
-background-color: #f1d8b1;
-border: 20px solid #ffffff;
-position: relative;
-top: 25px;
-right: 110px;}
-
+      .fishRealistic {max-height: 300px;
+        max-width: 300px;
+        min-height: 100px;
+        min-width: 300px;
+      background-color: #f1d8b1;
+      border: 20px solid #ffffff;
+      position: relative;
+      top: 25px;
+      right: 110px;}
+      
 
 .fishPicture:hover {cursor: pointer;}
 
@@ -442,13 +439,13 @@ right: 110px;}
     border-radius: 10%;
   font-size: 15px;}
   
-    .pc .blathersInfo {position: absolute;
-      right: 10px;
-      bottom: 350px;
-      max-width: 450px;
-      padding: 10px 20px;
-    }
-  
+  .pc .blathersInfo {position: absolute;
+    right: 10px;
+    bottom: 350px;
+    max-width: 450px;
+    padding: 10px 20px;
+  }
+
 
 
   .quoteTriangle {width: 0px;
@@ -461,12 +458,12 @@ right: 110px;}
 }
 
 .pc .fishInfoHidden .quoteTriangle, .pc .bugInfoHidden .quoteTriangle, .pc .SeaCrittersInfoHidden .quoteTriangle {position: absolute;
-  left: 1000px;
-  top: 345px;}
+  left: 998px;
+  top: 344px;}
 
-  .exitButton button {padding: 10px 15px;}
+.exitButton button {padding: 10px 15px;}
 
-  .pc .fishInfoHidden .exitButton, .pc .bugInfoHidden .exitButton, .pc .SeaCrittersInfoHidden .exitButton{position: absolute;
-  right: 130px;
-  top: 2px;
+.pc .fishInfoHidden .exitButton, .pc .bugInfoHidden .exitButton, .pc .SeaCrittersInfoHidden .exitButton{position: absolute;
+right: 130px;
+top: 2px;
 }
