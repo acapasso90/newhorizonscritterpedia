@@ -139,12 +139,14 @@ if (monthAvailable === true && timeAvailable === true)
 <div className="Months">
     <div className="months">
     <h4 className="monthsHeader"> Months Available</h4>
-   <p className="Jan"  style={janStyle}>January</p>
+    <div className="months1">
+    <p className="Jan"  style={janStyle}>January</p>
       <p className="Feb" style={febStyle} >February</p>
       <p className="Mar"  style={marStyle}>March</p>
       <p className="Apr"  style={aprStyle}>April</p>
       <p className="May"  style={mayStyle} >May</p>
       <p className="Jun"  style={junStyle}>June</p>
+      </div>
       <div className="months2">
       <p className="Jul" style={julStyle}>July</p>
       <p className="Aug" style={augStyle} >August</p>
@@ -201,12 +203,14 @@ if (monthAvailable === true && timeAvailable === true)
 <div className="Months">
     <div className="months">
     <h4 className="monthsHeader"> Months Available</h4>
-   <p className="Jan"  style={janStyle}>January</p>
+    <div className="months1">
+    <p className="Jan"  style={janStyle}>January</p>
       <p className="Feb" style={febStyle} >February</p>
       <p className="Mar"  style={marStyle}>March</p>
       <p className="Apr"  style={aprStyle}>April</p>
       <p className="May"  style={mayStyle} >May</p>
       <p className="Jun"  style={junStyle}>June</p>
+      </div>
       <div className="months2">
       <p className="Jul" style={julStyle}>July</p>
       <p className="Aug" style={augStyle} >August</p>
