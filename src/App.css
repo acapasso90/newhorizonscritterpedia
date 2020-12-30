@@ -263,8 +263,9 @@ a {color: #702b2b;
       flex-wrap: wrap;
       margin-top: 85px;
       position: relative;
-     left: 37px;
-     width: 300px;
+     left: 17px;
+     min-width: 350px;
+     max-width: 350px;
     top: 130px;
       } 
   
