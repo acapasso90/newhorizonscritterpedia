@@ -10,12 +10,12 @@ export default function DisplaySeaApp() {
     <div className="App">
       <header className="header">
         <div className="mobile">
-      <MediaQuery maxDeviceWidth={410}>
+      <MediaQuery maxDeviceWidth={500}>
         <DisplaySeaCritters />
         </MediaQuery>
         </div>
         <div className="tablet">
-      <MediaQuery minDeviceWidth={411} maxDeviceWidth={1025}>
+      <MediaQuery minDeviceWidth={501} maxDeviceWidth={1025}>
         <DisplaySeaCritters />
         </MediaQuery>
         </div>

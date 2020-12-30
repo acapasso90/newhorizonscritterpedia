@@ -442,7 +442,7 @@ right: 120px;}
   .btn, .btn:hover, .btn-secondary:not(:disabled):not(.disabled) {      padding: 5px 5px;}
 
   .container {padding: 0px;
-  width: 370px;}
+  max-width: 350px;}
   .currentlyAvailable { position: absolute;
     top: 280px;
     left: 50px;

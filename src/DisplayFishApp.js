@@ -6,12 +6,12 @@ export default function DisplayFishApp(){return(
 <div className="App">
 <header className="header">
   <div className="mobile">
-<MediaQuery maxDeviceWidth={410}>
+<MediaQuery maxDeviceWidth={500}>
   <DisplayFish />
   </MediaQuery>
   </div>
   <div className="tablet">
-<MediaQuery minDeviceWidth={411} maxDeviceWidth={1026}>
+<MediaQuery minDeviceWidth={501} maxDeviceWidth={1026}>
 <DisplayFish />
   </MediaQuery>
   </div>
