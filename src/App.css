@@ -69,7 +69,12 @@ a {color: #702b2b;
   @media (min-width: 1025px) {
   .container {    overflow: hidden;
     min-width: 1580px;
-    }  }
+    }
+  
+    .Header {min-width: 1585px;
+    max-width: 1585px;}
+  
+    .btn, .btn:hover, .btn-secondary:not(:disabled):not(.disabled) {      padding: 8px 18px;}}
   
   .dropdown {position: absolute;
   right: 260px;}
@@ -78,6 +83,8 @@ a {color: #702b2b;
   left: 75px;}
   
   .dropdown-menu {background-image: url(./dropdownmarble.jpg)}
+  
+ 
   
   .dropdown-item:active {background-color: #74573c;}
    .pc .quote {margin-top: 20px;
@@ -103,7 +110,6 @@ a {color: #702b2b;
     .btn, .btn:hover, .btn-secondary:not(:disabled):not(.disabled) {background-color: #da8f4d;
       border: 4px solid #702b2b;
       color: #440f0f;
-      padding: 8px 18px;
       border-radius: 3px;
       font-weight: bold;
       position: absolute;
@@ -121,7 +127,7 @@ a {color: #702b2b;
   .pc .column {max-width: 100px;
   min-width: 98px;}
 
-  .currentlyAvailable {position: relative;
+ .pc .currentlyAvailable {position: relative;
   top: 70px;
   right: 120px;}
     
@@ -185,7 +191,6 @@ a {color: #702b2b;
       text-align: center;
       margin-top: 130px;}
   
-  
       .getFishInfo .horizontalRow {display: flex;
         flex-direction: row;
         position: relative; 
@@ -202,7 +207,7 @@ a {color: #702b2b;
             user-select: none;
         position: relative;
         bottom: 20px;
-        right: 15px;
+        right: 18px;
             min-height: 80px;
             width: 100%;
             background-image: url(./bigmarble.jpg);
@@ -210,8 +215,6 @@ a {color: #702b2b;
             background-position-y: -100px;
           }
 
-          .pc .Header { min-width: 1580px;
-            max-width: 1585px;}
     
           .headerText {text-align: right;
             position: relative;
@@ -246,42 +249,24 @@ a {color: #702b2b;
   
   .mobile .column {margin-bottom: 0px;
   max-height: 310px;}
-  .mobile .CurrentHemisphere {white-space: nowrap;
-    font-size: 14px;
+  .mobile .CurrentHemisphere h2 {white-space: nowrap;
+    font-size: 20px;
+    font-weight: bold;
   position: relative;
-  bottom: 10px;}
-  
-    .mobile .currentlyAvailable {position: relative;
-    top: 45px;}
-  
-    .mobile .Header {font-size: 10px;
-      user-select: none;
-    white-space: nowrap;
-  max-height: 50px;
-  min-width: 400px;
-  position: relative;
-  left: 5px;
-  bottom: 5px;}
-  
-  .mobile .headerText {position: relative;
-  left: 40px;}
+  left: -125px;
+  top: 5px;}
+
+
   
     .mobile .horizontalRow {display: flex;
       flex-wrap: wrap;
       margin-top: 85px;
-      max-width: 250px;
-      margin-left: auto;
-      margin-right: auto;
       position: relative;
-    top: -20px;
+     left: 22px;
+     width: 300px;
+    top: 130px;
       } 
   
-  .mobile .iconLinks {position: relative;
-    bottom: 47px;
-    left: -5px;}
-  
-    .mobile .iconLinks img {max-width: 40px;
-    max-height: 40px;}
   
       .mobile .active {font-size: 12px;
       min-height: 200px;
@@ -297,13 +282,13 @@ a {color: #702b2b;
         max-height: 82px;}
     
   .mobile .Northern {position: absolute;
-    left: 50px;
-  top: 91px;
+    left: 43px;
+  top: 121px;
   }
   
   .mobile .Southern {position: absolute;
-    left: 201px;
-  top: 91px;
+    left: 198px;
+    top: 121px;
   }
 
   .months {display: flex;
@@ -382,6 +367,8 @@ a {color: #702b2b;
     @media only screen and (max-width: 1025px) and (min-width: 400px) 
 { 
 
+  .btn, .btn:hover, .btn-secondary:not(:disabled):not(.disabled) {      padding: 8px 18px;}
+
 .Blathers {max-width: 150px!important;  
     position: absolute;
     right: 332px;
@@ -439,6 +426,46 @@ bottom: 10px;}
       position: relative; 
       top: 80px;
   }
+}
+
+@media only screen and (max-width: 399px){ 
+  .btn, .btn:hover, .btn-secondary:not(:disabled):not(.disabled) {      padding: 5px 5px;}
+
+  .currentlyAvailable { position: absolute;
+    top: 280px;
+    left: 50px;
+  }
+  .currentlyAvailable h2 {font-size: 20px;
+    position: relative;
+    top:  -10px;
+    height: 100px;
+    width: 260px
+}
+
+.footer {margin-top: 180px;}
+  .Header {min-width: 378px;
+min-height: 80px;}
+.headerText h1 {font-size: 22px;
+position: relative;
+width: 180px;
+top: -4px;
+font-weight: bold;
+left: 180px;}
+
+.iconLinks {position: relative;
+top: -40px;
+left: -2px;}
+
+.kk {opacity: 0%;}
+
+.dropdown {position: absolute;
+  right: 358px;
+top: 200px;}
+  
+  .dropdown2{ position: absolute;
+  left: 195px;
+  top: 200px;}
+  
 }
 
 
