@@ -301,6 +301,9 @@ a {color: #702b2b;
   text-align: center;
   right: 50px;
   font-size: 18px;}
+
+  .pc .months1 {    display: flex;
+    flex-direction: row;}
   
  .pc  .months2 {display: flex;
     flex-direction: row;
@@ -406,8 +409,11 @@ font-weight: bold;
 bottom: 10px;}
 
 .currentlyAvailable h2 {white-space: nowrap;
-  font-size: 28px;
-  font-weight: bold;}
+  font-size: 26px;
+  font-weight: bold;
+position: relative;
+top: 70px;
+right: 120px;}
 
   .quote {
   font-size: 18px;
@@ -599,6 +605,9 @@ top: 200px;}
             position: relative;
             top: 60px;
             right: 975px;}
+
+            .tablet .months1 {display: flex;
+            flex-direction: row;}
           
           .tablet  .months p {margin-left: 70px;
               max-height: 20px;
