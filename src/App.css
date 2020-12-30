@@ -684,7 +684,7 @@ top: 200px;}
         top: 25px;
         right: 110px;}
 
-.fishPicture:hover {cursor: pointer;}
+.fishPicture:hover, .fishPicture2:hover {cursor: pointer;}
 
 .pc .Blathers {max-width: 210px!important;
   position: absolute;
