@@ -368,7 +368,7 @@ a {color: #702b2b;
   .Southern { 
     left: 862px;}
 
-    @media only screen and (max-width: 1025px) and (min-width: 376px) 
+    @media only screen and (max-width: 1025px) and (min-width: 390px) 
 { 
 
   .btn, .btn:hover, .btn-secondary:not(:disabled):not(.disabled) {      padding: 8px 18px;}
@@ -435,7 +435,7 @@ right: 120px;}
   }
 }
 
-@media only screen and (max-width: 375px){.blathersInfo {opacity: 0%!important;}
+@media only screen and (max-width: 380px){.blathersInfo {opacity: 0%!important;}
 
 .Blathers {opacity: 0%!important;}
   .btn, .btn:hover, .btn-secondary:not(:disabled):not(.disabled) {      padding: 5px 5px;}
