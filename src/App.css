@@ -254,7 +254,7 @@ a {color: #702b2b;
     font-size: 20px;
     font-weight: bold;
   position: relative;
-  left: -110px;
+  left: -130px;
   top: 5px;}
 
 
@@ -284,7 +284,7 @@ a {color: #702b2b;
         max-height: 82px;}
     
   .mobile .Northern {position: absolute;
-    left: 43px;
+    left: 50px;
   top: 121px;
   }
   
@@ -455,14 +455,16 @@ right: 120px;}
 }
 
 .footer {margin-top: 180px;}
+
   .Header {min-width: 378px;
 min-height: 80px;}
+
 .headerText h1 {font-size: 22px;
 position: relative;
 width: 180px;
 top: -4px;
 font-weight: bold;
-left: 195px;}
+left: 190px;}
 
 .loadingFish {position: relative;
   right: 215px;
