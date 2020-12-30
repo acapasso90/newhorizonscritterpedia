@@ -265,7 +265,7 @@ a {color: #702b2b;
       position: relative;
      left: 17px;
      min-width: 350px;
-     max-width: 350px;
+     max-width: 350px!important;
     top: 130px;
       } 
   
