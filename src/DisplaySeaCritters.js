@@ -161,7 +161,7 @@ if (loaded){return(
 else{
     return (  
         <div className="loadingFish">
-        <h1>Loading Current Sea Creatures</h1>
+        <h1 className="sealoading">Loading Current Sea Creatures</h1>
         <Loader
             type="Puff"
             color="#08203a"

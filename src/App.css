@@ -725,3 +725,9 @@ top: 200px;}
 right: 115px;
 top: 5px;
 }
+
+.pc .sealoading {position: relative;
+right: 80px;}
+
+.mobile .sealoading {position: relative;
+right: 40px;}
