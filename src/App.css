@@ -479,6 +479,9 @@ left: 190px;}
   right: 5px;
 }
 
+.bugInfoHidden .columnRight li {margin-top: 30px;
+position: relative;
+bottom: 50px;}
 
 .bugInfoHidden, .fishInfoHidden, .SeaCrittersInfoHidden {max-width: 350px;
   min-height: 720px;
@@ -493,6 +496,7 @@ font-weight: bold;}
 bottom: 275px;
 left: -142px;}
 
+.SeaCrittersInfoHidden .columnRight {bottom: 370px;}
 .columnRight li {margin-top: 42px;}
 .iconLinks {position: relative;
 top: -40px;
@@ -525,16 +529,18 @@ bottom: 55px;
 left: 30px;}
 
 .fishName, .bugName, .seaName {
-  font-size: 15px;
+  font-size: 24px!important;
   position: relative;
-top: 642px;
+top: 455px;
 left: -340px!important;
 }
 
+.seaName {top: 400px;}
+.bugName {font-size: 20px!important;
+top: 422px;}
 .bugName, .seaName{
-  left: -365px!important;
-  white-space: nowrap;
-  font-size: 14px;}
+  left: -368px!important;
+  white-space: nowrap;}
 .quoteTriangle {opacity: 0%;
 }
 
