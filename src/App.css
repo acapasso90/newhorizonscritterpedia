@@ -254,7 +254,7 @@ a {color: #702b2b;
     font-size: 20px;
     font-weight: bold;
   position: relative;
-  left: -130px;
+  left: -115px;
   top: 5px;}
 
 
@@ -263,7 +263,7 @@ a {color: #702b2b;
       flex-wrap: wrap;
       margin-top: 85px;
       position: relative;
-     right: 7px;
+     left: 2px;
      min-width: 350px;
      max-width: 350px!important;
     top: 130px;
@@ -284,12 +284,12 @@ a {color: #702b2b;
         max-height: 82px;}
     
   .mobile .Northern {position: absolute;
-    left: 50px;
+    left: 45px;
   top: 121px;
   }
   
   .mobile .Southern {position: absolute;
-    left: 198px;
+    left: 235px;
     top: 121px;
   }
 
@@ -396,8 +396,8 @@ a {color: #702b2b;
   .Header {position: relative;
     bottom: 10px;
     right: 55px;
-    min-width: 1080px;
-    max-width: 1085px;}
+    min-width: 100vw;
+    max-width: 100vw;}
   
   .headerText h1{ font-size: 32px;
   position: relative;
@@ -439,6 +439,7 @@ right: 120px;}
 @media only screen and (max-width: 500px){.blathersInfo {opacity: 0%!important;}
 
 .Blathers {opacity: 0%!important;}
+
   .btn, .btn:hover, .btn-secondary:not(:disabled):not(.disabled) {      padding: 5px 5px;}
 
   .container {padding: 0px;
@@ -450,14 +451,16 @@ right: 120px;}
   .currentlyAvailable h2 {font-size: 20px;
     position: relative;
     top:  -10px;
+    left: 20px;
     height: 100px;
     width: 260px
 }
 
 .footer {margin-top: 180px;}
 
-  .Header {min-width: 378px;
-min-height: 80px;}
+  .Header {min-width: 100vw;
+min-height: 80px;
+right: 25px;}
 
 .headerText h1 {font-size: 22px;
 position: relative;
@@ -547,11 +550,11 @@ top: 422px;}
 .kk {opacity: 0%;}
 
 .dropdown {position: absolute;
-  right: 395px;
+  right: 375px;
 top: 200px;}
   
   .dropdown2{ position: absolute;
-  left: 195px;
+  left: 210px;
   top: 200px;}
   
 }
@@ -737,3 +740,16 @@ right: 80px;}
 
 .mobile .sealoading {position: relative;
 right: 40px;}
+
+.overlay {position:absolute;
+  z-index:999;
+  width:100%;
+  height:100%;}
+
+  .overlay2 {filter: brightness(45%);}
+
+  .blackout {    width:100vw;
+    height:100vh;}
+
+    .blackout2 {background-color: #000000;
+    opacity: 40%;}

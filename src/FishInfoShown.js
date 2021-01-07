@@ -127,10 +127,11 @@ function ShowMonths(){ if (allYear === true) {setJanStyle(available), setFebStyl
   function DisplayFishInfo(){
     let active = document.getElementById('active');
     if(active){SetStyle(infoHiddenStyle);
-        SetId("inactive");}
+        SetId("inactive");
+      }
 else {SetStyle(infoShownStyle);
     SetId("active");
-    ShowMonths()
+    ShowMonths();
 }}   
 
   if (monthAvailable === true && timeAvailable === true) {return(
@@ -183,6 +184,7 @@ else {SetStyle(infoShownStyle);
 </div>
 </div>
 </div>
+</div>
    <div className="column">
               <img src={Blathers} alt="Blathers" className="Blathers" style={blathersStyle} />
               <div className="quoteTriangle"></div>
@@ -191,7 +193,6 @@ else {SetStyle(infoShownStyle);
               </div>
     </div>
   </div>
-</div>
 </div>);
   } else {
     return (
@@ -259,7 +260,7 @@ else {SetStyle(infoShownStyle);
               </div>
     </div>
   </div>
-</div>
+  </div>
 </div>
     );
   }
