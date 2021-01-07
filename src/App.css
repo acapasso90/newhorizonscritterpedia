@@ -395,7 +395,7 @@ a {color: #702b2b;
 
   .Header {position: relative;
     bottom: 10px;
-    right: 55px;
+    right: 13px;
     min-width: 100vw;
     max-width: 100vw;}
   
@@ -407,7 +407,7 @@ right: 20px;}
   font-size: 25px;
 position: relative;
 font-weight: bold;
-bottom: 10px;}
+bottom: 6px;}
 
 .currentlyAvailable h2 {white-space: nowrap;
   font-size: 26px;
