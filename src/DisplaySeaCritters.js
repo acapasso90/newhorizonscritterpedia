@@ -44,7 +44,7 @@ if (loaded){return(
             <div className="hrow">
             <div className="dropdown">
   <button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-   Select a Month
+   Select a month
    </button>
   <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
   <a className="dropdown-item" href="#" onClick={() => setMonth(1)} >January</a>
