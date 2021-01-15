@@ -748,7 +748,7 @@ right: 120px;}
 
 
 @media (min-width: 1025px) {
-  .container {    overflow: hidden;
+  .container {   
     min-width: 1580px;
     }
   
