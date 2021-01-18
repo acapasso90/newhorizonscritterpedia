@@ -34,6 +34,7 @@ a {color: #702b2b;
     .App {
       text-align: center;
       min-width: 100%;
+      max-width: 100%;
     }
   
     ::selection{background-color:#74573c;
@@ -68,6 +69,10 @@ a {color: #702b2b;
   }
   
 
+  .container {   
+    width: 100vw;
+    max-width: 100%;
+    }
   
   .dropdown {position: absolute;
   right: 260px;}
@@ -111,6 +116,7 @@ a {color: #702b2b;
       font-size: 16px;}
 
   .buttons {white-space: nowrap;
+    width: 100%;
   display: inline;}
 
   .btn-secondary:not(:disabled):not(.disabled):active {background-color: #ac672b;
@@ -125,7 +131,8 @@ a {color: #702b2b;
   right: 120px;}
     
   .CurrentHemisphere {position: relative;
-    right: 120px;}
+    right: 8%;
+  width: 100%;}
   
   .CurrentHemisphere h2 {font-size: 28px;
   }
@@ -187,15 +194,17 @@ a {color: #702b2b;
   
       .getFishInfo .horizontalRow {display: flex;
         flex-direction: row;
+        width: 100%;
         position: relative; 
         top: 80px;
-        right: 245px;}
+       right: 0.5%;}
     
         .getBugInfo .horizontalRow {display: flex;
           flex-direction: row;
           position: relative; 
+          width: 100%;
           top: 80px;
-          right: 248px;}
+          right: 0.5%;}
       
           .Header {box-shadow: 0px 2px 3px #d8cfa1;
             user-select: none;
@@ -243,11 +252,12 @@ a {color: #702b2b;
   
   .mobile .column {margin-bottom: 0px;
   max-height: 310px;}
+  
   .mobile .CurrentHemisphere h2 {white-space: nowrap;
     font-size: 20px;
     font-weight: bold;
   position: relative;
-  left: -115px;
+left: -45%;
   top: 5px;}
 
 
@@ -257,8 +267,7 @@ a {color: #702b2b;
       margin-top: 85px;
       position: relative;
      left: 2px;
-     min-width: 350px;
-     max-width: 350px!important;
+     width: 100%;
     top: 130px;
       } 
   
@@ -564,7 +573,9 @@ right: 40px;}
   .btn, .btn:hover, .btn-secondary:not(:disabled):not(.disabled) {      padding: 5px 5px;}
 
   .container {padding: 0px;
-  max-width: 350px;}
+    margin: 0;
+    margin-left: 2%;
+  max-width: 100vw;}
   .currentlyAvailable { position: absolute;
     top: 280px;
     left: 50px;
@@ -581,14 +592,15 @@ right: 40px;}
 
   .Header {min-width: 100vw;
 min-height: 80px;
-right: 25px;}
+right: 1.5%;
+}
 
 .headerText h1 {font-size: 22px;
 position: relative;
 width: 180px;
 top: -4px;
 font-weight: bold;
-left: 190px;}
+left: 53%;}
 
 .loadingFish {position: relative;
   right: 215px;
@@ -671,7 +683,7 @@ top: 422px;}
 .kk {opacity: 0%;}
 
 .dropdown {position: absolute;
-  right: 408px;
+  right: 99%;
 top: 200px;}
   
   .dropdown2{ position: absolute;
