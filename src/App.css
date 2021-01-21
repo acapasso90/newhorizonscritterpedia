@@ -455,12 +455,12 @@ left: -45%;
 
         .tablet .horizontalRow {
           position: relative;
-          bottom: 35px;
-          width: 100%;
+      top: 40px;
+          left: 3%;
           } 
   
         .tablet .Northern {
-          left: 300px;
+          left: 72%;
         }
 
         .tablet .polaroid  {max-width: 200px;
@@ -475,7 +475,7 @@ left: -45%;
 
 
         .tablet .Southern { 
-          left: 475px;}
+          left: 95%;}
   
     .hrow {display: flex;
       flex-direction: row;}
@@ -694,6 +694,8 @@ top: 200px;}
 
 @media only screen and (max-width: 1025px) and (min-width: 501px) 
 { 
+
+
   .buttons .hrow {position: relative;
     left: -40%;}
   .btn, .btn:hover, .btn-secondary:not(:disabled):not(.disabled) {      padding: 8px 18px;}
@@ -718,6 +720,10 @@ top: 200px;}
     padding: 0;
   max-width: 100%;}
 
+  .footer {
+    position: relative;
+    margin-top: 80px;
+  }
   .Header {position: relative;
     bottom: 10px;
     left: 0.25%;
@@ -743,7 +749,7 @@ bottom: 6px;}
   font-weight: bold;
 position: relative;
 top: 70px;
-right: 120px;}
+right: 80px;}
 
   .quote {
   font-size: 18px;
@@ -766,7 +772,10 @@ right: 120px;}
   .getFishInfo .horizontalRow, .getBugInfo .horizontalRow {width: 100%;}
 
   .dropdown {position: relative;
-  left: 120%;}
+  left: 125%;}
+
+  .dropdown2 {position: relative;
+  left: 27%;}
 
 
 }
