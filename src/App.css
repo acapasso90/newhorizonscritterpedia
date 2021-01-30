@@ -72,6 +72,7 @@ a {color: #702b2b;
   .container {   
     width: 100vw;
     max-width: 100%;
+    padding: 0;
     }
   
   .dropdown {position: absolute;
@@ -210,7 +211,6 @@ a {color: #702b2b;
             user-select: none;
         position: relative;
         bottom: 20px;
-        right: 18px;
             min-height: 80px;
             width: 100%;
             background-image: url(./bigmarble.jpg);
@@ -716,9 +716,8 @@ top: 200px;}
     }
 
     .container {
-    min-width: 100%;
-    padding: 0;
-  max-width: 100%;}
+
+    padding: 0;}
 
   .footer {
     position: relative;
@@ -783,11 +782,8 @@ right: 80px;}
 
 
 @media (min-width: 1025px) {
-  .container {   
-    min-width: 1580px;
-    }
+
   
-    .Header {min-width: 1585px;
-    max-width: 1585px;}
+
   
     .btn, .btn:hover, .btn-secondary:not(:disabled):not(.disabled) {      padding: 8px 18px;}}
