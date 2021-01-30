@@ -178,12 +178,12 @@ a {color: #702b2b;
 .bugLabel {right: 155px;}
 .seaLabel {  width: 147.5px;}
 
-.fishPicture, .fishPicture2 {        user-select: none;}
+.fishPicture, .fishPicture2 {user-select: none;}
 
 .fishPicture2 {  filter: contrast(0%) brightness(140%)  grayscale(80%);}
 
-.pc .fishPicture {            max-width: 96px;
-      max-height: 98px;}
+.pc .fishPicture {            max-width: 90%;
+      max-height: 90%}
     
 .pc  .fishPicture2 {
         max-width: 96px;
@@ -198,7 +198,7 @@ a {color: #702b2b;
         width: 100%;
         position: relative; 
         top: 80px;
-       right: 0.5%;}
+       left: .5%;}
     
         .getBugInfo .horizontalRow {display: flex;
           flex-direction: row;
@@ -303,7 +303,7 @@ left: -45%;
   top: 610px;
   text-align: center;
   right: 50px;
-  font-size: 18px;}
+  font-size: 1.5vw;}
 
   .pc .months1 {    display: flex;
     flex-direction: row;}
@@ -312,11 +312,12 @@ left: -45%;
     flex-direction: row;
   position: relative;
   top: 65px;
-  right: 1135px;}
+  left: -650%}
 
-.pc  .months p {margin-left: 80px;
-    max-height: 20px;
-    padding: 6px 15px 9px 15px;}
+.pc  .months p {margin-left: 7%;
+  margin-right: 7%;
+    max-height: 6%;
+    padding: 0.5% 1.5% 0.5% 1.5%;}
     
     .Northern { 
       left: 600px;
@@ -332,7 +333,8 @@ left: -45%;
       
       .polaroid {background-color: #ffffff;}
 
-      .pc .polaroid  {max-width: 300px;
+      .pc .polaroid  {max-width: 80%;
+        margin-left: 1.7%;
       min-height: 95px;}
 
       .pc .fishInfoHidden .polaroid {min-height: 110px;}
@@ -362,9 +364,9 @@ left: -45%;
   .right {float: right;}
 
 .pc  .SeaCrittersInfoHidden .columnRight, .pc .fishInfoHidden .columnRight, .pc .bugInfoHidden .columnRight {position: relative;
-    left: 280px;
-    top: 50px;
-    font-size: 24px;
+    right: -70%;
+    top: 11%;
+    font-size: 1.5vw;
     letter-spacing: 2px;
   }
 
@@ -485,7 +487,7 @@ left: -45%;
     opacity: 0%;}
   
     .pc .SeaCrittersInfoHidden, .pc .fishInfoHidden, .pc .bugInfoHidden { width: 90%; 
-      min-width: 1450px;
+      min-width: 90%;
       height: 100%;
       min-Height: 750px;
     margin: 15px 0px 0px 5px;}
@@ -496,17 +498,16 @@ left: -45%;
       border: 20px solid #ffffff;
      }
       
-      .pc .fishRealistic {max-height: 300px;
-        max-width: 300px;
-        min-height: 100px;
-        min-width: 300px;
+      .pc .fishRealistic {max-height: 90%;
+        max-width: 80%;
+        min-width: 80%;
         position: relative;
         top: 25px;
         right: 110px;}
 
 .fishPicture:hover, .fishPicture2:hover {cursor: pointer;}
 
-.pc .Blathers {max-width: 210px!important;
+.pc .Blathers {max-width: 14%!important;
   position: absolute;
   right: 405px;
   top: 247px;}
@@ -531,13 +532,13 @@ left: -45%;
     border-top: 31px solid transparent;
     border-bottom: 31px solid rgb(255, 255, 255);;
     border-left: 31px solid transparent;
-  transform: rotate(85deg);
+  transform: rotate(88deg);
   z-index: -1;
 }
 
 .pc .fishInfoHidden .quoteTriangle, .pc .bugInfoHidden .quoteTriangle, .pc .SeaCrittersInfoHidden .quoteTriangle {position: absolute;
-  left: 998px;
-  top: 344px;}
+  left: 68.6%;
+  top: 46.5%;}
 
 .exitButton button {padding: 10px 15px;}
 
@@ -644,7 +645,7 @@ left: 12px;}
 .months p {padding-top: 5px;}
 
 .months1, .months2 {position: relative;
-left: 50px;
+left: 20px;
 top: 105px;}
 
 .monthsHeader {font-size: 20px;
