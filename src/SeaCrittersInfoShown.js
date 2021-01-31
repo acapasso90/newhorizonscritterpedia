@@ -160,7 +160,7 @@ if (monthAvailable === true && timeAvailable === true) {
     </div>
                 <div className="hrow">
                 <div className="column">
-            <ul>
+                <ul className="unorderedList">
             <li> <img src={realisticImage} alt="sea realistic" className="fishRealistic" /></li>
             <li><div className="polaroid"></div></li>
     <li className="seaName">{SeaCrittersName}</li>
@@ -227,7 +227,7 @@ if (monthAvailable === true && timeAvailable === true) {
   </div>
                 <div className="hrow">
                 <div className="column">
-            <ul>
+                <ul className="unorderedList">
             <li> <img src={realisticImage} alt="sea realistic" className="fishRealistic" /></li>
             <li><div className="polaroid"></div></li>
     <li className="seaName">{SeaCrittersName}</li>

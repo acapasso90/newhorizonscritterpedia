@@ -55,7 +55,7 @@ const [decStyle, setDecStyle] = useState(unavailable);
     paddingRight: "50px",
     borderStyle: "solid",
     position: "absolute",
-    top: "-255px",
+    top: "-60%",
     left: "-4px",
   };
   const infoHiddenStyle = {
@@ -166,7 +166,7 @@ else {SetStyle(infoShownStyle);
     </div>
 <div className="hrow">
   <div className="column">
-  <ul>
+  <ul className="unorderedList">
 <li> <img src={realisticImage} alt="fish realistic" className="fishRealistic" /></li>
 <li><div className="polaroid"></div></li>
 <li className="fishName">{fishName}</li>
@@ -233,7 +233,7 @@ else {SetStyle(infoShownStyle);
 </div>
       <div className="hrow">
       <div className="column">
-              <ul>
+      <ul className="unorderedList">
               <li> <img src={realisticImage} alt="fish realistic" className="fishRealistic" /></li>
               <li><div className="polaroid"></div></li>
               <li className="fishName">{fishName}</li>

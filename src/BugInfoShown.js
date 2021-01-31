@@ -160,7 +160,7 @@ if (monthAvailable === true && timeAvailable === true)
 </div>
 <div className="hrow">
       <div className="column">
-<ul>
+<ul className="unorderedList">
 <li> <img src={realisticImage} alt="bug realistic" className="fishRealistic" /></li>
 <li><div className="polaroidBug"></div></li>
 <li className="bugName">{bugName}</li>
@@ -224,7 +224,7 @@ if (monthAvailable === true && timeAvailable === true)
     </div>
     <div className="hrow">
           <div className="column">
-    <ul>
+          <ul className="unorderedList">
     <li> <img src={realisticImage} alt="bug realistic" className="fishRealistic" /></li>
     <li><div className="polaroidBug"></div></li>
     <li className="bugName">{bugName}</li>
