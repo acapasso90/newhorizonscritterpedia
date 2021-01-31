@@ -98,56 +98,56 @@ if (loaded){return(
         </div>
         <div className="currentlyAvailable"><h2>Deep-Sea Creatures available between {formattedHours} in {formattedMonths}:</h2></div>
         <div className="horizontalRow">
-            <div className="column">
+        <div className="column" id="fishInfoColumn">
         <SeaCrittersInfoShown data={SeaCrittersInfo[0]}  month={month} hour={hour} location={hemisphere}/> 
         <SeaCrittersInfoShown data={SeaCrittersInfo[1]}  month={month} hour={hour} location={hemisphere} /> 
         <SeaCrittersInfoShown data={SeaCrittersInfo[2]}  month={month} hour={hour} location={hemisphere} />
         <SeaCrittersInfoShown data={SeaCrittersInfo[3]}  month={month} hour={hour} location={hemisphere}/>
         <SeaCrittersInfoShown data={SeaCrittersInfo[4]}  month={month} hour={hour} location={hemisphere}/>
             </div>
-            <div className="column">
+            <div className="column" id="fishInfoColumn">
         <SeaCrittersInfoShown data={SeaCrittersInfo[5]}  month={month} hour={hour} location={hemisphere}/>
         <SeaCrittersInfoShown data={SeaCrittersInfo[6]}  month={month} hour={hour} location={hemisphere}/>
         <SeaCrittersInfoShown data={SeaCrittersInfo[7]}  month={month} hour={hour} location={hemisphere}/>
         <SeaCrittersInfoShown data={SeaCrittersInfo[8]}  month={month} hour={hour} location={hemisphere}/>
         <SeaCrittersInfoShown data={SeaCrittersInfo[9]}  month={month} hour={hour} location={hemisphere}/>
             </div>
-            <div className="column">
+            <div className="column" id="fishInfoColumn">
         <SeaCrittersInfoShown data={SeaCrittersInfo[10]}  month={month} hour={hour} location={hemisphere}/>
         <SeaCrittersInfoShown data={SeaCrittersInfo[11]}  month={month} hour={hour} location={hemisphere}/>
         <SeaCrittersInfoShown data={SeaCrittersInfo[12]}  month={month} hour={hour} location={hemisphere}/>
         <SeaCrittersInfoShown data={SeaCrittersInfo[13]}  month={month} hour={hour} location={hemisphere}/>
         <SeaCrittersInfoShown data={SeaCrittersInfo[14]}  month={month} hour={hour} location={hemisphere}/>
             </div>
-            <div className="column">
+            <div className="column" id="fishInfoColumn">
         <SeaCrittersInfoShown data={SeaCrittersInfo[15]}  month={month} hour={hour} location={hemisphere}/>
         <SeaCrittersInfoShown data={SeaCrittersInfo[16]}  month={month} hour={hour} location={hemisphere}/>
         <SeaCrittersInfoShown data={SeaCrittersInfo[17]}  month={month} hour={hour} location={hemisphere}/>
         <SeaCrittersInfoShown data={SeaCrittersInfo[18]}  month={month} hour={hour} location={hemisphere}/>
         <SeaCrittersInfoShown data={SeaCrittersInfo[19]}  month={month} hour={hour} location={hemisphere}/>
             </div>
-            <div className="column">
+            <div className="column" id="fishInfoColumn">
         <SeaCrittersInfoShown data={SeaCrittersInfo[20]}  month={month} hour={hour} location={hemisphere}/>
         <SeaCrittersInfoShown data={SeaCrittersInfo[21]}  month={month} hour={hour} location={hemisphere}/>
         <SeaCrittersInfoShown data={SeaCrittersInfo[22]}  month={month} hour={hour} location={hemisphere}/>
         <SeaCrittersInfoShown data={SeaCrittersInfo[23]}  month={month} hour={hour} location={hemisphere}/>
         <SeaCrittersInfoShown data={SeaCrittersInfo[24]}  month={month} hour={hour} location={hemisphere} />
             </div>
-            <div className="column">
+            <div className="column" id="fishInfoColumn">
         <SeaCrittersInfoShown data={SeaCrittersInfo[25]}  month={month} hour={hour} location={hemisphere}/>
         <SeaCrittersInfoShown data={SeaCrittersInfo[26]}  month={month} hour={hour} location={hemisphere}/>
         <SeaCrittersInfoShown data={SeaCrittersInfo[27]}  month={month} hour={hour} location={hemisphere}/>
         <SeaCrittersInfoShown data={SeaCrittersInfo[28]}  month={month} hour={hour} location={hemisphere}/>
         <SeaCrittersInfoShown data={SeaCrittersInfo[29]}  month={month} hour={hour} location={hemisphere}/>
             </div>
-            <div className="column">
+            <div className="column" id="fishInfoColumn">
         <SeaCrittersInfoShown data={SeaCrittersInfo[30]}  month={month} hour={hour} location={hemisphere}/>
         <SeaCrittersInfoShown data={SeaCrittersInfo[31]}  month={month} hour={hour} location={hemisphere}/>
         <SeaCrittersInfoShown data={SeaCrittersInfo[32]}  month={month} hour={hour} location={hemisphere}/>
         <SeaCrittersInfoShown data={SeaCrittersInfo[33]}  month={month} hour={hour} location={hemisphere}/>
         <SeaCrittersInfoShown data={SeaCrittersInfo[34]}  month={month} hour={hour} location={hemisphere}/>
             </div>
-            <div className="column">
+            <div className="column" id="fishInfoColumn">
         <SeaCrittersInfoShown data={SeaCrittersInfo[35]}  month={month} hour={hour} location={hemisphere}/>
         <SeaCrittersInfoShown data={SeaCrittersInfo[36]}  month={month} hour={hour} location={hemisphere}/>
         <SeaCrittersInfoShown data={SeaCrittersInfo[37]}  month={month} hour={hour} location={hemisphere}/>

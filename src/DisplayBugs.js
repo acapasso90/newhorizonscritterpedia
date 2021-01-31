@@ -100,112 +100,112 @@ if (loaded){return(
         </div>
         <div className="currentlyAvailable"><h2>Bugs available between {formattedHours} in {formattedMonths}:</h2></div>
         <div className="horizontalRow">
-            <div className="column">
+        <div className="column" id="fishInfoColumn">
         <BugInfoShown data={bugInfo[0]} month={month} hour={hour} location={hemisphere}/> 
         <BugInfoShown data={bugInfo[1]} month={month} hour={hour} location={hemisphere} /> 
         <BugInfoShown data={bugInfo[2]} month={month} hour={hour} location={hemisphere} />
         <BugInfoShown data={bugInfo[3]} month={month} hour={hour} location={hemisphere}/>
         <BugInfoShown data={bugInfo[4]} month={month} hour={hour} location={hemisphere}/>
             </div>
-            <div className="column">
+            <div className="column" id="fishInfoColumn">
         <BugInfoShown data={bugInfo[5]} month={month} hour={hour} location={hemisphere}/>
         <BugInfoShown data={bugInfo[6]} month={month} hour={hour} location={hemisphere}/>
         <BugInfoShown data={bugInfo[7]} month={month} hour={hour} location={hemisphere}/>
         <BugInfoShown data={bugInfo[8]} month={month} hour={hour} location={hemisphere}/>
         <BugInfoShown data={bugInfo[9]} month={month} hour={hour} location={hemisphere}/>
             </div>
-            <div className="column">
+            <div className="column" id="fishInfoColumn">
         <BugInfoShown data={bugInfo[10]} month={month} hour={hour} location={hemisphere}/>
         <BugInfoShown data={bugInfo[11]}  month={month} hour={hour} location={hemisphere}/>
         <BugInfoShown data={bugInfo[12]}  month={month} hour={hour} location={hemisphere}/>
         <BugInfoShown data={bugInfo[13]}  month={month} hour={hour} location={hemisphere}/>
         <BugInfoShown data={bugInfo[14]} month={month} hour={hour} location={hemisphere}/>
             </div>
-            <div className="column">
+            <div className="column" id="fishInfoColumn">
         <BugInfoShown data={bugInfo[15]} month={month} hour={hour}  location={hemisphere}/>
         <BugInfoShown data={bugInfo[16]} month={month} hour={hour} location={hemisphere}/>
         <BugInfoShown data={bugInfo[17]} month={month} hour={hour} location={hemisphere}/>
         <BugInfoShown data={bugInfo[18]} month={month} hour={hour} location={hemisphere}/>
         <BugInfoShown data={bugInfo[19]} month={month} hour={hour} location={hemisphere}/>
             </div>
-            <div className="column">
+            <div className="column" id="fishInfoColumn">
         <BugInfoShown data={bugInfo[20]} month={month} hour={hour} location={hemisphere}/>
         <BugInfoShown data={bugInfo[21]} month={month} hour={hour} location={hemisphere}/>
         <BugInfoShown data={bugInfo[22]} month={month} hour={hour} location={hemisphere}/>
         <BugInfoShown data={bugInfo[23]} month={month} hour={hour} location={hemisphere}/>
         <BugInfoShown data={bugInfo[24]} month={month} hour={hour} location={hemisphere} />
             </div>
-            <div className="column">
+            <div className="column" id="fishInfoColumn">
         <BugInfoShown data={bugInfo[25]} month={month} hour={hour} location={hemisphere}/>
         <BugInfoShown data={bugInfo[26]} month={month} hour={hour} location={hemisphere}/>
         <BugInfoShown data={bugInfo[27]} month={month} hour={hour} location={hemisphere}/>
         <BugInfoShown data={bugInfo[28]} month={month} hour={hour} location={hemisphere}/>
         <BugInfoShown data={bugInfo[29]} month={month} hour={hour} location={hemisphere}/>
             </div>
-            <div className="column">
+            <div className="column" id="fishInfoColumn">
         <BugInfoShown data={bugInfo[30]} month={month} hour={hour}  location={hemisphere}/>
         <BugInfoShown data={bugInfo[31]} month={month} hour={hour} location={hemisphere}/>
         <BugInfoShown data={bugInfo[32]} month={month} hour={hour} location={hemisphere}/>
         <BugInfoShown data={bugInfo[33]} month={month} hour={hour} location={hemisphere}/>
         <BugInfoShown data={bugInfo[34]} month={month} hour={hour} location={hemisphere}/>
             </div>
-            <div className="column">
+            <div className="column" id="fishInfoColumn">
         <BugInfoShown data={bugInfo[35]} month={month} hour={hour} location={hemisphere}/>
         <BugInfoShown data={bugInfo[36]} month={month} hour={hour} location={hemisphere}/>
         <BugInfoShown data={bugInfo[37]} month={month} hour={hour} location={hemisphere}/>
         <BugInfoShown data={bugInfo[38]} month={month} hour={hour} location={hemisphere}/>
         <BugInfoShown data={bugInfo[39]} month={month} hour={hour} location={hemisphere}/>
             </div>
-            <div className="column">
+            <div className="column" id="fishInfoColumn">
         <BugInfoShown data={bugInfo[40]} month={month} hour={hour}  location={hemisphere} />
         <BugInfoShown data={bugInfo[41]} month={month} hour={hour} location={hemisphere} />
         <BugInfoShown data={bugInfo[42]} month={month} hour={hour}  location={hemisphere}/>
         <BugInfoShown data={bugInfo[43]} month={month} hour={hour} location={hemisphere}/>
         <BugInfoShown data={bugInfo[44]} month={month} hour={hour} location={hemisphere}/>
             </div>
-            <div className="column">
+            <div className="column" id="fishInfoColumn">
         <BugInfoShown data={bugInfo[45]} month={month} hour={hour} location={hemisphere}/>
         <BugInfoShown data={bugInfo[46]} month={month} hour={hour} location={hemisphere}/>
         <BugInfoShown data={bugInfo[47]} month={month} hour={hour} location={hemisphere}/>
         <BugInfoShown data={bugInfo[48]} month={month} hour={hour} location={hemisphere}/>
         <BugInfoShown data={bugInfo[49]} month={month} hour={hour} location={hemisphere}/>
             </div>
-            <div className="column">
+            <div className="column" id="fishInfoColumn">
         <BugInfoShown data={bugInfo[50]} month={month} hour={hour} location={hemisphere}/>
         <BugInfoShown data={bugInfo[51]} month={month} hour={hour} location={hemisphere}/>
         <BugInfoShown data={bugInfo[52]} month={month} hour={hour} location={hemisphere}/>
         <BugInfoShown data={bugInfo[53]} month={month} hour={hour} location={hemisphere}/>
         <BugInfoShown data={bugInfo[54]} month={month} hour={hour} location={hemisphere}/>
             </div>
-            <div className="column">
+            <div className="column" id="fishInfoColumn">
         <BugInfoShown data={bugInfo[55]} month={month} hour={hour} location={hemisphere}/>
         <BugInfoShown data={bugInfo[56]} month={month} hour={hour} location={hemisphere}/>
         <BugInfoShown data={bugInfo[57]} month={month} hour={hour} location={hemisphere}/>
         <BugInfoShown data={bugInfo[58]} month={month} hour={hour} location={hemisphere}/>
         <BugInfoShown data={bugInfo[59]} month={month} hour={hour} location={hemisphere}/>
             </div>
-            <div className="column">
+            <div className="column" id="fishInfoColumn">
         <BugInfoShown data={bugInfo[60]} month={month} hour={hour} location={hemisphere}/>
         <BugInfoShown data={bugInfo[61]} month={month} hour={hour} location={hemisphere}/>
         <BugInfoShown data={bugInfo[62]} month={month} hour={hour} location={hemisphere}/>
         <BugInfoShown data={bugInfo[63]} month={month} hour={hour} location={hemisphere}/>
         <BugInfoShown data={bugInfo[64]} month={month} hour={hour} location={hemisphere}/>
             </div>
-            <div className="column">
+            <div className="column" id="fishInfoColumn">
         <BugInfoShown data={bugInfo[65]} month={month} hour={hour} location={hemisphere}/>
         <BugInfoShown data={bugInfo[66]} month={month} hour={hour} location={hemisphere}/>
         <BugInfoShown data={bugInfo[67]} month={month} hour={hour} location={hemisphere}/>
         <BugInfoShown data={bugInfo[68]} month={month} hour={hour} location={hemisphere}/>
         <BugInfoShown data={bugInfo[69]} month={month} hour={hour} location={hemisphere}/>
             </div>
-            <div className="column">
+            <div className="column" id="fishInfoColumn">
         <BugInfoShown data={bugInfo[70]} month={month} hour={hour} location={hemisphere}/>
         <BugInfoShown data={bugInfo[71]} month={month} hour={hour} location={hemisphere}/>
         <BugInfoShown data={bugInfo[72]} month={month} hour={hour} location={hemisphere}/>
         <BugInfoShown data={bugInfo[73]} month={month} hour={hour} location={hemisphere}/>
         <BugInfoShown data={bugInfo[74]} month={month} hour={hour} location={hemisphere}/>
             </div>
-            <div className="column">
+            <div className="column" id="fishInfoColumn">
         <BugInfoShown data={bugInfo[75]} month={month} hour={hour} location={hemisphere} />
         <BugInfoShown data={bugInfo[76]} month={month} hour={hour} location={hemisphere}  />
         <BugInfoShown data={bugInfo[77]} month={month} hour={hour} location={hemisphere}/>

@@ -379,8 +379,8 @@ left: -45%;
         min-width: 60px;}
 
         .tablet  .SeaCrittersInfoHidden .columnRight, .tablet .fishInfoHidden .columnRight, .tablet .bugInfoHidden .columnRight {position: relative;
-          left: 95px;
-          top: 50px;
+          left: 95%;
+          top: 14%;
           letter-spacing: 1px;
         }
   
@@ -406,8 +406,7 @@ left: -45%;
               bottom: 40px;
             }
 
-  .tablet .fishInfoHidden, .tablet .bugInfoHidden { width: 90%; 
-          min-width: 1000px;
+  .tablet .fishInfoHidden, .tablet .bugInfoHidden { width: 100%; 
           height: 100%;
           min-Height: 720px;
         margin: 15px 0px 0px 5px;}
@@ -460,7 +459,6 @@ left: -45%;
         .tablet .horizontalRow {
           position: relative;
       top: 40px;
-          left: 3%;
           } 
   
         .tablet .Northern {
@@ -632,18 +630,19 @@ left: 53%;}
 position: relative;
 bottom: 50px;}
 
-.bugInfoHidden, .fishInfoHidden, .SeaCrittersInfoHidden {max-width: 350px;
+.bugInfoHidden, .fishInfoHidden, .SeaCrittersInfoHidden {max-width: 95%;
+  min-width: 385px;
   min-height: 720px;
 position: relative;
 top: -350px!important;
-left: -30px!important;}
+left: -1%!important;}
 
 .columnRight span {font-size: 22px!important;
 font-weight: bold;}
 
 .columnRight {position: absolute;
 bottom: 275px;
-left: -142px;}
+left: -8%;}
 
 .SeaCrittersInfoHidden .columnRight {bottom: 370px;}
 .columnRight li {margin-top: 42px;}
@@ -658,13 +657,13 @@ left: 12px;}
 .months p {padding-top: 5px;}
 
 .months1, .months2 {position: relative;
-left: 20px;
+left: 25%;
 top: 105px;}
 
 .monthsHeader {font-size: 20px;
 position: relative;
 font-weight: bold;
-left: 195px;
+left: 90%;
 top: 55px;}
 .quote {position: absolute;
   font-size: 14px;
@@ -686,7 +685,7 @@ left: -340px!important;
 
 .seaName {top: 400px;}
 .bugName {font-size: 20px!important;
-top: 422px;}
+top: 400px;}
 .bugName, .seaName{
   left: -368px!important;
   white-space: nowrap;}
