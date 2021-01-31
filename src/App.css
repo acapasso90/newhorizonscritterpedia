@@ -146,7 +146,7 @@ a {color: #702b2b;
     min-height: 98px;}
 
   
-  .pc .fishName, .pc .bugName, .pc .seaName {font-size: 28px;
+  .pc .fishName, .pc .bugName, .pc .seaName {font-size: 26px;
     position: relative;
     bottom: 60px;
   right: 110px;}
@@ -546,9 +546,13 @@ left: -45%;
   z-index: -1;
 }
 
-.pc .fishInfoHidden .quoteTriangle, .pc .bugInfoHidden .quoteTriangle, .pc .SeaCrittersInfoHidden .quoteTriangle {position: absolute;
+.pc .fishInfoHidden .quoteTriangle, .pc .bugInfoHidden .quoteTriangle {position: absolute;
   left: 68.6%;
   top: 46.5%;}
+
+  .pc .SeaCrittersInfoHidden .quoteTriangle {position: absolute;
+    left: 69.3%;
+    top: 46.5%;}
 
 .exitButton button {padding: 10px 15px;}
 
