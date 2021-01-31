@@ -341,7 +341,8 @@ left: -45%;
       .pc .fishInfoHidden .polaroid {min-height: 110px;}
 
      .polaroidBug {background-color: #ffffff;}
-     .pc .polaroidBug  { max-width: 300px;
+     .pc .polaroidBug  { max-width: 80%;
+      margin-left: 1.7%;
       min-height: 105px;}
       
       .pc .polaroid {position: relative;
@@ -487,7 +488,13 @@ left: -45%;
       height: 0px;
     opacity: 0%;}
   
-    .pc .SeaCrittersInfoHidden, .pc .fishInfoHidden, .pc .bugInfoHidden { width: 90%; 
+ .pc .fishInfoHidden, .pc .bugInfoHidden { width: 90%; 
+      min-width: 90%;
+      height: 100%;
+      min-Height: 750px;
+    margin: 5px 0px 0px 5px;}
+
+    .pc .SeaCrittersInfoHidden { width: 140%; 
       min-width: 90%;
       height: 100%;
       min-Height: 750px;

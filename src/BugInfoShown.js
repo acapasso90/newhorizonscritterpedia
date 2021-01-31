@@ -51,8 +51,8 @@ const english = "name-USen";
       paddingRight: "50px",
       borderStyle: "solid",
       position: "absolute",      
-      top: "-255px",
-      left: "-6px",
+      top: "-60%",
+      left: ".5%",
     };
     const infoHiddenStyle = {
       lineHeight: "0px",
