@@ -41,7 +41,7 @@ const [styleFish, setStyleFish] = useState(Active);
 const [styleBug, setStylebug] = useState(InActive);
 const [styleOctopus, setStyleOctopus] = useState(InActive);
 const cancelTokenSource = axios.CancelToken.source();
-
+// Makes previously active bug or fish icons revert to normal and adds active styling to the deep sea icon link
     function seaLinkActive(){  cancelTokenSource.cancel();
       if (bugsrc === butterflyActive) {setBugsrc(butterfly);
         setStylebug(InActive);
@@ -53,7 +53,7 @@ const cancelTokenSource = axios.CancelToken.source();
     setSeasrc(octopusActive);
     setStyleOctopus(Active);
    }}
-  
+// Makes previously active bug or deep sea icons revert to normal and adds active styling to the fish icon link
   function fishLinkActive(){ 
     cancelTokenSource.cancel();
     if (bugsrc === butterflyActive) {setBugsrc(butterfly);
@@ -66,7 +66,7 @@ const cancelTokenSource = axios.CancelToken.source();
       setFishsrc(fishActive);
       setStyleFish(Active);
      }}
-  
+// Makes previously active fish or deep sea icons revert to normal and adds active styling to the bug icon link
     function bugLinkActive(){
       cancelTokenSource.cancel();
       if (fishsrc === fishActive) {setBugsrc(butterflyActive);
@@ -79,10 +79,11 @@ const cancelTokenSource = axios.CancelToken.source();
         setBugsrc(butterflyActive);
         setStylebug(Active);
        }}
-
+  // on load if url is on /bug runs bugLinkActive function to set the bug icon to "active"
         window.addEventListener('load', function () {
           if ( url === '/bugs')
           {bugLinkActive()}
+  // on load if url is on /deepsea runs bugLinkActive function to set the deep sea icon to "active"
   else if  (url === '/deepsea'){seaLinkActive()}
       });
 

@@ -3,9 +3,6 @@ import FishInfoShown from "./FishInfoShown.js";
 import Loader from 'react-loader-spinner'
 import axios from "axios";
 
-
-
-
 export default function DisplayFish(){
    const [fishInfo, setfishInfo] = useState({ready:false});
    const [hemisphere, setHemisphere] = useState("Northern");
@@ -23,13 +20,13 @@ const [month, setMonth] = useState(currentMonth);
     "1PM-2PM", "2PM-3PM", "3PM-4PM", "4PM-5PM", "5PM-6PM", "6PM-7PM", "7PM-8PM", "8PM-9PM", "9PM-10PM", "10PM-11PM", "11PM-Midnight"];
     let formattedHours = hourNames[hour];
     let formattedMonths = monthNames[month];
-
+// sets axios response.data as fishInfo and sets loaded status to true
     function showFish(response){
         setfishInfo(response.data)
         setLoaded(true);
-       
    }
 
+   // Makes axios request for fish information then cancels request on cleanup function
     useEffect(() => {
         let mounted = true;
         if (mounted) {axios.get("https://acnhapi.com/v1a/fish/", {
@@ -215,6 +212,9 @@ if (loaded){return(
             </div>
         </div>
      </div>)}
+
+   // Returns loader spinner if app isn't loaded
+
 else{
 return (  
 <div className="loadingFish">

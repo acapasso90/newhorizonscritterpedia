@@ -22,11 +22,13 @@ const [month, setMonth] = useState(currentMonth);
     let formattedHours = hourNames[hour];
     let formattedMonths = monthNames[month];
 
+    // sets axios response.data as seaCrittersInfo and sets loaded status to true
 function showSeaCritters(response){
     setSeaCrittersInfo(response.data)
 setLoaded(true);
 }
 
+ // Makes axios request for fish information then cancels request on cleanup function
 useEffect(() => {
     let mounted = true;
     if (mounted) {axios.get("https://acnhapi.com/v1a/sea/", {
@@ -158,6 +160,7 @@ if (loaded){return(
      </div>
     )
 }
+   // Returns loader spinner if app isn't loaded
 else{
     return (  
         <div className="loadingFish">

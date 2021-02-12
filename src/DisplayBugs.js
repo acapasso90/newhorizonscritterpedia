@@ -24,10 +24,12 @@ let hourNames =  ["Midnight-1AM", "1AM-2AM", "2AM-3AM", "3AM-4AM", "4AM-5AM", "5
 let formattedHours = hourNames[hour];
 let formattedMonths = monthNames[month];
 
+// sets axios response.data as bugInfo and sets loaded status to true
 function showBugs(response){
 setbugInfo(response.data)
 setLoaded(true);}
 
+   // Makes axios request for fish information then cancels request on cleanup function
 useEffect(() => {
     let mounted = true;
     if (mounted) {axios.get("https://acnhapi.com/v1a/bugs/", {
@@ -216,6 +218,7 @@ if (loaded){return(
      </div>
     )
 }
+   // Returns loader spinner if app isn't loaded
 else{
     return (  
         <div className="loadingFish">
