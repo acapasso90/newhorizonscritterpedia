@@ -90,16 +90,21 @@ const english = "name-USen";
    let time = props.data.availability[timeArray];
    let currentTime = new Date();
    let javamonth = currentTime.getMonth();
+   // adds 1 to the javamonth value to match API months by starting at 1 instead of 0
    let month = ++(javamonth);
    let inputMonth = props.month;
 let inputHour = props.hour;
+// if inputMonth is sent through props then month becomes the inputMonth value
 if (inputMonth != null){month = inputMonth}
  let hours = currentTime.getHours();
+ // if inputHour is sent through props then month becomes the inputMonth value
  if (inputHour != null){hours = inputHour}
+// if time includes hours timeAvailabl is set to true/
 if (time.includes(hours)) { timeAvailable = true;}
+// if availability includes months then monthAvailable is set to true
  if (availability.includes(month)) {monthAvailable = true;}
  
- 
+ // sets the Months in the infoHiddenStyle to active if they are included in availability or if allYear is true. 
  function ShowMonths(){if (allYear === true) {setJanStyle(available), setFebStyle(available), setMarStyle(available), setJunStyle(available), setJulStyle(available)
   setAugStyle(available); setSepStyle(available), setOctStyle(available), setNovStyle(available), setDecStyle(available);} 
   else { if(availability.includes(1)){setJanStyle(available);}
@@ -116,7 +121,8 @@ if (time.includes(hours)) { timeAvailable = true;}
    if(availability.includes(12)){setDecStyle(available);}}
       }  
 
-
+// if already in previously active state, makes inactive and sets style to infoHiddenStyle. Otherwise sets to active and sets style to infoShownStyle
+// and calls ShowMonths function to show active months
 function DisplayBugInfo(){
 let active = document.getElementById('active');
 if(active){SetStyle(infoHiddenStyle);
@@ -125,7 +131,7 @@ else {SetStyle(infoShownStyle);
     SetId("active");
     ShowMonths()
 }}   
-
+// if bug is available in the month AND time requested, the bug image is colored in on the app
 if (monthAvailable === true && timeAvailable === true)
 {return(
   <div className="BugInfo">
@@ -190,6 +196,8 @@ if (monthAvailable === true && timeAvailable === true)
 </div>
 )
 }
+
+// bug is grayed out on app because it is not available this month or time
     else {return(
       <div className="BugInfo">
       <div className="bugImage" onClick={DisplayBugInfo}> 
