@@ -67,8 +67,10 @@ const english = "name-USen";
       let availability = null;
       let monthAvailable = null;
       let timeAvailable = null;
+      // if time displayed length is less than 1 bug is shown as being available All Day.
       let timeDisplayed = props.data.availability.time;
       if (timeDisplayed.length < 1){timeDisplayed = "All Day";}
+      // shows Northern months for availibility when World Location is Northern.
       if (worldLocation === "Northern") {
         availability = props.data.availability[northernArray];} else {
         availability = props.data.availability[southernArray];}

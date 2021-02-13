@@ -3,7 +3,7 @@ import DisplayBugs from "./DisplayBugs.js";
 import MediaQuery from 'react-responsive'
 import React from 'react';
 
-
+// Sets MediaQueries and DisplaysBugs
 export default function DisplayBugApp() {
   return (
     <div className="App">

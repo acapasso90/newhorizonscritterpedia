@@ -71,8 +71,10 @@ const [decStyle, setDecStyle] = useState(unavailable);
   let availability = null;
   let monthAvailable = null;
   let timeAvailable = null;
+        // if time displayed length is less than 1 fish is shown as being available All Day.
   let timeDisplayed = props.data.availability.time;
   if (timeDisplayed.length < 1){timeDisplayed = `All Day`;}
+        // shows Northern months for availibility when World Location is Northern.
   if (worldLocation === "Northern") {
     availability = props.data.availability[northernArray];} else {
     availability = props.data.availability[southernArray];}
@@ -87,12 +89,10 @@ const [decStyle, setDecStyle] = useState(unavailable);
   let blathers = props.data[blathersPhrase];
   let allDay = props.data.availability.isAllDay;
   if (allDay === true) {
-    timeAvailable = true;
-  }
+    timeAvailable = true;}
   let allYear = props.data.availability.isAllYear;
   if (allYear === true) {
-    monthAvailable = true;
-  }
+    monthAvailable = true;}
   let time = props.data.availability[timeArray];
   let currentTime = new Date();
   let javamonth = currentTime.getMonth();
@@ -105,7 +105,7 @@ if (inputMonth != null){month = inputMonth}
  let hours = currentTime.getHours();
   // if inputHour is sent through props then month becomes the inputMonth value
  if (inputHour != null){hours = inputHour}
- // if time includes hours timeAvailabl is set to true/
+ // if time includes hours timeAvailabl is set to true
 if (time.includes(hours)) { timeAvailable = true;}
 // if availability includes months then monthAvailable is set to true
  if (availability.includes(month)) {monthAvailable = true;}

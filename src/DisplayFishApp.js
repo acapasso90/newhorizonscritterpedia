@@ -2,6 +2,7 @@ import React from "react";
 import DisplayFish from "./DisplayFish.js";
 import MediaQuery from 'react-responsive'
 
+// Sets MediaQueries and DisplaysFish
 export default function DisplayFishApp(){return(
 <div className="App">
 <header className="header">

@@ -67,8 +67,10 @@ const [decStyle, setDecStyle] = useState(unavailable);
     let availability = null; 
     let monthAvailable = null;
     let timeAvailable = null; 
+         // if time displayed length is less than 1 sea creature is shown as being available All Day.
     let timeDisplayed = props.data.availability.time;
     if (timeDisplayed.length < 1){timeDisplayed = "All Day";}
+          // shows Northern months for availibility when World Location is Northern.
     if (worldLocation === "Northern"){availability = props.data.availability[northernArray];}
     else {availability = props.data.availability[southernArray];}
     let SeaCrittersName = props.data.name[english];
@@ -84,21 +86,25 @@ const [decStyle, setDecStyle] = useState(unavailable);
         let allYear = props.data.availability.isAllYear;    
         if (allYear === true){monthAvailable = true;}
         let time = props.data.availability[timeArray];
-   
     let currentTime = new Date();
     let javamonth = currentTime.getMonth();
+       // adds 1 to the javamonth value to match API months by starting at 1 instead of 0
     let month = ++(javamonth);
     let hours = currentTime.getHours(); 
     let inputMonth = props.month;
     let inputHour = props.hour;
+    // if inputMonth is sent through props then month becomes the inputMonth value
     if (inputMonth != null){month = inputMonth}
+      // if inputHour is sent through props then month becomes the inputMonth value
      if (inputHour != null){hours = inputHour}
+      // if time includes hours timeAvailabl is set to true
     if (time.includes(hours)){timeAvailable = true;}
+    // if availability includes months then monthAvailable is set to true
     if (availability.includes(month)){monthAvailable = true;} 
    
 
 
-  
+   // sets the Months in the infoHiddenStyle to active if they are included in availability or if allYear is true. 
 function ShowMonths(){ if (allYear === true) {setJanStyle(available), setFebStyle(available), setMarStyle(available), setJunStyle(available), setJulStyle(available)
   setAugStyle(available); setSepStyle(available), setOctStyle(available), setNovStyle(available), setDecStyle(available);} 
   else { if(availability.includes(1)){setJanStyle(available);}
@@ -116,7 +122,8 @@ function ShowMonths(){ if (allYear === true) {setJanStyle(available), setFebStyl
 
    }  
 
-
+// if already in previously active state, makes inactive and sets style to infoHiddenStyle. Otherwise sets to active and sets style to infoShownStyle
+// and calls ShowMonths function to show active months
     function DisplaySeaCrittersInfo(){
         let active = document.getElementById('active');
         if(active){SetStyle(infoHiddenStyle);
@@ -125,7 +132,7 @@ function ShowMonths(){ if (allYear === true) {setJanStyle(available), setFebStyl
         SetId("active");
         ShowMonths()
 }}   
-
+// if sea creature is available in the month AND time requested, the bug image is colored in on the app
 if (monthAvailable === true && timeAvailable === true) {
   return (
     <div className="SeaCrittersInfo">
@@ -189,7 +196,9 @@ if (monthAvailable === true && timeAvailable === true) {
 </div>
 </div>
   );
-} else {
+} 
+  // fish is grayed out on app because it is not available this month or time
+else {
   return (
     <div className="SeaCrittersInfo">
       <div className="SeaCrittersImage" onClick={DisplaySeaCrittersInfo}>

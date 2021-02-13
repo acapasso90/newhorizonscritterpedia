@@ -4,7 +4,7 @@ import MediaQuery from 'react-responsive'
 import React from 'react';
 
 
-
+// Sets MediaQueries and DisplaysSeaCritters
 export default function DisplaySeaApp() {
   return (
     <div className="App">
