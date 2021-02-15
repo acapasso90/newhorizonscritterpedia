@@ -198,6 +198,10 @@ display: none;}
 .pc .fishPicture {            max-width: 90%;
       max-height: 90%}
     
+  .pc .getSeaCrittersInfo .fishPicture {min-width: 96px;
+    max-width: 96px;
+    max-height: 96px;
+  min-height: 96px;}
 .pc  .fishPicture2 {
         max-width: 96px;
         max-height: 98px;}
@@ -325,10 +329,10 @@ left: -45%;
     flex-direction: row;
   position: relative;
   top: 65px;
-  left: -650%}
+  left: -680%}
 
-.pc  .months p {margin-left: 7%;
-  margin-right: 7%;
+.pc  .months p {margin-left: 6%;
+  margin-right: 6%;
     max-height: 6%;
     padding: 0.5% 1.5% 0.5% 1.5%;}
     

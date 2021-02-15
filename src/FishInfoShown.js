@@ -128,12 +128,11 @@ function ShowMonths(){ if (allYear === true) {setJanStyle(available), setFebStyl
 
    }  
 
-// if already in previously active state, makes inactive and sets style to infoHiddenStyle. Otherwise sets to active and sets style to infoShownStyle
-// and calls ShowMonths function to show active months
+// if already in previously active state, makes inactive and sets style to infoHiddenStyle and backdropBlack also gets hidden. Otherwise sets to active and sets style to infoShownStyle
+// and calls ShowMonths function to show active months. backdropblack is displayed.
   function DisplayFishInfo(){
     let active = document.getElementById('active');
     const backdrop = document.querySelector('.backdropBlack')
-  
     if(active){SetStyle(infoHiddenStyle);
         SetId("inactive");
         backdrop.classList.remove('backdropBlackActive');

@@ -10,6 +10,7 @@ export default function SeaCrittersInfoShown(props){
   textDecoration: "none",
   fontWeight: "bold",
   minHeight: "40px",
+  width: "30%",
   borderWidth: "3px",
   borderStyle: "solid",
   borderColor: "#702B2B",
@@ -44,6 +45,7 @@ const [decStyle, setDecStyle] = useState(unavailable);
       lineHeight: "normal",
       opacity: "100%",
       backgroundColor: "#F5EBC1",
+      width: "130%",
       zIndex: 2,
       textTransform: "capitalize",
       border: "4px",
@@ -51,8 +53,8 @@ const [decStyle, setDecStyle] = useState(unavailable);
       paddingRight: "50px",
       borderStyle: "solid",
       position: "absolute",
-      top: "-50%",
-      left: "-388px",
+      top: "-43%",
+      left: "-25%",
     };
     const infoHiddenStyle = {
       lineHeight: "0px",
@@ -126,9 +128,12 @@ function ShowMonths(){ if (allYear === true) {setJanStyle(available), setFebStyl
 // and calls ShowMonths function to show active months
     function DisplaySeaCrittersInfo(){
         let active = document.getElementById('active');
+        const backdrop = document.querySelector('.backdropBlack');
         if(active){SetStyle(infoHiddenStyle);
-            SetId("inactive");}
+            SetId("inactive");
+            backdrop.classList.remove('backdropBlackActive');}
     else {SetStyle(infoShownStyle);
+      backdrop.classList.add('backdropBlackActive');
         SetId("active");
         ShowMonths()
 }}   

@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/js/dist/dropdown';
 import './App.css';
@@ -22,6 +22,13 @@ function App() {
 const [seasrc, setSeasrc] = useState(octopus);
 const [bugsrc, setBugsrc] = useState(butterfly);
 const [fishsrc, setFishsrc] = useState(fishActive);
+const [backdropheight, setBackdropheight] = useState("");
+
+useEffect(() => {
+  let screenheight = (screen.height)*2;
+  setBackdropheight(screenheight);
+  }, []);
+
 const Active = {
   opacity: "100%",
   position: "absolute",
@@ -91,7 +98,7 @@ return (
   <Router>
      <main>
        <div className="container">
-       <div className="backdropBlack"> </div>
+       <div className="backdropBlack" style={{ minHeight: backdropheight }}> </div>
           <div className="Header">
             <div className="headerText">
             <h1>New Horizon&apos;s Critterpedia</h1></div>
