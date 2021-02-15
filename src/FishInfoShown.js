@@ -17,11 +17,9 @@ export default function FishInfoShown(props) {
   borderRadius: "2px",
   color: "#440f0f",
   }
-
   const bold = {fontSize: "24px",
 fontWeight: "bold"}
-
-
+//Styles for months in infoStyleHidden
 const [janStyle, setJanStyle] = useState(unavailable);
 const [febStyle, setFebStyle] = useState(unavailable);
 const [marStyle, setMarStyle] = useState(unavailable);
@@ -56,7 +54,7 @@ const [decStyle, setDecStyle] = useState(unavailable);
     borderStyle: "solid",
     position: "absolute",
     top: "-60%",
-    left: "-4px",
+    left: "2%",
   };
   const infoHiddenStyle = {
     lineHeight: "0px",

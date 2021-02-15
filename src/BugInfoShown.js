@@ -52,7 +52,7 @@ const english = "name-USen";
       borderStyle: "solid",
       position: "absolute",      
       top: "-60%",
-      left: ".5%",
+      left: "2%",
     };
     const infoHiddenStyle = {
       lineHeight: "0px",
