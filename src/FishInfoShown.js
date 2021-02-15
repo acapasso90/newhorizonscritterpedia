@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState} from "react";
 import Blathers from "./Blathers.png";
 
 export default function FishInfoShown(props) {
@@ -132,15 +132,20 @@ function ShowMonths(){ if (allYear === true) {setJanStyle(available), setFebStyl
 // and calls ShowMonths function to show active months
   function DisplayFishInfo(){
     let active = document.getElementById('active');
+    const backdrop = document.querySelector('.backdropBlack')
+  
     if(active){SetStyle(infoHiddenStyle);
         SetId("inactive");
+        backdrop.classList.remove('backdropBlackActive');
       }
 else {SetStyle(infoShownStyle);
     SetId("active");
-    ShowMonths();
-}}   
+    backdrop.classList.add('backdropBlackActive');
+    ShowMonths(); }}   
+
+
 // if fish is available in the month AND time requested, the bug image is colored in on the app
-  if (monthAvailable === true && timeAvailable === true) {return(
+  if (monthAvailable === true && timeAvailable === true) {return( 
     <div className="FishInfo">
     <div className="fishImage" onClick={DisplayFishInfo}>
       <img src={image} alt="fish icon" className="fishPicture" onClick={DisplayFishInfo} />      </div>
@@ -270,6 +275,7 @@ else {SetStyle(infoShownStyle);
   </div>
   </div>
 </div>
+
     );
   }
 }

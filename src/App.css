@@ -40,6 +40,17 @@ a {color: #702b2b;
   
     ::selection{background-color:#74573c;
     color: #ffff;}
+
+    .backdropBlack {width: 100%;
+    height: 100%;
+  position: absolute; 
+top: 0;
+background-color: #000000;
+opacity: 70%;
+z-index: 1;
+display: none;}
+
+.backdropBlackActive {display: inherit;}
     
     .backdrop1{background-color: #ffff;
       height: 80px;
@@ -140,6 +151,7 @@ a {color: #702b2b;
   }
 
   .fishImage, .bugImage, .SeaCrittersImage {border: 1px solid #d1cca6;
+    z-index: 2;
   }
 
   .pc .fishImage, .pc .bugImage, .pc .SeaCrittersImage {    min-width: 98px;

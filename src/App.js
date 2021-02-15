@@ -91,6 +91,7 @@ return (
   <Router>
      <main>
        <div className="container">
+       <div className="backdropBlack"> </div>
           <div className="Header">
             <div className="headerText">
             <h1>New Horizon&apos;s Critterpedia</h1></div>
