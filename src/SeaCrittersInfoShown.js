@@ -45,7 +45,6 @@ const [decStyle, setDecStyle] = useState(unavailable);
       lineHeight: "normal",
       opacity: "100%",
       backgroundColor: "#F5EBC1",
-      width: "130%",
       zIndex: 2,
       textTransform: "capitalize",
       border: "4px",
@@ -53,8 +52,8 @@ const [decStyle, setDecStyle] = useState(unavailable);
       paddingRight: "50px",
       borderStyle: "solid",
       position: "absolute",
-      top: "-43%",
-      left: "-25%",
+      top: "-50%",
+      left: "-20%",
     };
     const infoHiddenStyle = {
       lineHeight: "0px",

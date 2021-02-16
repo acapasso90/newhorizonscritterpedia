@@ -399,7 +399,7 @@ left: -45%;
   .Southern { 
     left: 862px;}
 
-      .tablet .column {max-width: 60px;
+      .tablet .column {max-width: 60px!important;
         min-width: 60px;}
 
         .tablet  .SeaCrittersInfoHidden .columnRight, .tablet .fishInfoHidden .columnRight, .tablet .bugInfoHidden .columnRight {position: relative;
@@ -433,6 +433,9 @@ left: -45%;
   .tablet .fishInfoHidden, .tablet .bugInfoHidden { width: 100%; 
           height: 100%;
           min-Height: 720px;
+          position: absolute;
+          top: -96%!important;
+          left: -2.9%!important;
         margin: 15px 0px 0px 5px;}
 
         .tablet .monthsHeader {white-space: nowrap;
@@ -447,7 +450,7 @@ left: -45%;
             position: relative;
             top: 605px;
             text-align: center;
-            right: 245px;
+            right: 400%;
             font-size: 18px;}
             
            .tablet  .months2 {display: flex;
@@ -468,7 +471,8 @@ left: -45%;
           height: 100%;
           min-Height: 720px;
         margin: 15px 0px 0px 5px;
-      left: -250px!important;}
+        top: -85%!important;
+      left: -290px!important;}
       .tablet .fishPicture {            max-width: 55px;
         max-height: 82px;}
         
@@ -482,11 +486,11 @@ left: -45%;
 
         .tablet .horizontalRow {
           position: relative;
-      top: 40px;
+          left: 2.5%;
           } 
   
         .tablet .Northern {
-          left: 72%;
+          left: 68%;
         }
 
         .tablet .polaroid  {max-width: 200px;
@@ -516,8 +520,7 @@ left: -45%;
       min-Height: 750px;
     margin: 5px 0px 0px 5px;}
 
-    .pc .SeaCrittersInfoHidden { width: 140%; 
-      min-width: 90%;
+    .pc .SeaCrittersInfoHidden { width: 130%; 
       height: 100%;
       min-Height: 750px;
     margin: 5px 0px 0px 5px;}
@@ -656,7 +659,7 @@ left: 53%;}
 position: relative;
 bottom: 50px;}
 
-.bugInfoHidden, .fishInfoHidden, .SeaCrittersInfoHidden {max-width: 95%;
+.bugInfoHidden, .fishInfoHidden, . {max-width: 95%;
   min-width: 385px;
   min-height: 720px;
 position: relative;
@@ -730,10 +733,10 @@ top: 200px;}
   
 
 }
-
+/*Tablet Sized*/
 @media only screen and (max-width: 1025px) and (min-width: 501px) 
 { 
-
+body {overflow: hidden;}
 
   .buttons .hrow {position: relative;
     left: -40%;}
@@ -786,8 +789,8 @@ bottom: 6px;}
   font-size: 26px;
   font-weight: bold;
 position: relative;
-top: 70px;
-right: 80px;}
+top: 80px;
+right: 14%;}
 
   .quote {
   font-size: 18px;
@@ -800,12 +803,12 @@ right: 80px;}
   left: 618px;
   top: 397px;}
 .getSeaCrittersInfo .horizontalRow {width: 100%;
-  margin-left: auto;
+  margin-left: 26%;
   margin-right: auto;
   display: flex;
       flex-direction: row;
       position: relative; 
-      top: 80px;
+      top: 40px;
   }
   .getFishInfo .horizontalRow, .getBugInfo .horizontalRow {width: 100%;}
 
