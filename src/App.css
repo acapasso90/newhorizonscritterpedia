@@ -316,10 +316,10 @@ left: -45%;
     flex-direction: row;}
   
     .pc .months {
-  position: relative;
-  top: 610px;
+  position: absolute;
+  bottom: 10%;
   text-align: center;
-  right: 50px;
+  right: 52%;
   font-size: 1.5vw;}
 
   .pc .months1 {    display: flex;
@@ -327,9 +327,10 @@ left: -45%;
   
  .pc  .months2 {display: flex;
     flex-direction: row;
-  position: relative;
-  top: 65px;
-  left: -680%}
+  position: absolute;
+  top: 115%;
+  left: 11%;
+  }
 
 .pc  .months p {margin-left: 6%;
   margin-right: 6%;
@@ -344,8 +345,8 @@ left: -45%;
       font-size: 24px;
       font-weight: bold;
         position: relative;
-    bottom: 60px;
-    left: 510%;
+    bottom: 62px;
+    left: 69.5%;
       }
       
       .polaroid {background-color: #ffffff;}
@@ -381,12 +382,19 @@ left: -45%;
   
   .right {float: right;}
 
-.pc  .SeaCrittersInfoHidden .columnRight, .pc .fishInfoHidden .columnRight, .pc .bugInfoHidden .columnRight {position: relative;
-  left: 120%;
-    top: 11%;
+.pc  .SeaCrittersInfoHidden .columnRight, .pc .fishInfoHidden .columnRight {position: absolute;
+  right: 53%;
+    top: 8%;
     font-size: 1.5vw;
     letter-spacing: 2px;
   }
+
+  .pc .bugInfoHidden .columnRight {position: absolute;
+    right: 49.5%;
+      top: 8%;
+      font-size: 1.5vw;
+      letter-spacing: 2px;
+    }
 
   .Southern { 
     left: 862px;}
@@ -530,9 +538,10 @@ left: -45%;
 .fishPicture:hover, .fishPicture2:hover {cursor: pointer;}
 
 .pc .Blathers {max-width: 14%!important;
+  width: 14%;
   position: absolute;
   z-index: -2;
-  right: 405px;
+  right: 0.6%;
   top: 247px;}
   
   
@@ -542,10 +551,11 @@ left: -45%;
     border-radius: 10%;}
   
   .pc .blathersInfo {position: absolute;
-    right: 10px;
+    right: 11%;
     font-size: 15px;
     bottom: 350px;
-    max-width: 450px;
+    max-width: 34%;
+    width: 32%;
     padding: 10px 20px;
   }
 
@@ -553,20 +563,20 @@ left: -45%;
 
   .quoteTriangle {width: 0px;
     height: 0px;
-    border-top: 31px solid transparent;
-    border-bottom: 31px solid rgb(255, 255, 255);;
     border-left: 31px solid transparent;
-  transform: rotate(88deg);
+    border-right: 31px solid rgb(255, 255, 255);
+    border-bottom: 31px solid transparent;
+  transform: rotate(89deg);
   z-index: -1;
 }
 
 .pc .fishInfoHidden .quoteTriangle, .pc .bugInfoHidden .quoteTriangle {position: absolute;
-  left: 68.6%;
-  top: 46.5%;}
+ right: 10%;
+  top: 46.4%;}
 
   .pc .SeaCrittersInfoHidden .quoteTriangle {position: absolute;
-    left: 69.3%;
-    top: 46.5%;}
+   left: 85.4%;
+  top: 46.5%;}
 
 .exitButton button {padding: 10px 15px;}
 
