@@ -11,7 +11,7 @@ a {color: #702b2b;
     font-family: 'Short Stack', cursive;
     }
     
-    button, button:hover {background-color: #da8f4d;
+    button {background-color: #da8f4d;
       border: 4px solid #702b2b;
       color: #440f0f;
       padding: 8px 18px;
@@ -23,6 +23,9 @@ a {color: #702b2b;
       font-size: 16px;
       user-select: none;
        }
+
+button:hover {background-color: #eba76c;
+  padding: 10px 20px;}
       
        button:active {margin-top: 2px;
         border: 4px solid #682424;
@@ -95,7 +98,10 @@ display: none;}
   
   .dropdown-menu {background-image: url(./dropdownmarble.jpg)}
   
- 
+ .dropdown-item:hover {background-color: #fcecdf;
+color: #74574c;
+font-weight: bolder;
+font-size: 13pt;}
   
   .dropdown-item:active {background-color: #74573c;}
    .pc .quote {margin-top: 20px;
@@ -118,7 +124,7 @@ display: none;}
   
     .butterfly {left: 12px;}
 
-    .btn, .btn:hover, .btn-secondary:not(:disabled):not(.disabled) {background-color: #da8f4d;
+    .btn, .btn-secondary:not(:disabled):not(.disabled) {background-color: #da8f4d;
       border: 4px solid #702b2b;
       color: #440f0f;
       border-radius: 3px;
