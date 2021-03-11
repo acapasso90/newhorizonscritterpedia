@@ -10,7 +10,6 @@ export default function SeaCrittersInfoShown(props){
   textDecoration: "none",
   fontWeight: "bold",
   minHeight: "40px",
-  width: "30%",
   borderWidth: "3px",
   borderStyle: "solid",
   borderColor: "#702B2B",
