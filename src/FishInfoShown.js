@@ -130,14 +130,17 @@ function ShowMonths(){ if (allYear === true) {setJanStyle(available), setFebStyl
 // and calls ShowMonths function to show active months. backdropblack is displayed.
   function DisplayFishInfo(){
     let active = document.getElementById('active');
-    const backdrop = document.querySelector('.backdropBlack')
+    const backdrop = document.querySelector('.backdropBlack');
+    const noScroll = document.querySelector('html');
     if(active){SetStyle(infoHiddenStyle);
         SetId("inactive");
         backdrop.classList.remove('backdropBlackActive');
+        noScroll.classList.remove('noScroll');
       }
 else {SetStyle(infoShownStyle);
     SetId("active");
     backdrop.classList.add('backdropBlackActive');
+    noScroll.classList.add('noScroll');
     ShowMonths(); }}   
 
 

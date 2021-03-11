@@ -127,13 +127,16 @@ if (time.includes(hours)) { timeAvailable = true;}
 // and calls ShowMonths function to show active months
 function DisplayBugInfo(){
 let active = document.getElementById('active');
-const backdrop = document.querySelector('.backdropBlack')
+const backdrop = document.querySelector('.backdropBlack');
+const noScroll = document.querySelector('html');
 if(active){SetStyle(infoHiddenStyle);
   SetId("inactive");
-  backdrop.classList.remove('backdropBlackActive');}
+  backdrop.classList.remove('backdropBlackActive');
+  noScroll.classList.remove('noScroll');} 
 else {SetStyle(infoShownStyle);
     SetId("active");
     backdrop.classList.add('backdropBlackActive');
+    noScroll.classList.add('noScroll');
     ShowMonths()
 }}   
 // if bug is available in the month AND time requested, the bug image is colored in on the app

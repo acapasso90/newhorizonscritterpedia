@@ -128,11 +128,14 @@ function ShowMonths(){ if (allYear === true) {setJanStyle(available), setFebStyl
     function DisplaySeaCrittersInfo(){
         let active = document.getElementById('active');
         const backdrop = document.querySelector('.backdropBlack');
+        const noScroll = document.querySelector('html');
         if(active){SetStyle(infoHiddenStyle);
             SetId("inactive");
+            noScroll.classList.remove('noScroll');
             backdrop.classList.remove('backdropBlackActive');}
     else {SetStyle(infoShownStyle);
       backdrop.classList.add('backdropBlackActive');
+      noScroll.classList.add('noScroll');
         SetId("active");
         ShowMonths()
 }}   

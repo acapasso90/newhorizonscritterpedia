@@ -33,6 +33,8 @@ button:hover {background-color: #eba76c;
     
     ul {list-style: none;
     }
+
+    .noScroll {overflow: hidden;}
   
     .unorderedList {  width: 400px;}
     .App {
@@ -665,7 +667,7 @@ left: 53%;}
 position: relative;
 bottom: 50px;}
 
-.bugInfoHidden, .fishInfoHidden, . {max-width: 95%;
+.bugInfoHidden, .fishInfoHidden, .SeaCrittersInfoHidden {max-width: 95%;
   min-width: 385px;
   min-height: 720px;
 position: relative;
