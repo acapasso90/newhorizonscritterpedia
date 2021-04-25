@@ -40,7 +40,7 @@ const [month, setMonth] = useState(currentMonth);
 if (loaded){return(
 <div className="getFishInfo">
     <div className="instructions">
-        <p>Shows catchable fish for the current time and month for the Northern Hemisphere. Hemisphere and Date can be changed with the buttons below. Gray fish are not catchable at the current/inputted date and time.  </p>
+        <p>Shows catchable fish for the current time and month for the Northern Hemisphere. Hemisphere, Date and Time can be changed with the buttons below. Gray fish are not catchable at the current/inputted date and time.  </p>
     </div>
              <div className="CurrentHemisphere"><h2>Current Hemisphere: {hemisphere} </h2></div>
         <div className="buttons">
