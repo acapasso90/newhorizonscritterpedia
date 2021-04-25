@@ -42,7 +42,7 @@ useEffect(() => {
 if (loaded){return(
 <div className="getSeaCrittersInfo">
     <div className="instructions">
-        <p>Shows catchable deep sea creatures for the current time and month for the Northern Hemisphere. Hemisphere and Date can be changed with the buttons below. Gray sea creatures are not catchable at the inputted time.  </p>
+        <p>Shows catchable deep sea creatures for the current time and month for the Northern Hemisphere. Hemisphere and Date can be changed with the buttons below. Gray sea creatures are not catchable at the current/inputted date and time.  </p>
     </div>
   <div className="CurrentHemisphere"><h2>Current Hemisphere: {hemisphere} </h2></div>
         <div className="buttons">

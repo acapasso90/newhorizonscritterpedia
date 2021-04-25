@@ -17,7 +17,6 @@ color: #440f0f;
 padding: 8px 18px;
 border-radius: 3px;
 font-weight: bold;
-position: absolute;
 white-space: nowrap;
 outline:none;
 font-family: 'Short Stack', cursive;
@@ -25,11 +24,11 @@ font-size: 16px;
 user-select: none;
 }
 
-button:active {margin-top: 2px;
-  border: 4px solid #682424;}
+button:active {position: relative;
+  top: 2px;}
 
-button:hover {background-color: #eba76c;
-  padding: 10px 20px;}
+button:hover {background-color: #f0b786;
+}
 
 ul {list-style: none;
 }
@@ -63,6 +62,7 @@ ul {list-style: none;
     
     .buttons {white-space: nowrap;
     width: 100%;
+    margin-bottom: 10px;
     display: inline;}
 
 /*NavBar Links*/
@@ -143,7 +143,7 @@ font-size: 18px;
   font-size: 28px;}
 
   .columnRight { position: absolute;
-  right: 3%;}
+  right: 25%;}
 
   .columnRight li {margin-bottom: 40px;
   font-size: 14pt;}
@@ -156,11 +156,11 @@ font-size: 18px;
 
   
 .CurrentHemisphere h2 {font-size: 28px;
-}
+padding-right: 245px;}
 
-.currentlyAvailable {position: relative;
-  top: 70px;
-  right: 106px;}
+
+ .currentlyAvailable {width: 100%;
+margin-top: 80px;}
 
 .dropdown {position: absolute;
   right: 260px;}
@@ -188,6 +188,7 @@ width: 20%;}
 
 
 .fishInfoHidden, .bugInfoHidden, .SeaCrittersInfoHidden {z-index: -1;
+ box-shadow: inset -3px -3px 7px #a38a69, inset 3px 3px 7px #a38a69;
   background-Image: url(./bigmarble.jpg)}
 
   .fishInfoHidden, .bugInfoHidden { width: 95%; 
@@ -196,7 +197,8 @@ width: 20%;}
     min-Height: 750px;
   margin: 5px 0px 0px 5px;}
 
-  .fishName, .bugName, .seaName {font-size: 26px;
+  .fishName, .bugName, .seaName {font-size: 24pt;
+    text-shadow: -1px 2px 5px #a39685;
     margin-top: 40px;
    }
 
@@ -235,14 +237,14 @@ margin-top: 130px;}
 flex-direction: row;
 width: 100%;
 position: relative; 
-top: 80px;
+top: 30px;
 left: .5%;}
 
 .getSeaCrittersInfo .horizontalRow {display: flex;
 flex-direction: row;
 position: relative; 
 align-content: center;
-top: 80px;
+top: 30px;
 margin-left: auto;
 margin-right: auto;
 width: 75%;}
@@ -251,7 +253,7 @@ width: 75%;}
 flex-direction: row;
 position: relative; 
 width: 100%;
-top: 80px;
+top: 30px;
 left: 0.5%;}
 
 
@@ -271,6 +273,11 @@ left: 0.5%;}
 flex-direction: row;}
 
 #inactive {display: none;}
+
+.instructions {width: 88%;
+  padding-right: 10px;
+margin-top: 20px;
+font-size: 13pt;}
 
 .left {float: left;}
 
@@ -312,13 +319,12 @@ margin-bottom: 10px;
     margin-bottom: 2.5%;
   }
 
-
-.Northern { 
-  left: 600px;}
-  .Southern { 
-left: 862px;}
-
-        
+  
+.Southern {position: absolute;
+  right: 360px;}
+  
+  .Northern{ position: absolute;
+  left: 375px;}
 
 
 .sealoading {position: relative;
@@ -330,7 +336,7 @@ left: 862px;}
 
 .quote {margin-top: 15px;
   padding-bottom: 20px;
-font-size: 25px;
+font-size: 15pt;
 width: 50%;
 margin-left: auto;
 margin-right: auto;
