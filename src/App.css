@@ -389,6 +389,9 @@ margin-right: auto;
 right: 10px;
 }
 
+.columnRight li {
+  font-size: 11pt;}
+
 
 .currentlyAvailable {position: relative;
 top: 50px;
@@ -411,13 +414,16 @@ top: 55px;}
       .fishName, .bugName, .seaName {
         font-size: 18pt;
         position: relative;
-        top: -40px;
+        margin-top: 0;
+        top: -30px;
+        left: -32px;
       }
 
     .fishRealistic {
     width: 180px;
     position: relative;
     top: -40px;
+    left: -32px;
     }
     
   .fishPicture, .fishPicture2 {width: 55px!important;
@@ -461,18 +467,26 @@ top: 55px;}
 }
 
 .months {flex-direction: row;
+  justify-items: flex-start;
+  width: 50%;
 font-size: 12pt;}
 
 .months p {padding-top: 5px;}
 
 .months1, .months2 {position: relative;
   flex-wrap: wrap;
+  position: relative;
+  left: -230px;
+  top: 40px!important;
   flex-direction: column;
   margin-bottom: 0;
 top: 10px;}
 
 
 .quote {font-size: 13pt;
+  position: relative;
+  top: -40px;
+  left: -32px;
 width: 75%;}
 .sealoading {
   right: 0px;}
