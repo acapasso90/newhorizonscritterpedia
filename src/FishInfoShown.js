@@ -9,6 +9,7 @@ export default function FishInfoShown(props) {
   textDecoration: "none",
   fontWeight: "bold",
   minHeight: "40px",
+  textShadow: "1px 2px 5px #8b5105",
   borderWidth: "3px",
   borderStyle: "solid",
   borderColor: "#702B2B",
@@ -47,10 +48,6 @@ const [decStyle, setDecStyle] = useState(unavailable);
     borderColor: "#7a3737",
     paddingRight: "50px",
     borderStyle: "solid",
-    position: "absolute",
-    height: "780px",
-    top: "-300px",
-    left: "2%",
   };
   const infoHiddenStyle = {
     display: "none",

@@ -11,6 +11,7 @@ export default function SeaCrittersInfoShown(props){
   fontWeight: "bold",
   minHeight: "40px",
   borderWidth: "3px",
+  textShadow: "1px 2px 5px #8b5105",
   borderStyle: "solid",
   borderColor: "#702B2B",
   backgroundColor: "#da8f4d",
@@ -45,11 +46,7 @@ const [decStyle, setDecStyle] = useState(unavailable);
       border: "4px",
       borderColor: "#7a3737",
       paddingRight: "50px",
-      height: "780px",
       borderStyle: "solid",
-      position: "absolute",
-      top: "-300px",
-      left: "-150px",
     };
     const infoHiddenStyle = {
       display: "none",

@@ -10,6 +10,7 @@ export default function BugInfoShown(props){
   fontWeight: "bold",
   minHeight: "40px",
   borderWidth: "3px",
+  textShadow: "1px 2px 5px #8b5105",
   borderStyle: "solid",
   borderColor: "#702B2B",
   backgroundColor: "#da8f4d",
@@ -45,10 +46,6 @@ const english = "name-USen";
       borderColor: "#7a3737",
       paddingRight: "50px",
       borderStyle: "solid",
-      position: "absolute",      
-      height: "780px",
-      left: "2%",
-      top: "-300px",
     };
     const infoHiddenStyle = {
       display: "none",
