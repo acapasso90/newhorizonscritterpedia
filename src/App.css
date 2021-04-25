@@ -210,11 +210,11 @@ width: 20%;}
 .fishImage, .bugImage, .SeaCrittersImage {border: 1px solid #d1cca6;
 z-index: 2;}
 
-.fishPicture, .fishPicture2 {width: 95%; height: 95%;}
+.fishPicture, .fishPicture2 {width: 83%; height: 83%;}
 
 
 
-.getSeaCrittersInfo .fishPicture, .getSeaCrittersInfo .fishPicture2 {width: 62%; height: 62%;}
+.getSeaCrittersInfo .fishPicture, .getSeaCrittersInfo .fishPicture2 {width: 55%; height: 55%;}
 
 
 
