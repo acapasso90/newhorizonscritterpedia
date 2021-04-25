@@ -1,5 +1,4 @@
 import React, { useState} from "react";
-import Blathers from "./Blathers.png";
 
 export default function FishInfoShown(props) {
   const unavailable = {
@@ -36,15 +35,11 @@ const [decStyle, setDecStyle] = useState(unavailable);
   const english = "name-USen";
   const cj = "price-cj";
   const phrase = "catch-phrase";
-  const blathersPhrase = "museum-phrase";
   const northernArray = "month-array-northern";
   const southernArray = "month-array-southern";
   const timeArray = "time-array";
-  const blathersStyle = {maxWidth: "200px",
-  marginTop: "120px",}
   const infoShownStyle = {
-    lineHeight: "normal",
-    opacity: "100%",
+    display: "inherit",
     backgroundColor: "#F5EBC1",
     zIndex: 2,
     textTransform: "capitalize",
@@ -53,15 +48,12 @@ const [decStyle, setDecStyle] = useState(unavailable);
     paddingRight: "50px",
     borderStyle: "solid",
     position: "absolute",
-    top: "-60%",
+    height: "780px",
+    top: "-300px",
     left: "2%",
   };
   const infoHiddenStyle = {
-    lineHeight: "0px",
-    width: "0px",
-    height: "0px",
-    opacity: "0%",
-    position: "absolute",
+    display: "none",
   };
   const [style, SetStyle] = useState(infoHiddenStyle);
   const [id, SetId] = useState("inactive");
@@ -84,7 +76,6 @@ const [decStyle, setDecStyle] = useState(unavailable);
   let priceNormal = props.data.price;
   let priceCJ = props.data[cj];
   let catchphrase = props.data[phrase];
-  let blathers = props.data[blathersPhrase];
   let allDay = props.data.availability.isAllDay;
   if (allDay === true) {
     timeAvailable = true;}
@@ -151,9 +142,9 @@ else {SetStyle(infoShownStyle);
       <img src={image} alt="fish icon" className="fishPicture" onClick={DisplayFishInfo} />      </div>
       <div className="left">
         <div className="fishInfoHidden" style={style} id={id}>
-        <div className="hrow">
-<div className="column">
+
 <div className="Months">
+<div className="hrow">
     <div className="months">
     <h4 className="monthsHeader"> Months Available</h4>
     <div className="months1">
@@ -173,13 +164,13 @@ else {SetStyle(infoShownStyle);
       <p className="Dec"style={decStyle} >December</p>
       </div>
   </div>
+  <div className="exitButton"><button  onClick={DisplayFishInfo}>Go Back</button></div>
   </div>
     </div>
 <div className="hrow">
   <div className="column">
   <ul className="unorderedList">
 <li> <img src={realisticImage} alt="fish realistic" className="fishRealistic" /></li>
-<li><div className="polaroid"></div></li>
 <li className="fishName">{fishName}</li>
 <li className="quote">&quot;{catchphrase}&quot;</li>
 </ul>   </div>
@@ -195,13 +186,6 @@ else {SetStyle(infoShownStyle);
 </div>
 </div>
 </div>
-</div>
-   <div className="column">
-              <img src={Blathers} alt="Blathers" className="Blathers" style={blathersStyle} />
-              <div className="quoteTriangle"></div>
-              <div className="blathersInfo" >&quot;{blathers}&quot;</div>
-              <div className="exitButton"><button  onClick={DisplayFishInfo}>Go Back</button></div>
-              </div>
     </div>
   </div>
 </div>);
@@ -219,10 +203,9 @@ else {SetStyle(infoShownStyle);
           />         </div>
           <div className="left">
           <div className="fishInfoHidden" style={style} id={id}>
-    <div className="hrow">
-<div className="column">
 
 <div className="Months">
+<div className="hrow">
     <div className="months">
     <h4 className="monthsHeader"> Months Available</h4>
     <div className="months1">
@@ -242,13 +225,12 @@ else {SetStyle(infoShownStyle);
       <p className="Dec"style={decStyle} >December</p>
       </div>
   </div>
-  </div>
+  <div className="exitButton"><button  onClick={DisplayFishInfo}>Go Back</button></div>
 </div>
       <div className="hrow">
       <div className="column">
       <ul className="unorderedList">
               <li> <img src={realisticImage} alt="fish realistic" className="fishRealistic" /></li>
-              <li><div className="polaroid"></div></li>
               <li className="fishName">{fishName}</li>
               <li className="quote">&quot;{catchphrase}&quot;</li>
                </ul>
@@ -265,12 +247,6 @@ else {SetStyle(infoShownStyle);
                 </div>
 </div>
 </div>
-   <div className="column">
-              <img src={Blathers} alt="Blathers" className="Blathers" style={blathersStyle} />
-              <div className="quoteTriangle"></div>
-              <div className="blathersInfo" >&quot;{blathers}&quot;</div>
-              <div className="exitButton"><button  onClick={DisplayFishInfo}>Go Back</button></div>
-              </div>
     </div>
   </div>
   </div>

@@ -41,7 +41,10 @@ useEffect(() => {
   }}, []);
 
 if (loaded){return(
-    <div className="getBugInfo">
+<div className="getBugInfo">
+    <div className="instructions">
+        <p>Shows catchable bugs for the current time and month for the Northern Hemisphere. Hemisphere and Date can be changed with the buttons below. Gray bugs are not catchable at the inputted time.  </p>
+    </div>
         <div className="CurrentHemisphere"><h2>Current Hemisphere: {hemisphere} </h2></div>
         <div className="buttons">
             <div className="hrow">

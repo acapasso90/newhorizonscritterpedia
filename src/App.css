@@ -1,98 +1,168 @@
 a {color: #702b2b;
-  font-weight: bold;
-  text-decoration: none; }
-  
-  a:hover {color: #31020f;
+font-weight: bold;
+text-decoration: none;}
+
+a:hover {color: #31020f;
   text-decoration: none;}
-  
-  body {background-color: #F5EBC1;
-    color: #8B7A65;
-    font-weight: bold;
-    font-family: 'Short Stack', cursive;
-    }
-    
-    button {background-color: #da8f4d;
-      border: 4px solid #702b2b;
-      color: #440f0f;
-      padding: 8px 18px;
-      border-radius: 3px;
-      font-weight: bold;
-      position: absolute;
-      white-space: nowrap;
-      font-family: 'Short Stack', cursive;
-      font-size: 16px;
-      user-select: none;
-       }
+
+body {background-color: #F5EBC1;
+color: #8B7A65;
+font-weight: bold;
+font-family: 'Short Stack', cursive;
+}
+
+button {background-color: #da8f4d;
+border: 4px solid #702b2b;
+color: #440f0f;
+padding: 8px 18px;
+border-radius: 3px;
+font-weight: bold;
+position: absolute;
+white-space: nowrap;
+outline:none;
+font-family: 'Short Stack', cursive;
+font-size: 16px;
+user-select: none;
+}
+
+button:active {margin-top: 2px;
+  border: 4px solid #682424;}
 
 button:hover {background-color: #eba76c;
   padding: 10px 20px;}
-      
-       button:active {margin-top: 2px;
-        border: 4px solid #682424;
-        outline:none;}
+
+ul {list-style: none;
+}
+
+::selection{background-color:#74573c;
+  color: #ffff;}
+
+
+.App {
+  text-align: center;
+  width: 98vw;
+}
+
+  .active:hover, .link:hover {cursor: default;}
+
+  .btn, .btn-secondary:not(:disabled):not(.disabled) {background-color: #da8f4d;
+    border: 4px solid #702b2b;
+    color: #440f0f;
+    border-radius: 3px;
+    font-weight: bold;
+    position: absolute;
+    padding: 8px 18px;
+    white-space: nowrap;
+    font-family: 'Short Stack', cursive;
+    font-size: 16px;}
     
-    ul {list-style: none;
+    
+    .btn-secondary:not(:disabled):not(.disabled):active {background-color: #ac672b;
+      border: 4px solid #702b2b;
+      }
+    
+    .buttons {white-space: nowrap;
+    width: 100%;
+    display: inline;}
+
+/*NavBar Links*/
+  .backdrop1{background-color: #ffff;
+    height: 80px;
+    width: 80px;
+    position: relative;
+    top: 5px;
+  border-radius: 50%;}
+
+  .backdrop2{background-color: #ffff;
+    height: 80px;
+    width: 80px;
+  border-radius: 50%;
+  position: relative;
+  top: 5px;
+  right: 30px;}
+
+.backdrop3 {background-color: #ffff;
+height: 80px;
+width: 80px;
+border-radius: 50%;
+position: relative;
+top: 5px;
+right: 60px;}
+
+.fishLabel, .bugLabel, .seaLabel {top: -12px;
+  right: 20px;}
+
+.fishLabel {right: 105px;}
+
+.bugLabel {right: 155px;}
+.seaLabel {  width: 147.5px;}
+
+  .butterfly:hover, .octopus:hover, .fishpic:hover {cursor: pointer;
     }
 
-    .noScroll {overflow: hidden;}
-  
-    .unorderedList {  width: 400px;}
-    .App {
-      text-align: center;
-      min-width: 100%;
-      max-width: 100%;
-    }
-  
-    ::selection{background-color:#74573c;
-    color: #ffff;}
+  .butterfly {left: 12px!important;}
 
-    .backdropBlack {width: 100%;
-    height: 100%;
-  position: absolute; 
+  .iconLinks {position: relative;
+    user-select: none;
+  bottom: 30px;
+  left: 35px;}
+
+  .fishpic, .octopus, .butterfly {position: relative;
+    bottom: 65px;
+    left: 8px;}
+
+/**/
+.backdropBlack {width: 100%;
+height: 100%;
+position: absolute; 
 top: 0;
 background-color: #000000;
 opacity: 70%;
 z-index: 1;
 display: none;}
-
+  
 .backdropBlackActive {display: inherit;}
-    
-    .backdrop1{background-color: #ffff;
-      height: 80px;
-      width: 80px;
-      position: relative;
-      top: 5px;
-    border-radius: 50%;}
-    
-    .backdrop2{background-color: #ffff;
-      height: 80px;
-      width: 80px;
-    border-radius: 50%;
-    position: relative;
-    top: 5px;
-    right: 30px;}
-    
-    .backdrop3 {background-color: #ffff;
-      height: 80px;
-      width: 80px;
-      border-radius: 50%;
-      position: relative;
-      top: 5px;
-      right: 60px;}
-   
+
+.bugName {font-size: 21px;
+color: #007910}
+
+.kk {position: relative;
+  bottom: 106px;
+left: 200px;
+text-decoration: none;
+color: #8B7A65;
+font-weight: bold;
+font-size: 18px;
+}
+
+.fishName {color: #004d80;}
+
+
+
+.seaName {color: #180052;
+  font-size: 28px;}
+
+  .columnRight { position: absolute;
+  right: 3%;}
+
+  .columnRight li {margin-bottom: 40px;
+  font-size: 14pt;}
+
+.container {   
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0; }
 
   
-  .butterfly:hover, .octopus:hover, .fishpic:hover {cursor: pointer;
-  }
-  
+.CurrentHemisphere h2 {font-size: 28px;
+}
 
-  .container {   
-    width: 100vw;
-    max-width: 100%;
-    padding: 0;
-    }
-  
-  .dropdown {position: absolute;
+.currentlyAvailable {position: relative;
+  top: 70px;
+  right: 106px;}
+
+.dropdown {position: absolute;
   right: 260px;}
   
   .dropdown2{ position: absolute;
@@ -107,742 +177,164 @@ font-size: 13pt;}
   
   .dropdown-item:active {background-color: #74573c;}
 
-  
-  .SeaCrittersInfoHidden .quote {color: #180052;}
-  
-  .fishInfoHidden .quote {color:  #004d80;}
-  
-  .bugInfoHidden .quote {color: #007910; }
-  
-  .fishpic, .octopus, .butterfly {position: relative;
-    bottom: 65px;
-    left: 8px;}
-  
-    .butterfly {left: 12px;}
 
-    .btn, .btn-secondary:not(:disabled):not(.disabled) {background-color: #da8f4d;
-      border: 4px solid #702b2b;
-      color: #440f0f;
-      border-radius: 3px;
-      font-weight: bold;
-      position: absolute;
-      white-space: nowrap;
-      font-family: 'Short Stack', cursive;
-      font-size: 16px;}
-
-  .buttons {white-space: nowrap;
-    width: 100%;
-  display: inline;}
-
-  .btn-secondary:not(:disabled):not(.disabled):active {background-color: #ac672b;
-    border: 4px solid #702b2b;
-    }
-  
- 
-    
-  .CurrentHemisphere {position: relative;
-    right: 8%;
-  width: 100%;}
-  
-  .CurrentHemisphere h2 {font-size: 28px;
-  }
-
-  .fishImage, .bugImage, .SeaCrittersImage {border: 1px solid #d1cca6;
-    z-index: 2;
-  }
-
-  .bugName {font-size: 21px;
-    position: relative;
-  bottom: 60px;
-  color: #007910}
-  
-.fishName {color: #004d80;}
-  
-.loadingFish {margin-top: 100px;
-    width: 550px;
-    margin-left: auto;
-    margin-right: auto;
-    white-space: nowrap;}
-  
-    .pc .loadingFish, .tablet .loadingFish { white-space: nowrap;}
-.seaName {color: #180052;
-    font-size: 28px;}
-  
-.fishInfoHidden, .bugInfoHidden, .SeaCrittersInfoHidden {z-index: -1;
-    background-Image: url(./bigmarble.jpg)}
-    
-.fishLabel, .bugLabel, .seaLabel {top: -12px;
-      right: 20px;}
-    
-.fishLabel {right: 105px;}
-  
-.bugLabel {right: 155px;}
-.seaLabel {  width: 147.5px;}
-
-.fishPicture, .fishPicture2 {user-select: none;}
-
-.fishPicture2 {  filter: contrast(0%) brightness(140%)  grayscale(80%);}
-
-      
-      .footer {font-size: 18px;
-      text-align: center;
-      margin-top: 130px;}
-  
-      .getFishInfo .horizontalRow {display: flex;
-        flex-direction: row;
-        width: 100%;
-        position: relative; 
-        top: 80px;
-       left: .5%;}
-    
-        .getBugInfo .horizontalRow {display: flex;
-          flex-direction: row;
-          position: relative; 
-          width: 100%;
-          top: 80px;
-          right: 0.5%;}
-      
-          .Header {box-shadow: 0px 2px 3px #d8cfa1;
-            user-select: none;
-        position: relative;
-        bottom: 20px;
-            min-height: 80px;
-            width: 100%;
-            background-image: url(./bigmarble.jpg);
-            background-repeat: repeat;
-            background-position-y: -100px;
-          }
-
-    
-          .headerText {text-align: right;
-            position: relative;
-          top: 35px;}
-            
-            
-          .iconLinks {position: relative;
-            user-select: none;
-          bottom: 30px;
-          left: 35px;}
-
-  .active:hover {cursor: default;}
-  .link:hover {cursor: default;}
-  
-  .kk {position: relative;
-    bottom: 106px;
-  left: 200px;
-  text-decoration: none;
-  color: #8B7A65;
-  font-weight: bold;
-  font-size: 18px;
-  }
-  
-  .left {float: left;}
-
-  .price, .CJprice, .timeFound, .flickPrice, .shadowSea {margin-top: 50px;
-  }
-  
-
-
-  .months {display: flex;
-    flex-direction: row;}
-
-    .Northern { 
-      left: 600px;
-    }
-
-    .polaroid {background-color: #ffffff;}
-  
-    .polaroidBug {background-color: #ffffff;}
-  .right {float: right;}
-
-  .Southern { 
-    left: 862px;}
-  
-    .hrow {display: flex;
-      flex-direction: row;}
-
-      #inactive {width: 0px;
-      height: 0px;
-    opacity: 0%;}
-  
-
-.fishPicture:hover, .fishPicture2:hover {cursor: pointer;}
-
-.fishRealistic {
-  background: radial-gradient(circle, rgb(231, 235, 248) 0%, rgb(248, 218, 247) 100%);
-
-  border: 20px solid #ffffff;
- }
-
-
-
-  
-  .blathersInfo {text-align: left;
-    background-color: #ffff;
-    z-index: -2;
-    border-radius: 10%;}
-  
-
-  .quoteTriangle {width: 0px;
-    height: 0px;
-    border-left: 31px solid transparent;
-    border-right: 31px solid rgb(255, 255, 255);
-    border-bottom: 31px solid transparent;
-  transform: rotate(89deg);
-  z-index: -1;
-}
-
-.exitButton button {padding: 10px 15px;}
-
-
-.overlay {position:absolute;
-  z-index:999;
-  width:100%;
-  height:100%;}
-
-  .overlay2 {filter: brightness(45%);}
-
+.exitButton button {padding: 10px 15px;
+  position: absolute;
+  right: 1%;
+top: 1%;}
 
 #fishInfoColumn {max-width: 20%;
 width: 20%;}
-    
-  
-/*Mobile Sized*/
-    @media only screen and (max-width: 500px){.blathersInfo {opacity: 0%!important;}
-
-.Blathers {opacity: 0%!important;}
-
-  .btn, .btn:hover, .btn-secondary:not(:disabled):not(.disabled) {      padding: 5px 5px;}
-
-  .container {padding: 0px;
-    margin: 0;
-    margin-left: 2%;
-  max-width: 100%;}
-  .currentlyAvailable { position: absolute;
-    top: 280px;
-    left: 50px;
-  }
-  .currentlyAvailable h2 {font-size: 20px;
-    position: relative;
-    top:  -10px;
-    left: 20px;
-    height: 100px;
-    width: 260px
-}
-
-.footer {margin-top: 180px;}
-
-  .Header {min-width: 100%;
-min-height: 80px;
-right: 1.5%;
-}
-
-.headerText h1 {font-size: 22px;
-position: relative;
-width: 180px;
-top: -4px;
-font-weight: bold;
-left: 53%;}
-
-.loadingFish {position: relative;
-  right: 215px;
-}
-
-.column {margin-bottom: 0px;
-  max-height: 310px;}
-  
-.CurrentHemisphere h2 {white-space: nowrap;
-    font-size: 20px;
-    font-weight: bold;
-  position: relative;
-left: -45%;
-  top: 5px;}
 
 
-  
-.horizontalRow {display: flex;
-flex-wrap: wrap;
-margin-top: 85px;
-position: relative;
-left: 2px;
-width: 100%;
-top: 130px;
-} 
-  
-  
-.active {font-size: 12px;
-min-height: 200px;
-max-width: 150px;
-position: relative;
-left: 5px;}
-  
-.fishPicture {            max-width: 55px;
-        max-height: 82px;}
-        
-  .fishPicture2 {      filter: contrast(0%) brightness(105%)  grayscale(80%);
-  max-width: 55px;
- max-height: 82px;}
-    
-.Northern {position: absolute;
-left: 50px;
-top: 121px;
-}
-  
- .Southern {position: absolute;
-left: 230px;
-top: 121px;
-}
+.fishInfoHidden, .bugInfoHidden, .SeaCrittersInfoHidden {z-index: -1;
+  background-Image: url(./bigmarble.jpg)}
 
-.DisplaySeaCritters  .loadingFish {position: relative;
-  left: 200px!important;}
-
-.loadingFish h1 {  font-size: 22px!important;
-  position: relative;
-  font-weight: bold;
-  right: 5px;
-}
-
-.bugInfoHidden .columnRight li {margin-top: 30px;
-position: relative;
-bottom: 50px;}
-
-.bugInfoHidden, .fishInfoHidden, .SeaCrittersInfoHidden {max-width: 95%;
-  min-width: 385px;
-  min-height: 720px;
-position: relative;
-top: -350px!important;
-left: -1%!important;}
-
-.columnRight span {font-size: 22px!important;
-font-weight: bold;}
-
-.columnRight {position: absolute;
-bottom: 275px;
-left: -8%;}
-
-.SeaCrittersInfoHidden .columnRight {bottom: 370px;}
-.columnRight li {margin-top: 42px;}
-.iconLinks {position: relative;
-top: -40px;
-left: 12px;}
-
-.exitButton{position: absolute;
-  left: 230px;
-  top: 2px;}
-
-.months p {padding-top: 5px;}
-
-.months1, .months2 {position: relative;
-left: 25%;
-top: 105px;}
-
-.monthsHeader {font-size: 20px;
-position: relative;
-font-weight: bold;
-left: 90%;
-top: 55px;}
-.quote {position: absolute;
-  font-size: 14px;
-bottom: 10px;
-left: -2px;
-width: 350px;}
-.fishRealistic {max-height: 220px;
-max-width: 280px;
-position: absolute;
-bottom: 55px;
-left: 30px;}
-
-.fishName, .bugName, .seaName {
-  font-size: 24px!important;
-  position: relative;
-top: 455px;
-left: -340px!important;
-}
-
-.seaName {top: 400px;}
-.bugName {font-size: 20px!important;
-top: 400px;}
-.bugName, .seaName{
-  left: -368px!important;
-  white-space: nowrap;}
-.quoteTriangle {opacity: 0%;
-}
-
-.kk {opacity: 0%;}
-
-.dropdown {position: absolute;
-  right: 99%;
-top: 200px;}
-  
-  .dropdown2{ position: absolute;
-  left: 230px;
-  top: 200px;}
-  
-
-.sealoading {position: relative;
-    right: 40px;}
-
-}
-/*Tablet Sized*/
-@media only screen and (max-width: 1025px) and (min-width: 501px) 
-{ 
-body {overflow: hidden;}
-
-.column {max-width: 60px!important;
-  min-width: 60px;}
-
- .SeaCrittersInfoHidden .columnRight, .fishInfoHidden .columnRight, .bugInfoHidden .columnRight {position: relative;
-    left: 95%;
-    top: 14%;
-    letter-spacing: 1px;
-  }
-
-   .fishInfoHidden .exitButton, .bugInfoHidden .exitButton, .SeaCrittersInfoHidden .exitButton{position: absolute;
-    right: 115px;
-    top: 5px;
-    }
-
-     .fishName, .bugName, .seaName {font-size: 17px;
-      position: relative;
-      bottom: 65px;
-    right: 110px;}
-  
-.fishRealistic {max-height: 180px;
-max-width: 180px;
-min-height: 100px;
-min-width: 200px;
-position: relative;
-top: 25px;
-right: 110px;}
-    
-.location {position: relative;
-bottom: 40px;
-}
-
-.fishInfoHidden, .bugInfoHidden { width: 100%; 
+  .fishInfoHidden, .bugInfoHidden { width: 95%; 
+    min-width: 95%;
     height: 100%;
-    min-Height: 720px;
-    position: absolute;
-    top: -96%!important;
-    left: -2.9%!important;
-  margin: 15px 0px 0px 5px;}
+    min-Height: 750px;
+  margin: 5px 0px 0px 5px;}
 
-.monthsHeader {white-space: nowrap;
+  .fishName, .bugName, .seaName {font-size: 26px;
+    margin-top: 40px;
+   }
+
+  .SeaCrittersInfoHidden { width: 120%; 
+    min-Height: 750px;
+  margin: 5px 0px 0px 5px;}
+
+.fishImage, .bugImage, .SeaCrittersImage {border: 1px solid #d1cca6;
+z-index: 2;}
+
+.fishPicture, .fishPicture2 {width: 95%; height: 95%;}
+
+
+
+.getSeaCrittersInfo .fishPicture, .getSeaCrittersInfo .fishPicture2 {width: 62%; height: 62%;}
+
+
+
+.fishPicture:hover, .fishPicture2:hover {cursor: pointer;}
+.fishPicture, .fishPicture2 {user-select: none;}
+.fishPicture2 {  filter: contrast(0%) brightness(140%)  grayscale(80%);}
+
+.fishRealistic {
+  background: radial-gradient(circle, rgb(231, 235, 248) 0%, rgb(248, 218, 247) 100%);
+  border: 20px solid #ffffff; 
+  max-height: 60%;
+    width: 350px;
+    position: relative;
+   }
+
+.footer {font-size: 18px;
+text-align: center;
+margin-top: 130px;}
+
+.getFishInfo .horizontalRow {display: flex;
+flex-direction: row;
+width: 100%;
+position: relative; 
+top: 80px;
+left: .5%;}
+
+.getSeaCrittersInfo .horizontalRow {display: flex;
+flex-direction: row;
+position: relative; 
+align-content: center;
+top: 80px;
+margin-left: auto;
+margin-right: auto;
+width: 75%;}
+
+.getBugInfo .horizontalRow {display: flex;
+flex-direction: row;
+position: relative; 
+width: 100%;
+top: 80px;
+left: 0.5%;}
+
+
+
+.Header {box-shadow: 0px 2px 8px #dbd1a9;
+    user-select: none;
+    min-height: 80px;
+    background-image: url(./bigmarble.jpg);
+    background-repeat: repeat;
+    background-position-y: -100px;}
+    
+  .headerText {position: relative;
+  text-align: right;	
+  top: 35px;}
+
+.hrow {display: flex;
+flex-direction: row;}
+
+#inactive {display: none;}
+
+.left {float: left;}
+
+.SeaCrittersInfo .left {width: 100%;}
+
+.loadingFish {margin-top: 100px;
+  width: 550px;
+  margin-left: auto;
+  margin-right: auto;
+  white-space: nowrap;}
+
+
+.months {display: flex;
+  flex-direction: column;
+  justify-items: center;
+  font-size: 1.5vw;}
+
+.getSeaCrittersInfo .hrow {width: 80%;}
+
+  .monthsHeader {white-space: nowrap;
     font-size: 24px;
     font-weight: bold;
       position: relative;
-  bottom: 96px;
-  left: 562px;
+margin-top: 8px;
+margin-bottom: 10px;
+  left: 39.5%;
     }
 
-  .months {
-      position: relative;
-      top: 605px;
-      text-align: center;
-      right: 400%;
-      font-size: 18px;}
-      
-.months2 {display: flex;
-        flex-direction: row;
-      position: relative;
-      top: 60px;
-      right: 975px;}
+  .months p {margin-left: 6%;
+    margin-right: 6%;
+      max-height: 6%;
+      padding: 5px 8px;}
 
-.months1 {display: flex;
-      flex-direction: row;}
-    
-.months p {margin-left: 70px;
-        max-height: 20px;
-        padding: 5px 9px 7px 9px;}
-
-.SeaCrittersInfoHidden { width: 90%; 
-    min-width: 1000px;
-    height: 100%;
-    min-Height: 720px;
-  margin: 15px 0px 0px 5px;
-  top: -85%!important;
-left: -290px!important;}
-.fishPicture {            max-width: 55px;
-  max-height: 82px;}
+  .months1 {    display: flex;
+    flex-direction: row;}
   
-.fishPicture2 {      filter: contrast(0%) brightness(105%)  grayscale(80%);
-  max-width: 55px;
-  max-height: 82px;}
-
-.fishImage, .bugImage, .SeaCrittersImage {min-width: 47px;
-    max-width: 63px;
-  min-height: 60px;}
-
-.horizontalRow {
-    position: relative;
-    left: 2.5%;
-    } 
-
-.Northern {
-    left: 68%;
+  .months2 {display: flex;
+    flex-direction: row;
+    margin-bottom: 2.5%;
   }
 
- .polaroid  {max-width: 200px;
-    min-height: 95px;
-    position: relative;
-  right: 30px;}
 
-  .polaroidBug {max-width: 200px;
-      min-height: 105px;
-    position: relative;
-  right: 30px;} 
+.Northern { 
+  left: 600px;}
+  .Southern { 
+left: 862px;}
 
-
- .Southern { 
-    left: 95%;}
-
-  .buttons .hrow {position: relative;
-    left: -40%;}
-  .btn, .btn:hover, .btn-secondary:not(:disabled):not(.disabled) {      padding: 8px 18px;}
-
-.Blathers {max-width: 150px!important;  
-    position: absolute;
-    right: 332px;
-    top: 325px;}
-
-          
-    .blathersInfo {position: absolute;
-      right: 10px;
-      font-size: 15px;
-      bottom: 270px;
-      min-width: 200px;
-      max-width: 380px;
-      padding: 10px 20px;
-    }
-
-    .container {
-
-    padding: 0;}
-
-  .footer {
-    position: relative;
-    margin-top: 80px;
-  }
-  .Header {position: relative;
-    bottom: 10px;
-    left: 0.25%;
-    min-width: 100%;
-    max-width: 100%;}
-  
-  .Header h1{ font-size: 32px;
-  position: relative;
-right: 20px;}
-
-.headerText {
-top: 10px;}
-.Header .left {position: relative;
-left: -4%;}
-.CurrentHemisphere h2 {white-space: nowrap;
-  font-size: 25px;
-position: relative;
-font-weight: bold;
-bottom: 6px;}
-
-.currentlyAvailable h2 {white-space: nowrap;
-  font-size: 26px;
-  font-weight: bold;
-position: relative;
-top: 80px;
-right: 14%;}
-
-  .quote {
-  font-size: 18px;
-  position: relative;
-  top: 10px;
-  right: 105px;
-}
-
-.fishInfoHidden .quoteTriangle, .bugInfoHidden .quoteTriangle, .SeaCrittersInfoHidden .quoteTriangle {position: absolute;
-  left: 618px;
-  top: 397px;}
-.getSeaCrittersInfo .horizontalRow {width: 100%;
-  margin-left: 26%;
-  margin-right: auto;
-  display: flex;
-      flex-direction: row;
-      position: relative; 
-      top: 40px;
-  }
-  .getFishInfo .horizontalRow, .getBugInfo .horizontalRow {width: 100%;}
-
-  .dropdown {position: relative;
-  left: 125%;}
-
-  .dropdown2 {position: relative;
-  left: 27%;}
-}
-
-
-/* Pc sized */
-@media (min-width: 1025px) {
-    .btn, .btn:hover, .btn-secondary:not(:disabled):not(.disabled) {      padding: 8px 18px;}
-
-   .fishInfoHidden .exitButton, .bugInfoHidden .exitButton, .SeaCrittersInfoHidden .exitButton {position: absolute;
-      right: 115px;
-      top: 5px;
-      }
-      
-    .sealoading {position: relative;
-      right: 80px;}
-
-     .fishInfoHidden .quoteTriangle, .bugInfoHidden .quoteTriangle {position: absolute;
-        right: 10%;
-         top: 46.4%;}
-       
-         .SeaCrittersInfoHidden .quoteTriangle {position: absolute;
-          left: 85.4%;
-         top: 46.5%;}
-
-         .fishInfoHidden, .bugInfoHidden { width: 90%; 
-          min-width: 90%;
-          height: 100%;
-          min-Height: 750px;
-        margin: 5px 0px 0px 5px;}
-
-      .fishPicture {            max-width: 90%;
-          max-height: 90%}
         
-    .getSeaCrittersInfo .fishPicture {min-width: 96px;
-        max-width: 96px;
-        max-height: 96px;
-      min-height: 96px;}
-.fishPicture2 {
-            max-width: 96px;
-            max-height: 98px;}
-    
-        .SeaCrittersInfoHidden { width: 130%; 
-          height: 100%;
-          min-Height: 750px;
-        margin: 5px 0px 0px 5px;}
-          
-          .fishRealistic {max-height: 90%;
-            max-width: 80%;
-            min-width: 80%;
-            position: relative;
-            top: 25px;
-            right: 110px;}
-    
-.Blathers {max-width: 14%!important;
-width: 14%;
-position: absolute;
-z-index: -2;
-right: 0.6%;
-top: 247px;}
-              
- .blathersInfo {position: absolute;
-  right: 11%;
-font-size: 15px;
-bottom: 350px;
- max-width: 34%;
-width: 32%;
- padding: 10px 20px;
-              }
 
- .SeaCrittersInfoHidden .columnRight, .fishInfoHidden .columnRight {position: absolute;
- right: 53%;
-  top: 8%;
-   font-size: 1.5vw;
-  letter-spacing: 2px;
-}
-              
-  .bugInfoHidden .columnRight {position: absolute;
-                  right: 49.5%;
-                    top: 8%;
-                    font-size: 1.5vw;
-                    letter-spacing: 2px;
-                  }
-              
-.fishImage, .bugImage, .SeaCrittersImage {    min-width: 98px;
-                    min-height: 98px;}
-                
-                  
-.fishName, .bugName, .seaName {font-size: 26px;
-position: relative;
-bottom: 60px;
-right: 110px;}
-                
-  .column {max-width: 100px;
-  min-width: 98px;}
-                  
-.currentlyAvailable {position: relative;
-    top: 70px;
-    right: 120px;}
 
-.months {
-      position: absolute;
-      bottom: 10%;
-      text-align: center;
-      right: 52%;
-      font-size: 1.5vw;}
-    
-.months1 {    display: flex;
-        flex-direction: row;}
+.sealoading {position: relative;
+  right: 80px;}
 
-.months2 {display: flex;
-        flex-direction: row;
-      position: absolute;
-      top: 115%;
-      left: 11%;
-      }
-    
-.months p {margin-left: 6%;
-      margin-right: 6%;
-        max-height: 6%;
-        padding: 0.5% 1.5% 0.5% 1.5%;}
-        
-    
-        
-.monthsHeader {white-space: nowrap;
-          font-size: 24px;
-          font-weight: bold;
-            position: relative;
-        bottom: 62px;
-        left: 69.5%;
-          }
-          
-.polaroid  {max-width: 80%;
-            margin-left: 1.7%;
-          min-height: 95px;}
-    
-.fishInfoHidden .polaroid {min-height: 110px;}
-    
- .polaroidBug  { max-width: 80%;
-          margin-left: 1.7%;
-          min-height: 105px;}
-          
-.polaroid {position: relative;
-          right: 80px;
-          top: 20px;}
-          
-.polaroidBug {position: relative;
-            z-index: -1;
-            right: 80px;
-          top: 20px;}
-    
-.getSeaCrittersInfo .horizontalRow {width: 1040px;
-            margin-left: 17.5%;
-            margin-right: auto;
-            display: flex;
-                flex-direction: row;
-                position: relative; 
-                top: 80px;
-            }
+  .SeaCrittersInfoHidden .quote {color: #180052;}
+  .fishInfoHidden .quote {color:  #004d80;}
+  .bugInfoHidden .quote {color: #007910; }
 
-.location {position: relative;
- bottom: 40px;
-}
-
-.quote {margin-top: 20px;
-  margin-bottom: 20px;
+.quote {margin-top: 15px;
+  padding-bottom: 20px;
 font-size: 25px;
-position: relative;
-top: 15px;
-right: 115px;
+width: 50%;
+margin-left: auto;
+margin-right: auto;
+
 }
-              
-  }
+.right {float: right;}
+

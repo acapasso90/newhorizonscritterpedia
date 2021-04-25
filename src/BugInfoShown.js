@@ -1,5 +1,4 @@
 import React, {useState} from "react";
-import Blathers from "./Blathers.png";
 
 export default function BugInfoShown(props){
   const unavailable = {
@@ -34,32 +33,25 @@ const [decStyle, setDecStyle] = useState(unavailable);
 const english = "name-USen";
  const flick = "price-flick";
   const phrase = "catch-phrase";
- const blathersPhrase = "museum-phrase";
     const northernArray = "month-array-northern";
   const southernArray = "month-array-southern"; 
     const timeArray = "time-array";
-    const blathersStyle = {maxWidth: "200px",
-    marginTop: "120px",}
     const infoShownStyle = {
-      lineHeight: "normal",
-      opacity: "100%",
       backgroundColor: "#F5EBC1",
       zIndex: 2,
+      display: "inherit",
       textTransform: "capitalize",
       border: "4px",
       borderColor: "#7a3737",
       paddingRight: "50px",
       borderStyle: "solid",
       position: "absolute",      
-      top: "-60%",
+      height: "780px",
       left: "2%",
+      top: "-300px",
     };
     const infoHiddenStyle = {
-      lineHeight: "0px",
-      width: "0px",
-      height: "0px",
-      opacity: "0%",
-      position: "absolute",
+      display: "none",
     };
       const [style, SetStyle] = useState(infoHiddenStyle);
       const [id, SetId] = useState("inactive");
@@ -82,7 +74,6 @@ const english = "name-USen";
         let priceNormal = props.data.price;
        let  priceflick = props.data[flick];
       let  catchphrase = props.data[phrase];
-      let blathers = props.data[blathersPhrase];
         let allDay = props.data.availability.isAllDay;
         if (allDay === true) {
           timeAvailable = true;
@@ -147,11 +138,11 @@ if (monthAvailable === true && timeAvailable === true)
   <img src={image} alt="bug icon" className="fishPicture"  />        </div>
   <div className="left">
   <div className="bugInfoHidden" style={style} id={id} >
-  <div className="hrow">
-    <div className="column">
  
-<div className="Months">
+  <div className="Months">
+<div className="hrow">
     <div className="months">
+      
     <h4 className="monthsHeader"> Months Available</h4>
     <div className="months1">
     <p className="Jan"  style={janStyle}>January</p>
@@ -170,13 +161,12 @@ if (monthAvailable === true && timeAvailable === true)
       <p className="Dec"style={decStyle} >December</p>
       </div>
   </div>
-  </div>
-</div>
+  <div className="exitButton"><button onClick={DisplayBugInfo}>Go Back</button></div>
+    </div>
 <div className="hrow">
       <div className="column">
 <ul className="unorderedList">
 <li> <img src={realisticImage} alt="bug realistic" className="fishRealistic" /></li>
-<li><div className="polaroidBug"></div></li>
 <li className="bugName">{bugName}</li>
 <li className="quote">&quot;{catchphrase}&quot;</li>
 </ul>   </div>
@@ -192,12 +182,6 @@ if (monthAvailable === true && timeAvailable === true)
 </div>
 </div>
 </div>
-    <div className="column">
-    <img src={Blathers} alt="Blathers" className="Blathers" style={blathersStyle} />
-    <div className="quoteTriangle"></div>
-    <div className="blathersInfo" >&quot;{blathers}&quot;</div>
-    <div className="exitButton"><button onClick={DisplayBugInfo}>Go Back</button></div>
-    </div>
     </div>
   </div>
 </div>
@@ -212,12 +196,10 @@ if (monthAvailable === true && timeAvailable === true)
       <img src={image} alt="bug icon" className="fishPicture2"  />        </div>
       <div className="left">
       <div className="bugInfoHidden" style={style} id={id} >
-      <div className="hrow">
-        <div className="column">
-
-    
 <div className="Months">
+<div className="hrow">
     <div className="months">
+      
     <h4 className="monthsHeader"> Months Available</h4>
     <div className="months1">
     <p className="Jan"  style={janStyle}>January</p>
@@ -236,13 +218,12 @@ if (monthAvailable === true && timeAvailable === true)
       <p className="Dec"style={decStyle} >December</p>
       </div>
   </div>
-  </div>
+  <div className="exitButton"><button onClick={DisplayBugInfo}>Go Back</button></div>
     </div>
     <div className="hrow">
           <div className="column">
           <ul className="unorderedList">
     <li> <img src={realisticImage} alt="bug realistic" className="fishRealistic" /></li>
-    <li><div className="polaroidBug"></div></li>
     <li className="bugName">{bugName}</li>
     <li className="quote">&quot;{catchphrase}&quot;</li>
     </ul>   </div>
@@ -258,12 +239,6 @@ if (monthAvailable === true && timeAvailable === true)
     </div>
     </div>
     </div>
-        <div className="column">
-        <img src={Blathers} alt="Blathers" className="Blathers" style={blathersStyle} />
-        <div className="quoteTriangle"></div>
-        <div className="blathersInfo" >&quot;{blathers}&quot;</div>
-        <div className="exitButton"><button onClick={DisplayBugInfo}>Go Back</button></div>
-        </div>
         </div>
       </div>
     </div>

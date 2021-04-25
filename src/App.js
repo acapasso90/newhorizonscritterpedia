@@ -25,7 +25,7 @@ const [fishsrc, setFishsrc] = useState(fishActive);
 const [backdropheight, setBackdropheight] = useState("");
 
 useEffect(() => {
-  let screenheight = (screen.height)*2;
+  let screenheight = (screen.height)*1.20;
   setBackdropheight(screenheight);
   }, []);
 
