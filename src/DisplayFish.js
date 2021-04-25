@@ -68,7 +68,7 @@ if (loaded){return(
   <button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
    Select an hour
   </button>
-  <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
+  <div className="dropdown-menu" aria-labelledby="dropdownMenuButton" id="timeDropdown">
   <a className="dropdown-item" href="#" onClick={() => setHour(0)} >MIDNIGHT to 1AM</a>
     <a className="dropdown-item" href="#" onClick={() => setHour(1)}>1AM to 2AM</a>
     <a className="dropdown-item" href="#" onClick={() => setHour(2)}>2AM to 3AM</a>

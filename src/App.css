@@ -30,6 +30,7 @@ button:hover {background-color: #f0b786;
 }
 
 ul {list-style: none;
+  padding: 0;
 }
 
 ::selection{background-color:#74573c;
@@ -102,6 +103,7 @@ right: 60px;}
   .butterfly {left: 12px!important;}
 
   .iconLinks {position: relative;
+    height: 50px;
     user-select: none;
   bottom: 30px;
   left: 35px;}
@@ -142,7 +144,7 @@ font-size: 18px;
   font-size: 28px;}
 
   .columnRight { position: absolute;
-  right: 25%;}
+  right: 15%;}
 
   .columnRight li {margin-bottom: 40px;
   font-size: 14pt;}
@@ -154,8 +156,7 @@ font-size: 18px;
   padding: 0; }
 
   
-.CurrentHemisphere h2 {font-size: 28px;
-padding-right: 230px;}
+.CurrentHemisphere h2 {font-size: 28px;}
 
 
  .currentlyAvailable {width: 100%;
@@ -231,7 +232,7 @@ z-index: 2;}
 
 .footer {font-size: 18px;
 text-align: center;
-margin-top: 130px;}
+margin-top: 100px;}
 
 .getFishInfo .horizontalRow {display: flex;
 flex-direction: row;
@@ -261,6 +262,7 @@ left: 0.5%;}
 .Header {box-shadow: 0px 2px 8px #dbd1a9;
     user-select: none;
     min-height: 80px;
+    width: 100%;
     background-image: url(./bigmarble.jpg);
     background-repeat: repeat;
     background-position-y: -100px;}
@@ -274,8 +276,7 @@ flex-direction: row;}
 
 #inactive {display: none;}
 
-.instructions {width: 88%;
-  padding-right: 10px;
+.instructions {width: 90%;
 margin-top: 20px;
 font-size: 13pt;}
 
@@ -319,12 +320,14 @@ margin-bottom: 10px;
     margin-bottom: 2.5%;
   }
 
-  
+.noScroll {
+overflow: hidden;}
+
 .Southern {position: absolute;
-  right: 370px;}
+  right: 360px;}
   
   .Northern{ position: absolute;
-  left: 375px;}
+  left: 355px;}
 
 
 
@@ -345,8 +348,143 @@ margin-right: auto;
 }
 .right {float: right;}
 
+#timeDropdown {position: absolute;
+  width: 225px;
+  left: 185px!important;}
+
+#timeDropdown .dropdown-item {padding-left: 40px!important;}
 /*Tablet Sized*/
 @media only screen and (max-width: 1025px) and (min-width: 501px) 
 { 
+  .fishInfoHidden, .bugInfoHidden, .SeaCrittersInfoHidden { width: 95%; 
+    min-width: 95%;
+    position: fixed;      
+    height: 700px;
+    left: 2%;
+    top: 0;
+  margin: 5px 0px 0px 5px;}
 
+  .columnRight {right: 4%;}
+
+  .footer {
+    margin-top: 80px;
+  }
+}
+
+/*Mobile Sized*/
+@media only screen and (max-width: 500px){
+  .fishInfoHidden, .bugInfoHidden, .SeaCrittersInfoHidden { width: 95%; 
+    min-width: 95%;
+    position: fixed;      
+    height: 700px;
+    left: 2%;
+    top: 0;
+  margin: 5px 0px 0px 5px;}
+
+.btn, .btn:hover, .btn-secondary:not(:disabled):not(.disabled) {      padding: 5px 5px;}
+
+.column {width: 85%;}
+.columnRight {position: absolute;
+  bottom: 105px;
+right: 10px;
+}
+
+
+.currentlyAvailable {position: relative;
+top: 50px;
+margin-bottom: 40px;}
+.CurrentHemisphere h2 {position: relative;
+top: 55px;}
+
+  .dropdown {position: absolute;
+    right: 97%;
+    top: 40%;}
+    
+    .dropdown2{ position: absolute;
+    left: 56%;
+    top: 40%;}
+
+    #timeDropdown {
+      width: 225px;
+      left: -40px!important;}
+
+      .fishName, .bugName, .seaName {
+        font-size: 18pt;
+        position: relative;
+        top: -40px;
+      }
+
+    .fishRealistic {
+    width: 180px;
+    position: relative;
+    top: -40px;
+    }
+    
+  .fishPicture, .fishPicture2 {width: 55px!important;
+    height: 82px!important;}
+
+  .headerText h1 {font-size: 23px;
+    position: relative;
+    width: 180px;
+    top: -34px;
+    font-weight: bold;
+    left: 53%;}
+
+    .horizontalRow {display: flex;
+      flex-wrap: wrap;
+      margin-top: 85px;
+      position: relative;
+      left: 2px;
+      width: 100%;
+      top: 130px;
+      } 
+
+    .instructions {width: 100%;
+      padding-right: 0px;
+    margin-top: 20px;
+    font-size: 13pt;}
+    
+    .kk {display: none; }
+    .loadingFish {position: relative;
+      right: 17%;
+    }
+    
+.loadingFish h1 {  font-size: 22px!important;
+  white-space: normal;
+  font-weight: bold;
+}
+
+.monthsHeader {
+  font-size: 18pt;
+  text-align: left;
+  left: 8%;
+}
+
+.months {flex-direction: row;
+font-size: 12pt;}
+
+.months p {padding-top: 5px;}
+
+.months1, .months2 {position: relative;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin-bottom: 0;
+top: 10px;}
+
+
+.quote {font-size: 13pt;
+width: 75%;}
+.sealoading {
+  right: 0px;}
+
+  
+  .Northern {position: absolute;
+    left: 50px;
+    top: 60%;
+    }
+      
+     .Southern {position: absolute;
+    left: 55%;
+    top: 60%;
+    }
 }

@@ -42,7 +42,7 @@ useEffect(() => {
 if (loaded){return(
 <div className="getSeaCrittersInfo">
     <div className="instructions">
-        <p>Shows catchable deep sea creatures for the current time and month for the Northern Hemisphere. Hemisphere and Date can be changed with the buttons below. Gray sea creatures are not catchable at the current/inputted date and time.  </p>
+        <p>Shows catchable deep sea creatures for the current time and month for the Northern Hemisphere. Hemisphere, Date and Time can be changed with the buttons below. Gray sea creatures are not catchable at the current/inputted date and time.  </p>
     </div>
   <div className="CurrentHemisphere"><h2>Current Hemisphere: {hemisphere} </h2></div>
         <div className="buttons">
@@ -70,7 +70,7 @@ if (loaded){return(
   <button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
    Select an hour
   </button>
-  <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
+  <div className="dropdown-menu" aria-labelledby="dropdownMenuButton" id="timeDropdown">
   <a className="dropdown-item" href="#" onClick={() => setHour(0)} >MIDNIGHT to 1AM</a>
     <a className="dropdown-item" href="#" onClick={() => setHour(1)}>1AM to 2AM</a>
     <a className="dropdown-item" href="#" onClick={() => setHour(2)}>2AM to 3AM</a>
