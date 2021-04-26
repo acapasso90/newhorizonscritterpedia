@@ -112,8 +112,9 @@ if (time.includes(hours)) { timeAvailable = true;}
 
 
  // sets the Months in the infoHiddenStyle to active if they are included in availability or if allYear is true. 
-function ShowMonths(){ if (allYear === true) {setJanStyle(available), setFebStyle(available), setMarStyle(available), setJunStyle(available), setJulStyle(available)
-  setAugStyle(available); setSepStyle(available), setOctStyle(available), setNovStyle(available), setDecStyle(available);} 
+ function ShowMonths(){
+  if(allYear === true){setJanStyle(available), setFebStyle(available), setMarStyle(available), setAprStyle(available), setMayStyle(available), setJunStyle(available), setJulStyle(available),
+  setAugStyle(available), setSepStyle(available), setOctStyle(available), setNovStyle(available), setDecStyle(available);} 
   else { if(availability.includes(1)){setJanStyle(available);}
     if(availability.includes(2)){setFebStyle(available);}
     if(availability.includes(3)){setMarStyle(available);}
