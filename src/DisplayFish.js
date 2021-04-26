@@ -40,9 +40,9 @@ const [month, setMonth] = useState(currentMonth);
 if (loaded){return(
 <div className="getFishInfo">
     <div className="instructions">
-        <p>Shows catchable fish for the current time and month for the Northern Hemisphere. Hemisphere, Date and Time can be changed with the buttons below. Gray fish are not catchable at the current/inputted date and time.  </p>
+        <p>Shows catchable fish for the current time and month for the Northern Hemisphere. Hemisphere, Date and Time can be changed with the buttons below. Gray fish are not catchable at the current/inputted date and time, but any fish is clickable to get more information.  </p>
     </div>
-             <div className="CurrentHemisphere"><h2>Current Hemisphere: {hemisphere} </h2></div>
+    <div className="CurrentHemisphere"><h2>Current Hemisphere: <span className="currentMonth">{hemisphere}</span> </h2></div>
         <div className="buttons">
             <div className="hrow">
             <div className="dropdown">
@@ -99,7 +99,7 @@ if (loaded){return(
             <button className="Southern" onClick={() => setHemisphere("Southern")}>Southern</button>
             </div>
         </div>
-        <div className="currentlyAvailable"><h2>Fish available between {formattedHours} in {formattedMonths}:</h2></div>
+        <div className="currentlyAvailable"><h2>Fish available between available between <span className="currentMonth" style={{textDecoration: "underline"}} >{formattedHours}</span> in <span className="currentMonth">{formattedMonths}</span>:</h2></div>
         <div className="horizontalRow">
             <div className="column" id="fishInfoColumn">
         <FishInfoShown data={fishInfo[0]} location={hemisphere} month={month} hour={hour} /> 

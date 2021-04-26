@@ -126,14 +126,9 @@ display: none;}
 .bugName {font-size: 21px;
 color: #007910}
 
-.kk {position: relative;
-  bottom: 106px;
-left: 200px;
-text-decoration: none;
-color: #8B7A65;
-font-weight: bold;
-font-size: 18px;
-}
+.currentMonth {
+  color: #440f0f;}
+
 
 .fishName {color: #004d80;}
 
@@ -167,7 +162,8 @@ margin-top: 80px;}
   .dropdown2{ position: absolute;
   left: 75px;}
   
-  .dropdown-menu {background-image: url(./dropdownmarble.jpg)}
+  .dropdown-menu {background-image: url(./dropdownmarble.jpg);
+    background-color: #d1cca6;}
   
  .dropdown-item:hover {background-color: #fcecdf;
 color: #74574c;
@@ -275,7 +271,10 @@ flex-direction: row;}
 
 #inactive {display: none;}
 
-.instructions {width: 90%;
+.instructions {width: 98%;
+  text-align: center;
+position: relative;
+left: 20px;
 margin-top: 20px;
 font-size: 13pt;}
 
@@ -446,10 +445,10 @@ top: 55px;}
 
     .instructions {width: 100%;
       padding-right: 0px;
-    margin-top: 20px;
-    font-size: 13pt;}
+      left: 0;
+    margin-top: 10px;
+    font-size: 12pt;}
     
-    .kk {display: none; }
     .loadingFish {position: relative;
       right: 17%;
     }

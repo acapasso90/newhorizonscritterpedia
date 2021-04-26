@@ -117,7 +117,6 @@ return (
 <NavLink to="/deepsea" style={{ textDecoration: 'none' }} className="link"><img src={seasrc} alt="deep-sea" className="octopus" onClick={seaLinkActive}  /> </NavLink>
 <label style={styleOctopus} className="seaLabel">Sea Creatures</label>
 </nav>
-<a href="https://determined-lamarr-edc795.netlify.app/" className="kk" target="_blank"  rel="noreferrer">K.K. Slider Jukebox</a>
 </div>
 </div>
 
