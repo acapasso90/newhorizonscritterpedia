@@ -107,7 +107,7 @@ useEffect(() => { setJanStyle(unavailable);
    setDecStyle(unavailable);
  }, [props.location]);
 
- console.log(availability)
+
 
    // sets the Months in the infoHiddenStyle to active if they are included in availability or if allYear is true. 
    function ShowMonths(){
