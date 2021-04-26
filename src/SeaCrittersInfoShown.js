@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 
 
 export default function SeaCrittersInfoShown(props){
@@ -92,6 +92,22 @@ const [decStyle, setDecStyle] = useState(unavailable);
     if (availability.includes(month)){monthAvailable = true;} 
    
 
+     // Makes axios request for fish information then cancels request on cleanup function
+useEffect(() => { setJanStyle(unavailable);
+   setFebStyle(unavailable);
+   setMarStyle(unavailable);
+   setAprStyle(unavailable);
+   setMayStyle(unavailable);
+  setJunStyle(unavailable);
+   setJulStyle(unavailable);
+   setAugStyle(unavailable);
+   setSepStyle(unavailable);
+   setOctStyle(unavailable);
+   setNovStyle(unavailable);
+   setDecStyle(unavailable);
+ }, [props.location]);
+
+ console.log(availability)
 
    // sets the Months in the infoHiddenStyle to active if they are included in availability or if allYear is true. 
 function ShowMonths(){ if (allYear === true) {setJanStyle(available), setFebStyle(available), setMarStyle(available), setJunStyle(available), setJulStyle(available)

@@ -1,4 +1,4 @@
-import React, { useState} from "react";
+import React, { useState, useEffect } from "react";
 
 export default function FishInfoShown(props) {
   const unavailable = {
@@ -95,6 +95,21 @@ if (inputMonth != null){month = inputMonth}
 if (time.includes(hours)) { timeAvailable = true;}
 // if availability includes months then monthAvailable is set to true
  if (availability.includes(month)) {monthAvailable = true;}
+
+ useEffect(() => { setJanStyle(unavailable);
+  setFebStyle(unavailable);
+  setMarStyle(unavailable);
+  setAprStyle(unavailable);
+  setMayStyle(unavailable);
+ setJunStyle(unavailable);
+  setJulStyle(unavailable);
+  setAugStyle(unavailable);
+  setSepStyle(unavailable);
+  setOctStyle(unavailable);
+  setNovStyle(unavailable);
+  setDecStyle(unavailable);
+}, [props.location]);
+
 
  // sets the Months in the infoHiddenStyle to active if they are included in availability or if allYear is true. 
 function ShowMonths(){ if (allYear === true) {setJanStyle(available), setFebStyle(available), setMarStyle(available), setJunStyle(available), setJulStyle(available)

@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 
 export default function BugInfoShown(props){
   const unavailable = {
@@ -110,6 +110,20 @@ if (time.includes(hours)) { timeAvailable = true;}
    if(availability.includes(11)){setNovStyle(available);}
    if(availability.includes(12)){setDecStyle(available);}}
       }  
+
+      useEffect(() => { setJanStyle(unavailable);
+        setFebStyle(unavailable);
+        setMarStyle(unavailable);
+        setAprStyle(unavailable);
+        setMayStyle(unavailable);
+       setJunStyle(unavailable);
+        setJulStyle(unavailable);
+        setAugStyle(unavailable);
+        setSepStyle(unavailable);
+        setOctStyle(unavailable);
+        setNovStyle(unavailable);
+        setDecStyle(unavailable);
+      }, [props.location]);
 
 // if already in previously active state, makes inactive and sets style to infoHiddenStyle. Otherwise sets to active and sets style to infoShownStyle
 // and calls ShowMonths function to show active months
