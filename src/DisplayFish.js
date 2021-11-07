@@ -99,7 +99,7 @@ if (loaded){return(
             <button className="Southern" onClick={() => setHemisphere("Southern")}>Southern</button>
             </div>
         </div>
-        <div className="currentlyAvailable"><h2>Fish available between available between <span className="currentMonth" style={{textDecoration: "underline"}} >{formattedHours}</span> in <span className="currentMonth">{formattedMonths}</span>:</h2></div>
+        <div className="currentlyAvailable"><h2>Fish available between <span className="currentMonth" style={{textDecoration: "underline"}} >{formattedHours}</span> in <span className="currentMonth">{formattedMonths}</span>:</h2></div>
         <div className="horizontalRow">
             <div className="column" id="fishInfoColumn">
         <FishInfoShown data={fishInfo[0]} location={hemisphere} month={month} hour={hour} /> 

@@ -101,7 +101,7 @@ if (loaded){return(
             <button className="Southern" onClick={() => setHemisphere("Southern")}>Southern</button>
             </div>
         </div>
-        <div className="currentlyAvailable"><h2>Deep-Sea Creatures available between available between <span className="currentMonth" style={{textDecoration: "underline"}} >{formattedHours}</span> in <span className="currentMonth">{formattedMonths}</span>:</h2></div>
+        <div className="currentlyAvailable"><h2>Deep-Sea Creatures available between <span className="currentMonth" style={{textDecoration: "underline"}} >{formattedHours}</span> in <span className="currentMonth">{formattedMonths}</span>:</h2></div>
         <div className="horizontalRow">
         <div className="column" id="fishInfoColumn">
         <SeaCrittersInfoShown data={SeaCrittersInfo[0]}  month={month} hour={hour} location={hemisphere}/> 
