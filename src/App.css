@@ -1,3 +1,17 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(16, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+}
+
+.sea-critter-grid {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  width: 80%;
+  margin: 0 auto;
+}
+
 a {color: #702b2b;
 font-weight: bold;
 text-decoration: none;}
@@ -13,7 +27,7 @@ font-family: 'Short Stack', cursive;
 
 button {background-color: #da8f4d;
 border: 4px solid #702b2b;
-box-shadow: inset 1px 1px 5px #914215, inset -1px -1px 5px #914215;
+box-shadow: inset 1px 1px 3px #914215, inset -1px -1px 3px #914215;
 color: #440f0f;
 padding: 8px 18px;
 border-radius: 3px;
@@ -210,7 +224,7 @@ z-index: 2;}
 
 
 
-.getSeaCrittersInfo .fishPicture, .getSeaCrittersInfo .fishPicture2 {width: 55%; height: 55%;}
+.getSeaCrittersInfo .fishPicture, .getSeaCrittersInfo .fishPicture2 {width: 45%; height: 45%;}
 
 
 
