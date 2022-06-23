@@ -1,0 +1,89 @@
+.month:not(.available-month) {
+  text-decoration: line-through;
+}
+
+
+.available-month {
+  font-weight: bold;
+  border-width: 3px;
+  border-style: solid;
+  border-color: #702B2B;
+  background-color: #da8f4d;
+  border-radius: 2px;
+  color: #440f0f;
+  min-width: 100px;
+  margin: 0 auto;
+}
+
+.month-display {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.capitalize {
+  text-transform: capitalize;
+}
+
+
+.month-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(2, 1fr); 
+  margin: 15px auto 0px auto;
+  column-gap: 30px;
+  width: 80%;
+  row-gap: 10px;
+  text-align: center;
+}
+
+.modal-content {
+  background-color: #F5EBC1;
+}
+
+.modal-dialog {
+  max-width: 90%;
+  height: 80%;
+}
+
+.modal-dialog li {
+  margin: 20px 0;
+}
+
+.modal-dialog header {
+  font-weight: bolder;
+  font-size: 16pt;
+  text-decoration: underline;
+}
+
+.modal-header, .modal-dialog .row {
+  border-bottom: 1px solid #c99781;
+}
+
+.modal-dialog .row {
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 25px;
+  margin-bottom: 25px;
+}
+
+.modal-dialog img {
+    background: radial-gradient(circle, rgb(248, 244, 231) 0%, rgb(248, 231, 218) 100%);
+    border: 20px solid #ffffff; 
+    width: 300px;
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width: 800px) {
+  .month-grid {
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 10px;
+    width: 100%;
+  }
+
+  .modal-dialog {
+    max-width: 100%;
+    width: 96%;
+    height: 80%;
+  }
+}
+
