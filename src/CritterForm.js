@@ -54,11 +54,11 @@ export function CritterForm(){
             </Col>
             <Col >
               <ul>
-                {(selected.availability.location || selected.availability.time) && <li><header>Found: </header>{selected.availability.location} from {selected.availability.time} </li>}
+                {(selected.availability.location || selected.availability.time) && <li><header>Found: </header>{selected.availability.location} {selected.availability.time && ` from ${selected.availability.time}`} </li>}
                 {rarity && <li><header>Rarity:</header> {rarity} </li>}
-                <li><header>Sell price:</header> {priceNormal}</li>
-                {priceFlick && <li><header>Flick&apos;s Price:</header> {priceFlick}</li>}
-                {priceCJ && <li><header>CJ&apos;s Price:</header> {priceCJ} </li>}
+                <li><header>Sell price:</header> {priceNormal} bells</li>
+                {priceFlick && <li><header>Flick&apos;s Price:</header> {priceFlick} bells</li>}
+                {priceCJ && <li><header>CJ&apos;s Price:</header> {priceCJ} bells</li>}
                 {speed && <li><header> Speed:</header> {speed}</li>}
                 {shadow && <li><header> Shadow: </header> {shadow} </li>}
               </ul>
