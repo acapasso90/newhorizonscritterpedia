@@ -7,6 +7,7 @@ import Col from 'react-bootstrap/Col';
 import { 
   useNavigate,
     useOutletContext, 
+    useLocation,
     useParams } from 'react-router-dom'
 
 import "./CritterForm.css";
@@ -15,6 +16,8 @@ export function CritterForm(){
     const {availability, selected} = useOutletContext()
     const {name} = useParams();
     const english = "name-USen";
+
+    const match = useLocation()?.pathname?.split('/')[1];
 
     if (selected.name[english] !== name){
       return(null)
@@ -38,12 +41,13 @@ export function CritterForm(){
     return(
         <Modal
         show={true}
-        onHide={() => navigate(-1)}
+        onHide={() => navigate(`/${match}`)}
         backdrop="static"
         keyboard={false}
       >
-        <Modal.Header className="capitalize" closeButton>
+        <Modal.Header className="capitalize">
           <Modal.Title>{name}</Modal.Title>
+          <button onClick={() => navigate(-1)}> x</button>
         </Modal.Header>
         <Modal.Body className="text-center">
           <Row>
@@ -54,7 +58,7 @@ export function CritterForm(){
             </Col>
             <Col >
               <ul>
-                {(selected.availability.location || selected.availability.time) && <li><header>Found: </header>{selected.availability.location} {selected.availability.time && ` from ${selected.availability.time}`} </li>}
+                {(selected.availability.location || selected.availability.time) && <li><header>Found: </header>{selected.availability.location}{selected.availability.time ? ` from ${selected.availability.time}` : "" }  </li>}
                 {rarity && <li><header>Rarity:</header> {rarity} </li>}
                 <li><header>Sell price:</header> {priceNormal} bells</li>
                 {priceFlick && <li><header>Flick&apos;s Price:</header> {priceFlick} bells</li>}
