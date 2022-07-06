@@ -16,8 +16,6 @@ export function CritterForm(){
     const {name} = useParams();
     const english = "name-USen";
 
-    const match = useLocation()?.pathname?.split('/')[1];
-
     if (selected.name[english] !== name){
       return(null)
     }
@@ -40,13 +38,13 @@ export function CritterForm(){
     return(
         <Modal
         show={true}
-        onHide={() => navigate(`/${match}`)}
+        onHide={() => navigate(-1)}
         backdrop="static"
         keyboard={false}
       >
         <Modal.Header className="capitalize">
           <Modal.Title>{name}</Modal.Title>
-          <button className="clickable" onClick={() => navigate(`/${match}`)}> x</button>
+          <button className="clickable" onClick={() => navigate(-1)}> x</button>
         </Modal.Header>
         <Modal.Body className="text-center">
           <Row>
