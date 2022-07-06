@@ -47,7 +47,7 @@ export function CritterForm(){
       >
         <Modal.Header className="capitalize">
           <Modal.Title>{name}</Modal.Title>
-          <button onClick={() => navigate(-1)}> x</button>
+          <button className="clickable" onClick={() => navigate(-1)}> x</button>
         </Modal.Header>
         <Modal.Body className="text-center">
           <Row>
