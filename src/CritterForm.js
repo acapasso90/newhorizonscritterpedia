@@ -1,3 +1,5 @@
+import React from 'react';
+
 import Modal from 'react-bootstrap/Modal'
 import classNames from "classnames";
 import Row from 'react-bootstrap/Row';
@@ -6,7 +8,6 @@ import Col from 'react-bootstrap/Col';
 import { 
   useNavigate,
     useOutletContext, 
-    useLocation,
     useParams } from 'react-router-dom'
 
 import "./CritterForm.css";
