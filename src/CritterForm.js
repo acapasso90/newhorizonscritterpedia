@@ -1,4 +1,3 @@
-import React from "react";
 import Modal from 'react-bootstrap/Modal'
 import classNames from "classnames";
 import Row from 'react-bootstrap/Row';
@@ -47,7 +46,7 @@ export function CritterForm(){
       >
         <Modal.Header className="capitalize">
           <Modal.Title>{name}</Modal.Title>
-          <button className="clickable" onClick={() => navigate(-1)}> x</button>
+          <button className="clickable" onClick={() => navigate(`/${match}`)}> x</button>
         </Modal.Header>
         <Modal.Body className="text-center">
           <Row>
