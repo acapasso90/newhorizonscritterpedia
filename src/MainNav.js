@@ -1,83 +1,107 @@
-import {React} from "react"
-import axios from "axios";
+import {useEffect} from "react"
 
 import { useNavigate, Outlet } from "react-router-dom";
 
-import butterfly from "./butterfly.png";
-import octopus from "./octopus.png";
-import octopusActive from "./octopusActive.png";
-import butterflyActive from "./butterflyActive.png";
-import fishActive from "./fishActive.png";
-import fish from "./fish.png";
+import butterfly from "./Media/butterfly.png";
+import octopus from "./Media/octopus.png";
+import octopusActive from "./Media/octopusActive.png";
+import butterflyActive from "./Media/butterflyActive.png";
+import fishActive from "./Media/fishActive.png";
+import fish from "./Media/fish.png";
+
+import Container from 'react-bootstrap/Container'
 
 import "./MainNav.css";
 
-export function MainNav(){
+function Footer(){
+    return(
+        <footer>
+            All images, information, quotes, and characters found on the app are the sole property of Nintendo and Animal Crossing
+            and are only used for non-commercial and educational purpose.
+            <div>
+            App built by <a href="https://amandacapasso.netlify.app/" target="_blank"  rel="noreferrer">Amanda Capasso</a>
+            </div>
+        </footer>
+    )
+}
+
+function NavIcon({
+    pathname = 'bug',
+    labelName = 'Insects',
+    onClick = ()=> console.log('onClick function must be passed in')
+}){
+    const url = window.location.pathname;
+    const isActive = url.includes(pathname);
+
+    let imgSrc;
+    switch(pathname){
+        case 'bug':
+            imgSrc = isActive ? butterflyActive : butterfly;
+        break;
+
+        case 'fish':
+            imgSrc = isActive ? fishActive : fish;
+        break
+        
+        default:
+            imgSrc = isActive ? octopusActive : octopus;
+    }
+
+
+    return(
+        <div className="backdrop">  
+            <img 
+                src={imgSrc} 
+                alt={pathname}      
+                onClick={()=> onClick()}  
+            />
+            {isActive && 
+                <div className="label" >{labelName}</div>
+            }
+        </div>
+    )
+}
+
+function NavBar(){
     const navigate = useNavigate();
 
-    const url = window.location.pathname;
+    useEffect(() => {
+        const url = window.location.pathname;
 
-
-    const cancelTokenSource = axios.CancelToken.source();
-    // Makes previously active bug or fish icons revert to normal and adds active styling to the deep sea icon link
-    function seaLinkActive(){  
-        cancelTokenSource.cancel();
-        navigate('/deepsea', {replace: true})
+        if ( url === '/bug'){
+            navigate('/bug')
         }
-        // Makes previously active bug or deep sea icons revert to normal and adds active styling to the fish icon link
-        function fishLinkActive(){ 
-            cancelTokenSource.cancel();
-            navigate('/fish', {replace: true})
-           }
-        // Makes previously active fish or deep sea icons revert to normal and adds active styling to the bug icon link
-        function bugLinkActive(){
-            cancelTokenSource.cancel();
-            navigate('/bugs', {replace: true})
+        else if  (url === '/deepsea'){
+            navigate('/deepsea')
         }
+    }, [navigate])
 
-    // on load if url is on /bug runs bugLinkActive function to set the bug icon to "active"
-    window.addEventListener('load', function () {
-        if ( url === '/bugs'){bugLinkActive()}
-        // on load if url is on /deepsea runs bugLinkActive function to set the deep sea icon to "active"
-        else if  (url === '/deepsea'){seaLinkActive()}});
-
-        return(
-            <div className="critterpedia">
-                <div className="nav">
-                    <div className="iconLinks">
-                        <div className="hrow">
-                            <div className="backdrop">  
-                                <img src={url.includes('bug') ? butterflyActive : butterfly} alt="bug"      className="butterfly"  onClick={bugLinkActive}  />
-                                {url.includes('bug') && 
-                                    <label className="bugLabel" >Insects</label>
-                                }
-                            </div>
-                            <div className="backdrop">  
-                                <img src={url.includes('fish') ? fishActive : fish} alt="fish" className="fishpic" onClick={fishLinkActive}  />
-                                {url.includes('fish') && 
-                                    <label className="fishLabel">Fish</label>
-                                }
-                            </div>
-                            <div className="backdrop">
-                                <img src={url.includes('sea') ? octopusActive : octopus} alt="deep-sea" className="octopus" onClick={seaLinkActive}  /> 
-                                {url.includes('sea') && 
-                                    <label className="seaLabel">Sea Creatures</label>
-                                }
-                            </div>
-                        </div>
-                    </div>
-                    <header>
-                        New Horizon&apos;s Critterpedia
-                    </header>
+    return(
+        <div className="nav">
+            <div className="iconLinks">
+                <div className="hrow">
+                    <NavIcon pathname='bug' labelName='Insects' onClick={()=> navigate('/bug')} />
+                    <NavIcon pathname='fish' labelName='Fish' onClick={()=> navigate('/fish')} />
+                    <NavIcon pathname='deepsea' labelName='Sea Creatures' onClick={()=> navigate('/deepsea')} />
+            
                 </div>
-            <Outlet />
-            <div className="footer">
-                <footer>
-                    All images, information, quotes, and characters found on the app are the sole property of Nintendo and Animal Crossing
-                    and are only used for non-commercial and educational purpose.
-                    <a href="https://github.com/acapasso90/newhorizonscritterpedia" target="_blank"  rel="noreferrer"> Open-sourced</a> app built by <a href="https://www.amandacapasso.com" target="_blank"  rel="noreferrer">Amanda Capasso</a> using the <a href="http://acnhapi.com/" target="blank" rel="noreferrer">ACNH API</a>
-                </footer>
             </div>
+            <header>
+                New Horizon's Critterpedia
+            </header>
+        </div>
+    )
+}
+
+export function MainNav(){
+    return(
+        <div className="critterpedia">
+                <NavBar />
+                <Container fluid>
+
+                    <Outlet />
+                    <Footer />
+                </Container>
         </div>
     )
 }

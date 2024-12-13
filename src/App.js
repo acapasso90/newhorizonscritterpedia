@@ -1,37 +1,37 @@
 import React from "react";
-import 'bootstrap/dist/css/bootstrap.css';
-import 'bootstrap/js/dist/dropdown';
-import './App.css';
 import {
-  BrowserRouter,
-  Routes,
-  Navigate,
-  Route,
+    BrowserRouter,Routes,Navigate,Route,
 } from "react-router-dom";
-import DisplayBugs from "./DisplayBugs";
+import {DisplayCritters} from "./DisplayCritters";
 import { MainNav } from "./MainNav";
-import { CritterForm } from "./CritterForm";
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './App.css';
+import { CritterDetails } from "./CritterDetails/CritterDetails";
+
 
 function App() {
 
-return (
-  <BrowserRouter>
-    <Routes>
-        <Route path="/" element={<MainNav />}>
-          <Route index element={<Navigate to="fish" replace />} />
-          <Route path="fish" element={<DisplayBugs keyword="fish" />}>
-            <Route path=":name" element={<CritterForm />} />
-          </Route>
-          <Route path="bugs" element={<DisplayBugs keyword="bug"/>}>
-            <Route path=":name" element={<CritterForm />} />
-          </Route>
-          <Route path="deepsea" element={<DisplayBugs keyword="deep sea creature"/>}>
-            <Route path=":name" element={<CritterForm />} />
-          </Route>
-          <Route path="*" element={<h1>404: page not found</h1>} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
-  );
+    return (
+        <BrowserRouter>
+            <Routes>
+                <Route path="/" element={<MainNav />}>
+                <Route index element={<Navigate to="fish" replace />} />
+                <Route path="fish" element={<DisplayCritters keyword="fish" />} >
+                    <Route path=":name" element={<CritterDetails />} />
+                </Route>
+                <Route path="bug" element={<DisplayCritters keyword="bug"/>} >3
+                    <Route path=":name" element={<CritterDetails />} />
+
+                </Route>
+                <Route path="deepsea" element={<DisplayCritters keyword="deep sea creature"/>} >
+                    <Route path=":name" element={<CritterDetails />} />
+
+                </Route>
+                <Route path="*" element={<h1>404: page not found</h1>} />
+                </Route>
+            </Routes>
+        </BrowserRouter>
+    );
 }
 export default App;
