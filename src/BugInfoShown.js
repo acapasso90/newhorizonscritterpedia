@@ -8,7 +8,7 @@ export default function BugInfoShown({
 }){
 
   const navigate = useNavigate();
-  const english = "name-USen";
+  const english = "name-USen"; 
   const northernArray = "month-array-northern";
   const southernArray = "month-array-southern"; 
   const timeArray = "time-array";
